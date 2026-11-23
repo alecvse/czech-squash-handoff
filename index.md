@@ -8,19 +8,19 @@
 
 ### [Přehled soutěží](souteze-druzstev.md#prehled)
 
-- [Otevřít mustr](templates/souteze.html)
+- [Otevřít mustr](templates/souteze-druzstev-prehled.html)
 
 ### [Detail soutěže](souteze-druzstev.md#soutez)
 
-- [Otevřít mustr](templates/soutez-extraliga-muzi.html)
+- [Otevřít mustr](templates/soutez-detail-s-tabulkou-druzstvy-a-rozpisem.html)
 
 ### [Detail družstva](souteze-druzstev.md#druzstvo)
 
-- [Otevřít mustr](templates/druzstvo-300-2026-2027.html)
+- [Otevřít mustr](templates/druzstvo-detail-se-soupiskou-a-exporty.html)
 
 ### [Detail utkání](souteze-druzstev.md#utkani)
 
-- [Otevřít mustr](templates/utkani-11588.html)
+- [Otevřít mustr](templates/utkani-uplny-zapis-se-zapasy-a-sety.html)
 
 ## Sportovní přehledy a profily
 
@@ -36,8 +36,8 @@
 
 ### [Profil hráče](sportovni-prehledy.md#hrac)
 
-- [Profil s historií a zápasy](templates/hrac-marek-panacek.html)
-- [Bez historie a zápasů](templates/hrac-3534.html)
+- [Profil s historií a zápasy](templates/hrac-profil-s-historii-a-zapasy.html)
+- [Bez historie a zápasů](templates/hrac-profil-bez-historie-a-zapasu.html)
 
 ### [Reprezentace](sportovni-prehledy.md#reprezentace)
 
@@ -49,13 +49,13 @@
 
 ### [Přehled klubů](kluby-nabory.md#kluby)
 
-- [Otevřít mustr](templates/kluby.html)
+- [Otevřít mustr](templates/kluby-adresar-s-mapou.html)
 
 ### [Profil klubu](kluby-nabory.md#profil-klubu)
 
-- [Profil s kontakty a družstvy](templates/klub-viktoria-brno.html)
-- [Dvě sportoviště, bez kontaktů](templates/klub-26553317.html)
-- [Bez sportoviště a družstev](templates/klub-casq-ixi.html)
+- [Profil s kontakty a družstvy](templates/klub-profil-s-kontakty-druzstvy-a-exporty.html)
+- [Dvě sportoviště, bez kontaktů](templates/klub-profil-se-dvema-sportovisti-bez-kontaktu.html)
+- [Bez sportoviště a družstev](templates/klub-profil-bez-sportoviste-kontaktu-a-druzstev.html)
 
 ### [Nábory – Hrej squash!](kluby-nabory.md#nabory)
 
@@ -67,11 +67,11 @@
 
 ### [Úvodní stránka](uvod-media.md#uvod)
 
-- [Otevřít mustr](templates/homepage.html)
+- [Otevřít mustr](templates/uvodni-stranka.html)
 
 ### [Archiv aktualit](uvod-media.md#aktuality)
 
-- [Otevřít mustr](templates/aktuality.html)
+- [Otevřít mustr](templates/aktuality-prehled-s-filtry.html)
 
 ### [Detail článku](uvod-media.md#clanek)
 
@@ -82,20 +82,20 @@
 
 ### [Rozcestník Média](uvod-media.md#media)
 
-- [Otevřít mustr](templates/media.html)
+- [Otevřít mustr](templates/media-rozcestnik.html)
 
 ### [Tiskové informace](uvod-media.md#tiskove-zpravy)
 
-- [Otevřít mustr](templates/tiskove-zpravy.html)
+- [Otevřít mustr](templates/tiskove-zpravy-prazdny-stav.html)
 
 ### [Přehled fotogalerií](uvod-media.md#fotogalerie)
 
-- [Otevřít mustr](templates/fotogalerie.html)
+- [Otevřít mustr](templates/fotogalerie-prehled-s-filtry.html)
 
 ### [Detail galerie](uvod-media.md#galerie)
 
-- [Galerie se jménem fotografa](templates/galerie-mcr-junioru-2026.html)
-- [Zdroj bez jména fotografa](templates/galerie-hamr-2024.html)
+- [Galerie se jménem fotografa](templates/galerie-se-jmenem-fotografa.html)
+- [Zdroj bez jména fotografa](templates/galerie-se-zdrojem-bez-jmena-fotografa.html)
 
 ## ČASQ, dokumenty a veřejné informace
 
@@ -103,7 +103,7 @@
 
 ### [ČASQ a odborné komise](asociace-dokumenty.md#komise)
 
-- [Otevřít mustr](templates/asociace.html)
+- [Otevřít mustr](templates/asociace-rozcestnik.html)
 - [Samostatná stránka komisí](templates/odborne-komise.html)
 
 ### [Kontakty a vedení asociace](asociace-dokumenty.md#kontakty)
@@ -116,7 +116,7 @@
 
 ### [Řády a předpisy](asociace-dokumenty.md#predpisy)
 
-- [Otevřít mustr](templates/dokumenty.html)
+- [Otevřít mustr](templates/dokumenty-rady-a-predpisy.html)
 
 ### [Formuláře](asociace-dokumenty.md#formulare)
 
@@ -148,7 +148,7 @@
 
 ### [Časté otázky](asociace-dokumenty.md#faq)
 
-- [Přesměrování na otázky](templates/faq.html)
+- [Přesměrování na otázky](templates/caste-otazky-presmerovani-na-nabory.html)
 
 ### [Ochrana osobních údajů](asociace-dokumenty.md#ochrana-udaju)
 
@@ -160,7 +160,7 @@
 
 ### [Trenérský rozcestník](odborny-servis.md#treneri)
 
-- [Otevřít mustr](templates/treneri.html)
+- [Otevřít mustr](templates/treneri-rozcestnik.html)
 
 ### [Archiv trenérů](odborny-servis.md#archiv)
 
@@ -168,11 +168,11 @@
 
 ### [Archivní odborný článek](odborny-servis.md#archivni-clanek)
 
-- [Sezónní článek trenérů](templates/obsah-archiv-1746.html)
+- [Sezónní článek trenérů](templates/archiv-odborny-clanek-se-sezonnimi-prilohami.html)
 
 ### [Přehled trenérských projektů](odborny-servis.md#projekty)
 
-- [Otevřít mustr](templates/treneri-projekty.html)
+- [Otevřít mustr](templates/treneri-projekty-prehled.html)
 
 ### [Seznam trenérů](odborny-servis.md#seznam)
 

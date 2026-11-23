@@ -87,9 +87,9 @@ Profil ukazuje základní údaje, aktuální a nejlepší umístění v kategori
 
 Vedle registračních údajů a vazeb na soupisky jsou současné umístění, posun a dostupné mezinárodní pořadí. Nejlepší umístění patří vždy ke kategorii a měsíci. Měsíční historii lze projít v grafu pořadí nebo bodů, ročním přehledu i podrobných datech. Profil bez historie má vlastní prázdný stav.
 
-- [Plný profil a základní údaje](templates/hrac-marek-panacek.html)
-- [Graf, měsíční historie a podrobná data](templates/hrac-marek-panacek.html#pohyb)
-- [Profil bez historie a zápasů](templates/hrac-3534.html)
+- [Plný profil a základní údaje](templates/hrac-profil-s-historii-a-zapasy.html)
+- [Graf, měsíční historie a podrobná data](templates/hrac-profil-s-historii-a-zapasy.html#pohyb)
+- [Profil bez historie a zápasů](templates/hrac-profil-bez-historie-a-zapasu.html)
 
 **Data pro profil.** Použij stabilní identitu hráče ze zdrojového profilu. Veřejné registrační číslo, ročník, příslušnost ke klubu a soupiska družstva mají vlastní význam. Ulož datum platnosti, soutěž a sezónu soupisky. Každé měření potřebuje vydání, kategorii, pořadí a dostupné body. U rekordu uchovej datum, k němuž ho zdroj uvádí.
 
@@ -114,8 +114,8 @@ Seznam sdružuje zápasy pod jednotlivé účasti. Návštěvník může vybrat 
 
 Návštěvník hledá soupeře či akci, vybírá rok a přepíná Vše, Turnaje a Liga. U turnajů s doloženým zařazením navazují okruh, třída a kategorie. Stránkují se celé akce. Po rozbalení zůstávají zápasy pohromadě s příslušnou účastí a jejími body.
 
-- [Zápasové karty a navazující filtry](templates/hrac-marek-panacek.html#zapasy)
-- [Stav bez zápasů](templates/hrac-3534.html#zapasy)
+- [Zápasové karty a navazující filtry](templates/hrac-profil-s-historii-a-zapasy.html#zapasy)
+- [Stav bez zápasů](templates/hrac-profil-bez-historie-a-zapasu.html#zapasy)
 
 **Data pro účast.** Pro každou účast uchovej akci, datum, druh, kategorii, umístění, zveřejněné body za pořadí, za soupeře a celkem. Jednotlivé zápasy mají pořadí, soupeře, fázi, výsledek z pohledu hráče a dostupné body. Více kategorií na jedné akci smí mít různé souhrny.
 

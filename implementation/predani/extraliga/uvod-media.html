@@ -20,10 +20,10 @@
       <h1>Úvod, aktuality a média</h1>
       <p>Úvod vybírá obsah z více částí webu. Samostatné Aktuality zpřístupňují archiv a Média propojují zprávy, fotografie, videa a tiskové informace. Zadání platí pro všechny zveřejněné záznamy těchto typů a doplňuje <a href="principy.html">obecné principy předání</a>.</p>
       <div class="guide-actions">
-        <a class="button" href="templates/homepage.html">Mustr úvodu</a>
-        <a class="button" href="templates/aktuality.html">Mustr archivu aktualit</a>
-        <a class="button" href="templates/media.html">Mustr rozcestníku médií</a>
-        <a class="button" href="templates/fotogalerie.html">Mustr přehledu galerií</a>
+        <a class="button" href="templates/uvodni-stranka.html">Mustr úvodu</a>
+        <a class="button" href="templates/aktuality-prehled-s-filtry.html">Mustr archivu aktualit</a>
+        <a class="button" href="templates/media-rozcestnik.html">Mustr rozcestníku médií</a>
+        <a class="button" href="templates/fotogalerie-prehled-s-filtry.html">Mustr přehledu galerií</a>
       </div>
     </header>
 
@@ -39,7 +39,7 @@
       <a href="#prevzeti">Kontrola po napojení</a>
     </nav>
 
-    <section id="uvod" data-template="homepage.html">
+    <section id="uvod" data-template="uvodni-stranka.html">
       <h2>Úvodní stránka</h2>
       <article>
         <h3>Hlavní aktuality a výběr článků</h3>
@@ -53,8 +53,8 @@
             <h4>Nový mustr</h4>
             <p>Nahoře se přepínají tři zvýrazněné články s fotografií, rubrikou, datem, titulkem a perexem. Dalších šest karet tvoří blok Aktuality s odkazem na celý archiv. Krátké zprávy jsou vypnuté.</p>
             <ul class="comparison-links">
-              <li><a href="templates/homepage.html#main-content">Hlavní aktuality</a></li>
-              <li><a href="templates/homepage.html#aktuality">Šest článkových karet</a></li>
+              <li><a href="templates/uvodni-stranka.html#main-content">Hlavní aktuality</a></li>
+              <li><a href="templates/uvodni-stranka.html#aktuality">Šest článkových karet</a></li>
             </ul>
           </div>
         </div>
@@ -77,7 +77,7 @@
           <div class="accent-card comparison-card">
             <h4>Nový mustr</h4>
             <p>Jeden vodorovný pás míchá turnaje a termíny družstev. Karta ukazuje datum nebo rozsah, název a kategorii. Akce s publikovaným cílem může vést na přehled ligy. Záhlaví pásu odkazuje do kalendáře akcí.</p>
-            <ul class="comparison-links"><li><a href="templates/homepage.html#main-content">Vybrané akce v mustru úvodu</a></li></ul>
+            <ul class="comparison-links"><li><a href="templates/uvodni-stranka.html#main-content">Vybrané akce v mustru úvodu</a></li></ul>
           </div>
         </div>
         <p><strong>Backend.</strong> Záznam přebírej z kalendáře nebo rozpisu včetně identity, data začátku a konce, názvu, kategorie a dostupného cíle. Změna termínu v jeho zdrojové evidenci se projeví i tady. Položka bez veřejného cíle zůstane čitelná jako text. Pozastavené detaily turnajů se v cílovém rozsahu nezpřístupňují.</p>
@@ -99,7 +99,7 @@
           <div class="accent-card comparison-card">
             <h4>Nový mustr</h4>
             <p>Stream na úvodu má čtyři karty s náhledem, titulkem, datem a odkazem na video. Pod 768 px zůstávají dvě první karty. Odkaz Odebírej vede na skutečný kanál.</p>
-            <ul class="comparison-links"><li><a href="templates/homepage.html#stream">CzechSquash Stream</a></li></ul>
+            <ul class="comparison-links"><li><a href="templates/uvodni-stranka.html#stream">CzechSquash Stream</a></li></ul>
           </div>
         </div>
         <p><strong>Backend.</strong> Každá karta potřebuje platnou adresu videa, titulek, datum a náhled s alternativním textem. Odkaz z rozcestníku médií a patičky vede na <code>#stream</code> na úvodu.</p>
@@ -118,8 +118,8 @@
             <h4>Nový mustr</h4>
             <p>Desktop má hlavní a doplňkovou navigaci. Mobil stejné cíle seskupuje v menu. Patička odděluje hlavního partnera, další partnery a finanční podporu. Skupina Média a sítě vede na tiskové informace, mediální kontakt, fotogalerie, videa a sociální kanály.</p>
             <ul class="comparison-links">
-              <li><a href="templates/homepage.html">Desktopová a mobilní navigace</a></li>
-              <li><a href="templates/homepage.html#partneri">Partneři a patička</a></li>
+              <li><a href="templates/uvodni-stranka.html">Desktopová a mobilní navigace</a></li>
+              <li><a href="templates/uvodni-stranka.html#partneri">Partneři a patička</a></li>
             </ul>
           </div>
         </div>
@@ -139,7 +139,7 @@
           <div class="accent-card comparison-card">
             <h4>Nový mustr</h4>
             <p>Newsletter má označené e-mailové pole a tlačítko, obojí je deaktivované. Odesílání není napojené.</p>
-            <ul class="comparison-links"><li><a href="templates/homepage.html#newsletter-title">Newsletter v nové patičce</a></li></ul>
+            <ul class="comparison-links"><li><a href="templates/uvodni-stranka.html#newsletter-title">Newsletter v nové patičce</a></li></ul>
           </div>
         </div>
         <p><strong>Ověřit v backendu.</strong> Zjisti příjemce stávajícího formuláře, místo správy seznamu, potvrzování odběru, řešení duplicit a odhlašování.</p>
@@ -147,7 +147,7 @@
       </article>
     </section>
 
-    <section id="aktuality" data-template="aktuality.html">
+    <section id="aktuality" data-template="aktuality-prehled-s-filtry.html">
       <h2>Archiv aktualit</h2>
       <article>
         <h3>Vyhledávání, rubriky a stránkování</h3>
@@ -163,7 +163,7 @@
           <div class="accent-card comparison-card">
             <h4>Nový mustr</h4>
             <p>Samostatný archiv nabízí hledání v textu karet a filtr rubriky. Filtry se kombinují a lze je zrušit. Výsledky jsou po 12, další strana se volí pod výpisem. Karta ukazuje rubriku, datum, titulek, perex a fotografii, případně označenou jako ilustrační.</p>
-            <ul class="comparison-links"><li><a href="templates/aktuality.html#main-content">Mustr archivu s filtry</a></li></ul>
+            <ul class="comparison-links"><li><a href="templates/aktuality-prehled-s-filtry.html#main-content">Mustr archivu s filtry</a></li></ul>
           </div>
         </div>
         <p><strong>Backend.</strong> Vrať všechny odpovídající zveřejněné zprávy, po datech od nejnovějších se stabilním pořadím také při shodném dni. Filtr uplatni před rozdělením na stránky. Hledání v mustru pracuje s veřejným textem karty bez rozlišení diakritiky a velikosti písmen. Po změně filtru přejdi na první stránku, oznam počet výsledků a při nulové shodě nabídni reset. Bez JavaScriptu jsou v mustru dostupné karty a odkazy. Pro napojený archiv zachovej přístup k celému obsahu i bez JS, například serverovým stránkováním.</p>
@@ -224,7 +224,7 @@
       </article>
     </section>
 
-    <section id="media" data-template="media.html">
+    <section id="media" data-template="media-rozcestnik.html">
       <h2>Rozcestník Média</h2>
       <article>
         <h3>Vstupy do mediálních sekcí</h3>
@@ -241,14 +241,14 @@
           <div class="accent-card comparison-card">
             <h4>Nový mustr</h4>
             <p>Rozcestník nabízí odkazy na Aktuality, Fotogalerii, Videa a Tiskové informace. Stejné cíle používá sekční navigace mediálních stránek. Videa vedou k bloku Stream na úvodu.</p>
-            <ul class="comparison-links"><li><a href="templates/media.html#main-content">Mustr rozcestníku Média</a></li></ul>
+            <ul class="comparison-links"><li><a href="templates/media-rozcestnik.html#main-content">Mustr rozcestníku Média</a></li></ul>
           </div>
         </div>
         <p><strong>Backend a administrace.</strong> Sdílej stejné veřejné adresy mezi rozcestníkem, sekční navigací a patičkou. Označ aktuální stránku v sekční navigaci a zachovej hierarchii předků v drobečcích. Média mají vlastní veřejnou adresu dostupnou z navázaných obsahových stránek.</p>
       </article>
     </section>
 
-    <section id="tiskove-zpravy" data-template="tiskove-zpravy.html">
+    <section id="tiskove-zpravy" data-template="tiskove-zpravy-prazdny-stav.html">
       <h2>Tiskové informace</h2>
       <article>
         <h3>Přehled tiskových zpráv</h3>
@@ -260,7 +260,7 @@
           <div class="accent-card comparison-card">
             <h4>Nový mustr</h4>
             <p>Rubrika zatím zobrazuje schválený prázdný stav a směřuje běžné zprávy do Aktualit. Na stejné stránce je také odkaz na mediální kontakt.</p>
-            <ul class="comparison-links"><li><a href="templates/tiskove-zpravy.html#main-content">Mustr tiskových informací</a></li></ul>
+            <ul class="comparison-links"><li><a href="templates/tiskove-zpravy-prazdny-stav.html#main-content">Mustr tiskových informací</a></li></ul>
           </div>
         </div>
         <p><strong>Související podklady.</strong> Při srovnání se ve veřejném archivu nepodařilo dohledat vydanou tiskovou zprávu. V Aktualitách jsou pozvánky na tiskové konference a přehledy mediálních ohlasů. <a href="https://czechsquash.cz/novinka/?news=3115">Termín tiskové konference k MČR 2026</a> · <a href="https://czechsquash.cz/novinka/?news=1971">Pozvánka k přenosu tiskové konference k MČR 2021</a> · <a href="https://czechsquash.cz/novinka/?news=1985">Mediální ohlasy MČR 2021</a></p>
@@ -279,7 +279,7 @@
             <h4>Nový mustr</h4>
             <p>Tiskové informace jmenují odpovědnou osobu a odkazují na její kartu v Kontaktech. Stejný cíl používá patička.</p>
             <ul class="comparison-links">
-              <li><a href="templates/tiskove-zpravy.html#main-content">Kontakt v tiskových informacích</a></li>
+              <li><a href="templates/tiskove-zpravy-prazdny-stav.html#main-content">Kontakt v tiskových informacích</a></li>
               <li><a href="templates/kontakty.html#marketing-komunikace">Mustr cílového kontaktu</a></li>
             </ul>
           </div>
@@ -288,7 +288,7 @@
       </article>
     </section>
 
-    <section id="fotogalerie" data-template="fotogalerie.html">
+    <section id="fotogalerie" data-template="fotogalerie-prehled-s-filtry.html">
       <h2>Přehled fotogalerií</h2>
       <article>
         <h3>Archiv, kategorie a ročníky</h3>
@@ -305,7 +305,7 @@
           <div class="accent-card comparison-card">
             <h4>Nový mustr</h4>
             <p>Karty ukazují náhled, titulek, datum, počet fotografií a krátký popis. Lze kombinovat hledání, kategorii a ročník. Výsledek otevírá samostatný detail nebo přímo galerii uvnitř článku.</p>
-            <ul class="comparison-links"><li><a href="templates/fotogalerie.html#main-content">Mustr archivu fotogalerií</a></li></ul>
+            <ul class="comparison-links"><li><a href="templates/fotogalerie-prehled-s-filtry.html#main-content">Mustr archivu fotogalerií</a></li></ul>
           </div>
         </div>
         <p><strong>Backend.</strong> Každá zveřejněná galerie potřebuje vlastní stabilní identitu, titulek, datum, ročník, kategorii, popis, veřejný náhled a odkaz na skutečnou galerii. Počet karty odpovídá zveřejněným fotografiím v cíli. Všechny filtry se uplatňují společně, s počtem výsledků a možností resetu. Bez JS zůstávají karty a cíle dostupné.</p>
@@ -314,7 +314,7 @@
       </article>
     </section>
 
-    <section id="galerie" data-template="galerie-mcr-junioru-2026.html">
+    <section id="galerie" data-template="galerie-se-jmenem-fotografa.html">
       <h2>Detail galerie</h2>
       <article>
         <h3>Galerie uvnitř článku</h3>
@@ -354,8 +354,8 @@
             <h4>Nový mustr</h4>
             <p>Galerie MČR juniorů má deset fotografií s popisky a jménem fotografky. Galerie HAMR uvádí u dvou fotografií zdroj ČASQ. Oba snímky pocházejí ze související reportáže. Každá má vlastní adresu a návrat do archivu.</p>
             <ul class="comparison-links">
-              <li><a href="templates/galerie-mcr-junioru-2026.html">Mustr galerie s uvedenou fotografkou</a></li>
-              <li><a href="templates/galerie-hamr-2024.html">Galerie HAMR se zdrojem a vazbou na reportáž</a></li>
+              <li><a href="templates/galerie-se-jmenem-fotografa.html">Mustr galerie s uvedenou fotografkou</a></li>
+              <li><a href="templates/galerie-se-zdrojem-bez-jmena-fotografa.html">Galerie HAMR se zdrojem a vazbou na reportáž</a></li>
             </ul>
           </div>
         </div>

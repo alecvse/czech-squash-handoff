@@ -2,13 +2,13 @@
 
 Úvod vybírá obsah z více částí webu. Samostatné Aktuality zpřístupňují archiv a Média propojují zprávy, fotografie, videa a tiskové informace. Zadání platí pro všechny zveřejněné záznamy těchto typů a doplňuje [obecné principy předání](principy.md).
 
-[Mustr úvodu](templates/homepage.html)
+[Mustr úvodu](templates/uvodni-stranka.html)
 
-[Mustr archivu aktualit](templates/aktuality.html)
+[Mustr archivu aktualit](templates/aktuality-prehled-s-filtry.html)
 
-[Mustr rozcestníku médií](templates/media.html)
+[Mustr rozcestníku médií](templates/media-rozcestnik.html)
 
-[Mustr přehledu galerií](templates/fotogalerie.html)
+[Mustr přehledu galerií](templates/fotogalerie-prehled-s-filtry.html)
 
 <a id="uvod"></a>
 
@@ -26,8 +26,8 @@
 
 Nahoře se přepínají tři zvýrazněné články s fotografií, rubrikou, datem, titulkem a perexem. Dalších šest karet tvoří blok Aktuality s odkazem na celý archiv. Krátké zprávy jsou vypnuté.
 
-- [Hlavní aktuality](templates/homepage.html#main-content)
-- [Šest článkových karet](templates/homepage.html#aktuality)
+- [Hlavní aktuality](templates/uvodni-stranka.html#main-content)
+- [Šest článkových karet](templates/uvodni-stranka.html#aktuality)
 
 **Backend.** Oba bloky čtou zveřejněné články. Položka potřebuje stabilní identitu a adresu, rubriku, datum publikace, titulek, perex a fotografii s alternativním textem. Text i obraz v každé hlavní aktualitě odkazují na stejný článek. Karta i hlavní aktualita přebírají opravy článku ze společného zdroje. Zachovej ruční přepnutí, zastavení rotace při najetí a při focusu a vypnutí automatické rotace v režimu omezeného pohybu.
 
@@ -48,7 +48,7 @@ Nahoře se přepínají tři zvýrazněné články s fotografií, rubrikou, dat
 
 Jeden vodorovný pás míchá turnaje a termíny družstev. Karta ukazuje datum nebo rozsah, název a kategorii. Akce s publikovaným cílem může vést na přehled ligy. Záhlaví pásu odkazuje do kalendáře akcí.
 
-- [Vybrané akce v mustru úvodu](templates/homepage.html#main-content)
+- [Vybrané akce v mustru úvodu](templates/uvodni-stranka.html#main-content)
 
 **Backend.** Záznam přebírej z kalendáře nebo rozpisu včetně identity, data začátku a konce, názvu, kategorie a dostupného cíle. Změna termínu v jeho zdrojové evidenci se projeví i tady. Položka bez veřejného cíle zůstane čitelná jako text. Pozastavené detaily turnajů se v cílovém rozsahu nezpřístupňují.
 
@@ -68,7 +68,7 @@ Jeden vodorovný pás míchá turnaje a termíny družstev. Karta ukazuje datum 
 
 Stream na úvodu má čtyři karty s náhledem, titulkem, datem a odkazem na video. Pod 768 px zůstávají dvě první karty. Odkaz Odebírej vede na skutečný kanál.
 
-- [CzechSquash Stream](templates/homepage.html#stream)
+- [CzechSquash Stream](templates/uvodni-stranka.html#stream)
 
 **Backend.** Každá karta potřebuje platnou adresu videa, titulek, datum a náhled s alternativním textem. Odkaz z rozcestníku médií a patičky vede na `#stream` na úvodu.
 
@@ -86,8 +86,8 @@ Hlavička dává přímý přístup ke sportovním částem a členskému přihl
 
 Desktop má hlavní a doplňkovou navigaci. Mobil stejné cíle seskupuje v menu. Patička odděluje hlavního partnera, další partnery a finanční podporu. Skupina Média a sítě vede na tiskové informace, mediální kontakt, fotogalerie, videa a sociální kanály.
 
-- [Desktopová a mobilní navigace](templates/homepage.html)
-- [Partneři a patička](templates/homepage.html#partneri)
+- [Desktopová a mobilní navigace](templates/uvodni-stranka.html)
+- [Partneři a patička](templates/uvodni-stranka.html#partneri)
 
 **Backend a administrace.** Zaveď jeden zdroj společné hlavičky a patičky. Aktuality jsou přímá položka hlavního menu, vstupní stránka Média zůstává dostupná přes obsahové odkazy. Změny kontaktního cíle, kanálu nebo partnera se mají projevit na všech stránkách. Ke zveřejněnému logu patří přístupný název, skupina a pořadí. Odkaz používej jen u ověřeného cíle.
 
@@ -107,7 +107,7 @@ Patička obsahuje formulář s povinnou e-mailovou adresou a odesláním. Doruč
 
 Newsletter má označené e-mailové pole a tlačítko, obojí je deaktivované. Odesílání není napojené.
 
-- [Newsletter v nové patičce](templates/homepage.html#newsletter-title)
+- [Newsletter v nové patičce](templates/uvodni-stranka.html#newsletter-title)
 
 **Ověřit v backendu.** Zjisti příjemce stávajícího formuláře, místo správy seznamu, potvrzování odběru, řešení duplicit a odhlašování.
 
@@ -130,7 +130,7 @@ Aktuality v navigaci vedou na úvod. Výpis na něm přijímá hledaný výraz n
 
 Samostatný archiv nabízí hledání v textu karet a filtr rubriky. Filtry se kombinují a lze je zrušit. Výsledky jsou po 12, další strana se volí pod výpisem. Karta ukazuje rubriku, datum, titulek, perex a fotografii, případně označenou jako ilustrační.
 
-- [Mustr archivu s filtry](templates/aktuality.html#main-content)
+- [Mustr archivu s filtry](templates/aktuality-prehled-s-filtry.html#main-content)
 
 **Backend.** Vrať všechny odpovídající zveřejněné zprávy, po datech od nejnovějších se stabilním pořadím také při shodném dni. Filtr uplatni před rozdělením na stránky. Hledání v mustru pracuje s veřejným textem karty bez rozlišení diakritiky a velikosti písmen. Po změně filtru přejdi na první stránku, oznam počet výsledků a při nulové shodě nabídni reset. Bez JavaScriptu jsou v mustru dostupné karty a odkazy. Pro napojený archiv zachovej přístup k celému obsahu i bez JS, například serverovým stránkováním.
 
@@ -202,7 +202,7 @@ Aktuality zpřístupňují fotografie a videa v jednotlivých zprávách. U konk
 
 Rozcestník nabízí odkazy na Aktuality, Fotogalerii, Videa a Tiskové informace. Stejné cíle používá sekční navigace mediálních stránek. Videa vedou k bloku Stream na úvodu.
 
-- [Mustr rozcestníku Média](templates/media.html#main-content)
+- [Mustr rozcestníku Média](templates/media-rozcestnik.html#main-content)
 
 **Backend a administrace.** Sdílej stejné veřejné adresy mezi rozcestníkem, sekční navigací a patičkou. Označ aktuální stránku v sekční navigaci a zachovej hierarchii předků v drobečcích. Média mají vlastní veřejnou adresu dostupnou z navázaných obsahových stránek.
 
@@ -220,7 +220,7 @@ Na současném webu nemá tato část předobraz.
 
 Rubrika zatím zobrazuje schválený prázdný stav a směřuje běžné zprávy do Aktualit. Na stejné stránce je také odkaz na mediální kontakt.
 
-- [Mustr tiskových informací](templates/tiskove-zpravy.html#main-content)
+- [Mustr tiskových informací](templates/tiskove-zpravy-prazdny-stav.html#main-content)
 
 **Související podklady.** Při srovnání se ve veřejném archivu nepodařilo dohledat vydanou tiskovou zprávu. V Aktualitách jsou pozvánky na tiskové konference a přehledy mediálních ohlasů. [Termín tiskové konference k MČR 2026](https://czechsquash.cz/novinka/?news=3115) · [Pozvánka k přenosu tiskové konference k MČR 2021](https://czechsquash.cz/novinka/?news=1971) · [Mediální ohlasy MČR 2021](https://czechsquash.cz/novinka/?news=1985)
 
@@ -240,7 +240,7 @@ V kontaktech ČASQ je člen VV odpovědný za marketing a komunikaci se jménem,
 
 Tiskové informace jmenují odpovědnou osobu a odkazují na její kartu v Kontaktech. Stejný cíl používá patička.
 
-- [Kontakt v tiskových informacích](templates/tiskove-zpravy.html#main-content)
+- [Kontakt v tiskových informacích](templates/tiskove-zpravy-prazdny-stav.html#main-content)
 - [Mustr cílového kontaktu](templates/kontakty.html#marketing-komunikace)
 
 **Backend a administrace.** Jméno a veřejné kontaktní údaje spravuj u role marketingu a komunikace ve společném adresáři. Po výměně odpovědné osoby se aktualizuje i tiskový text. Trvalý odkaz směřuje na roli.
@@ -263,7 +263,7 @@ Galerie jsou v archivu aktualit. Hledání podle názvu najde například galeri
 
 Karty ukazují náhled, titulek, datum, počet fotografií a krátký popis. Lze kombinovat hledání, kategorii a ročník. Výsledek otevírá samostatný detail nebo přímo galerii uvnitř článku.
 
-- [Mustr archivu fotogalerií](templates/fotogalerie.html#main-content)
+- [Mustr archivu fotogalerií](templates/fotogalerie-prehled-s-filtry.html#main-content)
 
 **Backend.** Každá zveřejněná galerie potřebuje vlastní stabilní identitu, titulek, datum, ročník, kategorii, popis, veřejný náhled a odkaz na skutečnou galerii. Počet karty odpovídá zveřejněným fotografiím v cíli. Všechny filtry se uplatňují společně, s počtem výsledků a možností resetu. Bez JS zůstávají karty a cíle dostupné.
 
@@ -307,8 +307,8 @@ V článku je samostatná fotografická mřížka dosažitelná fragmentem `#fot
 
 Galerie MČR juniorů má deset fotografií s popisky a jménem fotografky. Galerie HAMR uvádí u dvou fotografií zdroj ČASQ. Oba snímky pocházejí ze související reportáže. Každá má vlastní adresu a návrat do archivu.
 
-- [Mustr galerie s uvedenou fotografkou](templates/galerie-mcr-junioru-2026.html)
-- [Galerie HAMR se zdrojem a vazbou na reportáž](templates/galerie-hamr-2024.html)
+- [Mustr galerie s uvedenou fotografkou](templates/galerie-se-jmenem-fotografa.html)
+- [Galerie HAMR se zdrojem a vazbou na reportáž](templates/galerie-se-zdrojem-bez-jmena-fotografa.html)
 
 **Backend a administrace.** Pro oba typy zachovej pořadí snímků, jejich poměr stran v originálu a čitelný náhled. Každý snímek potřebuje alternativní text, odkaz na úplný soubor a dostupný popisek a kredit. Správce musí mít možnost upravit popisek, pořadí, náhled i vazbu na článek. Pokud je jeden snímek na obou místech, může být spravovaný jako jeden mediální soubor.
 

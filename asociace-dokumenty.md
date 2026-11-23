@@ -19,7 +19,7 @@ Odborné komise mají vlastní stránku se jmény, předsedy a zveřejněnými k
 
 Vstup ČASQ otevírá karty odborných komisí. Stejný seznam zůstává i na samostatné adrese komisí. Odtud návštěvník přejde k rozhodčím, školením a trenérům.
 
-- [Komise na vstupu ČASQ](templates/asociace.html#odborne-komise)
+- [Komise na vstupu ČASQ](templates/asociace-rozcestnik.html#odborne-komise)
 - [Samostatná adresa komisí](templates/odborne-komise.html)
 
 **Data a správa.** U komise eviduj název, agendu, pořadí a členství osob s rolí. Zobraz jen doložené funkce a zveřejněné kontakty. Agenda může být svěřená jinému orgánu a kontakt může vést na sekretariát.
@@ -100,7 +100,7 @@ Do rozcestníku Ke stažení vede odkaz z hlavičky i z patičky, každý na jin
 
 Dokumenty jsou samostatným vstupem v hlavním menu. Řády a předpisy se otevírají jako první ze šesti kategorií. Každý předpis je přímý odkaz s názvem, formátem a velikostí.
 
-- [Vstup do Dokumentů](templates/dokumenty.html)
+- [Vstup do Dokumentů](templates/dokumenty-rady-a-predpisy.html)
 
 **Data a správa.** Přenes název, kategorii, řazení, číslo či platnost uvedenou vydavatelem, soubor nebo externí cíl. Záměnu verze řeš v místě správy předpisu. Původní příloha zápisu musí zůstat dohledatelná i po změně nyní platného řádu.
 
@@ -130,7 +130,7 @@ Návštěvník prochází samostatné výpisy předpisů, formulářů, zápisů
 
 Pole Hledat dokument prohledá všechny kategorie včetně trenérských materiálů. Výsledky zůstávají ve skupinách, přílohy u příslušných zápisů. Zadání bez shody má vlastní stav a vymazání dotazu vrací původní výpis.
 
-- [Vyhledání kodexů z hlavní kategorie](templates/dokumenty.html?q=kodex)
+- [Vyhledání kodexů z hlavní kategorie](templates/dokumenty-rady-a-predpisy.html?q=kodex)
 - [Kategorie trenérů](templates/dokumenty-treneri.html)
 
 **Ověřit v backendu.** Vyhledej publikované záznamy ze stejné evidence, která plní kategorie. Dotaz bez diakritiky musí najít český název, změna kategorie zachovat parametr q a vymazání obnovit její místní obsah. Při vypnutém JavaScriptu zůstávají kategorie a odkazy dostupné.
@@ -326,7 +326,7 @@ Počet hráčů vysvětluje úvod do hry, bodování a úplné znění pravidel 
 Odpovědi pro začátečníky, rodiče, kluby a členy se rozbalují přímo na stránce Hrej squash!. Patička i dosavadní adresa Častých otázek vedou na sekci s odpověďmi.
 
 - [Otázky a odpovědi na Hrej squash!](templates/nabory.html#otazky)
-- [Původní místní adresa FAQ](templates/faq.html)
+- [Původní místní adresa FAQ](templates/caste-otazky-presmerovani-na-nabory.html)
 
 **Data a správa.** Spravuj znění otázky, odpověď, pořadí a případný související odkaz. Odkazy na pravidla, klub či sekretariát musejí sledovat stejné zdroje jako navazující stránky. Věk pro přijetí dítěte a cenu první lekce určuje konkrétní klub.
 

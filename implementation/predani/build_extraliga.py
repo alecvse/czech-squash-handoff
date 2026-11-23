@@ -26,27 +26,27 @@ WITHHELD = {'historie.html', 'co-je-to-squash.html', 'design-system.html'}
 # Each chapter declares its primary pages with data-template. Only these explicit
 # secondary examples add files to the handoff, independently of editorial links.
 EXAMPLES = {
-    'klub-viktoria-brno.html': (
-        ('klub-26553317.html', 'Dvě sportoviště, bez kontaktů'),
-        ('klub-casq-ixi.html', 'Bez sportoviště a družstev'),
+    'klub-profil-s-kontakty-druzstvy-a-exporty.html': (
+        ('klub-profil-se-dvema-sportovisti-bez-kontaktu.html', 'Dvě sportoviště, bez kontaktů'),
+        ('klub-profil-bez-sportoviste-kontaktu-a-druzstev.html', 'Bez sportoviště a družstev'),
     ),
-    'hrac-marek-panacek.html': (('hrac-3534.html', 'Bez historie a zápasů'),),
+    'hrac-profil-s-historii-a-zapasy.html': (('hrac-profil-bez-historie-a-zapasu.html', 'Bez historie a zápasů'),),
     'clanek-s-fotogalerii.html': (
         ('clanek-bez-fotografie-s-prilohami.html', 'Bez fotografie, s přílohami'),
         ('clanek-s-externimi-prenosy.html', 'Externí přenosy v textu'),
         ('clanek-s-ilustracni-grafikou-bez-galerie.html', 'Ilustrační grafika bez galerie'),
     ),
-    'galerie-mcr-junioru-2026.html': (('galerie-hamr-2024.html', 'Zdroj bez jména fotografa'),),
-    'asociace.html': (('odborne-komise.html', 'Samostatná stránka komisí'),),
+    'galerie-se-jmenem-fotografa.html': (('galerie-se-zdrojem-bez-jmena-fotografa.html', 'Zdroj bez jména fotografa'),),
+    'asociace-rozcestnik.html': (('odborne-komise.html', 'Samostatná stránka komisí'),),
 }
 
 PRIMARY_LABELS = {
-    'klub-viktoria-brno.html': 'Profil s kontakty a družstvy',
-    'hrac-marek-panacek.html': 'Profil s historií a zápasy',
+    'klub-profil-s-kontakty-druzstvy-a-exporty.html': 'Profil s kontakty a družstvy',
+    'hrac-profil-s-historii-a-zapasy.html': 'Profil s historií a zápasy',
     'clanek-s-fotogalerii.html': 'Reportáž s fotogalerií',
-    'galerie-mcr-junioru-2026.html': 'Galerie se jménem fotografa',
-    'obsah-archiv-1746.html': 'Sezónní článek trenérů',
-    'faq.html': 'Přesměrování na otázky',
+    'galerie-se-jmenem-fotografa.html': 'Galerie se jménem fotografa',
+    'archiv-odborny-clanek-se-sezonnimi-prilohami.html': 'Sezónní článek trenérů',
+    'caste-otazky-presmerovani-na-nabory.html': 'Přesměrování na otázky',
 }
 
 def withheld(name):
@@ -132,23 +132,52 @@ class Chapter(HTMLParser):
                 '<ul class="template-list">\n' + '\n'.join(rows) + '\n</ul></details>')
 
 
-ARTICLE_SOURCES = {
+SAMPLE_SOURCES = {
     'clanek-s-fotogalerii.html': 'clanek-hradecky-juniorsky-cup.html',
     'clanek-bez-fotografie-s-prilohami.html': 'clanek-podpora-lscm-2026.html',
     'clanek-s-externimi-prenosy.html': 'clanek-3122.html',
     'clanek-s-ilustracni-grafikou-bez-galerie.html': 'clanek-podpora-treneru-nadace-cez.html',
+    'archiv-odborny-clanek-se-sezonnimi-prilohami.html': 'obsah-archiv-1746.html',
+    'klub-profil-s-kontakty-druzstvy-a-exporty.html': 'klub-viktoria-brno.html',
+    'klub-profil-se-dvema-sportovisti-bez-kontaktu.html': 'klub-26553317.html',
+    'klub-profil-bez-sportoviste-kontaktu-a-druzstev.html': 'klub-casq-ixi.html',
+    'hrac-profil-s-historii-a-zapasy.html': 'hrac-marek-panacek.html',
+    'hrac-profil-bez-historie-a-zapasu.html': 'hrac-3534.html',
+    'galerie-se-jmenem-fotografa.html': 'galerie-mcr-junioru-2026.html',
+    'galerie-se-zdrojem-bez-jmena-fotografa.html': 'galerie-hamr-2024.html',
+    'soutez-detail-s-tabulkou-druzstvy-a-rozpisem.html': 'soutez-extraliga-muzi.html',
+    'druzstvo-detail-se-soupiskou-a-exporty.html': 'druzstvo-300-2026-2027.html',
+    'utkani-uplny-zapis-se-zapasy-a-sety.html': 'utkani-11588.html',
+    'uvodni-stranka.html': 'homepage.html',
+    'caste-otazky-presmerovani-na-nabory.html': 'faq.html',
+    'asociace-rozcestnik.html': 'asociace.html',
+    'media-rozcestnik.html': 'media.html',
+    'treneri-rozcestnik.html': 'treneri.html',
+    'souteze-druzstev-prehled.html': 'souteze.html',
+    'kluby-adresar-s-mapou.html': 'kluby.html',
+    'aktuality-prehled-s-filtry.html': 'aktuality.html',
+    'fotogalerie-prehled-s-filtry.html': 'fotogalerie.html',
+    'dokumenty-rady-a-predpisy.html': 'dokumenty.html',
+    'tiskove-zpravy-prazdny-stav.html': 'tiskove-zpravy.html',
+    'treneri-projekty-prehled.html': 'treneri-projekty.html',
 }
 
 
+HANDOFF_NAMES = {source: sample for sample, source in SAMPLE_SOURCES.items()}
+LOCAL_PAGE_URL = re.compile(r'((?:href=["\']|url=)(?:\./)?)([\w-]+\.html)(?=[?#"\'])', re.I)
+
+
 def sample_markup(name, approved_names):
-    if Path(name).name != name or not name.endswith('.html') or withheld(name):
+    if Path(name).name != name or not name.endswith('.html') or withheld(SAMPLE_SOURCES.get(name, name)):
         raise ValueError(f'Outside the approved handoff: {name}')
     source = ROOT / 'templates' / name
-    if not source.exists() and name in ARTICLE_SOURCES:
-        source = source.with_name(ARTICLE_SOURCES[name])
+    if not source.exists() and name in SAMPLE_SOURCES:
+        source = source.with_name(SAMPLE_SOURCES[name])
     markup = source.read_text(encoding='utf-8')
-    for state_name, demo_name in ARTICLE_SOURCES.items():
-        markup = markup.replace(demo_name, state_name)
+    # Rewrite only local page URLs, including the FAQ refresh destination.
+    markup = LOCAL_PAGE_URL.sub(
+        lambda match: match[1] + HANDOFF_NAMES.get(match[2], match[2]), markup
+    )
     markup = re.sub(r'<!--\s*old fixtures:start\b.*?-->', '', markup, flags=re.S)
     markup = re.sub(r'<li>\s*<a href="\./historie\.html">Historie(?: squashe)?</a>\s*</li>', '', markup)
     markup = prepare_sample(markup, approved_names)

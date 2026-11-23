@@ -20,7 +20,7 @@ Přehled trenérské části odkazuje na aktuality, seznam, projekty, pozvánky,
 
 Rozcestník slouží jako vstup k šesti oblastem. Dokumenty míří do společné kategorie Dokumentů, metodika zůstává externí. Trenérské aktuality a pozvánky čekají na dopracování. Sezónní články má vlastní [archiv trenérů](templates/treneri-archiv.html).
 
-- [Rozcestník Trenéři](templates/treneri.html)
+- [Rozcestník Trenéři](templates/treneri-rozcestnik.html)
 - [Cíl karty Dokumenty](templates/dokumenty-treneri.html)
 
 **Data a správa.** Pro kartu zachovej název, pořadí, popis a cíl. U metodiky použij přímo adresu externí služby. Odborné materiály a článkový archiv mají rozdílnou funkci a vlastní cílové stránky.
@@ -69,7 +69,7 @@ Každý archivní článek má původní číselné ID a vlastní soubor oznáme
 
 Sezónní článek trenérů ukazuje společnou šablonu pro odborný archiv. Každý záznam má vlastní ID, text a odkazy na přílohy. Drobečková navigace se řídí odbornou sekcí. Přehledy Rozhodčí a Školení nabízejí dostupné soubory také přímo.
 
-- [Trenérský článek 2019/2020](templates/obsah-archiv-1746.html)
+- [Trenérský článek 2019/2020](templates/archiv-odborny-clanek-se-sezonnimi-prilohami.html)
 
 **Data a správa.** Přenášej ID článku, sekci, datum zveřejnění a uspořádaný obsah. Článek může pokrývat jednu i více sezón. U každého sezónního bloku zachovej jeho pořadí, text a přílohy. Dva podobné články v různých sekcích si ponechávají vlastní identitu.
 
@@ -100,7 +100,7 @@ Trenérská sekce nabízí odkazy na tři samostatné projekty včetně podpory 
 
 Přehled uvádí tři projekty. Jejich detaily čekají na zpracování.
 
-- [Rozcestník projektů](templates/treneri-projekty.html)
+- [Rozcestník projektů](templates/treneri-projekty-prehled.html)
 
 **Data a správa.** Spravuj vždy název projektu, vlastní cílovou stránku a pořadí. Projekt může mít více výzev pro různé sezóny. Náborový projekt pro kluby patří do odborné sekce a má jiný účel než úvod pro rodiče.
 
