@@ -1,5 +1,11 @@
 # Czech Squash – předání pro vývojáře
 
+HTML stránky v kořeni tvoří [předávací dokumentaci](index.html). Každá kapitola popisuje změny v dané sekci, potřebná data a požadavky na administraci. Vedle ní je stejný obsah v Markdownu.
+
 Schválené HTML mustry jsou v `templates/`, společné styly, skripty a soubory v `assets/`. Jednotlivá předání jsou označená Git tagem.
 
 Pro prohlížení spusť v kořeni `python3 nahled.py` a otevři [přehled šablon](http://127.0.0.1:8011/). Pro čtení zadání v Markdownu použij [rozcestník pro AI](llms.txt). Zdroj dokumentace je v `implementation/predani/extraliga/`.
+
+## Design systém
+
+[Interní katalog komponent](design-system/index.html) obsahuje vizuální základy, komponenty a jejich použití v předaných šablonách. Po spuštění místního náhledu otevři [design systém v prohlížeči](http://127.0.0.1:8011/design-system/).
