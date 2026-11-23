@@ -19,8 +19,8 @@ Odborné komise mají vlastní stránku se jmény, předsedy a zveřejněnými k
 
 Vstup ČASQ otevírá karty odborných komisí. Stejný seznam zůstává i na samostatné adrese komisí. Odtud návštěvník přejde k rozhodčím, školením a trenérům.
 
-- [Komise na vstupu ČASQ](templates/asociace-rozcestnik.html#odborne-komise)
-- [Samostatná adresa komisí](templates/odborne-komise.html)
+- [Komise na vstupu ČASQ](../templates/asociace-rozcestnik.html#odborne-komise)
+- [Samostatná adresa komisí](../templates/odborne-komise.html)
 
 **Data a správa.** U komise eviduj název, agendu, pořadí a členství osob s rolí. Zobraz jen doložené funkce a zveřejněné kontakty. Agenda může být svěřená jinému orgánu a kontakt může vést na sekretariát.
 
@@ -48,9 +48,9 @@ Představení asociace, složení výboru a kontakty jsou rozdělené mezi tři 
 
 Kontakty začínají kartou O asociaci. Následují adresa s mapou, organizační údaje a účty podle měny, pak karty výkonného výboru a sekretariátu. E-mail nebo telefon lze otevřít přímo u správné osoby.
 
-- [Představení asociace v Kontaktech](templates/kontakty.html#o-asociaci)
-- [Karty výkonného výboru](templates/kontakty.html#vybor)
-- [Kontakt pro média](templates/kontakty.html#marketing-komunikace)
+- [Představení asociace v Kontaktech](../templates/kontakty.html#o-asociaci)
+- [Karty výkonného výboru](../templates/kontakty.html#vybor)
+- [Kontakt pro média](../templates/kontakty.html#marketing-komunikace)
 
 **Data a správa.** Odděl údaje organizace, banky a veřejný pracovní kontakt osoby. Zachovej jméno s tituly, roli, agendu, pořadí a určení účtu včetně měny, IBAN a SWIFT. Změnu držitele agendy promítni do kontaktů i cíle odkazu pro média.
 
@@ -76,7 +76,7 @@ V patičce úvodní stránky jsou klikací loga rozdělená podle role. Národn�
 
 Na samostatné stránce má každá skupina nadpis a každý partner odkaz na svůj web. Zájemce o spolupráci může pokračovat na kontakty. Stejné partnerské úrovně a loga využívá patička.
 
-- [Přehled partnerů a spolupráce](templates/partneri.html)
+- [Přehled partnerů a spolupráce](../templates/partneri.html)
 
 **Data a správa.** V jedné evidenci pro stránku i patičku spravuj partnera, název pro alternativní text, logo, cílovou URL, úroveň a pořadí v rámci úrovně. Popis finanční podpory patří k poskytovateli podpory. Se změnou partnera aktualizuj jeho stránku i společný pás.
 
@@ -100,7 +100,7 @@ Do rozcestníku Ke stažení vede odkaz z hlavičky i z patičky, každý na jin
 
 Dokumenty jsou samostatným vstupem v hlavním menu. Řády a předpisy se otevírají jako první ze šesti kategorií. Každý předpis je přímý odkaz s názvem, formátem a velikostí.
 
-- [Vstup do Dokumentů](templates/dokumenty-rady-a-predpisy.html)
+- [Vstup do Dokumentů](../templates/dokumenty-rady-a-predpisy.html)
 
 **Data a správa.** Přenes název, kategorii, řazení, číslo či platnost uvedenou vydavatelem, soubor nebo externí cíl. Záměnu verze řeš v místě správy předpisu. Původní příloha zápisu musí zůstat dohledatelná i po změně nyní platného řádu.
 
@@ -130,8 +130,8 @@ Návštěvník prochází samostatné výpisy předpisů, formulářů, zápisů
 
 Pole Hledat dokument prohledá všechny kategorie včetně trenérských materiálů. Výsledky zůstávají ve skupinách, přílohy u příslušných zápisů. Zadání bez shody má vlastní stav a vymazání dotazu vrací původní výpis.
 
-- [Vyhledání kodexů z hlavní kategorie](templates/dokumenty-rady-a-predpisy.html?q=kodex)
-- [Kategorie trenérů](templates/dokumenty-treneri.html)
+- [Vyhledání kodexů z hlavní kategorie](../templates/dokumenty-rady-a-predpisy.html?q=kodex)
+- [Kategorie trenérů](../templates/dokumenty-treneri.html)
 
 **Ověřit v backendu.** Vyhledej publikované záznamy ze stejné evidence, která plní kategorie. Dotaz bez diakritiky musí najít český název, změna kategorie zachovat parametr q a vymazání obnovit její místní obsah. Při vypnutém JavaScriptu zůstávají kategorie a odkazy dostupné.
 
@@ -153,7 +153,7 @@ Původní tabulka páruje dokumenty v PDF a editovatelné soubory. Některé pol
 
 Návštěvník vybírá přímo název formuláře a formát. Dostupné verze jsou u sebe a každá má vlastní odkaz i velikost.
 
-- [Formátové a ročníkové verze](templates/dokumenty-formulare.html)
+- [Formátové a ročníkové verze](../templates/dokumenty-formulare.html)
 
 **Data a správa.** Publikuj formulář s jeho doloženými verzemi, každou s vlastním cílem, označením, formátem a velikostí. Zachovej číslo a pořadí formuláře. Jediná verze smí stát samostatně.
 
@@ -175,8 +175,8 @@ Zápisy jsou v sezónních blocích. Pod jednotlivými zápisy jsou očíslovan�
 
 Chronologický seznam drží pohromadě zápis, datum jednání a zveřejnění a jeho přílohy. Starší rok lze otevřít přímo odkazem.
 
-- [Zápisy s přílohami](templates/dokumenty-zapisy-vv.html)
-- [Starší rok jednání](templates/dokumenty-zapisy-vv.html#rok-2025)
+- [Zápisy s přílohami](../templates/dokumenty-zapisy-vv.html)
+- [Starší rok jednání](../templates/dokumenty-zapisy-vv.html#rok-2025)
 
 **Data a správa.** U zápisu zachovej číslo, datum jednání, případné datum zveřejnění, vlastní soubor a uspořádané přílohy. Přílohu spoj s konkrétním zápisem, a to i při shodné adrese souboru u více záznamů.
 
@@ -198,7 +198,7 @@ Pod ročními nadpisy jsou zápisy, pozvánky, prezenční listiny a zprávy. Je
 
 Jeden blok v přehledu obsahuje zdrojové dokumenty daného roku. V roce s více zasedáními se zobrazí všechny jeho zápisy a přílohy v původním pořadí.
 
-- [Přehled podle roku](templates/dokumenty-valne-hromady.html)
+- [Přehled podle roku](../templates/dokumenty-valne-hromady.html)
 
 **Data a správa.** Vazba souboru na zasedání a jeho pořadí musí přežít seskupení podle roku. Zachovej také jednotlivé soubory uvnitř jedné číslované přílohy. Při rozporu názvu a cílového souboru zaznamenej původní dvojici k opravě správcem.
 
@@ -220,7 +220,7 @@ Komise se střídají v dlouhém výpisu. Soutěžní a disciplinární komise n
 
 Přepínač vybere komisi. Její rozhodnutí a zápisy se zobrazí v původních skupinách. Komise bez rozepsaných sezón má soubory pohromadě.
 
-- [Výběr komise a skupiny dokumentů](templates/dokumenty-zapisy-komisi.html)
+- [Výběr komise a skupiny dokumentů](../templates/dokumenty-zapisy-komisi.html)
 
 **Data a správa.** Uchovej příslušnost ke komisi, druh záznamu, zdrojovou sezónu a pořadí. Historické komise zůstávají v archivu i po změně organizační struktury. Položka bez cílového souboru zůstává textem.
 
@@ -245,8 +245,8 @@ Trenérské dokumenty obsahují systém tříd a kodexy. Starší pozvánky, his
 
 Trenérská kategorie v Dokumentech má dvě skupiny. První nabízí základní dokumenty, druhá školení a starší podklady.
 
-- [Kategorie Dokumenty pro trenéry](templates/dokumenty-treneri.html)
-- [Starší podklady](templates/dokumenty-treneri.html#skoleni-a-starsi-podklady)
+- [Kategorie Dokumenty pro trenéry](../templates/dokumenty-treneri.html)
+- [Starší podklady](../templates/dokumenty-treneri.html#skoleni-a-starsi-podklady)
 
 **Data a správa.** Zařaď každý soubor do odpovídající skupiny, zachovej datum a místo kurzu, doložený popis a verzi seznamu. Stejnou položku a její metadata používej v kategorii i ve společném vyhledávání.
 
@@ -270,8 +270,8 @@ Původní stránka ke stažení nabízí český překlad a anglický originál 
 
 Stránka pro veřejnost nabízí výklad pro začátečníky a dvojici úplných pravidel v češtině a angličtině. U odkazů přímo uvádí jazyk, rok vydání, formát a velikost.
 
-- [Pravidla hry](templates/pravidla.html)
-- [Úplná pravidla ve dvou jazycích](templates/pravidla.html#rules-downloads-title)
+- [Pravidla hry](../templates/pravidla.html)
+- [Úplná pravidla ve dvou jazycích](../templates/pravidla.html#rules-downloads-title)
 
 **Data a správa.** U každé jazykové verze zachovej vydavatele, vydání, jazyk a skutečný soubor. Krátké redakční karty mají název a výklad, který lze při změně pravidel přezkoumat. Informace v kartách a označení staženého vydání musí souhlasit.
 
@@ -295,7 +295,7 @@ Přihlašovací stránka členské aplikace obsahuje vedle formuláře samostatn
 
 Informační stránka rozděluje pokyny pro hráče a kluby a odkazuje na přehled klubů, sekretariát a kalendář. V mustru se žádné přihlašovací údaje nezadávají.
 
-- [Veřejné pokyny pro členy](templates/clensky-system.html)
+- [Veřejné pokyny pro členy](../templates/clensky-system.html)
 
 **Data a správa.** Udržuj dva různé kontaktní postupy. Hráč získává přístup prostřednictvím svého klubu, klub přes sekretariát. Zachovej veřejnou cestu ke kontaktům i při změně adresy členské aplikace.
 
@@ -325,8 +325,8 @@ Počet hráčů vysvětluje úvod do hry, bodování a úplné znění pravidel 
 
 Odpovědi pro začátečníky, rodiče, kluby a členy se rozbalují přímo na stránce Hrej squash!. Patička i dosavadní adresa Častých otázek vedou na sekci s odpověďmi.
 
-- [Otázky a odpovědi na Hrej squash!](templates/nabory.html#otazky)
-- [Původní místní adresa FAQ](templates/caste-otazky-presmerovani-na-nabory.html)
+- [Otázky a odpovědi na Hrej squash!](../templates/nabory.html#otazky)
+- [Původní místní adresa FAQ](../templates/caste-otazky-presmerovani-na-nabory.html)
 
 **Data a správa.** Spravuj znění otázky, odpověď, pořadí a případný související odkaz. Odkazy na pravidla, klub či sekretariát musejí sledovat stejné zdroje jako navazující stránky. Věk pro přijetí dítěte a cenu první lekce určuje konkrétní klub.
 
@@ -350,7 +350,7 @@ Odpovědi pro začátečníky, rodiče, kluby a členy se rozbalují přímo na 
 
 Mustr sděluje, že úplné informace pro tento web zatím nejsou k dispozici. Uvádí ověřený obecný kontakt ČASQ a odkaz na kontaktní stránku.
 
-- [Stav při chybějícím úplném textu](templates/ochrana-osobnich-udaju.html)
+- [Stav při chybějícím úplném textu](../templates/ochrana-osobnich-udaju.html)
 
 **Data a správa.** Zveřejni verzi potvrzenou vlastníkem pro nový web. Udržuj datum verze a ověřený kontakt. Změna kontaktní osoby se má projevit i na stránce otevřené z patičky. Registrační formulář patří k členské registraci.
 

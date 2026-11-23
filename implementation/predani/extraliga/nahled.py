@@ -40,9 +40,18 @@ class Preview(SimpleHTTPRequestHandler):
         return super().guess_type(path)
 
     def send_head(self):
-        if urlsplit(self.path).path in self.server.omitted:
+        url = urlsplit(self.path)
+        path = url.path
+        local_docs = (ROOT / 'docs/index.html').is_file()
+        legacy = path.lstrip('/') or 'index.html'
+        if local_docs and '/' not in legacy and (ROOT / 'docs' / legacy).is_file():
+            self.send_response(302)
+            self.send_header('Location', url._replace(path='/docs/' + legacy).geturl())
+            self.end_headers()
+            return None
+        if path in self.server.omitted:
             self.send_response(303)
-            self.send_header('Location', '/index.html#rozsah')
+            self.send_header('Location', ('/docs' if local_docs else '') + '/index.html#rozsah')
             self.send_header('Content-Length', '0')
             self.end_headers()
             return None

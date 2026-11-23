@@ -20,7 +20,7 @@ Veřejný kalendář nabízí kategorii, název a období od–do. Pod měsíci 
 
 Pod měsícem je tabulka s termínem, kategorií, názvem, místem a stavem nebo časem. Hledání podle názvu či místa se kombinuje s kategorií a rozmezím dat. Přehled rozlišuje jednotlivce, konkrétní utkání družstev, společné ligové kolo i školení trenérů a rozhodčích.
 
-- [Kalendář, filtry a měsíční tabulky](templates/kalendar-akci.html#main-content)
+- [Kalendář, filtry a měsíční tabulky](../templates/kalendar-akci.html#main-content)
 - [Trenérské pozvánky čekající na zpracování](index.md#trenerske-detaily)
 
 **Data pro přehled.** Ke zveřejněné položce předej identitu, druh a podrobnější kategorii, začátek, případně konec, místní čas, název, sportoviště a zveřejněný stav. Ligové kolo může mít místo až v rozlosování. U kurzu zachovej i zrušení a zveřejněný důvod. Samotné uplynutí data nedokládá odehrání.
@@ -53,10 +53,10 @@ Rozcestník odkazuje na domácí výpisy i úplné zahraniční žebříčky PSA
 
 Jeden panel vybírá okruh, mužskou či ženskou kategorii, juniorský nebo masters věk a následně rok a datum vydání. Hledání hráče nebo klubu a stránkování zachovávají oficiální pořadí. Nadpis nese datum platnosti. Výchozí volbou jsou dospělí muži a poslední dostupné vydání.
 
-- [Výchozí tabulka dospělých](templates/zebricky.html#muzi)
-- [Junioři do 19 let](templates/zebricky.html#B19)
-- [Masters 35+](templates/zebricky.html#VM35)
-- [Kategorie bez vydání](templates/zebricky.html#VZ60)
+- [Výchozí tabulka dospělých](../templates/zebricky.html#muzi)
+- [Junioři do 19 let](../templates/zebricky.html#B19)
+- [Masters 35+](../templates/zebricky.html#VM35)
+- [Kategorie bez vydání](../templates/zebricky.html#VZ60)
 
 **Data pro vydání.** Předávej oficiální kategorii, datum vydání a jeho úplné seřazené řádky. Zachovej pořadí i při stejných bodech, publikovaný posun, hráče a klub k vydání, ligové a turnajové body, celkem a dostupné umístění PSA či ESF podle konkrétní tabulky. Datum narození se nesmí dostat do veřejného HTML ani skrytých dat žebříčku.
 
@@ -87,9 +87,9 @@ Profil ukazuje základní údaje, aktuální a nejlepší umístění v kategori
 
 Vedle registračních údajů a vazeb na soupisky jsou současné umístění, posun a dostupné mezinárodní pořadí. Nejlepší umístění patří vždy ke kategorii a měsíci. Měsíční historii lze projít v grafu pořadí nebo bodů, ročním přehledu i podrobných datech. Profil bez historie má vlastní prázdný stav.
 
-- [Plný profil a základní údaje](templates/hrac-profil-s-historii-a-zapasy.html)
-- [Graf, měsíční historie a podrobná data](templates/hrac-profil-s-historii-a-zapasy.html#pohyb)
-- [Profil bez historie a zápasů](templates/hrac-profil-bez-historie-a-zapasu.html)
+- [Plný profil a základní údaje](../templates/hrac-profil-s-historii-a-zapasy.html)
+- [Graf, měsíční historie a podrobná data](../templates/hrac-profil-s-historii-a-zapasy.html#pohyb)
+- [Profil bez historie a zápasů](../templates/hrac-profil-bez-historie-a-zapasu.html)
 
 **Data pro profil.** Použij stabilní identitu hráče ze zdrojového profilu. Veřejné registrační číslo, ročník, příslušnost ke klubu a soupiska družstva mají vlastní význam. Ulož datum platnosti, soutěž a sezónu soupisky. Každé měření potřebuje vydání, kategorii, pořadí a dostupné body. U rekordu uchovej datum, k němuž ho zdroj uvádí.
 
@@ -114,8 +114,8 @@ Seznam sdružuje zápasy pod jednotlivé účasti. Návštěvník může vybrat 
 
 Návštěvník hledá soupeře či akci, vybírá rok a přepíná Vše, Turnaje a Liga. U turnajů s doloženým zařazením navazují okruh, třída a kategorie. Stránkují se celé akce. Po rozbalení zůstávají zápasy pohromadě s příslušnou účastí a jejími body.
 
-- [Zápasové karty a navazující filtry](templates/hrac-profil-s-historii-a-zapasy.html#zapasy)
-- [Stav bez zápasů](templates/hrac-profil-bez-historie-a-zapasu.html#zapasy)
+- [Zápasové karty a navazující filtry](../templates/hrac-profil-s-historii-a-zapasy.html#zapasy)
+- [Stav bez zápasů](../templates/hrac-profil-bez-historie-a-zapasu.html#zapasy)
 
 **Data pro účast.** Pro každou účast uchovej akci, datum, druh, kategorii, umístění, zveřejněné body za pořadí, za soupeře a celkem. Jednotlivé zápasy mají pořadí, soupeře, fázi, výsledek z pohledu hráče a dostupné body. Více kategorií na jedné akci smí mít různé souhrny.
 
@@ -146,7 +146,7 @@ Jména účastníků a jejich konečná umístění zveřejňuje ČASQ ve zpráv
 
 Karty spojují české účastníky konkrétních šampionátů. U osoby jsou klub, ročník, umístění na příslušné akci a odkaz na profil. Hledání, kategorie Dospělí / Junioři U19 a skupina Hráči / Hráčky se kombinují. Hráč s účastí na obou šampionátech má jednu kartu dostupnou z obou kategorií.
 
-- [Přehled reprezentantů a výsledků](templates/reprezentace.html#main-content)
+- [Přehled reprezentantů a výsledků](../templates/reprezentace.html#main-content)
 
 **Data pro kartu.** Spoj evidenci osoby s jednou nebo více účastmi. Pro každou uchovej šampionát, rok, veřejnou kategorii, skupinu, publikované umístění a zdroj výsledku. Označení a období výběru patří k přehledu. Veřejná ukázka představuje účastníky dvou akcí v roce 2026.
 

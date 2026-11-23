@@ -8,19 +8,19 @@
 
 ### [Přehled soutěží](souteze-druzstev.md#prehled)
 
-- [Otevřít mustr](templates/souteze-druzstev-prehled.html)
+- [Otevřít mustr](../templates/souteze-druzstev-prehled.html)
 
 ### [Detail soutěže](souteze-druzstev.md#soutez)
 
-- [Otevřít mustr](templates/soutez-detail-s-tabulkou-druzstvy-a-rozpisem.html)
+- [Otevřít mustr](../templates/soutez-detail-s-tabulkou-druzstvy-a-rozpisem.html)
 
 ### [Detail družstva](souteze-druzstev.md#druzstvo)
 
-- [Otevřít mustr](templates/druzstvo-detail-se-soupiskou-a-exporty.html)
+- [Otevřít mustr](../templates/druzstvo-detail-se-soupiskou-a-exporty.html)
 
 ### [Detail utkání](souteze-druzstev.md#utkani)
 
-- [Otevřít mustr](templates/utkani-uplny-zapis-se-zapasy-a-sety.html)
+- [Otevřít mustr](../templates/utkani-uplny-zapis-se-zapasy-a-sety.html)
 
 ## Sportovní přehledy a profily
 
@@ -28,20 +28,20 @@
 
 ### [Kalendář akcí](sportovni-prehledy.md#kalendar)
 
-- [Otevřít mustr](templates/kalendar-akci.html)
+- [Otevřít mustr](../templates/kalendar-akci.html)
 
 ### [Žebříčky](sportovni-prehledy.md#zebricky)
 
-- [Otevřít mustr](templates/zebricky.html)
+- [Otevřít mustr](../templates/zebricky.html)
 
 ### [Profil hráče](sportovni-prehledy.md#hrac)
 
-- [Profil s historií a zápasy](templates/hrac-profil-s-historii-a-zapasy.html)
-- [Bez historie a zápasů](templates/hrac-profil-bez-historie-a-zapasu.html)
+- [Profil s historií a zápasy](../templates/hrac-profil-s-historii-a-zapasy.html)
+- [Bez historie a zápasů](../templates/hrac-profil-bez-historie-a-zapasu.html)
 
 ### [Reprezentace](sportovni-prehledy.md#reprezentace)
 
-- [Otevřít mustr](templates/reprezentace.html)
+- [Otevřít mustr](../templates/reprezentace.html)
 
 ## Kluby a nábory
 
@@ -49,17 +49,17 @@
 
 ### [Přehled klubů](kluby-nabory.md#kluby)
 
-- [Otevřít mustr](templates/kluby-adresar-s-mapou.html)
+- [Otevřít mustr](../templates/kluby-adresar-s-mapou.html)
 
 ### [Profil klubu](kluby-nabory.md#profil-klubu)
 
-- [Profil s kontakty a družstvy](templates/klub-profil-s-kontakty-druzstvy-a-exporty.html)
-- [Dvě sportoviště, bez kontaktů](templates/klub-profil-se-dvema-sportovisti-bez-kontaktu.html)
-- [Bez sportoviště a družstev](templates/klub-profil-bez-sportoviste-kontaktu-a-druzstev.html)
+- [Profil s kontakty a družstvy](../templates/klub-profil-s-kontakty-druzstvy-a-exporty.html)
+- [Dvě sportoviště, bez kontaktů](../templates/klub-profil-se-dvema-sportovisti-bez-kontaktu.html)
+- [Bez sportoviště a družstev](../templates/klub-profil-bez-sportoviste-kontaktu-a-druzstev.html)
 
 ### [Nábory – Hrej squash!](kluby-nabory.md#nabory)
 
-- [Otevřít mustr](templates/nabory.html)
+- [Otevřít mustr](../templates/nabory.html)
 
 ## Úvod, aktuality a média
 
@@ -67,35 +67,35 @@
 
 ### [Úvodní stránka](uvod-media.md#uvod)
 
-- [Otevřít mustr](templates/uvodni-stranka.html)
+- [Otevřít mustr](../templates/uvodni-stranka.html)
 
 ### [Archiv aktualit](uvod-media.md#aktuality)
 
-- [Otevřít mustr](templates/aktuality-prehled-s-filtry.html)
+- [Otevřít mustr](../templates/aktuality-prehled-s-filtry.html)
 
 ### [Detail článku](uvod-media.md#clanek)
 
-- [Reportáž s fotogalerií](templates/clanek-s-fotogalerii.html)
-- [Bez fotografie, s přílohami](templates/clanek-bez-fotografie-s-prilohami.html)
-- [Externí přenosy v textu](templates/clanek-s-externimi-prenosy.html)
-- [Ilustrační grafika bez galerie](templates/clanek-s-ilustracni-grafikou-bez-galerie.html)
+- [Reportáž s fotogalerií](../templates/clanek-s-fotogalerii.html)
+- [Bez fotografie, s přílohami](../templates/clanek-bez-fotografie-s-prilohami.html)
+- [Externí přenosy v textu](../templates/clanek-s-externimi-prenosy.html)
+- [Ilustrační grafika bez galerie](../templates/clanek-s-ilustracni-grafikou-bez-galerie.html)
 
 ### [Rozcestník Média](uvod-media.md#media)
 
-- [Otevřít mustr](templates/media-rozcestnik.html)
+- [Otevřít mustr](../templates/media-rozcestnik.html)
 
 ### [Tiskové informace](uvod-media.md#tiskove-zpravy)
 
-- [Otevřít mustr](templates/tiskove-zpravy-prazdny-stav.html)
+- [Otevřít mustr](../templates/tiskove-zpravy-prazdny-stav.html)
 
 ### [Přehled fotogalerií](uvod-media.md#fotogalerie)
 
-- [Otevřít mustr](templates/fotogalerie-prehled-s-filtry.html)
+- [Otevřít mustr](../templates/fotogalerie-prehled-s-filtry.html)
 
 ### [Detail galerie](uvod-media.md#galerie)
 
-- [Galerie se jménem fotografa](templates/galerie-se-jmenem-fotografa.html)
-- [Zdroj bez jména fotografa](templates/galerie-se-zdrojem-bez-jmena-fotografa.html)
+- [Galerie se jménem fotografa](../templates/galerie-se-jmenem-fotografa.html)
+- [Zdroj bez jména fotografa](../templates/galerie-se-zdrojem-bez-jmena-fotografa.html)
 
 ## ČASQ, dokumenty a veřejné informace
 
@@ -103,56 +103,56 @@
 
 ### [ČASQ a odborné komise](asociace-dokumenty.md#komise)
 
-- [Otevřít mustr](templates/asociace-rozcestnik.html)
-- [Samostatná stránka komisí](templates/odborne-komise.html)
+- [Otevřít mustr](../templates/asociace-rozcestnik.html)
+- [Samostatná stránka komisí](../templates/odborne-komise.html)
 
 ### [Kontakty a vedení asociace](asociace-dokumenty.md#kontakty)
 
-- [Otevřít mustr](templates/kontakty.html)
+- [Otevřít mustr](../templates/kontakty.html)
 
 ### [Partneři](asociace-dokumenty.md#partneri)
 
-- [Otevřít mustr](templates/partneri.html)
+- [Otevřít mustr](../templates/partneri.html)
 
 ### [Řády a předpisy](asociace-dokumenty.md#predpisy)
 
-- [Otevřít mustr](templates/dokumenty-rady-a-predpisy.html)
+- [Otevřít mustr](../templates/dokumenty-rady-a-predpisy.html)
 
 ### [Formuláře](asociace-dokumenty.md#formulare)
 
-- [Otevřít mustr](templates/dokumenty-formulare.html)
+- [Otevřít mustr](../templates/dokumenty-formulare.html)
 
 ### [Zápisy výkonného výboru](asociace-dokumenty.md#vybor)
 
-- [Otevřít mustr](templates/dokumenty-zapisy-vv.html)
+- [Otevřít mustr](../templates/dokumenty-zapisy-vv.html)
 
 ### [Valné hromady](asociace-dokumenty.md#hromady)
 
-- [Otevřít mustr](templates/dokumenty-valne-hromady.html)
+- [Otevřít mustr](../templates/dokumenty-valne-hromady.html)
 
 ### [Zápisy komisí](asociace-dokumenty.md#zapisy-komisi)
 
-- [Otevřít mustr](templates/dokumenty-zapisy-komisi.html)
+- [Otevřít mustr](../templates/dokumenty-zapisy-komisi.html)
 
 ### [Dokumenty pro trenéry](asociace-dokumenty.md#trenerske-dokumenty)
 
-- [Otevřít mustr](templates/dokumenty-treneri.html)
+- [Otevřít mustr](../templates/dokumenty-treneri.html)
 
 ### [Pravidla hry](asociace-dokumenty.md#pravidla)
 
-- [Otevřít mustr](templates/pravidla.html)
+- [Otevřít mustr](../templates/pravidla.html)
 
 ### [Členský přístup](asociace-dokumenty.md#clensky-pristup)
 
-- [Otevřít mustr](templates/clensky-system.html)
+- [Otevřít mustr](../templates/clensky-system.html)
 
 ### [Časté otázky](asociace-dokumenty.md#faq)
 
-- [Přesměrování na otázky](templates/caste-otazky-presmerovani-na-nabory.html)
+- [Přesměrování na otázky](../templates/caste-otazky-presmerovani-na-nabory.html)
 
 ### [Ochrana osobních údajů](asociace-dokumenty.md#ochrana-udaju)
 
-- [Otevřít mustr](templates/ochrana-osobnich-udaju.html)
+- [Otevřít mustr](../templates/ochrana-osobnich-udaju.html)
 
 ## Trenéři, rozhodčí a školení
 
@@ -160,31 +160,31 @@
 
 ### [Trenérský rozcestník](odborny-servis.md#treneri)
 
-- [Otevřít mustr](templates/treneri-rozcestnik.html)
+- [Otevřít mustr](../templates/treneri-rozcestnik.html)
 
 ### [Archiv trenérů](odborny-servis.md#archiv)
 
-- [Otevřít mustr](templates/treneri-archiv.html)
+- [Otevřít mustr](../templates/treneri-archiv.html)
 
 ### [Archivní odborný článek](odborny-servis.md#archivni-clanek)
 
-- [Sezónní článek trenérů](templates/archiv-odborny-clanek-se-sezonnimi-prilohami.html)
+- [Sezónní článek trenérů](../templates/archiv-odborny-clanek-se-sezonnimi-prilohami.html)
 
 ### [Přehled trenérských projektů](odborny-servis.md#projekty)
 
-- [Otevřít mustr](templates/treneri-projekty-prehled.html)
+- [Otevřít mustr](../templates/treneri-projekty-prehled.html)
 
 ### [Seznam trenérů](odborny-servis.md#seznam)
 
-- [Otevřít mustr](templates/treneri-seznam.html)
+- [Otevřít mustr](../templates/treneri-seznam.html)
 
 ### [Rozhodčí](odborny-servis.md#rozhodci)
 
-- [Otevřít mustr](templates/rozhodci.html)
+- [Otevřít mustr](../templates/rozhodci.html)
 
 ### [Školení](odborny-servis.md#skoleni)
 
-- [Otevřít mustr](templates/skoleni.html)
+- [Otevřít mustr](../templates/skoleni.html)
 
 <a id="chybejici-sablony"></a>
 

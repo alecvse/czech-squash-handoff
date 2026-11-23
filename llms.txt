@@ -2,11 +2,11 @@
 
 ## Dokumentace
 
-- [Přehled šablon](index.md)
-- [Obecné principy](principy.md)
-- [Soutěže družstev](souteze-druzstev.md)
-- [Sportovní přehledy a profily](sportovni-prehledy.md)
-- [Kluby a nábory](kluby-nabory.md)
-- [Úvod, aktuality a média](uvod-media.md)
-- [ČASQ, dokumenty a veřejné informace](asociace-dokumenty.md)
-- [Trenéři, rozhodčí a školení](odborny-servis.md)
+- [Přehled šablon](docs/index.md)
+- [Obecné principy](docs/principy.md)
+- [Soutěže družstev](docs/souteze-druzstev.md)
+- [Sportovní přehledy a profily](docs/sportovni-prehledy.md)
+- [Kluby a nábory](docs/kluby-nabory.md)
+- [Úvod, aktuality a média](docs/uvod-media.md)
+- [ČASQ, dokumenty a veřejné informace](docs/asociace-dokumenty.md)
+- [Trenéři, rozhodčí a školení](docs/odborny-servis.md)

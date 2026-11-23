@@ -18,10 +18,10 @@ Přehled trenérské části odkazuje na aktuality, seznam, projekty, pozvánky,
 
 #### Nový mustr
 
-Rozcestník slouží jako vstup k šesti oblastem. Dokumenty míří do společné kategorie Dokumentů, metodika zůstává externí. Trenérské aktuality a pozvánky čekají na dopracování. Sezónní články má vlastní [archiv trenérů](templates/treneri-archiv.html).
+Rozcestník slouží jako vstup k šesti oblastem. Dokumenty míří do společné kategorie Dokumentů, metodika zůstává externí. Trenérské aktuality a pozvánky čekají na dopracování. Sezónní články má vlastní [archiv trenérů](../templates/treneri-archiv.html).
 
-- [Rozcestník Trenéři](templates/treneri-rozcestnik.html)
-- [Cíl karty Dokumenty](templates/dokumenty-treneri.html)
+- [Rozcestník Trenéři](../templates/treneri-rozcestnik.html)
+- [Cíl karty Dokumenty](../templates/dokumenty-treneri.html)
 
 **Data a správa.** Pro kartu zachovej název, pořadí, popis a cíl. U metodiky použij přímo adresu externí služby. Odborné materiály a článkový archiv mají rozdílnou funkci a vlastní cílové stránky.
 
@@ -43,8 +43,8 @@ Trenérský archiv spojuje starší dokumenty s odkazy na celé sezónní člán
 
 Archiv vypisuje sezóny se zveřejněným článkem. Starší pozvánky a další samostatné soubory patří do trenérské kategorie Dokumentů.
 
-- [Seznam sezón s články](templates/treneri-archiv.html)
-- [Převedené samostatné soubory](templates/dokumenty-treneri.html#skoleni-a-starsi-podklady)
+- [Seznam sezón s články](../templates/treneri-archiv.html)
+- [Převedené samostatné soubory](../templates/dokumenty-treneri.html#skoleni-a-starsi-podklady)
 
 **Data a správa.** Zachovej označení a pořadí sezón i ID navazujícího článku. Sezóna s nadpisem bez cíle nevytváří prázdnou archivní stránku. Samostatnou přílohu identifikuj podle souboru a zařaď ji do odpovídající skupiny.
 
@@ -69,7 +69,7 @@ Každý archivní článek má původní číselné ID a vlastní soubor oznáme
 
 Sezónní článek trenérů ukazuje společnou šablonu pro odborný archiv. Každý záznam má vlastní ID, text a odkazy na přílohy. Drobečková navigace se řídí odbornou sekcí. Přehledy Rozhodčí a Školení nabízejí dostupné soubory také přímo.
 
-- [Trenérský článek 2019/2020](templates/archiv-odborny-clanek-se-sezonnimi-prilohami.html)
+- [Trenérský článek 2019/2020](../templates/archiv-odborny-clanek-se-sezonnimi-prilohami.html)
 
 **Data a správa.** Přenášej ID článku, sekci, datum zveřejnění a uspořádaný obsah. Článek může pokrývat jednu i více sezón. U každého sezónního bloku zachovej jeho pořadí, text a přílohy. Dva podobné články v různých sekcích si ponechávají vlastní identitu.
 
@@ -100,7 +100,7 @@ Trenérská sekce nabízí odkazy na tři samostatné projekty včetně podpory 
 
 Přehled uvádí tři projekty. Jejich detaily čekají na zpracování.
 
-- [Rozcestník projektů](templates/treneri-projekty-prehled.html)
+- [Rozcestník projektů](../templates/treneri-projekty-prehled.html)
 
 **Data a správa.** Spravuj vždy název projektu, vlastní cílovou stránku a pořadí. Projekt může mít více výzev pro různé sezóny. Náborový projekt pro kluby patří do odborné sekce a má jiný účel než úvod pro rodiče.
 
@@ -122,7 +122,7 @@ Seznam zveřejňuje trenéry podle kvalifikace a vysvětluje význam licenčníc
 
 Tabulka rozlišuje jméno, třídu ČASQ a zveřejněný údaj o licenci. Hledání podle jména lze kombinovat s třídou a typem záznamu. Výpis hlásí počet shod, nabízí zrušení filtrů a má stav bez výsledků.
 
-- [Seznam trenérů s kombinovatelnými filtry](templates/treneri-seznam.html)
+- [Seznam trenérů s kombinovatelnými filtry](../templates/treneri-seznam.html)
 
 **Data a správa.** Základem je záznam kvalifikace, nikoli unikátní napsané jméno. Zachovej různé licence i osoby shodného jména. Ulož doložené datum i případné slovní označení. Datum v minulosti a výslovné pozastavení licence jsou dva různé údaje.
 
@@ -149,7 +149,7 @@ Odborná stránka odkazuje na vzdělávací dokumenty a starší kurzy. Pozvánk
 
 Na jednom místě jsou kontakty komise rozhodčích, soubory v sekci Dokumenty a pozvánky na starší kurzy. Přílohy lze otevřít přímo z výpisu.
 
-- [Kontakty, dokumenty a kurzy rozhodčích](templates/rozhodci.html)
+- [Kontakty, dokumenty a kurzy rozhodčích](../templates/rozhodci.html)
 
 **Data a správa.** Členy komise zobraz ze stejné evidence jako na stránce ČASQ. Předpisy, systém vzdělávání a seznamy patří do části Dokumenty. Část Kurzy používá stejnou evidenci školení jako Kalendář. Odborný přehled nabídne zveřejněný termín, odkaz na případné oznámení v Aktualitách a stejnou schválenou přílohu, kterou má kurz v evidenci. Článek má vlastní ID a datum vydání.
 
@@ -180,7 +180,7 @@ Stránka Školení a sezónní články kombinují texty pozvánek s přílohami
 
 Školení je výpis převzatých archivních souborů. Uvádí název, věcný popis, formát a velikost. Publikované termíny najde návštěvník v Kalendáři. Detail trenérské pozvánky čeká na zpracování.
 
-- [Archivní materiály ke školení](templates/skoleni.html)
+- [Archivní materiály ke školení](../templates/skoleni.html)
 - [Trenérské pozvánky čekající na zpracování](index.md#trenerske-detaily)
 
 **Data a správa.** Do archivního výpisu zařaď dostupné přílohy školení a další schválené archivní materiály. Stejnou přílohu uveď ve výpisu jednou. Pokud patří k evidovanému kurzu, použij jeho vazbu na soubor. Sezónní články si ponechají původní text, ID a odkazy na přílohy. Kurz bez přílohy je dohledatelný podle termínu v kalendáři, pokud je zveřejněný.
