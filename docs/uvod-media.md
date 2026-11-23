@@ -338,6 +338,6 @@ Galerie MČR juniorů má deset fotografií s popisky a jménem fotografky. Gale
 
 ### Původní články pro kontrolu migrace
 
-- Článek o Madrid Open ukazuje, že stejný textový cíl může být v hlavních aktualitách i v archivu. [Madrid Open](https://czechsquash.cz/novinka/?news=3193)
+- Hlavní aktuality vedou na tři předané články. U Hradeckého juniorského CUPu se otevře reportáž s galerií, u ME U19 reportáž z Krakova s odkazy na přenosy a u podpory trenérů zpráva s grafikou Nadace ČEZ. [Hradecký juniorský CUP](../templates/clanek-s-fotogalerii.html) · [ME U19 v Krakově](../templates/clanek-s-externimi-prenosy.html) · [Podpora trenérů](../templates/clanek-s-ilustracni-grafikou-bez-galerie.html)
 - Zpráva o podpoře trenérů patří v ukázce do hlavních aktualit i do bloku šesti karet. [Podpora trenérů](https://czechsquash.cz/novinka/?news=3198)
 - Reportáže z Brazílie a z Dutch Junior Open ukazují stručnější a rozsáhlejší galerii. [Živá Brazílie](https://czechsquash.cz/novinka/?news=3230) · [Živý Dutch Junior Open](https://czechsquash.cz/novinka/?news=3195)

@@ -1,7 +1,8 @@
 """Build the local Czech Squash handoff preview, or its final ZIP on request."""
 from argparse import ArgumentParser
 from hashlib import sha256
-from html import escape
+from datetime import date
+from html import escape, unescape
 from html.parser import HTMLParser
 from pathlib import Path
 import re
@@ -26,11 +27,20 @@ WITHHELD = {'historie.html', 'co-je-to-squash.html', 'design-system.html'}
 # Each chapter declares its primary pages with data-template. Only these explicit
 # secondary examples add files to the handoff, independently of editorial links.
 EXAMPLES = {
+    'soutez-detail-s-tabulkou-druzstvy-a-rozpisem.html': (
+        ('soutez-bez-zverejnene-tabulky-soupisek-a-rozpisu.html', 'Bez zveřejněné tabulky, soupisek a rozpisu'),
+    ),
+    'druzstvo-detail-se-soupiskou-a-exporty.html': (
+        ('druzstvo-s-vice-rolemi-hrace-na-soupisce.html', 'Více rolí u jednoho hráče'),
+    ),
+    'utkani-uplny-zapis-se-zapasy-a-sety.html': (
+        ('utkani-s-castecne-vyplnenym-zapisem.html', 'Výsledek družstev s jedinou vyplněnou dvojicí'),
+    ),
     'klub-profil-s-kontakty-druzstvy-a-exporty.html': (
         ('klub-profil-se-dvema-sportovisti-bez-kontaktu.html', 'Dvě sportoviště, bez kontaktů'),
         ('klub-profil-bez-sportoviste-kontaktu-a-druzstev.html', 'Bez sportoviště a družstev'),
     ),
-    'hrac-profil-s-historii-a-zapasy.html': (('hrac-profil-bez-historie-a-zapasu.html', 'Bez historie a zápasů'),),
+    'hrac-profil-s-historii-a-zapasy.html': (('hrac-profil-bez-historie-a-zapasu.html', 'Bez měsíční historie žebříčku'),),
     'clanek-s-fotogalerii.html': (
         ('clanek-bez-fotografie-s-prilohami.html', 'Bez fotografie, s přílohami'),
         ('clanek-s-externimi-prenosy.html', 'Externí přenosy v textu'),
@@ -41,8 +51,11 @@ EXAMPLES = {
 }
 
 PRIMARY_LABELS = {
+    'soutez-detail-s-tabulkou-druzstvy-a-rozpisem.html': 'Tabulka, družstva a rozpis',
+    'druzstvo-detail-se-soupiskou-a-exporty.html': 'Soupiska a exporty',
+    'utkani-uplny-zapis-se-zapasy-a-sety.html': 'Úplný zápis se sety',
     'klub-profil-s-kontakty-druzstvy-a-exporty.html': 'Profil s kontakty a družstvy',
-    'hrac-profil-s-historii-a-zapasy.html': 'Profil s historií a zápasy',
+    'hrac-profil-s-historii-a-zapasy.html': 'S měsíční historií žebříčku',
     'clanek-s-fotogalerii.html': 'Reportáž s fotogalerií',
     'galerie-se-jmenem-fotografa.html': 'Galerie se jménem fotografa',
     'archiv-odborny-clanek-se-sezonnimi-prilohami.html': 'Sezónní článek trenérů',
@@ -133,6 +146,9 @@ class Chapter(HTMLParser):
 
 
 SAMPLE_SOURCES = {
+    'soutez-bez-zverejnene-tabulky-soupisek-a-rozpisu.html': 'soutez-1ligap1.html',
+    'druzstvo-s-vice-rolemi-hrace-na-soupisce.html': 'druzstvo-203-2026-2027.html',
+    'utkani-s-castecne-vyplnenym-zapisem.html': 'utkani-liga-11627-7936.html',
     'clanek-s-fotogalerii.html': 'clanek-hradecky-juniorsky-cup.html',
     'clanek-bez-fotografie-s-prilohami.html': 'clanek-podpora-lscm-2026.html',
     'clanek-s-externimi-prenosy.html': 'clanek-3122.html',
@@ -167,13 +183,70 @@ HANDOFF_NAMES = {source: sample for sample, source in SAMPLE_SOURCES.items()}
 LOCAL_PAGE_URL = re.compile(r'((?:href=["\']|url=)(?:\./)?)([\w-]+\.html)(?=[?#"\'])', re.I)
 
 
-def sample_markup(name, approved_names):
-    if Path(name).name != name or not name.endswith('.html') or withheld(SAMPLE_SOURCES.get(name, name)):
-        raise ValueError(f'Outside the approved handoff: {name}')
+def sample_source(name):
     source = ROOT / 'templates' / name
     if not source.exists() and name in SAMPLE_SOURCES:
         source = source.with_name(SAMPLE_SOURCES[name])
-    markup = source.read_text(encoding='utf-8')
+    return source
+
+
+# Editorial selection for this handoff. The Kraków report opens with a banner;
+# its first match photograph is the chosen cover. All copy comes from the detail.
+FEATURED_ARTICLES = (
+    ('clanek-s-fotogalerii.html', 'Turnaje a soutěže', None),
+    ('clanek-s-externimi-prenosy.html', 'Reprezentace', 'news-3122-7aaff1ada84bb3207f998888d8bf9bdb.jpg'),
+    ('clanek-s-ilustracni-grafikou-bez-galerie.html', 'ČASQ', None),
+)
+
+
+def featured_homepage(markup, approved_names):
+    media, stories = [], []
+    for name, category, cover in FEATURED_ARTICLES:
+        if name not in approved_names:
+            raise ValueError(f'Featured article outside the handoff: {name}')
+        detail = sample_source(name).read_text(encoding='utf-8')
+        article = re.search(r'<article\b[^>]*class="[^"]*\bnews-article\b[^"]*"[^>]*>(.*?)</article>', detail, re.S)
+        if not article:
+            raise ValueError(f'Missing article content: {name}')
+        content = article[1]
+        title = re.search(r'<h1\b[^>]*>(.*?)</h1>', content, re.S)
+        publication = re.search(r'<time datetime="(\d{4}-\d{2}-\d{2})"', content)
+        lead = re.search(r'<p class="text-article__lead\b[^"]*">(.*?)</p>', content, re.S)
+        if not lead:
+            body = content.partition('</header>')[2]
+            lead = re.search(r'<p>([^<]+)</p>', body)
+        images = re.findall(r'<img\b[^>]*>', content, re.S)
+        image = next((img for img in images if not cover or f'/{cover}"' in img), None)
+        if not all((title, publication, lead, image)):
+            raise ValueError(f'Incomplete featured article: {name}')
+        href = './' + name
+        # The carousel already manages visibility. A first-slide cover must load immediately.
+        image = image.replace(' loading="lazy"', '')
+        media.append(f'<a class="hero__media-link" href="{href}">{image}</a>')
+        when = date.fromisoformat(publication[1]).strftime('%d. %m. %Y')
+        summary = escape(' '.join(unescape(re.sub(r'<[^>]+>', '', lead[1])).split()))
+        stories.append(f'<p class="eyebrow">{escape(category)} · {when}</p>'
+                       f'<h2><a href="{href}">{title[1]}</a></h2><p>{summary}</p>')
+
+    # The portable source can already contain the rendered highlights or an unlinked
+    # cover from a prior release. Keep the original slide containers and controls.
+    for pattern, replacements in (
+        (r'<(?:a|div) class="hero__media-link"[^>]*>\s*<img\b[^>]*>\s*</(?:a|div)>', media),
+        (r'(?<=<div data-hero-content>).*?(?=</div>)|(?<=<div data-hero-content hidden>).*?(?=</div>)', stories),
+    ):
+        if len(re.findall(pattern, markup, re.S)) != len(replacements):
+            raise ValueError('Expected three homepage highlights')
+        slots = iter(replacements)
+        markup = re.sub(pattern, lambda _: next(slots), markup, flags=re.S)
+    return markup
+
+
+def sample_markup(name, approved_names):
+    if Path(name).name != name or not name.endswith('.html') or withheld(SAMPLE_SOURCES.get(name, name)):
+        raise ValueError(f'Outside the approved handoff: {name}')
+    markup = sample_source(name).read_text(encoding='utf-8')
+    if name == 'uvodni-stranka.html':
+        markup = featured_homepage(markup, approved_names)
     # Rewrite only local page URLs, including the FAQ refresh destination.
     markup = LOCAL_PAGE_URL.sub(
         lambda match: match[1] + HANDOFF_NAMES.get(match[2], match[2]), markup

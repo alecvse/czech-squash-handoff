@@ -98,9 +98,11 @@ V každé soutěži má družstvo vlastní soupisku se jménem klubu, seznamem h
 
 #### Nový mustr
 
-Tabulka Týmy seskupuje družstva klubu pro uvedenou sezónu. Název týmu a soutěže otevírá odpovídající detaily, počet hráčů a soubor XLSX patří ke konkrétní soupisce. Pokud nejsou doložena žádná družstva, tabulka to uvede.
+Tabulka Týmy seskupuje družstva klubu pro uvedenou sezónu. Z řádku Viktoria Brno Sportprofit se otevře detail družstva nebo Extraliga mužů. Ze soupisky vede odkaz na Marka Panáčka, jeho profil odkazuje zpět na družstvo. Počet hráčů i soubor XLSX patří ke stejné soupisce. Pokud nejsou doložena žádná družstva, tabulka to uvede.
 
-- [Více družstev v různých soutěžích](../templates/klub-profil-s-kontakty-druzstvy-a-exporty.html#tymy)
+- [Mužská a ženská družstva Viktorie Brno](../templates/klub-profil-s-kontakty-druzstvy-a-exporty.html#tymy)
+- [Soupiska Viktorie Brno Sportprofit 2026/2027](../templates/druzstvo-s-vice-rolemi-hrace-na-soupisce.html#soupiska)
+- [Marek Panáček s odkazem na soupisku 2026/2027](../templates/hrac-profil-s-historii-a-zapasy.html)
 - [Stav bez uvedeného družstva](../templates/klub-profil-bez-sportoviste-kontaktu-a-druzstev.html#tymy)
 
 **Data pro řádek.** Spoj klub s účastí družstva podle identity, sezóny a soutěže včetně skupiny. Součet hráčů a export musejí vycházet z téže verze soupisky. Použij skutečný název družstva pro daný ročník.

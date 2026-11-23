@@ -12,15 +12,18 @@
 
 ### [Detail soutěže](souteze-druzstev.md#soutez)
 
-- [Otevřít mustr](../templates/soutez-detail-s-tabulkou-druzstvy-a-rozpisem.html)
+- [Tabulka, družstva a rozpis](../templates/soutez-detail-s-tabulkou-druzstvy-a-rozpisem.html)
+- [Bez zveřejněné tabulky, soupisek a rozpisu](../templates/soutez-bez-zverejnene-tabulky-soupisek-a-rozpisu.html)
 
 ### [Detail družstva](souteze-druzstev.md#druzstvo)
 
-- [Otevřít mustr](../templates/druzstvo-detail-se-soupiskou-a-exporty.html)
+- [Soupiska a exporty](../templates/druzstvo-detail-se-soupiskou-a-exporty.html)
+- [Více rolí u jednoho hráče](../templates/druzstvo-s-vice-rolemi-hrace-na-soupisce.html)
 
 ### [Detail utkání](souteze-druzstev.md#utkani)
 
-- [Otevřít mustr](../templates/utkani-uplny-zapis-se-zapasy-a-sety.html)
+- [Úplný zápis se sety](../templates/utkani-uplny-zapis-se-zapasy-a-sety.html)
+- [Výsledek družstev s jedinou vyplněnou dvojicí](../templates/utkani-s-castecne-vyplnenym-zapisem.html)
 
 ## Sportovní přehledy a profily
 
@@ -36,8 +39,8 @@
 
 ### [Profil hráče](sportovni-prehledy.md#hrac)
 
-- [Profil s historií a zápasy](../templates/hrac-profil-s-historii-a-zapasy.html)
-- [Bez historie a zápasů](../templates/hrac-profil-bez-historie-a-zapasu.html)
+- [S měsíční historií žebříčku](../templates/hrac-profil-s-historii-a-zapasy.html)
+- [Bez měsíční historie žebříčku](../templates/hrac-profil-bez-historie-a-zapasu.html)
 
 ### [Reprezentace](sportovni-prehledy.md#reprezentace)
 
@@ -210,7 +213,7 @@ Turnajové detaily čekají na posouzení návrhu jako celku. Pracovní ukázky 
 ### Další stránky a varianty
 
 - **Play-off a baráž družstev.** V ligovém archivu mají tyto fáze vlastní termíny a výsledky. V předání chybí ukázka detailu soutěže tvořeného jen rozpisem a zápisy. [Semifinále a finále extraligy](https://czechsquash.cz/liga/2018-2019-extraligaplayoff) · [Baráž o extraligu](https://czechsquash.cz/liga/2018-2019-barazextraliga)
-- **Neúplný zápis utkání.** Chybí ukázka týmového výsledku před zveřejněním jednotlivých dvojic a skreče bez úplného skóre. [Zadání detailu utkání](souteze-druzstev.md#utkani)
+- **Výsledek bez dvojic a skreč.** Chybí ukázka zveřejněného týmového výsledku úplně bez rozepsaných dvojic a ukázka skreče bez doloženého skóre setů. [Zadání detailu utkání](souteze-druzstev.md#utkani)
 - **Historie squashe.** Stránka je vyřazená z aktuálního rozsahu předání.
 - **Tiskové informace s vydanými zprávami.** Předaný mustr pokrývá prázdnou rubriku a kontakt pro média. Po dodání první schválené zprávy zbývá určit podobu výpisu a cíl po otevření položky. [Zadání tiskových informací](uvod-media.md#tiskove-zpravy)
 

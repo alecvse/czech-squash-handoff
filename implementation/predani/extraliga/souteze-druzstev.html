@@ -87,13 +87,15 @@
             <ul class="comparison-links">
               <li><a href="https://czechsquash.cz/liga/2026-2027-extraliga">Otevřít současnou tabulku</a></li>
               <li><a href="https://czechsquash.cz/liga/2026-2027-extraliga/soupisky/">Soupisky družstev</a></li>
+              <li><a href="https://czechsquash.cz/liga/2026-2027-1ligap1">1. liga muži I</a></li>
             </ul>
           </div>
           <div class="accent-card comparison-card">
             <h4>Nový mustr</h4>
             <p>Název v řádku otevírá detail družstva pro vybranou soutěž a sezónu. Tabulka zachovává sportovní hodnoty, rozepisuje názvy posledních sloupců a u zkratek nabízí vysvětlení.</p>
             <ul class="comparison-links">
-              <li><a href="templates/soutez-detail-s-tabulkou-druzstvy-a-rozpisem.html#tabulky">Otevřít nový mustr tabulky</a></li>
+              <li><a href="templates/soutez-detail-s-tabulkou-druzstvy-a-rozpisem.html#tabulky">Tabulka Extraligy mužů</a></li>
+              <li><a href="templates/soutez-bez-zverejnene-tabulky-soupisek-a-rozpisu.html">1. liga muži I bez zveřejněné tabulky, soupisek a rozpisu</a></li>
             </ul>
           </div>
         </div>
@@ -147,7 +149,7 @@
         </div>
         <p><strong>Backend.</strong> Převezmi datum, dostupné kolo, účastníky v pořadí rozlosování, čas, místo, výsledek a odkaz na zveřejněný zápis. Obě hodnoty oficiálního skóre přiřaď k ID družstev. V řádku rozpisu patří první hodnota prvnímu uvedenému družstvu, i když podle zápisu hrálo jako host. Při přeložení zachovej identitu utkání. U společného termínu s více družstvy zachovej všechny účastníky a zahrň je do filtru. Chybějící čas nebo místo ponech neurčené.</p>
         <p><strong>Ověřit v backendu.</strong> Zjisti, kde pořadatel mění termín, čas a místo a kdy se do veřejného rozpisu promítá oficiální výsledek. Filtrování již vykreslených řádků obsluhuje přiložený JavaScript.</p>
-        <p><strong>Stav návrhu.</strong> Mustr Extraligy obsahuje ligovou tabulku, týmy a rozpis. Pro play-off nebo baráž hrané pouze na zápisy chybí ukázka detailu fáze. Samostatně je potřeba předvést ligu, která tabulku vede, ale zatím ji nezveřejnila.</p>
+        <p><strong>Stav návrhu.</strong> Ve vzoru 1. ligy mužů I zůstávají dostupné záložky Tabulka, Týmy a Rozpis a výsledky. Každá zobrazuje svůj prázdný stav. Pro play-off nebo baráž hrané pouze na zápisy chybí ukázka detailu fáze.</p>
         <p><strong>Rozhodnout s vlastníkem soutěží.</strong> Bude u play-off nebo baráže bez vlastní tabulky a soupisek rovnou otevřený rozpis bez záložek, nebo má přístup k tabulce a týmům navazující ligy zůstat součástí navigace? Ověř, které vazby na ligu skutečně existují.</p>
       </article>
     </section>
@@ -186,6 +188,7 @@
             <p>Soupiska uvádí hráče, jejich nasazení a poznámky. Ročník hráče je v jeho profilu, posun v konkrétním vydání žebříčku. Jednotlivé výhry, prohry a sety se dají ověřit v zápisech utkání jeho družstva.</p>
             <ul class="comparison-links">
               <li><a href="https://czechsquash.cz/liga/2026-2027-extraliga/soupisky/?druzstvo_id=300#soupiska">Nasazení a poznámky na soupisce Ostravy</a></li>
+              <li><a href="https://czechsquash.cz/liga/2026-2027-extraliga/soupisky/?druzstvo_id=203#soupiska">Soupiska Viktorie Brno Sportprofit</a></li>
               <li><a href="https://czechsquash.cz/player/340/viktor-byrtus#basicinfo">Ročník Viktora Byrtuse na profilu</a></li>
               <li><a href="https://czechsquash.cz/zebricek/dospeli/muzi/?datum=2026-11-01">Pořadí a posun mužů k 1. 11. 2026, vydání pro srovnání s mustrem</a></li>
               <li><a href="https://czechsquash.cz/liga/2026-2027-extraliga/vysledky/?turnier=11588&amp;liga=7913#liga">Individuální výsledky a sety v zápisu Ostrava – SCC HK</a></li>
@@ -195,11 +198,12 @@
             <h4>Nový mustr</h4>
             <p>Přibývá ročník, známý posun v žebříčku a statistiky za toto družstvo v sezóně (zápasy, výhry–prohry a sety). Pořadí hráčů a poznámky se přebírají z oficiální soupisky.</p>
             <ul class="comparison-links">
-              <li><a href="templates/druzstvo-detail-se-soupiskou-a-exporty.html#soupiska">Mustr statistické soupisky</a></li>
+              <li><a href="templates/druzstvo-detail-se-soupiskou-a-exporty.html#soupiska">Statistiky na soupisce JM Ostrava</a></li>
+              <li><a href="templates/druzstvo-s-vice-rolemi-hrace-na-soupisce.html#soupiska">Viktoria Brno Sportprofit – hráč s více rolemi</a></li>
             </ul>
           </div>
         </div>
-        <p><strong>Backend.</strong> Propoj hráče se soupiskou přes jeho ID. Převezmi pořadí hráčů, nasazení i poznámky z oficiální soupisky. Posun připoj z vydání určeného pro nasazení, pokud souhlasí hráč, kategorie, datum a pořadí. Při neověřené shodě zachovej nasazení a posun vynech.</p>
+        <p><strong>Backend.</strong> Propoj hráče se soupiskou přes jeho ID. Převezmi pořadí hráčů, nasazení i všechny poznámky z oficiální soupisky. U Viktorie Brno má Martin Švec současně označení kapitán a pendl. Na soupisce zůstanou obě. Posun připoj z vydání určeného pro nasazení, pokud souhlasí hráč, kategorie, datum a pořadí. Při neověřené shodě zachovej nasazení a posun vynech.</p>
         <p><strong>Výpočet bilance.</strong> Vyber platné zveřejněné zápisy utkání této účasti družstva v soutěži, skupině a sezóně. Z nich započítej jednou každý doložený individuální výsledek hráče za toto družstvo. Sčítej výhry, prohry a získané i ztracené sety z pohledu hráče. Skreč přiřaď hráči až podle zápisu a doložené účasti. Ověřených nula startů se zobrazí jako 0, bilance 0–0 a sety „—“. Nezjištěná hodnota zůstává neznámá.</p>
         <p><strong>Ověřit v backendu.</strong> Zjisti, kdo spravuje soupisku, poznámky a rozhodné datum nasazení. Ročník patří k profilu. Bilance má vycházet z výsledků, aby oprava zápisu upravila i detail družstva.</p>
       </article>
@@ -254,16 +258,16 @@
           <div class="accent-card comparison-card comparison-card--current">
             <h4>Dnes</h4>
             <p>Hráči jsou na protilehlých stranách řádku zápisu. Mezi jmény jsou skóre jednotlivých setů a výsledek zápasu. Nevyužitá místa pro sety zůstávají v tabulce.</p>
-            <ul class="comparison-links"><li><a href="https://czechsquash.cz/liga/2026-2027-extraliga/vysledky/?turnier=11588&amp;liga=7913#liga">Jednotlivé zápasy na současném webu</a></li></ul>
+            <ul class="comparison-links"><li><a href="https://czechsquash.cz/liga/2026-2027-extraliga/vysledky/?turnier=11588&amp;liga=7913#liga">Jednotlivé zápasy na současném webu</a></li><li><a href="https://czechsquash.cz/liga/2026-2027-1ligaa/vysledky/?turnier=11627&amp;liga=7936#liga">SC Prague United – SBA Horský hotel Excelsior A</a></li></ul>
           </div>
           <div class="accent-card comparison-card">
             <h4>Nový mustr</h4>
             <p>Domácí hráč a host jsou vedle sebe. Za jejich jmény je výsledek zápasu a v posledním sloupci odehrané sety v pořadí zápisu. Vyšší počet míčků v setu je zvýrazněný. Jméno může odkazovat na profil hráče.</p>
-            <ul class="comparison-links"><li><a href="templates/utkani-uplny-zapis-se-zapasy-a-sety.html">Mustr zápasů a setů</a></li></ul>
+            <ul class="comparison-links"><li><a href="templates/utkani-uplny-zapis-se-zapasy-a-sety.html">Úplný zápis – JM Ostrava a SCC HK</a></li><li><a href="templates/utkani-s-castecne-vyplnenym-zapisem.html">Týmový výsledek s jednou vyplněnou dvojicí</a></li></ul>
           </div>
         </div>
         <p><strong>Backend.</strong> Převezmi pořadí dvojic, jména a dostupná hráčská ID, výsledek každé dvojice a posloupnost setů. Počet dvojic i setů určuje zápis. Hráče bez ověřené vazby na profil zobraz jako text. Volné místo (bye) zachovej. Nevyplněný set vynech. U skreče převezmi vykázaný výsledek a jen doložené skóre setů. Pokud je zveřejněný pouze výsledek družstev, zobraz dostupné součty a pod nimi prázdný stav jednotlivých zápasů.</p>
-        <p><strong>Stav návrhu.</strong> Zápis JM Ostrava – SCC HK obsahuje tři dokončené zápasy jednotlivců. Pro zveřejněný týmový výsledek bez rozepsaných dvojic a pro skreč s neúplným skóre setů chybí ukázka. Při převzetí oba případy porovnej se zveřejněným zápisem pro stejné utkání.</p>
+        <p><strong>Stav návrhu.</strong> Zápis JM Ostrava – SCC HK obsahuje všechny tři zápasy jednotlivců. SC Prague United má proti Excelsioru týmový výsledek 0 : 4, ale vyplněnou jen jednu ze čtyř dvojic. Proti Jakubu Slavíčkovi je uvedeno volné místo a tři sety 0 : 11. U zbývajících dvojic ponech neznámé hodnoty. Ukázka zveřejněného týmového výsledku úplně bez dvojic a ukázka skreče bez doloženého skóre setů stále chybějí.</p>
         <p><strong>Ověřit v backendu.</strong> Zjisti, kde lze opravit hráče, jejich přiřazení ke stranám a skóre setu. Rozliš nezadanou hodnotu od zaznamenané nuly. Po opravě musí detail zobrazit jednotlivé zápasy i součty z téže platné verze.</p>
       </article>
     </section>
@@ -305,7 +309,7 @@
 
     <section id="navaznosti">
       <h2>Rozsah náhledu a návazné stránky</h2>
-      <p>V náhledu můžeš projít z přehledu soutěží do Extraligy mužů, z tabulky na JM Ostrava a z rozpisu na její utkání se SCC HK. Další družstva, soutěže a zápisy používají stejné typy stránek. Příklady pro další typy najdeš v <a href="index.html#rozsah">rozsahu předání</a>.</p>
+      <p>V náhledu můžeš projít z přehledu soutěží do Extraligy mužů, z tabulky na JM Ostrava a z rozpisu na její utkání se SCC HK. Druhá cesta vede z tabulky na Viktorii Brno Sportprofit. Z její soupisky otevřeš Marka Panáčka a z jeho profilu se vrátíš na soupisku. Další družstva, soutěže a zápisy používají stejné typy stránek. Příklady pro další typy najdeš v <a href="index.html#rozsah">rozsahu předání</a>.</p>
       <p>Další typy stránek a stav jejich dokumentace najdeš v <a href="index.html">přehledu šablon</a>.</p>
       <p class="guide-actions"><a href="templates/souteze-druzstev-prehled.html">Mustr přehledu soutěží</a><a href="templates/soutez-detail-s-tabulkou-druzstvy-a-rozpisem.html">Mustr soutěže · Extraliga mužů</a><a href="templates/druzstvo-detail-se-soupiskou-a-exporty.html">Mustr družstva · JM Ostrava</a><a href="templates/utkani-uplny-zapis-se-zapasy-a-sety.html">Mustr utkání</a></p>
     </section>

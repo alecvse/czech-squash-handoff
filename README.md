@@ -4,6 +4,8 @@ Složka [docs](docs/) obsahuje [předávací dokumentaci](docs/index.md). Každ�
 
 Schválené HTML mustry jsou v `templates/`, společné styly, skripty a soubory v `assets/`. Jednotlivá předání jsou označená Git tagem.
 
+Profil hráče má dva mustry podle dostupnosti měsíční historie žebříčku. Klub, družstvo, soupisku a doložené zápasy lze propojit v obou stavech. [Pravidla pro profil hráče](docs/sportovni-prehledy.md#hrac)
+
 Pro prohlížení spusť v kořeni `python3 nahled.py` a otevři [přehled šablon](http://127.0.0.1:8011/docs/). Pro čtení zadání v Markdownu použij [rozcestník pro AI](llms.txt). Zdroj dokumentace je v `implementation/predani/extraliga/`.
 
 ## Design systém
