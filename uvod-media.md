@@ -155,7 +155,7 @@ Detail má adresu s číselným ID. Ukazuje titulek, datum, autora a vlastní te
 
 Sloupec článku odděluje titulek a metadata, perex, volitelný hlavní snímek a redakční text. Fotografie mohou mít popisek a kredit nebo vlastní galerii. Drobečky odkazují na skutečné předky. Hradecká reportáž má hlavní snímek a galerii deseti fotografií s popisky.
 
-- [Reportáž s galerií](templates/clanek-hradecky-juniorsky-cup.html)
+- [Reportáž s galerií](templates/clanek-s-fotogalerii.html)
 
 **Backend.** Převezmi stabilní ID, kanonickou adresu, titulek, dostupnou rubriku, datum publikace, doloženého autora, perex a tělo článku v původním pořadí. Zachovej význam odstavců, podnadpisů, seznamů, tabulek, odkazů a vložených médií. Každému snímku ponech funkční adresu originálu, alternativní text, případný popisek a samostatný kredit. Fotografii, autora, rubriku a galerii vykresli podle dostupnosti. Vydavatele článku a fotografa eviduj odděleně. Stejný záznam může být odkazován i z tematické části webu a má jednu kanonickou adresu.
 
@@ -176,9 +176,9 @@ V textu článku mohou být přímé odkazy na soubory, výsledky a vysílání.
 
 Výzva LSCM má text bez hlavní fotografie. Za podmínkami projektu odkazuje na jedno PDF a dva přihlašovací soubory XLSX. Reportáž z Krakova ukazuje delší text s externími odkazy včetně výsledků a několika zdrojů přenosu.
 
-- [Výzva bez fotografie s PDF a dvěma formuláři XLSX](templates/clanek-podpora-lscm-2026.html)
-- [Článek z hlavních aktualit s ilustrační grafikou bez galerie](templates/clanek-podpora-treneru-nadace-cez.html)
-- [Reportáž s externími výsledky a přenosy](templates/clanek-3122.html)
+- [Výzva bez fotografie s PDF a dvěma formuláři XLSX](templates/clanek-bez-fotografie-s-prilohami.html)
+- [Článek z hlavních aktualit s ilustrační grafikou bez galerie](templates/clanek-s-ilustracni-grafikou-bez-galerie.html)
+- [Reportáž s externími výsledky a přenosy](templates/clanek-s-externimi-prenosy.html)
 
 **Backend a administrace.** Redaktor může ke konkrétnímu článku přiřadit soubor nebo externí odkaz s čitelným názvem. Převeď relativní cíle z původního webu podle skutečné adresy souboru a zachovej obsahové pořadí odkazů. U příloh získej formát a případnou zobrazovanou velikost ze skutečného souboru. Externí odkaz na přenos zůstává odkazem podle zdroje. Pokud záznam opravdu má video s náhledem a titulkem, použij společnou video kartu.
 
@@ -289,7 +289,7 @@ Reportáž o Hradeckém juniorském CUPu obsahuje fotografie z vyhlášení a p�
 
 V článku je samostatná fotografická mřížka dosažitelná fragmentem `#fotogalerie`. Na ten míří také archivní karta. Fotografie se přes běžný odkaz otevře jako celý snímek.
 
-- [Mustr galerie v reportáži](templates/clanek-hradecky-juniorsky-cup.html#fotogalerie)
+- [Mustr galerie v reportáži](templates/clanek-s-fotogalerii.html#fotogalerie)
 
 **Backend a administrace.** Foto blok má vlastní trvalý fragment a stále patří k článku. Archivní karta odkazuje přímo na tento fragment. Po stažení článku z publikace aktualizuj i archivní kartu, aby nevedla na nedostupný obsah.
 

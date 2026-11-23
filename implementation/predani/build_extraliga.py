@@ -31,10 +31,10 @@ EXAMPLES = {
         ('klub-casq-ixi.html', 'Bez sportoviště a družstev'),
     ),
     'hrac-marek-panacek.html': (('hrac-3534.html', 'Bez historie a zápasů'),),
-    'clanek-hradecky-juniorsky-cup.html': (
-        ('clanek-podpora-lscm-2026.html', 'Bez fotografie, s přílohami'),
-        ('clanek-3122.html', 'Externí přenosy v textu'),
-        ('clanek-podpora-treneru-nadace-cez.html', 'Ilustrační grafika bez galerie'),
+    'clanek-s-fotogalerii.html': (
+        ('clanek-bez-fotografie-s-prilohami.html', 'Bez fotografie, s přílohami'),
+        ('clanek-s-externimi-prenosy.html', 'Externí přenosy v textu'),
+        ('clanek-s-ilustracni-grafikou-bez-galerie.html', 'Ilustrační grafika bez galerie'),
     ),
     'galerie-mcr-junioru-2026.html': (('galerie-hamr-2024.html', 'Zdroj bez jména fotografa'),),
     'asociace.html': (('odborne-komise.html', 'Samostatná stránka komisí'),),
@@ -43,7 +43,7 @@ EXAMPLES = {
 PRIMARY_LABELS = {
     'klub-viktoria-brno.html': 'Profil s kontakty a družstvy',
     'hrac-marek-panacek.html': 'Profil s historií a zápasy',
-    'clanek-hradecky-juniorsky-cup.html': 'Reportáž s fotogalerií',
+    'clanek-s-fotogalerii.html': 'Reportáž s fotogalerií',
     'galerie-mcr-junioru-2026.html': 'Galerie se jménem fotografa',
     'obsah-archiv-1746.html': 'Sezónní článek trenérů',
     'faq.html': 'Přesměrování na otázky',
@@ -132,10 +132,23 @@ class Chapter(HTMLParser):
                 '<ul class="template-list">\n' + '\n'.join(rows) + '\n</ul></details>')
 
 
+ARTICLE_SOURCES = {
+    'clanek-s-fotogalerii.html': 'clanek-hradecky-juniorsky-cup.html',
+    'clanek-bez-fotografie-s-prilohami.html': 'clanek-podpora-lscm-2026.html',
+    'clanek-s-externimi-prenosy.html': 'clanek-3122.html',
+    'clanek-s-ilustracni-grafikou-bez-galerie.html': 'clanek-podpora-treneru-nadace-cez.html',
+}
+
+
 def sample_markup(name, approved_names):
     if Path(name).name != name or not name.endswith('.html') or withheld(name):
         raise ValueError(f'Outside the approved handoff: {name}')
-    markup = (ROOT / 'templates' / name).read_text(encoding='utf-8')
+    source = ROOT / 'templates' / name
+    if not source.exists() and name in ARTICLE_SOURCES:
+        source = source.with_name(ARTICLE_SOURCES[name])
+    markup = source.read_text(encoding='utf-8')
+    for state_name, demo_name in ARTICLE_SOURCES.items():
+        markup = markup.replace(demo_name, state_name)
     markup = re.sub(r'<!--\s*old fixtures:start\b.*?-->', '', markup, flags=re.S)
     markup = re.sub(r'<li>\s*<a href="\./historie\.html">Historie(?: squashe)?</a>\s*</li>', '', markup)
     markup = prepare_sample(markup, approved_names)

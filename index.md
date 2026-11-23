@@ -75,10 +75,10 @@
 
 ### [Detail článku](uvod-media.md#clanek)
 
-- [Reportáž s fotogalerií](templates/clanek-hradecky-juniorsky-cup.html)
-- [Bez fotografie, s přílohami](templates/clanek-podpora-lscm-2026.html)
-- [Externí přenosy v textu](templates/clanek-3122.html)
-- [Ilustrační grafika bez galerie](templates/clanek-podpora-treneru-nadace-cez.html)
+- [Reportáž s fotogalerií](templates/clanek-s-fotogalerii.html)
+- [Bez fotografie, s přílohami](templates/clanek-bez-fotografie-s-prilohami.html)
+- [Externí přenosy v textu](templates/clanek-s-externimi-prenosy.html)
+- [Ilustrační grafika bez galerie](templates/clanek-s-ilustracni-grafikou-bez-galerie.html)
 
 ### [Rozcestník Média](uvod-media.md#media)
 
