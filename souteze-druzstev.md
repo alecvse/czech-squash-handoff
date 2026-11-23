@@ -118,7 +118,9 @@ Utkání jsou ve skupinách podle kola a data. V řádku návštěvník vidí so
 
 **Ověřit v backendu.** Zjisti, kde pořadatel mění termín, čas a místo a kdy se do veřejného rozpisu promítá oficiální výsledek. Filtrování již vykreslených řádků obsluhuje přiložený JavaScript.
 
-**Rozhodnout s vlastníkem soutěží.** Bude u play-off nebo baráže bez vlastní tabulky a soupisek rovnou otevřený rozpis bez záložek, nebo má přístup k tabulce a týmům navazující ligy zůstat součástí navigace? Ověř, které vazby na ligu skutečně existují. Rozliš fázi, pro kterou se tabulka vůbec nevede, od ligy, která na zveřejnění tabulky teprve čeká.
+**Stav návrhu.** Mustr Extraligy obsahuje ligovou tabulku, týmy a rozpis. Pro play-off nebo baráž hrané pouze na zápisy chybí ukázka detailu fáze. Samostatně je potřeba předvést ligu, která tabulku vede, ale zatím ji nezveřejnila.
+
+**Rozhodnout s vlastníkem soutěží.** Bude u play-off nebo baráže bez vlastní tabulky a soupisek rovnou otevřený rozpis bez záložek, nebo má přístup k tabulce a týmům navazující ligy zůstat součástí navigace? Ověř, které vazby na ligu skutečně existují.
 
 <a id="druzstvo"></a>
 
@@ -202,7 +204,7 @@ V Kalendáři/Výsledcích návštěvník otevře termín a u dvojice družstev 
 
 #### Nový mustr
 
-Odkaz v rozpisu vede přímo na stránku utkání. Názvy soupeřů a sezóna jsou v záhlaví. Nad zápasy jednotlivců jsou datum, soutěž, pořadatel, týmový výsledek, sety a míčky. Odkaz na soutěž vede do stejného ročníku.
+Řádek JM Ostrava – SCC HK vede přímo na místní zápis této dvojice. Názvy soupeřů a sezóna jsou v záhlaví. Nad zápasy jednotlivců jsou datum, soutěž, pořadatel, týmový výsledek, sety a míčky. Odkaz na soutěž vede do stejného ročníku.
 
 - [Mustr rozpisu](templates/soutez-extraliga-muzi.html#utkani)
 - [Mustr výsledku utkání](templates/utkani-11588.html#main-content)
@@ -226,6 +228,8 @@ Domácí hráč a host jsou vedle sebe. Za jejich jmény je výsledek zápasu a 
 - [Mustr zápasů a setů](templates/utkani-11588.html)
 
 **Backend.** Převezmi pořadí dvojic, jména a dostupná hráčská ID, výsledek každé dvojice a posloupnost setů. Počet dvojic i setů určuje zápis. Hráče bez ověřené vazby na profil zobraz jako text. Volné místo (bye) zachovej. Nevyplněný set vynech. U skreče převezmi vykázaný výsledek a jen doložené skóre setů. Pokud je zveřejněný pouze výsledek družstev, zobraz dostupné součty a pod nimi prázdný stav jednotlivých zápasů.
+
+**Stav návrhu.** Zápis JM Ostrava – SCC HK obsahuje tři dokončené zápasy jednotlivců. Pro zveřejněný týmový výsledek bez rozepsaných dvojic a pro skreč s neúplným skóre setů chybí ukázka. Při převzetí oba případy porovnej se zveřejněným zápisem pro stejné utkání.
 
 **Ověřit v backendu.** Zjisti, kde lze opravit hráče, jejich přiřazení ke stranám a skóre setu. Rozliš nezadanou hodnotu od zaznamenané nuly. Po opravě musí detail zobrazit jednotlivé zápasy i součty z téže platné verze.
 
@@ -266,7 +270,7 @@ Domácí hráč a host jsou vedle sebe. Za jejich jmény je výsledek zápasu a 
 
 ## Rozsah náhledu a návazné stránky
 
-V náhledu můžeš projít z přehledu soutěží do Extraligy mužů, z tabulky na JM Ostrava a z rozpisu na její utkání se SCC HK. Další družstva, soutěže a zápisy používají stejné typy stránek. Odkaz na nepřiložený záznam v náhledu vede na [rozsah předání](index.md#rozsah).
+V náhledu můžeš projít z přehledu soutěží do Extraligy mužů, z tabulky na JM Ostrava a z rozpisu na její utkání se SCC HK. Další družstva, soutěže a zápisy používají stejné typy stránek. Příklady pro další typy najdeš v [rozsahu předání](index.md#rozsah).
 
 Další typy stránek a stav jejich dokumentace najdeš v [přehledu šablon](index.md).
 

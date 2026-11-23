@@ -153,10 +153,9 @@ Detail má adresu s číselným ID. Ukazuje titulek, datum, autora a vlastní te
 
 #### Nový mustr
 
-Sloupec článku odděluje titulek a metadata, perex, volitelný hlavní snímek a redakční text. Fotografie mohou mít popisek a kredit nebo vlastní galerii. Drobečky odkazují na skutečné předky. Některé záznamy mají místo reportážní fotografie označený ilustrační snímek.
+Sloupec článku odděluje titulek a metadata, perex, volitelný hlavní snímek a redakční text. Fotografie mohou mít popisek a kredit nebo vlastní galerii. Drobečky odkazují na skutečné předky. Hradecká reportáž má hlavní snímek a galerii deseti fotografií s popisky.
 
 - [Reportáž s galerií](templates/clanek-hradecky-juniorsky-cup.html)
-- [Článek s ilustrační fotografií](templates/clanek-3227.html#page-title)
 
 **Backend.** Převezmi stabilní ID, kanonickou adresu, titulek, dostupnou rubriku, datum publikace, doloženého autora, perex a tělo článku v původním pořadí. Zachovej význam odstavců, podnadpisů, seznamů, tabulek, odkazů a vložených médií. Každému snímku ponech funkční adresu originálu, alternativní text, případný popisek a samostatný kredit. Fotografii, autora, rubriku a galerii vykresli podle dostupnosti. Vydavatele článku a fotografa eviduj odděleně. Stejný záznam může být odkazován i z tematické části webu a má jednu kanonickou adresu.
 
@@ -175,14 +174,15 @@ V textu článku mohou být přímé odkazy na soubory, výsledky a vysílání.
 
 #### Nový mustr
 
-Výzva LSCM uvádí podmínky a jednotlivé soubory pod vlastními názvy. Reportáž z Krakova ukazuje delší text s externími odkazy včetně výsledků a několika zdrojů přenosu.
+Výzva LSCM má text bez hlavní fotografie. Za podmínkami projektu odkazuje na jedno PDF a dva přihlašovací soubory XLSX. Reportáž z Krakova ukazuje delší text s externími odkazy včetně výsledků a několika zdrojů přenosu.
 
-- [Mustr článku s přílohami](templates/clanek-podpora-lscm-2026.html)
-- [Mustr delší reportáže s odkazy](templates/clanek-3122.html)
+- [Výzva bez fotografie s PDF a dvěma formuláři XLSX](templates/clanek-podpora-lscm-2026.html)
+- [Článek z hlavních aktualit s ilustrační grafikou bez galerie](templates/clanek-podpora-treneru-nadace-cez.html)
+- [Reportáž s externími výsledky a přenosy](templates/clanek-3122.html)
 
 **Backend a administrace.** Redaktor může ke konkrétnímu článku přiřadit soubor nebo externí odkaz s čitelným názvem. Převeď relativní cíle z původního webu podle skutečné adresy souboru a zachovej obsahové pořadí odkazů. U příloh získej formát a případnou zobrazovanou velikost ze skutečného souboru. Externí odkaz na přenos zůstává odkazem podle zdroje. Pokud záznam opravdu má video s náhledem a titulkem, použij společnou video kartu.
 
-**Ověřit v backendu.** Zjisti, zda jsou přílohy evidované samostatně, nebo jen v redakčním HTML. Projdi i články, v nichž současný mustr odkazuje slovně na původní zprávu nebo některé odkazy neobsahuje, a porovnej je se zdrojem.
+**Ověřit v backendu.** Zjisti, zda jsou přílohy evidované samostatně, nebo jen v redakčním HTML. Při migraci porovnej názvy, pořadí a cíle všech odkazů s původním článkem.
 
 <a id="media"></a>
 
@@ -283,14 +283,13 @@ Reportáž o Hradeckém juniorském CUPu obsahuje fotografie z vyhlášení a p�
 
 - [Fotografie v reportáži z Hradce](https://czechsquash.cz/novinka/?news=3231)
 - [Fotografie ze světového šampionátu](https://czechsquash.cz/novinka/?news=3197)
+- [Fotografie z mistrovství republiky juniorských družstev](https://czechsquash.cz/novinka/?news=3163)
 
 #### Nový mustr
 
 V článku je samostatná fotografická mřížka dosažitelná fragmentem `#fotogalerie`. Na ten míří také archivní karta. Fotografie se přes běžný odkaz otevře jako celý snímek.
 
 - [Mustr galerie v reportáži](templates/clanek-hradecky-juniorsky-cup.html#fotogalerie)
-- [Mustr galerie s doloženým vydavatelem](templates/clanek-3163.html#fotogalerie)
-- [Mustr galerie světového šampionátu](templates/clanek-juniorsti-mistri-sveta-2026.html#fotogalerie)
 
 **Backend a administrace.** Foto blok má vlastní trvalý fragment a stále patří k článku. Archivní karta odkazuje přímo na tento fragment. Po stažení článku z publikace aktualizuj i archivní kartu, aby nevedla na nedostupný obsah.
 
@@ -306,12 +305,10 @@ V článku je samostatná fotografická mřížka dosažitelná fragmentem `#fot
 
 #### Nový mustr
 
-Galerie má vlastní nadpis a adresu, popis, dostupný kredit, snímky s popisky a návrat do archivu. Je-li doložen související článek, může na něj odkázat.
+Galerie MČR juniorů má deset fotografií s popisky a jménem fotografky. Galerie HAMR uvádí u dvou fotografií zdroj ČASQ. Oba snímky pocházejí ze související reportáže. Každá má vlastní adresu a návrat do archivu.
 
 - [Mustr galerie s uvedenou fotografkou](templates/galerie-mcr-junioru-2026.html)
-- [Mustr dalšího ročníku MČR juniorů](templates/galerie-mcr-junioru-2025.html)
-- [Mustr galerie s odkazem na reportáž](templates/galerie-hamr-2024.html)
-- [Mustr související reportáže HAMR](templates/clanek-2689.html)
+- [Galerie HAMR se zdrojem a vazbou na reportáž](templates/galerie-hamr-2024.html)
 
 **Backend a administrace.** Pro oba typy zachovej pořadí snímků, jejich poměr stran v originálu a čitelný náhled. Každý snímek potřebuje alternativní text, odkaz na úplný soubor a dostupný popisek a kredit. Správce musí mít možnost upravit popisek, pořadí, náhled i vazbu na článek. Pokud je jeden snímek na obou místech, může být spravovaný jako jeden mediální soubor.
 
@@ -323,7 +320,7 @@ Galerie má vlastní nadpis a adresu, popis, dostupný kredit, snímky s popisky
 
 - Vytvoř mapu starého číselného ID na cílovou kanonickou adresu. Zahrň i články otevřené ze speciálního přehledu Trenérů nebo Reprezentace. Kontroluj každý záznam podle ID a zdrojového data. Stejný titulek může patřit více článkům.
 - Při migraci zachovej historická data publikace, autora, pořadí textu, původní popisky, kredity a média i v článcích mimo reprezentativní ukázky. Prověř staré odkazy na soubory a přesměrování starých adres podle schválené mapy.
-- V živém zápisu výboru zůstaly přílohy odkazované přímo, zatímco jeho mustr obsahuje jen jejich popis. Při migraci podobných záznamů ověř a přenes všechny schválené přílohy. [Živý zápis s přílohami](https://czechsquash.cz/novinka/?news=3216) · [Mustr zápisu](templates/clanek-3216.html)
+- Zápis výkonného výboru 7/2026 odkazuje přímo na přílohy. Při migraci zkontroluj, že cílový článek zachoval každý schválený soubor i jeho název. [Živý zápis s přílohami](https://czechsquash.cz/novinka/?news=3216)
 - Před přepnutím vyřeš staré adresy parametrů `search` a `month`, funkční přístup hráčů a klubů, stav newsletteru, dostupnost tiskových materiálů a schválený rozsah historických galerií podle rozhodnutí výše.
 
 <a id="prevzeti"></a>
@@ -339,8 +336,8 @@ Galerie má vlastní nadpis a adresu, popis, dostupný kredit, snímky s popisky
 
 <a id="referencni-priklad"></a>
 
-### Referenční příklady · články z úvodu
+### Původní články pro kontrolu migrace
 
-- Článek o Madrid Open ukazuje, že stejný textový cíl může být v hlavních aktualitách i v archivu. [Živý článek](https://czechsquash.cz/novinka/?news=3193) · [Mustr Madrid Open](templates/clanek-marek-panacek-madrid.html)
-- Zpráva o podpoře trenérů patří v ukázce do hlavních aktualit i do bloku šesti karet. [Živý článek](https://czechsquash.cz/novinka/?news=3198) · [Mustr zprávy ČASQ](templates/clanek-podpora-treneru-nadace-cez.html)
-- Reportáže z Brazílie a z Dutch Junior Open ukazují stručnější a rozsáhlejší galerii. [Živá Brazílie](https://czechsquash.cz/novinka/?news=3230) · [Mustr Brazílie](templates/clanek-cb-squash-tour-brazilie.html) · [Živý Dutch Junior Open](https://czechsquash.cz/novinka/?news=3195) · [Mustr Dutch Junior Open](templates/clanek-dutch-junior-open-2026.html)
+- Článek o Madrid Open ukazuje, že stejný textový cíl může být v hlavních aktualitách i v archivu. [Madrid Open](https://czechsquash.cz/novinka/?news=3193)
+- Zpráva o podpoře trenérů patří v ukázce do hlavních aktualit i do bloku šesti karet. [Podpora trenérů](https://czechsquash.cz/novinka/?news=3198)
+- Reportáže z Brazílie a z Dutch Junior Open ukazují stručnější a rozsáhlejší galerii. [Živá Brazílie](https://czechsquash.cz/novinka/?news=3230) · [Živý Dutch Junior Open](https://czechsquash.cz/novinka/?news=3195)

@@ -243,13 +243,14 @@ Trenérské dokumenty obsahují systém tříd a kodexy. Starší pozvánky, his
 
 #### Nový mustr
 
-Trenérská kategorie v Dokumentech spojuje základní dokumenty a starší soubory. Původní místní adresa dokumentů zobrazuje stejný obsah. Z pozvánek vede odkaz přímo na starší podklady.
+Trenérská kategorie v Dokumentech má dvě skupiny. První nabízí základní dokumenty, druhá školení a starší podklady.
 
 - [Kategorie Dokumenty pro trenéry](templates/dokumenty-treneri.html)
 - [Starší podklady](templates/dokumenty-treneri.html#skoleni-a-starsi-podklady)
-- [Dosavadní místní adresa](templates/treneri-dokumenty.html)
 
-**Data a správa.** Zařaď každý soubor do odpovídající skupiny, zachovej datum a místo kurzu, doložený popis a verzi seznamu. Pod stejnou veřejnou položkou spravuj pouze jednu kopii metadat pro obě adresy a pro společné vyhledávání.
+**Data a správa.** Zařaď každý soubor do odpovídající skupiny, zachovej datum a místo kurzu, doložený popis a verzi seznamu. Stejnou položku a její metadata používej v kategorii i ve společném vyhledávání.
+
+**Migrace.** Původní cestu `/treneri/dokumenty/` převeď do kategorie Dokumenty pro trenéry. Dřívější místní soubor `treneri-dokumenty.html` odpovídá témuž obsahu.
 
 **Kontrola po napojení.** Najdi historický seznam k určitému datu z jiné kategorie Dokumentů. Ověř, že dokument zůstává datovaným souborem a že stará adresa vede ke shodné verzi.
 

@@ -5,11 +5,13 @@ from html import escape
 from html.parser import HTMLParser
 from pathlib import Path
 import re
+import json
 from tempfile import NamedTemporaryFile
 from urllib.parse import unquote, urlsplit
 from zipfile import ZipFile, ZIP_DEFLATED
 
 from doc_pages import render_page
+from sample_links import prepare_sample
 
 ROOT = Path(__file__).resolve().parents[2]
 GUIDE = Path(__file__).resolve().parent / 'extraliga'
@@ -20,6 +22,32 @@ CHAPTERS = (
 )
 WITHHELD = {'historie.html', 'co-je-to-squash.html', 'design-system.html'}
 
+
+# Each chapter declares its primary pages with data-template. Only these explicit
+# secondary examples add files to the handoff, independently of editorial links.
+EXAMPLES = {
+    'klub-viktoria-brno.html': (
+        ('klub-26553317.html', 'Dvě sportoviště, bez kontaktů'),
+        ('klub-casq-ixi.html', 'Bez sportoviště a družstev'),
+    ),
+    'hrac-marek-panacek.html': (('hrac-3534.html', 'Bez historie a zápasů'),),
+    'clanek-hradecky-juniorsky-cup.html': (
+        ('clanek-podpora-lscm-2026.html', 'Bez fotografie, s přílohami'),
+        ('clanek-3122.html', 'Externí přenosy v textu'),
+        ('clanek-podpora-treneru-nadace-cez.html', 'Ilustrační grafika bez galerie'),
+    ),
+    'galerie-mcr-junioru-2026.html': (('galerie-hamr-2024.html', 'Zdroj bez jména fotografa'),),
+    'asociace.html': (('odborne-komise.html', 'Samostatná stránka komisí'),),
+}
+
+PRIMARY_LABELS = {
+    'klub-viktoria-brno.html': 'Profil s kontakty a družstvy',
+    'hrac-marek-panacek.html': 'Profil s historií a zápasy',
+    'clanek-hradecky-juniorsky-cup.html': 'Reportáž s fotogalerií',
+    'galerie-mcr-junioru-2026.html': 'Galerie se jménem fotografa',
+    'obsah-archiv-1746.html': 'Sezónní článek trenérů',
+    'faq.html': 'Přesměrování na otázky',
+}
 
 def withheld(name):
     return (name in WITHHELD or name in {'treneri-aktuality.html', 'treneri-pozvanky.html'}
@@ -89,10 +117,14 @@ class Chapter(HTMLParser):
     def directory_html(self):
         rows = []
         for anchor, title, sample in self.entries:
+            examples = [(sample, PRIMARY_LABELS.get(sample, 'Otevřít mustr')), *EXAMPLES.get(sample, ())]
+            sample_links = ''.join(
+                f'<li><a href="templates/{escape(path)}" aria-label="{escape(label)} – {escape(title)}">'
+                f'{escape(label)}</a></li>' for path, label in examples
+            )
             rows.append(
                 f'<li><h3><a href="{escape(self.filename)}#{escape(anchor)}">{escape(title)}</a></h3>'
-                f'<a href="templates/{escape(sample)}" '
-                f'aria-label="Otevřít mustr – {escape(title)}">Otevřít mustr</a></li>'
+                f'<ul class="sample-options">{sample_links}</ul></li>'
             )
         return (f'<details class="directory-group"><summary class="directory-heading">{escape(self.title)}'
                 '<span class="ui-icon ui-icon--chevron-down" aria-hidden="true"></span></summary>'
@@ -100,22 +132,13 @@ class Chapter(HTMLParser):
                 '<ul class="template-list">\n' + '\n'.join(rows) + '\n</ul></details>')
 
 
-def sample_markup(name):
+def sample_markup(name, approved_names):
     if Path(name).name != name or not name.endswith('.html') or withheld(name):
         raise ValueError(f'Outside the approved handoff: {name}')
     markup = (ROOT / 'templates' / name).read_text(encoding='utf-8')
     markup = re.sub(r'<!--\s*old fixtures:start\b.*?-->', '', markup, flags=re.S)
     markup = re.sub(r'<li>\s*<a href="\./historie\.html">Historie(?: squashe)?</a>\s*</li>', '', markup)
-    # Keep event names in the approved calendar and homepage. The deferred tournament
-    # detail itself is outside the handoff, including standalone calls to open it.
-    def approved_link(match):
-        if not withheld(match['target']):
-            return match[0]
-        if 'class="button' in match[0].split('>', 1)[0]:
-            return ''
-        return match['label']
-    markup = re.sub(r'<a\b[^>]*?\bhref="(?:\./)?(?P<target>[^"/?#]+\.html)(?:[?#][^"]*)?"[^>]*>'
-                    r'(?P<label>.*?)</a>', approved_link, markup, flags=re.S)
+    markup = prepare_sample(markup, approved_names)
     return markup.replace('../assets/js/mapy-config.local.js', '../assets/js/mapy-config.js')
 
 
@@ -152,8 +175,14 @@ def package_files():
     files['llms.txt'] = ('\n'.join(index) + '\n').encode('utf-8')
     files['assets/font/VendSans-OFL.txt'] = (GUIDE / 'VendSans-OFL.txt').read_bytes()
     template_links = PageLinks(ROOT / 'templates')
-    for name in sorted(links.samples):
-        markup = sample_markup(name)
+    primary = {sample for chapter in chapters for _, _, sample in chapter.entries}
+    if EXAMPLES.keys() - primary:
+        raise ValueError('State examples require a primary directory entry')
+    approved = primary | {path for variants in EXAMPLES.values() for path, _ in variants}
+    if links.samples != approved:
+        raise ValueError(f'Guide links outside the approved inventory: {links.samples ^ approved}')
+    for name in sorted(approved):
+        markup = sample_markup(name, approved)
         template_links.feed(markup)
         files['templates/' + name] = markup.encode('utf-8')
 
@@ -181,12 +210,19 @@ def package_files():
 
 def write_preview(files):
     directory = ARCHIVE.with_suffix('')
+    inventory = directory / '.generated-files.json'
+    previous = json.loads(inventory.read_text()) if inventory.exists() else []
+    for name in set(previous) - files.keys():
+        obsolete = (directory / name).resolve()
+        if obsolete.is_relative_to(directory.resolve()) and obsolete.is_file():
+            obsolete.unlink()
     for name, data in files.items():
         target = directory / name
         if target.is_file() and target.read_bytes() == data:
             continue
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_bytes(data)
+    inventory.write_text(json.dumps(sorted(files), ensure_ascii=False) + '\n')
     print(f'{directory} ({len(files)} files)')
 
 

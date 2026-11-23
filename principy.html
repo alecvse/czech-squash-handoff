@@ -6,7 +6,7 @@
   <title>Obecné principy | Předání pro vývojáře | Czech Squash</title>
   <link rel="icon" href="assets/ui/logo-horizontal.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/site.css">
-  <link rel="stylesheet" href="predani.css?v=6cb83978139b">
+  <link rel="stylesheet" href="predani.css?v=e9797d8b3d76">
   <link rel="alternate" type="text/markdown" href="principy.md">
   <script src="ai.js" defer></script>
 </head>
@@ -106,6 +106,7 @@ SOFTWARE.
       <h2>Zadání další sekce</h2>
       <ol>
         <li>Urči, které typy stránek sekce obsahuje a jak mezi nimi návštěvník přechází. U každého rozdílu dej do karty „Dnes“ odkaz na odpovídající místo současného webu a do karty „Nový mustr“ odkaz na šablonu. Pokud nový mustr spojuje údaje z více míst, popiš v „Dnes“, kde je návštěvník najde, a odkaž na příslušné stránky. Pokud předobraz neexistuje, obsah karty „Dnes“ tvoří jediná věta „Na současném webu nemá tato část předobraz.“ Při nedostupné stránce uveď, co ještě potřebuješ ověřit.</li>
+        <li>Ke každému typu stránky vyber jeden hlavní mustr. Vedle něj uveď další ukázku jen tehdy, když jiný stav dat mění rozložení, chování nebo dostupnou akci. Další ročníky a obsahové příklady pro kontrolu migrace odkazuj na původní web.</li>
         <li>Popiš požadované chování pro libovolný záznam daného typu, potřebná data, jejich vazby a zobrazení při chybějící hodnotě. Vysvětli také, co správce zadává a kam se jeho změna propíše. Konkrétní jména, výsledky nebo ID použij jako příklad pro ověření.</li>
         <li>Otevřené otázce přiřaď odpovědnost. Pod označením „Ověřit v backendu“ vývojář zjistí třeba zdroj dat, existující vazbu nebo oprávnění v administraci. Pod označením „Rozhodnout s vlastníkem…“ uveď konkrétní roli a volbu, například kde má být návštěvníkům dostupný dosavadní export.</li>
         <li>Přečti zadání v Markdownu a zkus podle něj popsat napojení jiného záznamu. Musí z něj být poznat, co implementovat, podle čeho ověřit výsledek a komu patří zbývající rozhodnutí. V pracovním náhledu ověř cestu mezi mustry a odkazy z obou karet.</li>
@@ -162,9 +163,10 @@ Začni na přehledu, otevři konkrétní detail a vrať se zpět. Zkontroluj zvo
 ## Zadání další sekce
 
 1. Urči, které typy stránek sekce obsahuje a jak mezi nimi návštěvník přechází. U každého rozdílu dej do karty „Dnes“ odkaz na odpovídající místo současného webu a do karty „Nový mustr“ odkaz na šablonu. Pokud nový mustr spojuje údaje z více míst, popiš v „Dnes“, kde je návštěvník najde, a odkaž na příslušné stránky. Pokud předobraz neexistuje, obsah karty „Dnes“ tvoří jediná věta „Na současném webu nemá tato část předobraz.“ Při nedostupné stránce uveď, co ještě potřebuješ ověřit.
-2. Popiš požadované chování pro libovolný záznam daného typu, potřebná data, jejich vazby a zobrazení při chybějící hodnotě. Vysvětli také, co správce zadává a kam se jeho změna propíše. Konkrétní jména, výsledky nebo ID použij jako příklad pro ověření.
-3. Otevřené otázce přiřaď odpovědnost. Pod označením „Ověřit v backendu“ vývojář zjistí třeba zdroj dat, existující vazbu nebo oprávnění v administraci. Pod označením „Rozhodnout s vlastníkem…“ uveď konkrétní roli a volbu, například kde má být návštěvníkům dostupný dosavadní export.
-4. Přečti zadání v Markdownu a zkus podle něj popsat napojení jiného záznamu. Musí z něj být poznat, co implementovat, podle čeho ověřit výsledek a komu patří zbývající rozhodnutí. V pracovním náhledu ověř cestu mezi mustry a odkazy z obou karet.
+2. Ke každému typu stránky vyber jeden hlavní mustr. Vedle něj uveď další ukázku jen tehdy, když jiný stav dat mění rozložení, chování nebo dostupnou akci. Další ročníky a obsahové příklady pro kontrolu migrace odkazuj na původní web.
+3. Popiš požadované chování pro libovolný záznam daného typu, potřebná data, jejich vazby a zobrazení při chybějící hodnotě. Vysvětli také, co správce zadává a kam se jeho změna propíše. Konkrétní jména, výsledky nebo ID použij jako příklad pro ověření.
+4. Otevřené otázce přiřaď odpovědnost. Pod označením „Ověřit v backendu“ vývojář zjistí třeba zdroj dat, existující vazbu nebo oprávnění v administraci. Pod označením „Rozhodnout s vlastníkem…“ uveď konkrétní roli a volbu, například kde má být návštěvníkům dostupný dosavadní export.
+5. Přečti zadání v Markdownu a zkus podle něj popsat napojení jiného záznamu. Musí z něj být poznat, co implementovat, podle čeho ověřit výsledek a komu patří zbývající rozhodnutí. V pracovním náhledu ověř cestu mezi mustry a odkazy z obou karet.
 
 V autorském projektu příkaz `python3 implementation/predani/build_extraliga.py` aktualizuje lokální náhled. Schválené mustry a zadání předáváme jako [označené verze na GitHubu](https://github.com/alecvse/czech-squash-handoff/tags).
 </template>

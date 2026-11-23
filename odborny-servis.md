@@ -18,7 +18,7 @@ Přehled trenérské části odkazuje na aktuality, seznam, projekty, pozvánky,
 
 #### Nový mustr
 
-Rozcestník slouží jako vstup k šesti oblastem. Dokumenty míří do společné kategorie Dokumentů, metodika zůstává externí. Článkový archiv je dostupný z trenérských aktualit.
+Rozcestník slouží jako vstup k šesti oblastem. Dokumenty míří do společné kategorie Dokumentů, metodika zůstává externí. Trenérské aktuality a pozvánky čekají na dopracování. Sezónní články má vlastní [archiv trenérů](templates/treneri-archiv.html).
 
 - [Rozcestník Trenéři](templates/treneri.html)
 - [Cíl karty Dokumenty](templates/dokumenty-treneri.html)
@@ -41,7 +41,7 @@ Trenérský archiv spojuje starší dokumenty s odkazy na celé sezónní člán
 
 #### Nový mustr
 
-Archiv dostupný z Aktualit pro trenéry vypisuje sezóny se zveřejněným článkem. Starší pozvánky a další samostatné soubory patří do trenérské kategorie Dokumentů.
+Archiv vypisuje sezóny se zveřejněným článkem. Starší pozvánky a další samostatné soubory patří do trenérské kategorie Dokumentů.
 
 - [Seznam sezón s články](templates/treneri-archiv.html)
 - [Převedené samostatné soubory](templates/dokumenty-treneri.html#skoleni-a-starsi-podklady)
@@ -63,15 +63,13 @@ Každý archivní článek má původní číselné ID a vlastní soubor oznáme
 - [Sezónní článek trenérů](https://czechsquash.cz/novinka/?news=1746)
 - [Sezónní článek školení](https://czechsquash.cz/novinka/?news=1745)
 - [Archivní článek rozhodčích](https://czechsquash.cz/novinka/?news=750)
+- [Původní archivní aktuality projektu LSCM](https://czechsquash.cz/novinka/?news=2250)
 
 #### Nový mustr
 
-Detail zachovává původní členění textu a odkazy na jednotlivé přílohy. Drobečková navigace se řídí odbornou sekcí. Přehledy Rozhodčí a Školení nabízejí dostupné soubory také přímo.
+Sezónní článek trenérů ukazuje společnou šablonu pro odborný archiv. Každý záznam má vlastní ID, text a odkazy na přílohy. Drobečková navigace se řídí odbornou sekcí. Přehledy Rozhodčí a Školení nabízejí dostupné soubory také přímo.
 
-- [Archivní aktuality LSCM](templates/obsah-archiv-2250.html)
 - [Trenérský článek 2019/2020](templates/obsah-archiv-1746.html)
-- [Školení 2019/2020](templates/obsah-archiv-1745.html)
-- [Archiv rozhodčích](templates/obsah-archiv-750.html)
 
 **Data a správa.** Přenášej ID článku, sekci, datum zveřejnění a uspořádaný obsah. Článek může pokrývat jednu i více sezón. U každého sezónního bloku zachovej jeho pořadí, text a přílohy. Dva podobné články v různých sekcích si ponechávají vlastní identitu.
 
@@ -79,12 +77,12 @@ Detail zachovává původní členění textu a odkazy na jednotlivé přílohy.
 
 **Kontrola po napojení.** Porovnej trenérský a školicí článek téže sezóny, poté jiný ročník s odlišným počtem příloh. Otevři původní adresu i soubor připojený uvnitř textu.
 
-### Další ročníky pro kontrolu migrace
+### Původní články dalších ročníků pro kontrolu migrace
 
-- 2018/2019 · [Trenéři](templates/obsah-archiv-1470.html) · [Školení](templates/obsah-archiv-1471.html)
-- 2017/2018 · [Trenéři](templates/obsah-archiv-1028.html) · [Školení](templates/obsah-archiv-1029.html)
-- 2016/2017 · [Trenéři](templates/obsah-archiv-671.html) · [Školení](templates/obsah-archiv-670.html)
-- 2015/2016 · [Trenéři](templates/obsah-archiv-408.html) · [Školení](templates/obsah-archiv-410.html)
+- 2018/2019 · [Trenéři](https://czechsquash.cz/novinka/?news=1470) · [Školení](https://czechsquash.cz/novinka/?news=1471)
+- 2017/2018 · [Trenéři](https://czechsquash.cz/novinka/?news=1028) · [Školení](https://czechsquash.cz/novinka/?news=1029)
+- 2016/2017 · [Trenéři](https://czechsquash.cz/novinka/?news=671) · [Školení](https://czechsquash.cz/novinka/?news=670)
+- 2015/2016 · [Trenéři](https://czechsquash.cz/novinka/?news=408) · [Školení](https://czechsquash.cz/novinka/?news=410)
 
 <a id="projekty"></a>
 
