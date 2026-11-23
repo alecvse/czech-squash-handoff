@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="80px" viewBox="0 0 30 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>dotts</title>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="HP-Desktop" transform="translate(-1145, -600)" fill="#FFFFFE">
+            <g id="hero-article-carousel" transform="translate(320, 161)">
+                <path d="M855,454 C855,462.28722 848.28722,469 839.993412,469 C831.719368,469 825,462.28722 825,454 C825,445.71278 831.719368,439 839.993412,439 C848.28722,439 855,445.71278 855,454 M855,504 C855,512.283582 848.28722,519 839.993412,519 C831.719368,519 825,512.283582 825,504 C825,495.716418 831.719368,489 839.993412,489 C848.28722,489 855,495.716418 855,504" id="dotts"></path>
+            </g>
+        </g>
+    </g>
+</svg>

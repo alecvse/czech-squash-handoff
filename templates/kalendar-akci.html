@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kalendář akcí | Český squash</title>
+    <meta name="description" content="Výběr squashových turnajů a ligových utkání v říjnu a listopadu 2026.">
+    <link rel="icon" href="../assets/ui/logo-horizontal.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../assets/css/site.css">
+    <script src="../assets/js/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Přejít na obsah</a>
+    <header class="site-header" data-site-header>
+      <div class="site-header__inner container">
+        <div class="site-header__brand">
+          <a href="./homepage.html" aria-label="Český squash – domů">
+            <img src="../assets/ui/logo-horizontal.svg" width="154" height="40" alt="">
+          </a>
+        </div>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Otevřít menu"
+          hidden
+          data-menu-toggle
+        >
+          <span class="menu-toggle__icon" aria-hidden="true"></span>
+        </button>
+
+        <div class="site-header__desktop">
+          <div class="utility-row">
+            <ul class="utility-list">
+              <li><a href="./kluby.html"><span class="ui-icon ui-icon--mapa" aria-hidden="true"></span><span>Kluby</span></a></li>
+              <li><a href="./treneri.html"><span class="ui-icon ui-icon--treneri" aria-hidden="true"></span><span>Trenéři</span></a></li>
+              <li><a href="./zebricky.html"><span class="ui-icon ui-icon--zebricky" aria-hidden="true"></span><span>Žebříčky</span></a></li>
+            </ul>
+            <ul class="social-list">
+              <li><a href="https://www.facebook.com/ceskaasociacesquashe" aria-label="Facebook"><span class="ui-icon ui-icon--fb" aria-hidden="true"></span></a></li>
+              <li><span class="nav-label" role="img" aria-label="Instagram"><span class="ui-icon ui-icon--ig" aria-hidden="true"></span></span></li>
+              <li><a href="https://www.youtube.com/@czechsquashstream9906" aria-label="YouTube"><span class="ui-icon ui-icon--yt" aria-hidden="true"></span></a></li>
+            </ul>
+          </div>
+
+          <div class="main-row">
+            <nav class="main-navigation" aria-label="Hlavní navigace">
+              <ul>
+                <li><a href="./aktuality.html">Aktuality</a></li>
+                <li><a href="./kalendar-akci.html">Kalendář akcí</a></li>
+                <li><a href="./souteze.html">Soutěže družstev</a></li>
+                <li><a href="./reprezentace.html">Reprezentace</a></li>
+                <li><a href="./nabory.html">Hrej squash!</a></li>
+                <li><a href="./asociace.html">ČASQ</a></li>
+                <li><a href="./dokumenty.html">Dokumenty</a></li>
+                <li><a href="./kontakty.html">Kontakty</a></li>
+              </ul>
+            </nav>
+            <a class="button button--member" href="./clensky-system.html">Přihlášení pro členy</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+        <div class="container">
+          <a class="button button--member" href="./clensky-system.html">Přihlášení pro členy</a>
+          <nav aria-label="Mobilní navigace">
+            <ul class="mobile-menu__main">
+              <li><a href="./aktuality.html">Aktuality</a></li>
+              <li><a href="./kalendar-akci.html">Kalendář akcí</a></li>
+                <li><a href="./souteze.html">Soutěže družstev</a></li>
+              <li><a href="./reprezentace.html">Reprezentace</a></li>
+              <li><a href="./nabory.html">Hrej squash!</a></li>
+              <li><a href="./asociace.html">ČASQ</a></li>
+                <li><a href="./dokumenty.html">Dokumenty</a></li>
+              <li><a href="./kontakty.html">Kontakty</a></li>
+            </ul>
+          </nav>
+          <ul class="mobile-menu__utility">
+            <li><a href="./kluby.html"><span class="ui-icon ui-icon--mapa" aria-hidden="true"></span><span>Kluby</span></a></li>
+            <li><a href="./treneri.html"><span class="ui-icon ui-icon--treneri" aria-hidden="true"></span><span>Trenéři</span></a></li>
+            <li><a href="./zebricky.html"><span class="ui-icon ui-icon--zebricky" aria-hidden="true"></span><span>Žebříčky</span></a></li>
+          </ul>
+          <div class="mobile-menu__footer">
+            <div class="mobile-menu__social">
+              <a href="https://www.facebook.com/ceskaasociacesquashe" aria-label="Facebook"><span class="ui-icon ui-icon--fb" aria-hidden="true"></span></a>
+              <span class="nav-label" role="img" aria-label="Instagram"><span class="ui-icon ui-icon--ig" aria-hidden="true"></span></span>
+              <a href="https://www.youtube.com/@czechsquashstream9906" aria-label="YouTube"><span class="ui-icon ui-icon--yt" aria-hidden="true"></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <div class="listing-page container" data-filter-list>
+<nav class="breadcrumbs" aria-label="Drobečková navigace"><ol><li><a href="./homepage.html">Úvod</a></li></ol></nav>
+        <header class="page-heading"><p class="eyebrow">Turnaje a soutěže</p><h1>Kalendář akcí</h1><p class="page-heading__intro">Turnaje jednotlivců i utkání družstev na jednom místě.</p></header>
+        <form class="filters filters--calendar" data-list-filters hidden aria-label="Filtrovat kalendář">
+          <div class="field field--search"><label for="event-search">Název nebo místo</label><input type="search" name="search" id="event-search" placeholder="Např. HAMR nebo Praha"></div>
+          <div class="field"><label for="event-category">Kategorie</label><select id="event-category" name="category"><option value="">Všechny kategorie</option><option value="muzi">Muži</option><option value="zeny">Ženy</option><option value="juniori">Junioři</option><option value="masters">Masters</option><option value="druzstva">Družstva</option><option value="treneri">Trenéři</option><option value="rozhodci">Rozhodčí</option></select></div>
+          <div class="field field--date"><label for="event-from">Datum od</label><input id="event-from" name="from" type="date" aria-describedby="date-error"></div>
+          <div class="field field--date"><label for="event-to">Datum do</label><input id="event-to" name="to" type="date" aria-describedby="date-error"></div>
+          <button class="button button--secondary" type="reset">Zrušit filtry</button>
+          <p id="date-error" class="filter-error" data-filter-error role="alert" hidden>Datum do musí být stejné nebo pozdější než datum od.</p>
+        </form>
+        <p class="visually-hidden" data-result-count role="status" aria-live="polite" aria-atomic="true">Zobrazeno: 15 z 15</p>
+<section class="calendar-month" data-filter-group><h2>Listopad 2026</h2><div class="table-scroll" tabindex="0" role="region" aria-label="Kalendář — Listopad 2026"><table class="data-table calendar-table"><caption class="visually-hidden">Akce v měsíci Listopad 2026</caption><thead><tr><th scope="col">Termín</th><th scope="col">Kategorie</th><th scope="col">Název akce</th><th scope="col">Místo</th><th scope="col">Stav / čas</th></tr></thead><tbody><tr data-filter-item data-category="juniori" data-date="2026-11-14" data-end-date="2026-11-15"><td class="date-cell tabular-nums"><time datetime="2026-11-14">14.–15. 11.</time></td><td>Junioři A</td><th scope="row">Elbe/Labe Junior Squash Open 2026</th><td>Drážďany</td><td><span class="status-label">Připravuje se</span></td></tr>
+<tr data-filter-item data-category="masters" data-date="2026-11-14" data-end-date="2026-11-14"><td class="date-cell tabular-nums"><time datetime="2026-11-14">14. 11.</time></td><td>Masters</td><th scope="row">FajnKafe Modrany Masters HAMR</th><td>Praha 10</td><td><span class="status-label">Připravuje se</span></td></tr>
+<tr data-filter-item data-category="muzi" data-date="2026-11-07" data-end-date="2026-11-07"><td class="date-cell tabular-nums"><time datetime="2026-11-07">7. 11.</time></td><td>Muži C</td><th scope="row">ELEKTRO MAHL – Muži C</th><td>Praha 10</td><td><span class="status-label">Připravuje se</span></td></tr></tbody></table></div></section>
+<section class="calendar-month" data-filter-group><h2>Říjen 2026</h2><div class="table-scroll" tabindex="0" role="region" aria-label="Kalendář — Říjen 2026"><table class="data-table calendar-table"><caption class="visually-hidden">Akce v měsíci Říjen 2026</caption><thead><tr><th scope="col">Termín</th><th scope="col">Kategorie</th><th scope="col">Název akce</th><th scope="col">Místo</th><th scope="col">Stav / čas</th></tr></thead><tbody><tr data-filter-item data-category="muzi" data-date="2026-10-24" data-end-date="2026-10-25"><td class="date-cell tabular-nums"><time datetime="2026-10-24">24.–25. 10.</time></td><td>Muži A</td><th scope="row">MEMORIÁL JANY KOSINKOVÉ</th><td>SQ centrum HK</td><td><span class="status-label">Odehráno</span></td></tr>
+<tr data-filter-item data-category="zeny" data-date="2026-10-24" data-end-date="2026-10-24"><td class="date-cell tabular-nums"><time datetime="2026-10-24">24. 10.</time></td><td>Ženy A</td><th scope="row">MEMORIÁL JANY KOSINKOVÉ</th><td>SQ centrum HK</td><td><span class="status-label">Odehráno</span></td></tr>
+<tr data-filter-item data-category="druzstva" data-date="2026-10-17" data-end-date="2026-10-18"><td class="date-cell tabular-nums"><time datetime="2026-10-17">17.–18. 10.</time></td><td><a href="./souteze.html">Ligy mužů</a></td><th scope="row">1., 2. a 3. liga družstev mužů</th><td>Dle rozlosování</td><td><span class="status-label">Ligové kolo</span></td></tr>
+<tr data-filter-item data-category="druzstva" data-date="2026-10-15" data-end-date="2026-10-15"><td class="date-cell tabular-nums"><time datetime="2026-10-15">15. 10.</time></td><td><a href="./soutez-extraliga-muzi.html">Extraliga muži</a></td><th scope="row"><a href="./utkani-11588.html">JM Ostrava – SCC HK BULDOCI</a></th><td>FAJNE Ostrava</td><td class="tabular-nums"><span class="status-label">Odehráno</span></td></tr>
+<tr data-filter-item data-category="druzstva" data-date="2026-10-14" data-end-date="2026-10-14"><td class="date-cell tabular-nums"><time datetime="2026-10-14">14. 10.</time></td><td><a href="./soutez-extraliga-muzi.html">Extraliga muži</a></td><th scope="row"><a href="./utkani-11590.html">SC Otec – TOPO muži A – HAMR D naPočkání.com</a></th><td>Squashcentrum Strahov</td><td class="tabular-nums"><span class="status-label">Odehráno</span></td></tr>
+<tr data-filter-item data-category="druzstva" data-date="2026-10-13" data-end-date="2026-10-13"><td class="date-cell tabular-nums"><time datetime="2026-10-13">13. 10.</time></td><td><a href="./soutez-extraliga-muzi.html">Extraliga muži</a></td><th scope="row"><a href="./utkani-11587.html">Dunlop Sq Team UH – Viktoria Brno Sportprofit</a></th><td>Uherské Hradiště</td><td class="tabular-nums"><span class="status-label">Odehráno</span></td></tr>
+<tr data-filter-item data-category="druzstva" data-date="2026-10-13" data-end-date="2026-10-13"><td class="date-cell tabular-nums"><time datetime="2026-10-13">13. 10.</time></td><td><a href="./soutez-extraliga-muzi.html">Extraliga muži</a></td><th scope="row"><a href="./utkani-11589.html">SC Strahov A – SC Strahov B</a></th><td>Squashcentrum Strahov</td><td class="tabular-nums"><span class="status-label">Odehráno</span></td></tr>
+<tr data-filter-item data-category="masters" data-date="2026-10-10" data-end-date="2026-10-10"><td class="date-cell tabular-nums"><time datetime="2026-10-10">10. 10.</time></td><td>Masters</td><th scope="row">naPočkání.com Masters HAMR</th><td>Praha 10</td><td><span class="status-label">Odehráno</span></td></tr>
+<tr data-filter-item data-category="juniori" data-date="2026-10-03" data-end-date="2026-10-04"><td class="date-cell tabular-nums"><time datetime="2026-10-03">3.–4. 10.</time></td><td>Junioři A</td><th scope="row">HRADECKÝ JUNIORSKÝ CUP</th><td>SQ centrum HK</td><td><span class="status-label">Odehráno</span></td></tr></tbody></table></div></section>
+<section class="calendar-month" data-filter-group><h2>Červen 2025</h2><div class="table-scroll" tabindex="0" role="region" aria-label="Kalendář — červen 2025"><table class="data-table calendar-table"><caption class="visually-hidden">Akce v červnu 2025</caption><thead><tr><th scope="col">Termín</th><th scope="col">Kategorie</th><th scope="col">Název akce</th><th scope="col">Místo</th><th scope="col">Stav / čas</th></tr></thead><tbody><tr data-filter-item data-category="treneri" data-date="2025-06-19" data-end-date="2025-06-22"><td class="date-cell tabular-nums"><time datetime="2025-06-19">19.–22. 6.</time></td><td>Trenéři</td><th scope="row">Školení trenérů 3. třídy ČASQ a WSC Level 1</th><td>Praha</td><td>Termín v evidenci</td></tr></tbody></table></div></section>
+<section class="calendar-month" data-filter-group><h2>Březen 2025</h2><div class="table-scroll" tabindex="0" role="region" aria-label="Kalendář — březen 2025"><table class="data-table calendar-table"><caption class="visually-hidden">Akce v březnu 2025</caption><thead><tr><th scope="col">Termín</th><th scope="col">Kategorie</th><th scope="col">Název akce</th><th scope="col">Místo</th><th scope="col">Stav / čas</th></tr></thead><tbody><tr data-filter-item data-category="treneri" data-date="2025-03-21" data-end-date="2025-03-23"><td class="date-cell tabular-nums"><time datetime="2025-03-21">21.–23. 3.</time></td><td>Trenéři</td><th scope="row">WSF level 2 Coaching course</th><td>—</td><td>Zrušeno pro malý počet přihlášených</td></tr></tbody></table></div></section>
+<section class="calendar-month" data-filter-group><h2>Prosinec 2022</h2><div class="table-scroll" tabindex="0" role="region" aria-label="Kalendář — prosinec 2022"><table class="data-table calendar-table"><caption class="visually-hidden">Akce v prosinci 2022</caption><thead><tr><th scope="col">Termín</th><th scope="col">Kategorie</th><th scope="col">Název akce</th><th scope="col">Místo</th><th scope="col">Stav / čas</th></tr></thead><tbody><tr data-filter-item data-category="rozhodci" data-date="2022-12-03" data-end-date="2022-12-04"><td class="date-cell tabular-nums"><time datetime="2022-12-03">3.–4. 12.</time></td><td>Rozhodčí</td><th scope="row">Kurz rozhodčích III. třídy</th><td>Praha, Strahov</td><td>Termín v evidenci</td></tr></tbody></table></div></section><div class="empty-state" data-filter-empty hidden><h2>Žádná akce neodpovídá výběru</h2><p>Změňte období, kategorii nebo hledaný název.</p><button type="button" class="button button--secondary" data-filter-reset>Zrušit filtry</button></div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <section id="partneri" class="partners" aria-label="Partneři českého squashe">
+        <div class="partners__grid container">
+          <div class="partner-group">
+            <h2>Hlavní partner českého squashe</h2>
+            <img src="../assets/ui/logo-aricoma.svg" alt="Aricoma" width="226" height="32">
+          </div>
+          <div class="partner-group partner-group--wide">
+            <h2>Partneři českého squashe</h2>
+            <div>
+              <img src="../assets/ui/logo-asb.svg" alt="ASB SquashCourts" width="74" height="32">
+              <img src="../assets/ui/logo-underarmour.svg" alt="Under Armour" width="59" height="34">
+              <img src="../assets/ui/logo-dunlop.svg" alt="Dunlop" width="144" height="24">
+            </div>
+          </div>
+          <div class="partner-group">
+            <h2>Český squash finančně podporuje</h2>
+            <img src="../assets/ui/logo-nsa.svg" alt="Národní sportovní agentura" width="68" height="48">
+          </div>
+        </div>
+      </section>
+      <div class="footer-navigation container">
+        <section class="footer-column">
+          <h2>ČASQ</h2>
+          <ul>
+            <li><a href="./asociace.html">Odborné komise</a></li>
+            <li><a href="./kontakty.html">Kontakty</a></li>
+            <li><a href="./rozhodci.html">Rozhodčí</a></li>
+            <li><a href="./skoleni.html">Školení</a></li>
+            <li><a href="./treneri.html">Trenéři</a></li>
+            <li><a href="./dokumenty.html">Řády a předpisy</a></li>
+          </ul>
+        </section>
+        <section class="footer-column">
+          <h2>Hrej squash!</h2>
+          <ul>
+            <li><a href="./kluby.html">Najdi svůj klub</a></li>
+            <li><a href="./nabory.html">Začít se squashem</a></li>
+            <li><a href="./pravidla.html">Pravidla squashe</a></li>
+            
+            <li><a href="./nabory.html#otazky">Časté otázky</a></li>
+          </ul>
+        </section>
+        <section class="footer-column">
+          <h2>Turnaje a soutěže</h2>
+          <ul>
+            <li><a href="./kalendar-akci.html">Kalendář akcí</a></li>
+            <li><a href="./souteze.html">Soutěže družstev</a></li>
+            <li><a href="https://europeansquash.com/calendar/158/Event-Calendar">Mezinárodní turnaje ESF</a></li>
+            <li><a href="https://psaworldtour.com/tournaments">Mezinárodní turnaje PSA</a></li>
+            <li><a href="./zebricky.html">Žebříčky hráčů</a></li>
+          </ul>
+        </section>
+        <section class="footer-column">
+          <h2>Média a sítě</h2>
+          <ul>
+            <li><a href="./tiskove-zpravy.html">Tiskové informace</a></li>
+            <li><a href="./kontakty.html#marketing-komunikace">Kontakt pro média</a></li>
+            <li><a href="./fotogalerie.html">Fotogalerie</a></li>
+            <li><a href="./homepage.html#stream">Videa</a></li>
+            <li><a href="https://www.facebook.com/ceskaasociacesquashe">Facebook</a></li>
+            <li><a href="https://www.youtube.com/@czechsquashstream9906">YouTube</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="newsletter" aria-labelledby="newsletter-title">
+        <div class="container">
+          <h2 id="newsletter-title">Newsletter českého squashe</h2>
+          <p class="visually-hidden" id="newsletter-status">Přihlášení k odběru není dostupné.</p>
+          <div class="newsletter__form">
+            <label class="visually-hidden" for="newsletter-email">E-mailová adresa</label>
+            <input id="newsletter-email" type="email" autocomplete="email" aria-describedby="newsletter-status" disabled>
+            <button type="button" class="button" aria-describedby="newsletter-status" disabled>Přihlásit odběr</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="site-footer__legal">
+        <p>© 2015–2026 Česká asociace squashe &amp; eSports.cz | <a href="./ochrana-osobnich-udaju.html">GDPR</a> | Nastavení cookies</p>
+      </div>
+    </footer>
+  </body>
+</html>

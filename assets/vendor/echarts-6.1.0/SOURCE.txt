@@ -1,0 +1,10 @@
+Apache ECharts 6.1.0
+Official npm package: https://registry.npmjs.org/echarts/6.1.0
+Distribution archive: https://registry.npmjs.org/echarts/-/echarts-6.1.0.tgz
+Registry integrity (verified before extraction): sha512-q0yaFPggC9FUdsWH4blavRWFmxdrIodbkoKNAjJudAI6CA9gNPxHtV2RcZNEepZVlk4yvBYkOkbk6HIVpIyHZA==
+Source repository: https://github.com/apache/echarts
+Vendored files: dist/echarts.min.js, LICENSE, NOTICE; unchanged from the pinned official package.
+Downloaded 2026-11-03. No CDN or runtime package requests are used.
+b66b25aeb4df84e33199dc21694014d336d222cbd9deb0e5a7c14bd6aa0d0fd0  echarts.min.js
+634293835b43a6dd2094fa39182a3d9a6b9ca43b7fdb9ac354e8037af2a3093a  LICENSE
+d491d358344f842685c1b1585970999db65fe30ecf7ef3867af8814f4016c016  NOTICE

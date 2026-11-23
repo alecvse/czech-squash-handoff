@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fotogalerie | Český squash</title>
+    <meta name="description" content="Momentky z turnajů a dalších squashových akcí.">
+    <link rel="icon" href="../assets/ui/logo-horizontal.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../assets/css/site.css">
+    <script src="../assets/js/site.js?v=20261021-gallery" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Přejít na obsah</a>
+    <header class="site-header" data-site-header>
+      <div class="site-header__inner container">
+        <div class="site-header__brand">
+          <a href="./homepage.html" aria-label="Český squash – domů">
+            <img src="../assets/ui/logo-horizontal.svg" width="154" height="40" alt="">
+          </a>
+        </div>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Otevřít menu"
+          hidden
+          data-menu-toggle
+        >
+          <span class="menu-toggle__icon" aria-hidden="true"></span>
+        </button>
+
+        <div class="site-header__desktop">
+          <div class="utility-row">
+            <ul class="utility-list">
+              <li><a href="./kluby.html"><span class="ui-icon ui-icon--mapa" aria-hidden="true"></span><span>Kluby</span></a></li>
+              <li><a href="./treneri.html"><span class="ui-icon ui-icon--treneri" aria-hidden="true"></span><span>Trenéři</span></a></li>
+              <li><a href="./zebricky.html"><span class="ui-icon ui-icon--zebricky" aria-hidden="true"></span><span>Žebříčky</span></a></li>
+            </ul>
+            <ul class="social-list">
+              <li><a href="https://www.facebook.com/ceskaasociacesquashe" aria-label="Facebook"><span class="ui-icon ui-icon--fb" aria-hidden="true"></span></a></li>
+              <li><span class="nav-label" role="img" aria-label="Instagram"><span class="ui-icon ui-icon--ig" aria-hidden="true"></span></span></li>
+              <li><a href="https://www.youtube.com/@czechsquashstream9906" aria-label="YouTube"><span class="ui-icon ui-icon--yt" aria-hidden="true"></span></a></li>
+            </ul>
+          </div>
+
+          <div class="main-row">
+            <nav class="main-navigation" aria-label="Hlavní navigace">
+              <ul>
+                <li><a href="./aktuality.html">Aktuality</a></li>
+                <li><a href="./kalendar-akci.html">Kalendář akcí</a></li>
+                <li><a href="./souteze.html">Soutěže družstev</a></li>
+                <li><a href="./reprezentace.html">Reprezentace</a></li>
+                <li><a href="./nabory.html">Hrej squash!</a></li>
+                <li><a href="./asociace.html">ČASQ</a></li>
+                <li><a href="./dokumenty.html">Dokumenty</a></li>
+                <li><a href="./kontakty.html">Kontakty</a></li>
+              </ul>
+            </nav>
+            <a class="button button--member" href="./clensky-system.html">Přihlášení pro členy</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+        <div class="container">
+          <a class="button button--member" href="./clensky-system.html">Přihlášení pro členy</a>
+          <nav aria-label="Mobilní navigace">
+            <ul class="mobile-menu__main">
+              <li><a href="./aktuality.html">Aktuality</a></li>
+              <li><a href="./kalendar-akci.html">Kalendář akcí</a></li>
+                <li><a href="./souteze.html">Soutěže družstev</a></li>
+              <li><a href="./reprezentace.html">Reprezentace</a></li>
+              <li><a href="./nabory.html">Hrej squash!</a></li>
+              <li><a href="./asociace.html">ČASQ</a></li>
+                <li><a href="./dokumenty.html">Dokumenty</a></li>
+              <li><a href="./kontakty.html">Kontakty</a></li>
+            </ul>
+          </nav>
+          <ul class="mobile-menu__utility">
+            <li><a href="./kluby.html"><span class="ui-icon ui-icon--mapa" aria-hidden="true"></span><span>Kluby</span></a></li>
+            <li><a href="./treneri.html"><span class="ui-icon ui-icon--treneri" aria-hidden="true"></span><span>Trenéři</span></a></li>
+            <li><a href="./zebricky.html"><span class="ui-icon ui-icon--zebricky" aria-hidden="true"></span><span>Žebříčky</span></a></li>
+          </ul>
+          <div class="mobile-menu__footer">
+            <div class="mobile-menu__social">
+              <a href="https://www.facebook.com/ceskaasociacesquashe" aria-label="Facebook"><span class="ui-icon ui-icon--fb" aria-hidden="true"></span></a>
+              <span class="nav-label" role="img" aria-label="Instagram"><span class="ui-icon ui-icon--ig" aria-hidden="true"></span></span>
+              <a href="https://www.youtube.com/@czechsquashstream9906" aria-label="YouTube"><span class="ui-icon ui-icon--yt" aria-hidden="true"></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1"><div class="listing-page container" data-filter-list><nav class="breadcrumbs" aria-label="Drobečková navigace"><ol><li><a href="./homepage.html">Úvod</a></li><li><a href="./media.html">Média</a></li></ol></nav><header class="page-heading"><p class="eyebrow">Média</p><h1>Fotogalerie</h1><p class="page-heading__intro">Momentky z turnajů a dalších squashových akcí.</p></header><nav class="section-nav" aria-label="Média"><ul class="section-nav__list"><li><a href="./aktuality.html">Aktuality</a></li><li><a href="./fotogalerie.html" aria-current="page">Fotogalerie</a></li><li><a href="./homepage.html#stream">Videa</a></li><li><a href="./tiskove-zpravy.html">Tiskové informace</a></li></ul></nav><form class="filters" data-list-filters hidden aria-label="Filtrovat fotogalerie"><div class="field field--search"><label for="gallery-search">Hledat</label><input type="search" name="search" id="gallery-search" placeholder="Jméno, název nebo klíčové slovo"></div><div class="field"><label for="gallery-category">Kategorie</label><select name="category" id="gallery-category"><option value="">Všechny kategorie</option><option value="juniori">Junioři</option><option value="souteze">Soutěže</option></select></div><div class="field"><label for="gallery-year">Ročník</label><select name="year" id="gallery-year"><option value="">Všechny ročníky</option><option value="2026">2026</option><option value="2025">2025</option><option value="2024">2024</option></select></div><button class="button button--secondary" type="reset">Zrušit filtry</button></form><p class="visually-hidden" data-result-count role="status" aria-live="polite">Zobrazeno: 6 z 6</p><div class="article-grid">
+<article class="article-card" data-filter-item data-category="juniori" data-year="2026">
+  <a class="article-card__media" href="./clanek-hradecky-juniorsky-cup.html#fotogalerie" aria-label="Fotogalerie Hradeckého juniorského Cupu"><img src="../assets/img/hradecky-cup-2026-01.jpg" alt="Vyhlášení dívek do 11 let v Hradci Králové" loading="lazy" width="2048" height="1524"></a>
+  <div class="article-card__body">
+    <p class="eyebrow"><time datetime="2026-10-05">5. 10. 2026</time> · 10 fotografií</p>
+    <h2><a href="./clanek-hradecky-juniorsky-cup.html#fotogalerie">Hradecký juniorský CUP</a></h2>
+    <p>Vyhlášení všech deseti kategorií po víkendu v SQ centru Hradec Králové.</p>
+  </div>
+</article>
+<article class="article-card" data-filter-item data-category="juniori" data-year="2026">
+  <a class="article-card__media" href="./galerie-mcr-junioru-2026.html" aria-label="Galerie medailistů MČR juniorů 2026"><img src="../assets/img/galerie-juniori-2026.jpg" alt="Společná fotografie medailistů MČR juniorů 2026 v ostravském centru FAJNE" loading="lazy" width="2000" height="1118"></a>
+  <div class="article-card__body">
+    <p class="eyebrow"><time datetime="2026-05-05">5. 5. 2026</time> · 10 fotografií</p>
+    <h2><a href="./galerie-mcr-junioru-2026.html">Medailisté MČR juniorů 2026</a></h2>
+    <p>Ohlédnutí za šampionátem v Ostravě. Fotografie vítězů jednotlivých věkových kategorií.</p>
+  </div>
+</article>
+<article class="article-card" data-filter-item data-category="juniori" data-year="2025">
+  <a class="article-card__media" href="./galerie-mcr-junioru-2025.html" aria-label="Galerie medailistů MČR juniorů 2025"><img src="../assets/img/galerie-juniori-2025.jpg" alt="Společná fotografie medailistů MČR juniorů 2025 v ostravském centru FAJNE" loading="lazy" width="2000" height="1051"></a>
+  <div class="article-card__body">
+    <p class="eyebrow"><time datetime="2025-04-08">8. 4. 2025</time> · 10 fotografií</p>
+    <h2><a href="./galerie-mcr-junioru-2025.html">Medailisté MČR juniorů 2025</a></h2>
+    <p>Ohlédnutí za šampionátem v Ostravě. Fotografie vítězů jednotlivých věkových kategorií.</p>
+  </div>
+</article>
+
+<!-- media:begin -->
+<article class="article-card" data-filter-item data-category="juniori" data-year="2026">
+  <a class="article-card__media" href="./clanek-3163.html#fotogalerie" aria-label="Fotogalerie Mistrovství republiky juniorských družstev 2026"><img src="../assets/img/article-3163-02.jpg" alt="Medailová družstva U15 na mistrovství republiky" loading="lazy"></a>
+  <div class="article-card__body"><p class="eyebrow"><time datetime="2026-05-25">25. 5. 2026</time> · 4 fotografie</p><h2><a href="./clanek-3163.html#fotogalerie">Mistrovství republiky juniorských družstev 2026</a></h2><p>Medailisté a trofeje ze šampionátu družstev v Praze.</p></div>
+</article>
+<article class="article-card" data-filter-item data-category="souteze" data-year="2026">
+  <a class="article-card__media" href="./clanek-juniorsti-mistri-sveta-2026.html#fotogalerie" aria-label="Fotogalerie Juniorské mistrovství světa 2026"><img src="../assets/img/article-3197-01.jpeg" alt="Squashistka s raketou na kurtu zvedá pěst" loading="lazy"></a>
+  <div class="article-card__body"><p class="eyebrow"><time datetime="2026-07-26">26. 7. 2026</time> · 6 fotografií</p><h2><a href="./clanek-juniorsti-mistri-sveta-2026.html#fotogalerie">Juniorské mistrovství světa 2026</a></h2><p>Fotografie z juniorského světového šampionátu v Kanadě.</p></div>
+</article>
+<article class="article-card" data-filter-item data-category="souteze" data-year="2024">
+  <a class="article-card__media" href="./galerie-hamr-2024.html" aria-label="Fotogalerie HAMR SPORT – ženy a muži B"><img src="../assets/img/news-2689-zeny.jpeg" alt="Tři hráčky s raketami stojí na kurtu, před nimi jsou ceny" loading="lazy"></a>
+  <div class="article-card__body"><p class="eyebrow"><time datetime="2024-02-26">26. 2. 2024</time> · 2 fotografie</p><h2><a href="./galerie-hamr-2024.html">HAMR SPORT – ženy a muži B</a></h2><p>Vyhlášení turnajů žen a mužů kategorie B v Praze.</p></div>
+</article>
+<!-- media:end -->
+</div>
+<div class="empty-state" data-filter-empty hidden><h2>Nic jsme nenašli</h2><p>Zkuste jiný výraz nebo zrušte filtry.</p><button class="button button--secondary" type="button" data-filter-reset>Zobrazit vše</button></div></div></main>
+
+    <footer class="site-footer">
+      <section id="partneri" class="partners" aria-label="Partneři českého squashe">
+        <div class="partners__grid container">
+          <div class="partner-group">
+            <h2>Hlavní partner českého squashe</h2>
+            <img src="../assets/ui/logo-aricoma.svg" alt="Aricoma" width="226" height="32">
+          </div>
+          <div class="partner-group partner-group--wide">
+            <h2>Partneři českého squashe</h2>
+            <div>
+              <img src="../assets/ui/logo-asb.svg" alt="ASB SquashCourts" width="74" height="32">
+              <img src="../assets/ui/logo-underarmour.svg" alt="Under Armour" width="59" height="34">
+              <img src="../assets/ui/logo-dunlop.svg" alt="Dunlop" width="144" height="24">
+            </div>
+          </div>
+          <div class="partner-group">
+            <h2>Český squash finančně podporuje</h2>
+            <img src="../assets/ui/logo-nsa.svg" alt="Národní sportovní agentura" width="68" height="48">
+          </div>
+        </div>
+      </section>
+      <div class="footer-navigation container">
+        <section class="footer-column">
+          <h2>ČASQ</h2>
+          <ul>
+            <li><a href="./asociace.html">Odborné komise</a></li>
+            <li><a href="./kontakty.html">Kontakty</a></li>
+            <li><a href="./rozhodci.html">Rozhodčí</a></li>
+            <li><a href="./skoleni.html">Školení</a></li>
+            <li><a href="./treneri.html">Trenéři</a></li>
+            <li><a href="./dokumenty.html">Řády a předpisy</a></li>
+          </ul>
+        </section>
+        <section class="footer-column">
+          <h2>Hrej squash!</h2>
+          <ul>
+            <li><a href="./kluby.html">Najdi svůj klub</a></li>
+            <li><a href="./nabory.html">Začít se squashem</a></li>
+            <li><a href="./pravidla.html">Pravidla squashe</a></li>
+            
+            <li><a href="./nabory.html#otazky">Časté otázky</a></li>
+          </ul>
+        </section>
+        <section class="footer-column">
+          <h2>Turnaje a soutěže</h2>
+          <ul>
+            <li><a href="./kalendar-akci.html">Kalendář akcí</a></li>
+            <li><a href="./souteze.html">Soutěže družstev</a></li>
+            <li><a href="https://europeansquash.com/calendar/158/Event-Calendar">Mezinárodní turnaje ESF</a></li>
+            <li><a href="https://psaworldtour.com/tournaments">Mezinárodní turnaje PSA</a></li>
+            <li><a href="./zebricky.html">Žebříčky hráčů</a></li>
+          </ul>
+        </section>
+        <section class="footer-column">
+          <h2>Média a sítě</h2>
+          <ul>
+            <li><a href="./tiskove-zpravy.html">Tiskové informace</a></li>
+            <li><a href="./kontakty.html#marketing-komunikace">Kontakt pro média</a></li>
+            <li><a href="./fotogalerie.html">Fotogalerie</a></li>
+            <li><a href="./homepage.html#stream">Videa</a></li>
+            <li><a href="https://www.facebook.com/ceskaasociacesquashe">Facebook</a></li>
+            <li><a href="https://www.youtube.com/@czechsquashstream9906">YouTube</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="newsletter" aria-labelledby="newsletter-title">
+        <div class="container">
+          <h2 id="newsletter-title">Newsletter českého squashe</h2>
+          <p class="visually-hidden" id="newsletter-status">Přihlášení k odběru není dostupné.</p>
+          <div class="newsletter__form">
+            <label class="visually-hidden" for="newsletter-email">E-mailová adresa</label>
+            <input id="newsletter-email" type="email" autocomplete="email" aria-describedby="newsletter-status" disabled>
+            <button type="button" class="button" aria-describedby="newsletter-status" disabled>Přihlásit odběr</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="site-footer__legal">
+        <p>© 2015–2026 Česká asociace squashe &amp; eSports.cz | <a href="./ochrana-osobnich-udaju.html">GDPR</a> | Nastavení cookies</p>
+      </div>
+    </footer>
+  </body>
+</html>

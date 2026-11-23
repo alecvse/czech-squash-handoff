@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Soutěže družstev | Předání pro vývojáře | Czech Squash</title>
+  <link rel="icon" href="assets/ui/logo-horizontal.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="predani.css">
+</head>
+<body>
+  <a class="skip-link" href="#obsah">Přejít na obsah</a>
+  <main id="obsah" class="guide container" tabindex="-1">
+    <nav class="handoff-nav" aria-label="Navigace předání">
+      <a href="index.html">Přehled šablon</a>
+      <a href="principy.html">Obecné principy</a>
+    </nav>
+    <header>
+      <p class="eyebrow">Czech Squash · Předání pro vývojáře · 19. 11. 2026</p>
+      <h1>Soutěže družstev</h1>
+      <p>Z přehledu návštěvník vybere soutěž v konkrétní sezóně. U ligy otevře družstvo z tabulky. Z rozpisu ligy, play-off nebo baráže pokračuje na zápis vybrané dvojice. Zadání platí pro všechny ligy, skupiny a ročníky a doplňuje <a href="principy.html">obecné principy předání</a>. Karty „Dnes“ odkazují na současný web, karty „Nový mustr“ na stejnou část v nové šabloně.</p>
+      <div class="guide-actions">
+        <a class="button" href="templates/souteze.html">Mustr přehledu soutěží</a>
+        <a class="button" href="templates/soutez-extraliga-muzi.html">Mustr soutěže · Extraliga mužů</a>
+        <a class="button" href="templates/druzstvo-300-2026-2027.html">Mustr družstva · JM Ostrava</a>
+        <a class="button" href="templates/utkani-11588.html">Mustr utkání</a>
+      </div>
+    </header>
+
+    <nav class="guide-contents" aria-label="Obsah sekce">
+      <a href="#prehled">Přehled soutěží</a>
+      <a href="#soutez">Soutěž</a>
+      <a href="#druzstvo">Družstvo</a>
+      <a href="#utkani">Utkání</a>
+      <a href="#prechod">Přechod ze stávajícího webu</a>
+      <a href="#prevzeti">Kontrola po napojení</a>
+      <a href="#navaznosti">Rozsah náhledu</a>
+    </nav>
+
+    <section id="prehled" data-template="souteze.html">
+      <h2>Přehled soutěží</h2>
+      <article>
+        <h3>Výběr sezóny, ligy a skupiny</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Ročníky jsou pod sebou na jedné stránce. Vedle lig a skupin tu mají vlastní odkazy také výsledkové fáze. V sezóně 2018/2019 vede mužské play-off na semifinálový a finálový termín, baráž o extraligu na barážový termín.</p>
+            <ul class="comparison-links"><li><a href="https://czechsquash.cz/souteze/">Současný přehled ročníků</a></li><li><a href="https://czechsquash.cz/liga/2018-2019-extraligaplayoff">Play-off extraligy mužů 2018/2019</a></li><li><a href="https://czechsquash.cz/liga/2018-2019-barazextraliga">Baráž o extraligu mužů 2018/2019</a></li></ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Návštěvník vybírá sezónu v záhlaví. Každá liga má vlastní kartu. U kategorie nebo skupiny najde odkaz na detail soutěže a případně také PDF s rozlosováním. Přiložený ročník ukazuje ligy a skupiny. Samostatná výsledková fáze v něm nemá vlastní mustr.</p>
+            <ul class="comparison-links"><li><a href="templates/souteze.html#competition-season">Výběr sezóny a karty lig</a></li></ul>
+          </div>
+        </div>
+        <p><strong>Backend.</strong> Nabídni dostupné ročníky. Pro zvolený ročník vrať zveřejněné soutěže s identitou, ligovou úrovní, názvem kategorie či skupiny a pořadím. Převezmi i zveřejněné fáze soutěže s jejich vlastní identitou, názvem a pořadím. Odkaz musí otevřít příslušnou skupinu nebo fázi ve vybraném ročníku. PDF připoj jen k příslušné soutěži a pouze tehdy, je-li k dispozici.</p>
+        <p><strong>Ověřit v backendu.</strong> Zjisti, odkud přehled čte zařazení do ročníku a ligy. Publikace nové skupiny v administraci ji má zpřístupnit v přehledu i před nahráním rozlosování.</p>
+        <p><strong>Rozhodnout s vlastníkem soutěží.</strong> Který ročník má návštěvník vidět při prvním otevření přehledu v době, kdy už je zveřejněná i příští sezóna?</p>
+      </article>
+      <article>
+        <h3>Hrací systém a dokumenty ke stažení</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Odkaz na hrací systém je v záhlaví ročníku. Níže jsou pořadí zápasů a formuláře zápisů. Některé starší ročníky mají navíc vlastní rozhodnutí soutěžní komise.</p>
+            <ul class="comparison-links"><li><a href="https://czechsquash.cz/souteze/">Dokumenty u jednotlivých sezón</a></li></ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Pod ligami je jeden seznam dokumentů pro vybranou sezónu. Každá položka má název, formát a velikost. Formuláře pro trojutkání a víceutkání mají samostatné odkazy na Excel a PDF.</p>
+            <ul class="comparison-links"><li><a href="templates/souteze.html">Mustr přehledu s dokumenty</a></li><li><a href="assets/files/souteze-2026-2027/Hraci%20system.pdf">Ukázka hracího systému (PDF)</a></li></ul>
+          </div>
+        </div>
+        <p><strong>Backend.</strong> Sestav seznam ze souborů platných pro vybranou sezónu a ze společných předpisů a formulářů. Každá položka potřebuje popis, odkaz na konkrétní soubor, formát a velikost. Zachovej i přílohy zveřejněné jen u jediného ročníku.</p>
+        <p><strong>Ověřit v backendu.</strong> Zjisti, jak správce přiřadí přílohu k ročníku nebo ke konkrétní skupině a kde spravuje společné formuláře. Výměna hracího systému pro nový ročník musí zachovat verzi dostupnou z archivu předchozí sezóny.</p>
+      </article>
+    </section>
+
+    <section id="soutez" data-template="soutez-extraliga-muzi.html">
+      <h2>Detail soutěže</h2>
+      <article>
+        <h3>Tabulka a odkaz na družstvo</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Řádek tabulky obsahuje pořadí a bilanci družstva. Název je prostý text. Na soupisku se návštěvník dostane přes samostatný seznam družstev.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/liga/2026-2027-extraliga">Otevřít současnou tabulku</a></li>
+              <li><a href="https://czechsquash.cz/liga/2026-2027-extraliga/soupisky/">Soupisky družstev</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Název v řádku otevírá detail družstva pro vybranou soutěž a sezónu. Tabulka zachovává sportovní hodnoty, rozepisuje názvy posledních sloupců a u zkratek nabízí vysvětlení.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/soutez-extraliga-muzi.html#tabulky">Otevřít nový mustr tabulky</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Backend.</strong> Každý řádek propoj s účastí družstva v konkrétní soutěži a sezóně. Převezmi oficiální pořadí, počet utkání, výhry, prohry, skreče, bilanci zápasů jednotlivců, sety, skóre a body. Odkaz musí zůstat správný i po změně názvu nebo sponzora. Pokud tabulka ještě není zveřejněná, zobraz prázdný stav.</p>
+        <p><strong>Ověřit v backendu.</strong> Zjisti, zda účast družstva v ročníku už tuto vazbu zakládá. Pokud ano, odkaz může vzniknout automaticky při vykreslení řádku.</p>
+      </article>
+
+      <article>
+        <h3>Týmy, kluby a kapitáni</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Soupisky nabízejí seznam názvů družstev. Klub, kapitán a soupiska se zobrazí až po výběru družstva.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/liga/2026-2027-extraliga/soupisky/">Živý seznam soupisek</a></li>
+              <li><a href="https://czechsquash.cz/liga/2026-2027-extraliga/soupisky/?druzstvo_id=300#soupiska">Klub a kapitán po výběru JM Ostrava</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Záložka Týmy ukazuje karty v pořadí ligové tabulky. Každá obsahuje družstvo, jeho klub, kapitána a odkaz na stejný detail jako v tabulce. Kontakty jsou až na detailu.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/soutez-extraliga-muzi.html#soupisky">Mustr týmových karet</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Backend.</strong> Vrať ke každé účasti v soutěži klub a kapitána včetně dostupných identifikátorů profilů. Klub může mít více družstev. Chybí-li profil, zobraz jméno jako text. Pro chybějící hodnotu používá mustr pomlčku.</p>
+        <p><strong>Ověřit v backendu.</strong> Zjisti, odkud se čte klub a kdo mění kapitána pro příslušné družstvo a ročník. Změna kapitána se musí projevit na kartě i v detailu téhož družstva.</p>
+      </article>
+
+      <article>
+        <h3>Rozpis, výsledky a filtry</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Kalendář/Výsledky vypisuje odkazy podle data a soupeřů. Po výběru termínu lze pokračovat na zápis konkrétní dvojice. V baráži 2018/2019 nabízí jeden termín tři dvojice, finálový termín play-off dvě.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/liga/2026-2027-extraliga/vysledky/">Živý kalendář</a></li>
+              <li><a href="https://czechsquash.cz/liga/2026-2027-extraliga/vysledky/?turnier=11588&amp;liga=7913#liga">Živý zápis</a></li>
+              <li><a href="https://czechsquash.cz/liga/2018-2019-barazextraliga/vysledky/?turnier=3812#liga">Tři dvojice v baráži</a></li>
+              <li><a href="https://czechsquash.cz/liga/2018-2019-extraligaplayoff/vysledky/?turnier=3805#liga">Dvě dvojice ve finálovém termínu</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Utkání jsou ve skupinách podle kola a data. V řádku návštěvník vidí soupeře, výsledek nebo čas, místo či pořadatele a dostupný detail. Filtry Tým a Kolo lze kombinovat a zrušit.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/soutez-extraliga-muzi.html#utkani">Mustr rozpisu</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Backend.</strong> Převezmi datum, dostupné kolo, účastníky v pořadí rozlosování, čas, místo, výsledek a odkaz na zveřejněný zápis. Obě hodnoty oficiálního skóre přiřaď k ID družstev. V řádku rozpisu patří první hodnota prvnímu uvedenému družstvu, i když podle zápisu hrálo jako host. Při přeložení zachovej identitu utkání. U společného termínu s více družstvy zachovej všechny účastníky a zahrň je do filtru. Chybějící čas nebo místo ponech neurčené.</p>
+        <p><strong>Ověřit v backendu.</strong> Zjisti, kde pořadatel mění termín, čas a místo a kdy se do veřejného rozpisu promítá oficiální výsledek. Filtrování již vykreslených řádků obsluhuje přiložený JavaScript.</p>
+        <p><strong>Rozhodnout s vlastníkem soutěží.</strong> Bude u play-off nebo baráže bez vlastní tabulky a soupisek rovnou otevřený rozpis bez záložek, nebo má přístup k tabulce a týmům navazující ligy zůstat součástí navigace? Ověř, které vazby na ligu skutečně existují. Rozliš fázi, pro kterou se tabulka vůbec nevede, od ligy, která na zveřejnění tabulky teprve čeká.</p>
+      </article>
+    </section>
+
+    <section id="druzstvo" data-template="druzstvo-300-2026-2027.html">
+      <h2>Detail družstva</h2>
+      <article>
+        <h3>Klub, kapitán a umístění</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Po výběru družstva se pod seznamem týmů zobrazí klub, kapitán, kontaktní a adresní údaje, domácí kurty a hráči. Bilance družstva se čte v ligové tabulce.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/liga/2026-2027-extraliga/soupisky/?druzstvo_id=300#soupiska">Klub, kapitán a kurty JM Ostrava</a></li>
+              <li><a href="https://czechsquash.cz/liga/2026-2027-extraliga/tabulky/">Pořadí a bilance družstva v ligové tabulce</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Družstvo má vlastní stránku s názvem a sezónou, proklikem na klub a kapitána, telefonem a e-mailem. Nad soupiskou je devět údajů od umístění po body. Drobečková navigace vede zpět na příslušnou soutěž.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/druzstvo-300-2026-2027.html#main-content">Mustr kontaktů</a></li>
+              <li><a href="templates/druzstvo-300-2026-2027.html#umisteni">Mustr umístění</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Backend.</strong> Kontaktní panel čte klub a kapitána z účasti družstva v konkrétní soutěži a sezóně. Bilanci načti ze stejného řádku a ke stejnému datu jako v soutěžní tabulce. Po změně výsledku se proto aktualizují obě zobrazení.</p>
+        <p><strong>Ověřit v backendu.</strong> Zjisti zdroj veřejného telefonu a e-mailu kapitána. Při výměně kapitána převezmi kontakty platné pro dané družstvo.</p>
+      </article>
+
+      <article>
+        <h3>Soupiska a hráčské statistiky</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Soupiska uvádí hráče, jejich nasazení a poznámky. Ročník hráče je v jeho profilu, posun v konkrétním vydání žebříčku. Jednotlivé výhry, prohry a sety se dají ověřit v zápisech utkání jeho družstva.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/liga/2026-2027-extraliga/soupisky/?druzstvo_id=300#soupiska">Nasazení a poznámky na soupisce Ostravy</a></li>
+              <li><a href="https://czechsquash.cz/player/340/viktor-byrtus#basicinfo">Ročník Viktora Byrtuse na profilu</a></li>
+              <li><a href="https://czechsquash.cz/zebricek/dospeli/muzi/?datum=2026-11-01">Pořadí a posun mužů k 1. 11. 2026, vydání pro srovnání s mustrem</a></li>
+              <li><a href="https://czechsquash.cz/liga/2026-2027-extraliga/vysledky/?turnier=11588&amp;liga=7913#liga">Individuální výsledky a sety v zápisu Ostrava – SCC HK</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Přibývá ročník, známý posun v žebříčku a statistiky za toto družstvo v sezóně (zápasy, výhry–prohry a sety). Pořadí hráčů a poznámky se přebírají z oficiální soupisky.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/druzstvo-300-2026-2027.html#soupiska">Mustr statistické soupisky</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Backend.</strong> Propoj hráče se soupiskou přes jeho ID. Převezmi pořadí hráčů, nasazení i poznámky z oficiální soupisky. Posun připoj z vydání určeného pro nasazení, pokud souhlasí hráč, kategorie, datum a pořadí. Při neověřené shodě zachovej nasazení a posun vynech.</p>
+        <p><strong>Výpočet bilance.</strong> Vyber platné zveřejněné zápisy utkání této účasti družstva v soutěži, skupině a sezóně. Z nich započítej jednou každý doložený individuální výsledek hráče za toto družstvo. Sčítej výhry, prohry a získané i ztracené sety z pohledu hráče. Skreč přiřaď hráči až podle zápisu a doložené účasti. Ověřených nula startů se zobrazí jako 0, bilance 0–0 a sety „—“. Nezjištěná hodnota zůstává neznámá.</p>
+        <p><strong>Ověřit v backendu.</strong> Zjisti, kdo spravuje soupisku, poznámky a rozhodné datum nasazení. Ročník patří k profilu. Bilance má vycházet z výsledků, aby oprava zápisu upravila i detail družstva.</p>
+      </article>
+
+      <article>
+        <h3>Export soupisky</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>V detailu soupisky je odkaz na Excel pro zvolené družstvo.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/liga/2026-2027-extraliga/soupisky/?druzstvo_id=300#soupiska">Export na živé soupisce</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Pod soupiskou jsou dvě karty ke stažení. U souboru XLSX je ikona Excelu, u CSV ikona s označením CSV. Oba uvádějí družstvo, soutěž, sezónu, platnost soupisky, datum nasazovacího žebříčku, zdroj a seznam hráčů se třemi sloupci.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/druzstvo-300-2026-2027.html#soupiska">Mustr soupisky s exporty</a></li>
+              <li><a href="assets/files/soupisky/soupiska-300-2026-2027.xlsx" download>Ukázka XLSX</a></li>
+              <li><a href="assets/files/soupisky/soupiska-300-2026-2027.csv" download>Ukázka CSV</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Backend.</strong> Oba formáty sestav z téže verze soupisky. Zachovej pořadí hráčů a sloupce Hráč, Na žebříčku a Poznámka. Chybějící pořadí je prázdná buňka. CSV používá UTF-8 s BOM a středník. XLSX obsahuje číselné pořadí a textové poznámky. Rozšířené statistiky jsou jen na stránce.</p>
+        <p><strong>Ověřit v backendu.</strong> Zjisti, zda nynější generování Excelu umí vybírat družstvo i sezónu a jak po opravě soupisky obnovit oba soubory. Jejich ruční dvojí nahrávání šablona nevyžaduje.</p>
+      </article>
+    </section>
+
+    <section id="utkani" data-template="utkani-11588.html">
+      <h2>Detail utkání</h2>
+      <article>
+        <h3>Odkaz z rozpisu a výsledek družstev</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>V Kalendáři/Výsledcích návštěvník otevře termín a u dvojice družstev vybere výsledky. Zápis se zobrazí pod výběrem. Celkový výsledek, sety a míčky jsou na konci zápisu.</p>
+            <ul class="comparison-links"><li><a href="https://czechsquash.cz/liga/2026-2027-extraliga/vysledky/?turnier=11588">Výběr utkání v termínu</a></li><li><a href="https://czechsquash.cz/liga/2026-2027-extraliga/vysledky/?turnier=11588&amp;liga=7913#liga">Současný zápis utkání</a></li></ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Odkaz v rozpisu vede přímo na stránku utkání. Názvy soupeřů a sezóna jsou v záhlaví. Nad zápasy jednotlivců jsou datum, soutěž, pořadatel, týmový výsledek, sety a míčky. Odkaz na soutěž vede do stejného ročníku.</p>
+            <ul class="comparison-links"><li><a href="templates/soutez-extraliga-muzi.html#utkani">Mustr rozpisu</a></li><li><a href="templates/utkani-11588.html#main-content">Mustr výsledku utkání</a></li></ul>
+          </div>
+        </div>
+        <p><strong>Backend.</strong> Každý veřejný zápis propoj s konkrétním utkáním, jeho termínem a soutěží v ročníku. Jeden termín může obsahovat více dvojic. V zápisu zobraz oficiální výsledek, sety i míčky v pořadí domácí–hosté. Rozpis čte tentýž výsledek a seřadí jeho hodnoty podle ID družstev v řádku. Pořadatele načti z termínu, může jím být i jiné družstvo. Dokud není zveřejněn zápis, ponech utkání v rozpisu bez odkazu na detail.</p>
+        <p><strong>Ověřit v backendu.</strong> Podle současného webu mohou ligové výsledky zadávat kapitáni a kluby. Ověř, kdo potvrzuje zápis konkrétní dvojice a kdy se zveřejní. Po opravě ověř v obou pohledech vítěze a skóre každého družstva. Ověř také přepočet tabulky a bilancí hráčů podle pravidel soutěže.</p>
+      </article>
+      <article>
+        <h3>Zápasy jednotlivců a průběh setů</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Hráči jsou na protilehlých stranách řádku zápisu. Mezi jmény jsou skóre jednotlivých setů a výsledek zápasu. Nevyužitá místa pro sety zůstávají v tabulce.</p>
+            <ul class="comparison-links"><li><a href="https://czechsquash.cz/liga/2026-2027-extraliga/vysledky/?turnier=11588&amp;liga=7913#liga">Jednotlivé zápasy na současném webu</a></li></ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Domácí hráč a host jsou vedle sebe. Za jejich jmény je výsledek zápasu a v posledním sloupci odehrané sety v pořadí zápisu. Vyšší počet míčků v setu je zvýrazněný. Jméno může odkazovat na profil hráče.</p>
+            <ul class="comparison-links"><li><a href="templates/utkani-11588.html">Mustr zápasů a setů</a></li></ul>
+          </div>
+        </div>
+        <p><strong>Backend.</strong> Převezmi pořadí dvojic, jména a dostupná hráčská ID, výsledek každé dvojice a posloupnost setů. Počet dvojic i setů určuje zápis. Hráče bez ověřené vazby na profil zobraz jako text. Volné místo (bye) zachovej. Nevyplněný set vynech. U skreče převezmi vykázaný výsledek a jen doložené skóre setů. Pokud je zveřejněný pouze výsledek družstev, zobraz dostupné součty a pod nimi prázdný stav jednotlivých zápasů.</p>
+        <p><strong>Ověřit v backendu.</strong> Zjisti, kde lze opravit hráče, jejich přiřazení ke stranám a skóre setu. Rozliš nezadanou hodnotu od zaznamenané nuly. Po opravě musí detail zobrazit jednotlivé zápasy i součty z téže platné verze.</p>
+      </article>
+    </section>
+
+    <section id="prechod">
+      <h2>Přechod ze stávajícího webu</h2>
+      <ul>
+        <li><strong>Ročníky a přílohy.</strong> Převeď vstup <a href="https://czechsquash.cz/souteze/">Soutěže družstev</a> na <a href="templates/souteze.html">výběr sezóny</a>. Pro každý ročník porovnej veřejné ligy, skupiny a přílohy včetně historických rozhodnutí. Při otevření detailu a návratu do přehledu zachovej zvolenou sezónu.</li>
+        <li><strong>Staré vstupní adresy.</strong> Namapuj tabulky na <code>#tabulky</code>, seznam soupisek na <code>#soupisky</code> a seznam výsledků na <code>#utkani</code>. U odkazu s <code>druzstvo_id</code> zachovej příslušnou účast družstva v soutěži a sezóně. Původní adresa play-off nebo baráže vede na výsledky právě této fáze. Parametr <code>turnier</code> otevře konkrétní termín se všemi jeho dvojicemi, včetně odkazů z kořene fáze i z její cesty <code>/vysledky/</code>. S parametrem <code>liga</code> navíc otevři přímo zápis vybrané dvojice. Při návratu zachovej fázi a termín. Podobu produkčních URL určí router. <a href="https://czechsquash.cz/liga/2026-2027-extraliga/vysledky/?turnier=11588&amp;liga=7913#liga">Původní přímý odkaz</a> · <a href="templates/utkani-11588.html">Mustr cílového zápisu</a></li>
+        <li><strong>Tisk a XLS tabulky.</strong> Živá soutěž nabízí ovládání tisku a export ligové tabulky. Mustr má ke stažení soupisku týmu. <strong>Rozhodnout s vlastníkem soutěží.</strong> Kde návštěvník najde tisk a export celé tabulky po přechodu? <a href="https://czechsquash.cz/liga/2026-2027-extraliga/tabulky/">Živá tabulka</a> · <a href="templates/soutez-extraliga-muzi.html#tabulky">Mustr</a></li>
+        <li><strong>Adresy a domácí kurty.</strong> Adresu klubu a kapitána, domácí halu, její kontakt a počet kurtů živá soupiska zobrazuje. Mustr týmu má kontaktní panel a odkaz na klub. <strong>Rozhodnout s vlastníkem soutěží.</strong> Které adresní údaje a kontakty mají zůstat veřejné a které patří na detail klubu? <a href="https://czechsquash.cz/liga/2026-2027-extraliga/soupisky/?druzstvo_id=300#soupiska">Živý detail</a> · <a href="templates/druzstvo-300-2026-2027.html#main-content">Mustr</a></li>
+        <li><strong>Platnost dat.</strong> Živá soutěž zobrazuje platnost soupisek i datum nasazovacího žebříčku již v záhlaví. Mustr soutěže uvádí sezónu, oba datumové údaje jsou v exportu soupisky. <strong>Rozhodnout s vlastníkem soutěží.</strong> Na které stránce potřebuje návštěvník obě data vidět? <strong>Ověřit v backendu.</strong> Urči zdroj dat platný pro stejnou verzi stránky a exportu. <a href="https://czechsquash.cz/liga/2026-2027-extraliga">Živé záhlaví</a> · <a href="templates/soutez-extraliga-muzi.html#main-content">Mustr</a> · <a href="assets/files/soupisky/soupiska-300-2026-2027.csv">Ukázkový export</a></li>
+      </ul>
+    </section>
+
+    <section id="prevzeti">
+      <h2>Kontrola po napojení</h2>
+      <ol>
+        <li>Na datech dvou ročníků přepni sezónu. Zkontroluj skupiny, cíle detailů a verzi hracího systému. Otevři detail skupiny a vrať se do přehledu. Musí zůstat vybraná původní sezóna.</li>
+        <li>Otevři rozlosování u skupiny s PDF a detail skupiny bez PDF. V seznamu dokumentů stáhni přílohu a porovnej formát i velikost se souborem. U staršího ročníku ověř také dostupnost dokumentu platného jen pro tuto sezónu.</li>
+        <li>Vyber družstvo s publikovaným utkáním. Otevři je z tabulky, karty v Týmech i řádku rozpisu. Všechny tři odkazy mají vybrat stejný tým a sezónu. Umístění a body se musí shodovat s příslušným řádkem tabulky.</li>
+        <li>Přejdi ze záložky Týmy na družstvo a vrať se tlačítkem Zpět. Zůstane vybraná záložka Týmy. U ligové soutěže se třemi částmi musí být bez JavaScriptu všechny viditelné a odkazy i exporty funkční.</li>
+        <li>Vyber družstvo a kolo. Zobrazené řádky musí splňovat obě podmínky. Zrušení filtrů obnoví celý rozpis. Ověř také soutěž bez zveřejněné tabulky, týmů nebo rozpisu. U části, kterou tato soutěž vede, zobraz při chybějících údajích její prázdný stav.</li>
+        <li>Porovnej hráče, nasazení, poznámky a pořadí řádků mezi stránkou, XLSX a CSV ze stejné verze soupisky. U hráče bez známého pořadí musí zůstat v exportech prázdná buňka. Vyber hráče se shodným i s nedoloženým žebříčkovým pořadím a ověř zobrazení posunu. Na hráči s účastí za více družstev prověř, že bilance obsahuje jen zápasy za vybrané družstvo v dané soutěži a sezóně. Po opravě zveřejněného zápisu ověř, že opravené skóre v bilanci nahradilo původní a počet zápasů zůstal stejný. Zkontroluj také změnu kapitána.</li>
+        <li>Z otevřeného ročníku vyber baráž a její termín se třemi dvojicemi. Totéž ověř u play-off s odděleným semifinále a finálovým termínem se dvěma dvojicemi. Původní adresu fáze, samotného termínu i konkrétního zápisu otevři přímo. Návrat ze zápisu musí zobrazit původní výběr. <a href="https://czechsquash.cz/liga/2018-2019-barazextraliga/vysledky/?turnier=3812&amp;liga=3878#liga">Barážový zápis SC Strahov B – Buldočci (4 : 0)</a> · <a href="https://czechsquash.cz/liga/2018-2019-extraligaplayoff/vysledky/?turnier=3805&amp;liga=3883#liga">Finálový termín, zápis Viktoria Brno Hanya – Buldoci (3 : 1)</a></li>
+        <li>V testovacích datech použij domácí A a hosty B s výsledkem 2 : 1. Jestliže los staví na první místo B, řádek B – A musí ukázat 1 : 2 a zápis A – B musí ukázat 2 : 1. V zápisu ověř pořadí domácí–hosté u každého setu. Ověř delší zápas, skreč a hráče bez profilu. Po opravě skóre v administraci znovu porovnej detail, rozpis a bilance obou družstev.</li>
+      </ol>
+      <details class="accent-card reference-example" id="referencni-priklad">
+        <summary>Referenční příklad · Extraliga mužů 2026/2027<span class="ui-icon ui-icon--chevron-down" aria-hidden="true"></span></summary>
+        <ul>
+          <li>Mustr přehledu obsahuje jednu ukázkovou sezónu. V jejím <a href="https://czechsquash.cz/souteze/">živém přehledu</a> je navíc <a href="https://czechsquash.cz/liga/2026-2027-1liga-zeny">1. liga žen</a>. Po napojení na ní lze ověřit, že zveřejněná soutěž přibude do přehledu bez ručního doplnění odkazu. U mužských skupin I a II téže ligy ukázka předvádí detail bez PDF rozlosování.</li>
+          <li>JM Ostrava je v této soutěži vedená jako <code>druzstvo_id=300</code>. V mustru má k 3. 11. 2026 čtvrté místo, v živé tabulce měla při srovnání 19. 11. první místo.</li>
+          <li>Ve filtru JM Ostrava a 1. kolo zůstane v mustru utkání se SCC HK s výsledkem 2 : 1. Na původním webu jde o termín <code>turnier=11588</code> a zápis <code>liga=7913</code>.</li>
+          <li>V <a href="templates/utkani-11588.html">mustru zápisu</a> odpovídají výsledku 2 : 1 tři zápasy jednotlivců, součet setů 6 : 3 a míčků 76 : 64. První domácí hráč prohrál 0 : 3, pořadí stran se zachovává i v jednotlivých setech.</li>
+          <li>Ukázkový export uvádí nasazovací žebříček k 1. 11. 2026, živé záhlaví při srovnání uvádělo 2. 11. 2026. Pro kontrolu shody vyber stránku i export ze stejné verze dat.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section id="navaznosti">
+      <h2>Rozsah náhledu a návazné stránky</h2>
+      <p>V náhledu můžeš projít z přehledu soutěží do Extraligy mužů, z tabulky na JM Ostrava a z rozpisu na její utkání se SCC HK. Další družstva, soutěže a zápisy používají stejné typy stránek. Odkaz na nepřiložený záznam v náhledu vede na <a href="index.html#rozsah">rozsah předání</a>.</p>
+      <p>Další typy stránek a stav jejich dokumentace najdeš v <a href="index.html">přehledu šablon</a>.</p>
+      <p class="guide-actions"><a href="templates/souteze.html">Mustr přehledu soutěží</a><a href="templates/soutez-extraliga-muzi.html">Mustr soutěže · Extraliga mužů</a><a href="templates/druzstvo-300-2026-2027.html">Mustr družstva · JM Ostrava</a><a href="templates/utkani-11588.html">Mustr utkání</a></p>
+    </section>
+  </main>
+</body>
+</html>

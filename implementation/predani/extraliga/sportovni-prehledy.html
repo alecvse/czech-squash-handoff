@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sportovní přehledy a profily | Předání pro vývojáře | Czech Squash</title>
+  <link rel="icon" href="assets/ui/logo-horizontal.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="predani.css">
+</head>
+<body>
+  <a class="skip-link" href="#obsah">Přejít na obsah</a>
+  <main id="obsah" class="guide container" tabindex="-1">
+    <nav class="handoff-nav" aria-label="Navigace předání">
+      <a href="index.html">Přehled šablon</a>
+      <a href="principy.html">Obecné principy</a>
+    </nav>
+    <header>
+      <p class="eyebrow">Czech Squash · Předání pro vývojáře · 19. 11. 2026</p>
+      <h1>Sportovní přehledy a profily</h1>
+      <p>Kalendář spojuje několik druhů akcí. Žebříčky, hráčské profily a reprezentace používají společnou identitu hráče. Každý z přehledů zobrazuje údaje k určitému datu nebo události. Společné požadavky doplňují <a href="principy.html">obecné principy předání</a>.</p>
+    </header>
+    <nav class="guide-contents" aria-label="Obsah sekce">
+      <a href="#kalendar">Kalendář akcí</a>
+      <a href="#zebricky">Žebříčky</a>
+      <a href="#hrac">Profil hráče</a>
+      <a href="#reprezentace">Reprezentace</a>
+    </nav>
+
+    <section id="kalendar" data-template="kalendar-akci.html">
+      <h2>Kalendář akcí</h2>
+      <article>
+        <h3>Termín, kategorie a stav akce</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Veřejný kalendář nabízí kategorii, název a období od–do. Pod měsíci vypisuje termíny, kódy kategorií, název a pořadatele či místo. Podle akce vede na propozice, přihlášené hráče nebo výsledky. Trenérské Pozvánky používají výběr kategorie Trenéři. Kurz III. třídy v Praze 19.–22. června 2025 má přímo u termínu propozice v PDF.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/kalendar-akci/">Současný kalendář s filtry</a></li>
+              <li><a href="https://czechsquash.cz/kalendar-akci-treneri?kat%5B%5D=TR&amp;nazev=&amp;od=01.01.2024&amp;do=&amp;Hledat=Hledat">Trenérské termíny a dostupné propozice</a></li>
+              <li><a href="https://czechsquash.cz/web/Skoleni/Pozvanka%20na%20skoleni%20III.%20trenerske%20tridy%20CASQ%20a%20WSC%20Level%201%2019.-22.6.2025.pdf">Propozice pražského kurzu 19.–22. června 2025 (PDF)</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Pod měsícem je tabulka s termínem, kategorií, názvem, místem a stavem nebo časem. Hledání podle názvu či místa se kombinuje s kategorií a rozmezím dat. Přehled rozlišuje jednotlivce, konkrétní utkání družstev, společné ligové kolo i školení trenérů a rozhodčích.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/kalendar-akci.html#main-content">Kalendář, filtry a měsíční tabulky</a></li>
+              <li><a href="templates/treneri-pozvanky.html">Pozvánky s propozicemi pražského kurzu</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Data pro přehled.</strong> Ke zveřejněné položce předej identitu, druh a podrobnější kategorii, začátek, případně konec, místní čas, název, sportoviště a zveřejněný stav. Ligové kolo může mít místo až v rozlosování. U kurzu zachovej i zrušení a zveřejněný důvod. Samotné uplynutí data nedokládá odehrání.</p>
+        <p><strong>Ověřit v backendu.</strong> Které údaje propojují kalendářní položku se soutěží, zápisem utkání nebo školením? Ověř, odkud se čte změna termínu či stavu. Vícedenní akce patří do výsledku, i pokud zvolený interval protíná jen jeden její den.</p>
+        <p><strong>Cesta k propozicím.</strong> V kalendářním mustru je kurz z 19.–22. 6. 2025 uvedený bez odkazu. Jeho PDF najdeš v Pozvánkách pro trenéry. Po napojení má odkaz u termínu otevřít zveřejněnou pozvánku tohoto kurzu a z ní aktuální propozice. Kalendář i Pozvánky čtou stejný záznam kurzu. Ověř cestu i po výměně PDF. U kurzu bez veřejné přílohy zobraz termín, místo a známý stav bez odkazu ke stažení.</p>
+        <p><strong>Administrace.</strong> Správce musí umět odlišit pořadatele od místa akce a změnit termín nebo stav na jednom místě. Při překladu termínu zachovej existující záznam a jeho vazby.</p>
+        <p><strong>Migrace.</strong> Převeď původní kódy na kategorie výběru a uchovej přesnější označení u řádku. V předávaném rozsahu veď ze soutěží na schválené cíle, u akcí bez předaného detailu ponech jejich obsah čitelný.</p>
+        <p><strong>Kontrola po napojení.</strong> Vyhledej místo a současně omez kategorii. Ověř vícedenní akci na hranici intervalu, zrušený kurz, utkání s dostupným zápisem, nulový výsledek, zrušení filtrů a hlášení při konci před začátkem.</p>
+      </article>
+    </section>
+
+    <section id="zebricky" data-template="zebricky.html">
+      <h2>Žebříčky</h2>
+      <article>
+        <h3>Oficiální kategorie, vydání a výsledná tabulka</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Rozcestník odkazuje na domácí výpisy i úplné zahraniční žebříčky PSA, ESF a WSF. Domácí kategorie mají vlastní adresu a výběr data. U vybraného vydání je ovládání tisku a odkaz na XLS. Tabulka uvádí pořadí, posun, jméno hráče, klub a sloupce podle kategorie.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/zebricek/">Vstupy do žebříčků ČASQ, PSA, ESF a WSF</a></li>
+              <li><a href="https://czechsquash.cz/zebricek/dospeli/muzi/?datum=2026-10-01">Tisk a odkaz na XLS u vydání mužů k 1. 10. 2026</a></li>
+              <li><a href="https://czechsquash.cz/zebricek/juniori/B19/">Juniorská kategorie B19</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Jeden panel vybírá okruh, mužskou či ženskou kategorii, juniorský nebo masters věk a následně rok a datum vydání. Hledání hráče nebo klubu a stránkování zachovávají oficiální pořadí. Nadpis nese datum platnosti. Výchozí volbou jsou dospělí muži a poslední dostupné vydání.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/zebricky.html#muzi">Výchozí tabulka dospělých</a></li>
+              <li><a href="templates/zebricky.html#B19">Junioři do 19 let</a></li>
+              <li><a href="templates/zebricky.html#VM35">Masters 35+</a></li>
+              <li><a href="templates/zebricky.html#VZ60">Kategorie bez vydání</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Data pro vydání.</strong> Předávej oficiální kategorii, datum vydání a jeho úplné seřazené řádky. Zachovej pořadí i při stejných bodech, publikovaný posun, hráče a klub k vydání, ligové a turnajové body, celkem a dostupné umístění PSA či ESF podle konkrétní tabulky. Datum narození se nesmí dostat do veřejného HTML ani skrytých dat žebříčku.</p>
+        <p><strong>Ověřit v backendu.</strong> Ověř seznam skutečně dostupných vydání v každé kategorii, včetně historických nebo prázdných kategorií. Hráče ani klub neurčuj podle současného věku nebo příslušnosti. Profily propoj přes ověřenou identitu, zbývající jména ponech čitelná.</p>
+        <p><strong>Administrace.</strong> Nové zveřejněné vydání nabídni v odpovídající kategorii. Oprava historického vydání se týká jeho řádků a jejich data. Výběr vydání a jeho filtraci řiď výhradně domácími žebříčky ČASQ.</p>
+        <p><strong>Rozhodnout s vlastníkem žebříčků.</strong> Mustr nabízí výběr a hledání v domácích vydáních. Urči, odkud po přechodu návštěvník otevře zahraniční žebříčky, zda zůstanou tisk a stažení domácího vydání a zda při hledání zahrnou celé vydání, nebo pouze shody. Při kontrole 19. 11. 2026 vrátil odkaz na říjnový XLS mužů po opakování HTTP 503. Pokud má export zůstat dostupný, ověř otevření skutečného souboru, kategorii, datum vydání a soulad řádků s dohodnutým rozsahem filtru, včetně řádků za první stránkou.</p>
+        <p><strong>Migrace.</strong> Přesměruj původní cestu kategorie a parametr <code>datum</code> na stejné vydání. Nový odkaz používá <code>category</code> a <code>edition</code>, při hledání také <code>search</code> a při stránkování <code>page</code>. Zachovej i přímé fragmenty kategorií a vydání. Ve vzorku je pouze výběr archivu.</p>
+        <p><strong>Kontrola po napojení.</strong> Porovnej několik řádků dospělých, juniorů a masters se stejným vydáním. Z jiného roku otevři hráče a vrať se do vyfiltrované tabulky. Při změně kategorie zachovej dostupné datum, jinak vyber její poslední vydání. Ověř nulový posun, chybějící hodnotu, kategorii bez vydání a nepřítomnost narození ve zdroji stránky.</p>
+      </article>
+    </section>
+
+    <section id="hrac" data-template="hrac-marek-panacek.html">
+      <h2>Profil hráče</h2>
+      <article>
+        <h3>Identita, umístění a měsíční historie</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Profil ukazuje základní údaje, aktuální a nejlepší umístění v kategoriích, měsíční tabulku i graf pořadí a bodů. U jednotlivých vydání jsou vidět také změny proti předchozímu vydání.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/player/2752/marek-panacek#basicinfo">Základní údaje a nejlepší umístění</a></li>
+              <li><a href="https://czechsquash.cz/player/2752/marek-panacek#vyvoj-na-zebricku">Vývoj na žebříčku</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Vedle registračních údajů a vazeb na soupisky jsou současné umístění, posun a dostupné mezinárodní pořadí. Nejlepší umístění patří vždy ke kategorii a měsíci. Měsíční historii lze projít v grafu pořadí nebo bodů, ročním přehledu i podrobných datech. Profil bez historie má vlastní prázdný stav.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/hrac-marek-panacek.html">Plný profil a základní údaje</a></li>
+              <li><a href="templates/hrac-marek-panacek.html#pohyb">Graf, měsíční historie a podrobná data</a></li>
+              <li><a href="templates/hrac-3534.html">Profil bez historie a zápasů</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Data pro profil.</strong> Použij stabilní identitu hráče ze zdrojového profilu. Veřejné registrační číslo, ročník, příslušnost ke klubu a soupiska družstva mají vlastní význam. Ulož datum platnosti, soutěž a sezónu soupisky. Každé měření potřebuje vydání, kategorii, pořadí a dostupné body. U rekordu uchovej datum, k němuž ho zdroj uvádí.</p>
+        <p><strong>Ověřit v backendu.</strong> Která vydání a kategorie mají srovnatelné body a posun? Zachovej desetinné hodnoty i známou nulu. Nezveřejněný měsíc vykresli jako mezeru a při nedostatku měření ponech změnu neurčenou.</p>
+        <p><strong>Administrace.</strong> Opravu výsledku nebo žebříčku přenes z vlastníka údajů do všech výpisů. U změny klubu či opravy jména ponech identitu osoby a dobový kontext soupisek.</p>
+        <p><strong>Migrace.</strong> Starou adresu <code>/player/</code> převeď podle ID na stejného hráče. Z <code>#basicinfo</code> otevři základní údaje a z <code>#vyvoj-na-zebricku</code> historii v části <code>#pohyb</code>. V přehledech ponech jméno bez odkazu, dokud není k dispozici ověřená identita a veřejný profil.</p>
+        <p><strong>Kontrola po napojení.</strong> Zkontroluj propojení jednoho hráče ze žebříčku, reprezentace i soupisky. Porovnej graf pořadí, body, tabulku a nejlepší umístění s konkrétními vydáními. Vyzkoušej i hráče bez měsíční historie.</p>
+      </article>
+      <article>
+        <h3>Účasti, zápasy a jejich filtry</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Seznam sdružuje zápasy pod jednotlivé účasti. Návštěvník může vybrat ligu nebo turnaje, u dospělých třídu A–D, u juniorů třídu a věkovou kategorii chlapců či dívek a u masters věkovou kategorii. Některá umístění mají bodový souhrn bez rozepsaných zápasů.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/player/2752/marek-panacek?turnTyp=liga#turnaje">Zdrojový výběr ligových zápasů</a></li>
+              <li><a href="https://czechsquash.cz/player/2752/marek-panacek?turnTyp=turnJunAB19#turnaje">Turnaje juniorů třídy A, chlapci do 19 let</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Návštěvník hledá soupeře či akci, vybírá rok a přepíná Vše, Turnaje a Liga. U turnajů s doloženým zařazením navazují okruh, třída a kategorie. Stránkují se celé akce. Po rozbalení zůstávají zápasy pohromadě s příslušnou účastí a jejími body.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/hrac-marek-panacek.html#zapasy">Zápasové karty a navazující filtry</a></li>
+              <li><a href="templates/hrac-3534.html#zapasy">Stav bez zápasů</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Data pro účast.</strong> Pro každou účast uchovej akci, datum, druh, kategorii, umístění, zveřejněné body za pořadí, za soupeře a celkem. Jednotlivé zápasy mají pořadí, soupeře, fázi, výsledek z pohledu hráče a dostupné body. Více kategorií na jedné akci smí mít různé souhrny.</p>
+        <p><strong>Ověřit v backendu.</strong> Ověř vazbu zápasu na konkrétní účast i u zdrojové hlavičky bez odkazu. Volný los nebo neznámý soupeř nesmí vytvořit hráčský profil. Doložený výsledek účasti uchovej i při nulovém počtu rozepsaných zápasů. Podrobnější filtry sestav jen z ověřených kategorií.</p>
+        <p><strong>Migrace.</strong> Starý odkaz s <code>turnTyp</code> a <code>#turnaje</code> otevři podle ID hráče v jeho zápasech a přenes odpovídající výběr ligy nebo turnajového okruhu, třídy a kategorie. Ověř to zvlášť na lize a juniorském výběru B19 třídy A. U některých ukázkových hráčů patří část zápasů k chybné hlavičce a chybějí účasti bez zápasů. Při napojení proto páruj výsledky ke konkrétním účastem z evidence.</p>
+        <p><strong>Kontrola po napojení.</strong> Vyber ligu, konkrétní rok a soupeře. U turnaje s více kategoriemi porovnej umístění a bodové souhrny po přepnutí filtru. Zkontroluj přechod přes hlavičku bez odkazu, účast bez zápasu a zachování pohledu hráče při zobrazení výsledku.</p>
+      </article>
+    </section>
+
+    <section id="reprezentace" data-template="reprezentace.html">
+      <h2>Reprezentace</h2>
+      <article>
+        <h3>Výběr podle doložené účasti</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Jména účastníků a jejich konečná umístění zveřejňuje ČASQ ve zprávách z jednotlivých šampionátů. Ve zprávě z ME U19 jsou výsledky jednotlivců i družstev. Ročník a klub hráče uvádí jeho veřejný profil. Výkonný výbor samostatně zveřejňuje nominace žen a mužů pro danou sezónu a širší nominace juniorů pro vymezené období.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/novinka/?news=3209">ME jednotlivců 2026 – konečná umístění českých hráčů</a></li>
+              <li><a href="https://czechsquash.cz/novinka/?news=3122">ME U19 2026 – výsledky českých juniorů</a></li>
+              <li><a href="https://czechsquash.cz/player/2752/marek-panacek#basicinfo">Ročník a klub na profilu Marka Panáčka</a></li>
+              <li><a href="https://czechsquash.cz/web/Zapisy_VV/Nominace_reprezentace_2026-2027_muzi.pdf">Nominace mužů 2026/2027 (PDF)</a></li>
+              <li><a href="https://czechsquash.cz/web/Zapisy_VV/Nominace_reprezentace_2026-2027_zeny.pdf">Nominace žen 2026/2027 (PDF)</a></li>
+              <li><a href="https://czechsquash.cz/web/Zapisy_VV/Reprezentacni_tym_nominace_juniori_09_2026.pdf">Širší nominace juniorů od 1. 9. 2026 do 31. 1. 2027 (PDF)</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Karty spojují české účastníky konkrétních šampionátů. U osoby jsou klub, ročník, umístění na příslušné akci a odkaz na profil. Hledání, kategorie Dospělí / Junioři U19 a skupina Hráči / Hráčky se kombinují. Hráč s účastí na obou šampionátech má jednu kartu dostupnou z obou kategorií.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/reprezentace.html#main-content">Přehled reprezentantů a výsledků</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Data pro kartu.</strong> Spoj evidenci osoby s jednou nebo více účastmi. Pro každou uchovej šampionát, rok, veřejnou kategorii, skupinu, publikované umístění a zdroj výsledku. Označení a období výběru patří k přehledu. Veřejná ukázka představuje účastníky dvou akcí v roce 2026.</p>
+        <p><strong>Ověřit v backendu.</strong> Je účast jednotlivce jednoznačně propojená s hráčským ID? Ověř možnost připojit dvě různé účasti k téže osobě. Příslušnost ke kategorii vyplývá z účasti. Při převodu článku o soutěži družstev a jednotlivců převezmi ke kartě člověka pouze jeho výsledek v jednotlivcích.</p>
+        <p><strong>Rozhodnout s vlastníkem reprezentace.</strong> Urči, které další šampionáty patří do výběru podle účasti a kdo je schvaluje. Pokud má web zveřejňovat i formální nominace, potvrď jejich umístění. Nominaci lze doložit rozhodnutím výboru pro konkrétní tým a dobu platnosti. Účast a umístění hráče na šampionátu dolož výsledkovou zprávou i v případě, že je hráč současně v nominaci.</p>
+        <p><strong>Administrace.</strong> Správce výběru potřebuje přidat schválenou akci, svázat její účastníky s profily a opravit umístění bez duplikování karty osoby.</p>
+        <p><strong>Kontrola po napojení.</strong> Porovnej umístění s výsledkovou zprávou. U hráče s dvěma účastmi přepni obě kategorie, spoj je postupně s hledáním a skupinou a ověř prázdný výsledek i návrat na celý výběr.</p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

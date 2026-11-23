@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Přehled šablon | Předání pro vývojáře | Czech Squash</title>
+  <link rel="icon" href="assets/ui/logo-horizontal.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="predani.css?v=6cb83978139b">
+  <script src="puvodni-odkazy.js" defer></script>
+  <link rel="alternate" type="text/markdown" href="index.md">
+  <script src="ai.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#obsah">Přejít na obsah</a>
+  <main id="obsah" class="guide container" tabindex="-1">
+    <nav class="handoff-nav" aria-label="Navigace předání">
+      <a href="index.html" aria-current="page">Přehled šablon</a>
+      <a href="principy.html">Obecné principy</a>
+    <details class="ai-tools">
+        <summary>Použít s AI</summary>
+        <div class="ai-tools__panel">
+          <button type="button" data-copy-markdown hidden><span class="ui-icon ui-icon--copy" aria-hidden="true"></span>Zkopírovat Markdown</button>
+          <a href="index.md" target="_blank" rel="noopener"><svg class="ai-tools__document" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+              <path d="M8 17H16 M8 13H12 M13 2.5V3C13 5.82843 13 7.24264 13.8787 8.12132C14.7574 9 16.1716 9 19 9H19.5M20 10.6569V14C20 17.7712 20 19.6569 18.8284 20.8284C17.6569 22 15.7712 22 12 22C8.22876 22 6.34315 22 5.17157 20.8284C4 19.6569 4 17.7712 4 14V9.45584C4 6.21082 4 4.58831 4.88607 3.48933C5.06508 3.26731 5.26731 3.06508 5.48933 2.88607C6.58831 2 8.21082 2 11.4558 2C12.1614 2 12.5141 2 12.8372 2.11401C12.9044 2.13772 12.9702 2.165 13.0345 2.19575C13.3436 2.34355 13.593 2.593 14.0919 3.09188L18.8284 7.82843C19.4065 8.40649 19.6955 8.69552 19.8478 9.06306C20 9.4306 20 9.83935 20 10.6569Z" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+            </svg>Zobrazit Markdown</a>
+          <div class="ai-tools__chats" hidden>
+            <!-- brand-openai · Tabler Icons
+MIT License
+
+Copyright (c) 2020-2026 Paweł Kuna
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+            -->
+            <a href="https://chatgpt.com/" target="_blank" rel="noopener" data-open-chat>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                <path d="M11.217 19.384a3.501 3.501 0 0 0 6.783 -1.217v-5.167l-6 -3.35 M5.214 15.014a3.501 3.501 0 0 0 4.446 5.266l4.34 -2.534v-6.946 M6 7.63c-1.391 -.236 -2.787 .395 -3.534 1.689a3.474 3.474 0 0 0 1.271 4.745l4.263 2.514l6 -3.348 M12.783 4.616a3.501 3.501 0 0 0 -6.783 1.217v5.067l6 3.45 M18.786 8.986a3.501 3.501 0 0 0 -4.446 -5.266l-4.34 2.534v6.946 M18 16.302c1.391 .236 2.787 -.395 3.534 -1.689a3.474 3.474 0 0 0 -1.271 -4.745l-4.308 -2.514l-5.955 3.42" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+              </svg>
+              Otevřít v ChatGPT<span class="ui-icon ui-icon--external" aria-hidden="true"></span></a>
+            <a href="https://claude.ai/new" target="_blank" rel="noopener" data-open-chat>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                <path d="M8.1 8.15 1.1 7.8 M8.1 8.15 2.1 4.05 M8.1 8.15 5.25 1.25 M8.1 8.15 9.2 1.7 M8.1 8.15 12.6 2.8 M8.1 8.15 14.55 6.55 M8.1 8.15 14.9 9.15 M8.1 8.15 13.1 12.45 M8.1 8.15 11.45 13.9 M8.1 8.15 7.35 14.85 M8.1 8.15 3.8 13.85 M8.1 8.15 1.6 11.9" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+              </svg>
+              Otevřít v Claude<span class="ui-icon ui-icon--external" aria-hidden="true"></span></a>
+          </div>
+          <p class="ai-tools__status" role="status"></p>
+        </div>
+      </details>
+
+    </nav>
+    <header>
+      <p class="eyebrow">Czech Squash · Předání pro vývojáře</p>
+      <h1>Přehled šablon</h1>
+    </header>
+    <p class="former-chapters">
+      <a id="spusteni" href="principy.html#spusteni">Otevřít spuštění balíčku</a>
+      <a id="soutez" href="souteze-druzstev.html#soutez">Otevřít zadání pro detail soutěže</a>
+      <a id="druzstvo" href="souteze-druzstev.html#druzstvo">Otevřít zadání pro detail družstva</a>
+      <a id="prechod" href="souteze-druzstev.html#prechod">Otevřít přechod ze stávajícího webu</a>
+      <a id="prevzeti" href="souteze-druzstev.html#prevzeti">Otevřít kontrolu po napojení</a>
+      <a id="navaznosti" href="souteze-druzstev.html#navaznosti">Otevřít rozsah náhledu</a>
+    </p>
+
+    <div class="directory" aria-label="Sekce předání">
+      <details class="directory-group"><summary class="directory-heading">Soutěže družstev<span class="ui-icon ui-icon--chevron-down" aria-hidden="true"></span></summary><p><a href="souteze-druzstev.html">Zadání celé sekce · Soutěže družstev</a></p><ul class="template-list">
+<li><h3><a href="souteze-druzstev.html#prehled">Přehled soutěží</a></h3><a href="templates/souteze.html" aria-label="Otevřít mustr – Přehled soutěží">Otevřít mustr</a></li>
+<li><h3><a href="souteze-druzstev.html#soutez">Detail soutěže</a></h3><a href="templates/soutez-extraliga-muzi.html" aria-label="Otevřít mustr – Detail soutěže">Otevřít mustr</a></li>
+<li><h3><a href="souteze-druzstev.html#druzstvo">Detail družstva</a></h3><a href="templates/druzstvo-300-2026-2027.html" aria-label="Otevřít mustr – Detail družstva">Otevřít mustr</a></li>
+<li><h3><a href="souteze-druzstev.html#utkani">Detail utkání</a></h3><a href="templates/utkani-11588.html" aria-label="Otevřít mustr – Detail utkání">Otevřít mustr</a></li>
+</ul></details>
+<details class="directory-group"><summary class="directory-heading">Sportovní přehledy a profily<span class="ui-icon ui-icon--chevron-down" aria-hidden="true"></span></summary><p><a href="sportovni-prehledy.html">Zadání celé sekce · Sportovní přehledy a profily</a></p><ul class="template-list">
+<li><h3><a href="sportovni-prehledy.html#kalendar">Kalendář akcí</a></h3><a href="templates/kalendar-akci.html" aria-label="Otevřít mustr – Kalendář akcí">Otevřít mustr</a></li>
+<li><h3><a href="sportovni-prehledy.html#zebricky">Žebříčky</a></h3><a href="templates/zebricky.html" aria-label="Otevřít mustr – Žebříčky">Otevřít mustr</a></li>
+<li><h3><a href="sportovni-prehledy.html#hrac">Profil hráče</a></h3><a href="templates/hrac-marek-panacek.html" aria-label="Otevřít mustr – Profil hráče">Otevřít mustr</a></li>
+<li><h3><a href="sportovni-prehledy.html#reprezentace">Reprezentace</a></h3><a href="templates/reprezentace.html" aria-label="Otevřít mustr – Reprezentace">Otevřít mustr</a></li>
+</ul></details>
+<details class="directory-group"><summary class="directory-heading">Kluby a nábory<span class="ui-icon ui-icon--chevron-down" aria-hidden="true"></span></summary><p><a href="kluby-nabory.html">Zadání celé sekce · Kluby a nábory</a></p><ul class="template-list">
+<li><h3><a href="kluby-nabory.html#kluby">Přehled klubů</a></h3><a href="templates/kluby.html" aria-label="Otevřít mustr – Přehled klubů">Otevřít mustr</a></li>
+<li><h3><a href="kluby-nabory.html#profil-klubu">Profil klubu</a></h3><a href="templates/klub-viktoria-brno.html" aria-label="Otevřít mustr – Profil klubu">Otevřít mustr</a></li>
+<li><h3><a href="kluby-nabory.html#nabory">Nábory – Hrej squash!</a></h3><a href="templates/nabory.html" aria-label="Otevřít mustr – Nábory – Hrej squash!">Otevřít mustr</a></li>
+</ul></details>
+<details class="directory-group"><summary class="directory-heading">Úvod, aktuality a média<span class="ui-icon ui-icon--chevron-down" aria-hidden="true"></span></summary><p><a href="uvod-media.html">Zadání celé sekce · Úvod, aktuality a média</a></p><ul class="template-list">
+<li><h3><a href="uvod-media.html#uvod">Úvodní stránka</a></h3><a href="templates/homepage.html" aria-label="Otevřít mustr – Úvodní stránka">Otevřít mustr</a></li>
+<li><h3><a href="uvod-media.html#aktuality">Archiv aktualit</a></h3><a href="templates/aktuality.html" aria-label="Otevřít mustr – Archiv aktualit">Otevřít mustr</a></li>
+<li><h3><a href="uvod-media.html#clanek">Detail článku</a></h3><a href="templates/clanek-hradecky-juniorsky-cup.html" aria-label="Otevřít mustr – Detail článku">Otevřít mustr</a></li>
+<li><h3><a href="uvod-media.html#media">Rozcestník Média</a></h3><a href="templates/media.html" aria-label="Otevřít mustr – Rozcestník Média">Otevřít mustr</a></li>
+<li><h3><a href="uvod-media.html#tiskove-zpravy">Tiskové informace</a></h3><a href="templates/tiskove-zpravy.html" aria-label="Otevřít mustr – Tiskové informace">Otevřít mustr</a></li>
+<li><h3><a href="uvod-media.html#fotogalerie">Přehled fotogalerií</a></h3><a href="templates/fotogalerie.html" aria-label="Otevřít mustr – Přehled fotogalerií">Otevřít mustr</a></li>
+<li><h3><a href="uvod-media.html#galerie">Detail galerie</a></h3><a href="templates/galerie-mcr-junioru-2026.html" aria-label="Otevřít mustr – Detail galerie">Otevřít mustr</a></li>
+</ul></details>
+<details class="directory-group"><summary class="directory-heading">ČASQ, dokumenty a veřejné informace<span class="ui-icon ui-icon--chevron-down" aria-hidden="true"></span></summary><p><a href="asociace-dokumenty.html">Zadání celé sekce · ČASQ, dokumenty a veřejné informace</a></p><ul class="template-list">
+<li><h3><a href="asociace-dokumenty.html#komise">ČASQ a odborné komise</a></h3><a href="templates/asociace.html" aria-label="Otevřít mustr – ČASQ a odborné komise">Otevřít mustr</a></li>
+<li><h3><a href="asociace-dokumenty.html#kontakty">Kontakty a vedení asociace</a></h3><a href="templates/kontakty.html" aria-label="Otevřít mustr – Kontakty a vedení asociace">Otevřít mustr</a></li>
+<li><h3><a href="asociace-dokumenty.html#partneri">Partneři</a></h3><a href="templates/partneri.html" aria-label="Otevřít mustr – Partneři">Otevřít mustr</a></li>
+<li><h3><a href="asociace-dokumenty.html#predpisy">Řády a předpisy</a></h3><a href="templates/dokumenty.html" aria-label="Otevřít mustr – Řády a předpisy">Otevřít mustr</a></li>
+<li><h3><a href="asociace-dokumenty.html#formulare">Formuláře</a></h3><a href="templates/dokumenty-formulare.html" aria-label="Otevřít mustr – Formuláře">Otevřít mustr</a></li>
+<li><h3><a href="asociace-dokumenty.html#vybor">Zápisy výkonného výboru</a></h3><a href="templates/dokumenty-zapisy-vv.html" aria-label="Otevřít mustr – Zápisy výkonného výboru">Otevřít mustr</a></li>
+<li><h3><a href="asociace-dokumenty.html#hromady">Valné hromady</a></h3><a href="templates/dokumenty-valne-hromady.html" aria-label="Otevřít mustr – Valné hromady">Otevřít mustr</a></li>
+<li><h3><a href="asociace-dokumenty.html#zapisy-komisi">Zápisy komisí</a></h3><a href="templates/dokumenty-zapisy-komisi.html" aria-label="Otevřít mustr – Zápisy komisí">Otevřít mustr</a></li>
+<li><h3><a href="asociace-dokumenty.html#trenerske-dokumenty">Dokumenty pro trenéry</a></h3><a href="templates/dokumenty-treneri.html" aria-label="Otevřít mustr – Dokumenty pro trenéry">Otevřít mustr</a></li>
+<li><h3><a href="asociace-dokumenty.html#pravidla">Pravidla hry</a></h3><a href="templates/pravidla.html" aria-label="Otevřít mustr – Pravidla hry">Otevřít mustr</a></li>
+<li><h3><a href="asociace-dokumenty.html#clensky-pristup">Členský přístup</a></h3><a href="templates/clensky-system.html" aria-label="Otevřít mustr – Členský přístup">Otevřít mustr</a></li>
+<li><h3><a href="asociace-dokumenty.html#faq">Časté otázky</a></h3><a href="templates/faq.html" aria-label="Otevřít mustr – Časté otázky">Otevřít mustr</a></li>
+<li><h3><a href="asociace-dokumenty.html#ochrana-udaju">Ochrana osobních údajů</a></h3><a href="templates/ochrana-osobnich-udaju.html" aria-label="Otevřít mustr – Ochrana osobních údajů">Otevřít mustr</a></li>
+</ul></details>
+<details class="directory-group"><summary class="directory-heading">Trenéři, rozhodčí a školení<span class="ui-icon ui-icon--chevron-down" aria-hidden="true"></span></summary><p><a href="odborny-servis.html">Zadání celé sekce · Trenéři, rozhodčí a školení</a></p><ul class="template-list">
+<li><h3><a href="odborny-servis.html#treneri">Trenérský rozcestník</a></h3><a href="templates/treneri.html" aria-label="Otevřít mustr – Trenérský rozcestník">Otevřít mustr</a></li>
+<li><h3><a href="odborny-servis.html#aktuality">Aktuality pro trenéry</a></h3><a href="templates/treneri-aktuality.html" aria-label="Otevřít mustr – Aktuality pro trenéry">Otevřít mustr</a></li>
+<li><h3><a href="odborny-servis.html#archiv">Archiv trenérů</a></h3><a href="templates/treneri-archiv.html" aria-label="Otevřít mustr – Archiv trenérů">Otevřít mustr</a></li>
+<li><h3><a href="odborny-servis.html#archivni-clanek">Archivní odborný článek</a></h3><a href="templates/obsah-archiv-1746.html" aria-label="Otevřít mustr – Archivní odborný článek">Otevřít mustr</a></li>
+<li><h3><a href="odborny-servis.html#projekty">Přehled trenérských projektů</a></h3><a href="templates/treneri-projekty.html" aria-label="Otevřít mustr – Přehled trenérských projektů">Otevřít mustr</a></li>
+<li><h3><a href="odborny-servis.html#detail-projektu">Detail projektu</a></h3><a href="templates/treneri-projekty-lscm.html" aria-label="Otevřít mustr – Detail projektu">Otevřít mustr</a></li>
+<li><h3><a href="odborny-servis.html#pozvanky">Pozvánky pro trenéry</a></h3><a href="templates/treneri-pozvanky.html" aria-label="Otevřít mustr – Pozvánky pro trenéry">Otevřít mustr</a></li>
+<li><h3><a href="odborny-servis.html#seznam">Seznam trenérů</a></h3><a href="templates/treneri-seznam.html" aria-label="Otevřít mustr – Seznam trenérů">Otevřít mustr</a></li>
+<li><h3><a href="odborny-servis.html#rozhodci">Rozhodčí</a></h3><a href="templates/rozhodci.html" aria-label="Otevřít mustr – Rozhodčí">Otevřít mustr</a></li>
+<li><h3><a href="odborny-servis.html#skoleni">Školení</a></h3><a href="templates/skoleni.html" aria-label="Otevřít mustr – Školení">Otevřít mustr</a></li>
+</ul></details>
+    </div>
+
+    <section id="chybejici-sablony">
+      <h2>Chybějící šablony</h2>
+      <h3>Detail turnaje</h3>
+      <p>Turnajové detaily čekají na posouzení návrhu jako celku. Pracovní ukázky zahrnují nadcházející Sepetná Junior Cup a odehrané turnaje Memoriál Jany Kosinkové a Masters HAMR. Ke schválení zbývají čtyři části detailu.</p>
+      <ul>
+        <li><strong>Propozice a účastníci.</strong> Termín, místo, harmonogram, startovné a uzávěrka přihlášek. Seznam přihlášených pro jednu či více kategorií, včetně dvojic ve čtyřhře.</li>
+        <li><strong>Rozlosování a pavouky.</strong> Los před začátkem turnaje a pavouk s výsledky. Pracovní varianty mají 8, 16 a 32 míst, hlavní větev i větve o umístění. Zahrnují nasazení, volný postup, skreč a dosud neobsazené místo.</li>
+        <li><strong>Skupiny a konečné pořadí.</strong> Skupinová tabulka, návazné zápasy o umístění a konečné pořadí v kategorii. Samostatný stav má kategorie, která se neodehrála.</li>
+        <li><strong>Rozpis a výsledky zápasů.</strong> Soupeři, dostupné časy a výsledky po setech, výběr jedné kategorie nebo zápasů napříč turnajem.</li>
+      </ul>
+      <h3>Další stránky a varianty</h3>
+      <ul>
+        <li><strong>Play-off a baráž družstev.</strong> V ligovém archivu mají tyto fáze vlastní termíny a výsledky. V předání chybí ukázka detailu soutěže tvořeného jen rozpisem a zápisy. <a href="https://czechsquash.cz/liga/2018-2019-extraligaplayoff">Semifinále a finále extraligy</a> · <a href="https://czechsquash.cz/liga/2018-2019-barazextraliga">Baráž o extraligu</a></li>
+        <li><strong>Historie squashe.</strong> Stránka je vyřazená z aktuálního rozsahu předání.</li>
+        <li><strong>Tiskové informace s vydanými zprávami.</strong> Předaný mustr pokrývá prázdnou rubriku a kontakt pro média. Po dodání první schválené zprávy zbývá určit podobu výpisu a cíl po otevření položky. <a href="uvod-media.html#tiskove-zpravy">Zadání tiskových informací</a></li>
+      </ul>
+    </section>
+
+    <section id="rozsah">
+      <h2>Rozsah předání</h2>
+      <p>U předávaných typů stránek najdeš v rozcestníku zadání a funkční mustr. Odkaz na další konkrétní záznam stejného typu může vést zpět sem. Odpovídající ukázku si vyber v přehledu výše.</p>
+    </section>
+  </main>
+<template id="page-markdown"># Přehled šablon
+
+[Obecné principy](principy.md)
+
+## Soutěže družstev
+
+[Zadání celé sekce · Soutěže družstev](souteze-druzstev.md)
+
+### [Přehled soutěží](souteze-druzstev.md#prehled)
+
+[Otevřít mustr](templates/souteze.html)
+
+### [Detail soutěže](souteze-druzstev.md#soutez)
+
+[Otevřít mustr](templates/soutez-extraliga-muzi.html)
+
+### [Detail družstva](souteze-druzstev.md#druzstvo)
+
+[Otevřít mustr](templates/druzstvo-300-2026-2027.html)
+
+### [Detail utkání](souteze-druzstev.md#utkani)
+
+[Otevřít mustr](templates/utkani-11588.html)
+
+## Sportovní přehledy a profily
+
+[Zadání celé sekce · Sportovní přehledy a profily](sportovni-prehledy.md)
+
+### [Kalendář akcí](sportovni-prehledy.md#kalendar)
+
+[Otevřít mustr](templates/kalendar-akci.html)
+
+### [Žebříčky](sportovni-prehledy.md#zebricky)
+
+[Otevřít mustr](templates/zebricky.html)
+
+### [Profil hráče](sportovni-prehledy.md#hrac)
+
+[Otevřít mustr](templates/hrac-marek-panacek.html)
+
+### [Reprezentace](sportovni-prehledy.md#reprezentace)
+
+[Otevřít mustr](templates/reprezentace.html)
+
+## Kluby a nábory
+
+[Zadání celé sekce · Kluby a nábory](kluby-nabory.md)
+
+### [Přehled klubů](kluby-nabory.md#kluby)
+
+[Otevřít mustr](templates/kluby.html)
+
+### [Profil klubu](kluby-nabory.md#profil-klubu)
+
+[Otevřít mustr](templates/klub-viktoria-brno.html)
+
+### [Nábory – Hrej squash!](kluby-nabory.md#nabory)
+
+[Otevřít mustr](templates/nabory.html)
+
+## Úvod, aktuality a média
+
+[Zadání celé sekce · Úvod, aktuality a média](uvod-media.md)
+
+### [Úvodní stránka](uvod-media.md#uvod)
+
+[Otevřít mustr](templates/homepage.html)
+
+### [Archiv aktualit](uvod-media.md#aktuality)
+
+[Otevřít mustr](templates/aktuality.html)
+
+### [Detail článku](uvod-media.md#clanek)
+
+[Otevřít mustr](templates/clanek-hradecky-juniorsky-cup.html)
+
+### [Rozcestník Média](uvod-media.md#media)
+
+[Otevřít mustr](templates/media.html)
+
+### [Tiskové informace](uvod-media.md#tiskove-zpravy)
+
+[Otevřít mustr](templates/tiskove-zpravy.html)
+
+### [Přehled fotogalerií](uvod-media.md#fotogalerie)
+
+[Otevřít mustr](templates/fotogalerie.html)
+
+### [Detail galerie](uvod-media.md#galerie)
+
+[Otevřít mustr](templates/galerie-mcr-junioru-2026.html)
+
+## ČASQ, dokumenty a veřejné informace
+
+[Zadání celé sekce · ČASQ, dokumenty a veřejné informace](asociace-dokumenty.md)
+
+### [ČASQ a odborné komise](asociace-dokumenty.md#komise)
+
+[Otevřít mustr](templates/asociace.html)
+
+### [Kontakty a vedení asociace](asociace-dokumenty.md#kontakty)
+
+[Otevřít mustr](templates/kontakty.html)
+
+### [Partneři](asociace-dokumenty.md#partneri)
+
+[Otevřít mustr](templates/partneri.html)
+
+### [Řády a předpisy](asociace-dokumenty.md#predpisy)
+
+[Otevřít mustr](templates/dokumenty.html)
+
+### [Formuláře](asociace-dokumenty.md#formulare)
+
+[Otevřít mustr](templates/dokumenty-formulare.html)
+
+### [Zápisy výkonného výboru](asociace-dokumenty.md#vybor)
+
+[Otevřít mustr](templates/dokumenty-zapisy-vv.html)
+
+### [Valné hromady](asociace-dokumenty.md#hromady)
+
+[Otevřít mustr](templates/dokumenty-valne-hromady.html)
+
+### [Zápisy komisí](asociace-dokumenty.md#zapisy-komisi)
+
+[Otevřít mustr](templates/dokumenty-zapisy-komisi.html)
+
+### [Dokumenty pro trenéry](asociace-dokumenty.md#trenerske-dokumenty)
+
+[Otevřít mustr](templates/dokumenty-treneri.html)
+
+### [Pravidla hry](asociace-dokumenty.md#pravidla)
+
+[Otevřít mustr](templates/pravidla.html)
+
+### [Členský přístup](asociace-dokumenty.md#clensky-pristup)
+
+[Otevřít mustr](templates/clensky-system.html)
+
+### [Časté otázky](asociace-dokumenty.md#faq)
+
+[Otevřít mustr](templates/faq.html)
+
+### [Ochrana osobních údajů](asociace-dokumenty.md#ochrana-udaju)
+
+[Otevřít mustr](templates/ochrana-osobnich-udaju.html)
+
+## Trenéři, rozhodčí a školení
+
+[Zadání celé sekce · Trenéři, rozhodčí a školení](odborny-servis.md)
+
+### [Trenérský rozcestník](odborny-servis.md#treneri)
+
+[Otevřít mustr](templates/treneri.html)
+
+### [Aktuality pro trenéry](odborny-servis.md#aktuality)
+
+[Otevřít mustr](templates/treneri-aktuality.html)
+
+### [Archiv trenérů](odborny-servis.md#archiv)
+
+[Otevřít mustr](templates/treneri-archiv.html)
+
+### [Archivní odborný článek](odborny-servis.md#archivni-clanek)
+
+[Otevřít mustr](templates/obsah-archiv-1746.html)
+
+### [Přehled trenérských projektů](odborny-servis.md#projekty)
+
+[Otevřít mustr](templates/treneri-projekty.html)
+
+### [Detail projektu](odborny-servis.md#detail-projektu)
+
+[Otevřít mustr](templates/treneri-projekty-lscm.html)
+
+### [Pozvánky pro trenéry](odborny-servis.md#pozvanky)
+
+[Otevřít mustr](templates/treneri-pozvanky.html)
+
+### [Seznam trenérů](odborny-servis.md#seznam)
+
+[Otevřít mustr](templates/treneri-seznam.html)
+
+### [Rozhodčí](odborny-servis.md#rozhodci)
+
+[Otevřít mustr](templates/rozhodci.html)
+
+### [Školení](odborny-servis.md#skoleni)
+
+[Otevřít mustr](templates/skoleni.html)
+
+&lt;a id=&quot;chybejici-sablony&quot;&gt;&lt;/a&gt;
+
+## Chybějící šablony
+
+### Detail turnaje
+
+Turnajové detaily čekají na posouzení návrhu jako celku. Pracovní ukázky zahrnují nadcházející Sepetná Junior Cup a odehrané turnaje Memoriál Jany Kosinkové a Masters HAMR. Ke schválení zbývají čtyři části detailu.
+
+- **Propozice a účastníci.** Termín, místo, harmonogram, startovné a uzávěrka přihlášek. Seznam přihlášených pro jednu či více kategorií, včetně dvojic ve čtyřhře.
+- **Rozlosování a pavouky.** Los před začátkem turnaje a pavouk s výsledky. Pracovní varianty mají 8, 16 a 32 míst, hlavní větev i větve o umístění. Zahrnují nasazení, volný postup, skreč a dosud neobsazené místo.
+- **Skupiny a konečné pořadí.** Skupinová tabulka, návazné zápasy o umístění a konečné pořadí v kategorii. Samostatný stav má kategorie, která se neodehrála.
+- **Rozpis a výsledky zápasů.** Soupeři, dostupné časy a výsledky po setech, výběr jedné kategorie nebo zápasů napříč turnajem.
+
+### Další stránky a varianty
+
+- **Play-off a baráž družstev.** V ligovém archivu mají tyto fáze vlastní termíny a výsledky. V předání chybí ukázka detailu soutěže tvořeného jen rozpisem a zápisy. [Semifinále a finále extraligy](https://czechsquash.cz/liga/2018-2019-extraligaplayoff) · [Baráž o extraligu](https://czechsquash.cz/liga/2018-2019-barazextraliga)
+- **Historie squashe.** Stránka je vyřazená z aktuálního rozsahu předání.
+- **Tiskové informace s vydanými zprávami.** Předaný mustr pokrývá prázdnou rubriku a kontakt pro média. Po dodání první schválené zprávy zbývá určit podobu výpisu a cíl po otevření položky. [Zadání tiskových informací](uvod-media.md#tiskove-zpravy)
+
+&lt;a id=&quot;rozsah&quot;&gt;&lt;/a&gt;
+
+## Rozsah předání
+
+U předávaných typů stránek najdeš v rozcestníku zadání a funkční mustr. Odkaz na další konkrétní záznam stejného typu může vést zpět sem. Odpovídající ukázku si vyber v přehledu výše.
+</template>
+</body>
+</html>

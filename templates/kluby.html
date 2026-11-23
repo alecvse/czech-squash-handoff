@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Najdi svůj klub | Český squash</title>
+    <meta name="description" content="Objevte squashové kluby a jejich domácí kurty.">
+    <link rel="icon" href="../assets/ui/logo-horizontal.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../assets/vendor/leaflet-1.9.4/leaflet.css">
+    <link rel="stylesheet" href="../assets/css/site.css?v=20261021-clubs-map">
+    <script src="../assets/vendor/leaflet-1.9.4/leaflet.js" defer></script>
+    <script src="../assets/js/mapy-config.js" defer></script>
+    <script src="../assets/js/site.js?v=20261102-map-netlify" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Přejít na obsah</a>
+    <header class="site-header" data-site-header>
+      <div class="site-header__inner container">
+        <div class="site-header__brand">
+          <a href="./homepage.html" aria-label="Český squash – domů">
+            <img src="../assets/ui/logo-horizontal.svg" width="154" height="40" alt="">
+          </a>
+        </div>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Otevřít menu"
+          hidden
+          data-menu-toggle
+        >
+          <span class="menu-toggle__icon" aria-hidden="true"></span>
+        </button>
+
+        <div class="site-header__desktop">
+          <div class="utility-row">
+            <ul class="utility-list">
+              <li><a href="./kluby.html"><span class="ui-icon ui-icon--mapa" aria-hidden="true"></span><span>Kluby</span></a></li>
+              <li><a href="./treneri.html"><span class="ui-icon ui-icon--treneri" aria-hidden="true"></span><span>Trenéři</span></a></li>
+              <li><a href="./zebricky.html"><span class="ui-icon ui-icon--zebricky" aria-hidden="true"></span><span>Žebříčky</span></a></li>
+            </ul>
+            <ul class="social-list">
+              <li><a href="https://www.facebook.com/ceskaasociacesquashe" aria-label="Facebook"><span class="ui-icon ui-icon--fb" aria-hidden="true"></span></a></li>
+              <li><span class="nav-label" role="img" aria-label="Instagram"><span class="ui-icon ui-icon--ig" aria-hidden="true"></span></span></li>
+              <li><a href="https://www.youtube.com/@czechsquashstream9906" aria-label="YouTube"><span class="ui-icon ui-icon--yt" aria-hidden="true"></span></a></li>
+            </ul>
+          </div>
+
+          <div class="main-row">
+            <nav class="main-navigation" aria-label="Hlavní navigace">
+              <ul>
+                <li><a href="./aktuality.html">Aktuality</a></li>
+                <li><a href="./kalendar-akci.html">Kalendář akcí</a></li>
+                <li><a href="./souteze.html">Soutěže družstev</a></li>
+                <li><a href="./reprezentace.html">Reprezentace</a></li>
+                <li><a href="./nabory.html">Hrej squash!</a></li>
+                <li><a href="./asociace.html">ČASQ</a></li>
+                <li><a href="./dokumenty.html">Dokumenty</a></li>
+                <li><a href="./kontakty.html">Kontakty</a></li>
+              </ul>
+            </nav>
+            <a class="button button--member" href="./clensky-system.html">Přihlášení pro členy</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+        <div class="container">
+          <a class="button button--member" href="./clensky-system.html">Přihlášení pro členy</a>
+          <nav aria-label="Mobilní navigace">
+            <ul class="mobile-menu__main">
+              <li><a href="./aktuality.html">Aktuality</a></li>
+              <li><a href="./kalendar-akci.html">Kalendář akcí</a></li>
+                <li><a href="./souteze.html">Soutěže družstev</a></li>
+              <li><a href="./reprezentace.html">Reprezentace</a></li>
+              <li><a href="./nabory.html">Hrej squash!</a></li>
+              <li><a href="./asociace.html">ČASQ</a></li>
+                <li><a href="./dokumenty.html">Dokumenty</a></li>
+              <li><a href="./kontakty.html">Kontakty</a></li>
+            </ul>
+          </nav>
+          <ul class="mobile-menu__utility">
+            <li><a href="./kluby.html"><span class="ui-icon ui-icon--mapa" aria-hidden="true"></span><span>Kluby</span></a></li>
+            <li><a href="./treneri.html"><span class="ui-icon ui-icon--treneri" aria-hidden="true"></span><span>Trenéři</span></a></li>
+            <li><a href="./zebricky.html"><span class="ui-icon ui-icon--zebricky" aria-hidden="true"></span><span>Žebříčky</span></a></li>
+          </ul>
+          <div class="mobile-menu__footer">
+            <div class="mobile-menu__social">
+              <a href="https://www.facebook.com/ceskaasociacesquashe" aria-label="Facebook"><span class="ui-icon ui-icon--fb" aria-hidden="true"></span></a>
+              <span class="nav-label" role="img" aria-label="Instagram"><span class="ui-icon ui-icon--ig" aria-hidden="true"></span></span>
+              <a href="https://www.youtube.com/@czechsquashstream9906" aria-label="YouTube"><span class="ui-icon ui-icon--yt" aria-hidden="true"></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1"><div class="listing-page container" data-filter-list data-club-finder><nav class="breadcrumbs" aria-label="Drobečková navigace"><ol><li><a href="./homepage.html">Úvod</a></li><li><a href="./nabory.html">Hrej squash!</a></li></ol></nav><header class="page-heading"><p class="eyebrow">Hrej squash!</p><h1>Najdi svůj klub</h1><p class="page-heading__intro">Objevte squashové kluby a jejich domácí kurty.</p></header><nav class="section-nav" aria-label="Hrej squash!"><ul class="section-nav__list"><li><a href="./nabory.html">Hrej squash!</a></li><li><a href="./kluby.html" aria-current="page">Kluby</a></li><li><a href="./pravidla.html">Pravidla</a></li></ul></nav><form class="filters" data-list-filters hidden aria-label="Filtrovat kluby"><div class="field field--search"><label for="club-search">Hledat klub nebo sportoviště</label><input type="search" name="search" id="club-search" placeholder="Název, město nebo adresa"></div><div class="field"><label for="club-city">Město</label><select name="category" id="club-city"><option value="">Všechna města</option><option value="brno">Brno</option><option value="hradec">Hradec Králové</option><option value="ostrava">Ostrava</option><option value="praha">Praha</option><option value="hradiste">Uherské Hradiště</option><!-- club-city-options:start --><option value="teplice">Teplice</option><option value="znojmo">Znojmo</option><option value="vyskov">Vyškov</option><option value="budejovice">České Budějovice</option><option value="sadska">Sadská</option><option value="olomouc">Olomouc</option><option value="zdar">Žďár nad Sázavou</option><option value="neuvedeno">Město sportoviště neuvedeno</option><!-- club-city-options:end --></select></div><button class="button button--secondary" type="reset">Zrušit filtry</button></form><p class="visually-hidden" data-result-count role="status" aria-live="polite" aria-atomic="true">Zobrazeno: 39 z 39</p><section class="club-map" aria-labelledby="club-map-title"><div class="club-map__heading"><h2 id="club-map-title">Mapa klubů</h2><a class="text-link" href="#club-results">Přejít na seznam<span class="ui-icon ui-icon--arrow-down ui-icon--inline" aria-hidden="true"></span></a></div><div class="club-map__interactive" data-club-map role="region" aria-label="Mapa squashových sportovišť" hidden></div><p class="club-map__status" data-club-map-status role="status" aria-live="polite"></p><p class="club-map__external"><a class="text-link" href="https://mapy.com/s/docosuzapo">Otevřít celou mapu na Mapy.com<span class="ui-icon ui-icon--external ui-icon--inline" aria-hidden="true"></span></a></p><div class="club-location" data-club-location hidden><div class="club-location__actions"><button class="button button--secondary" type="button" data-club-locate>Použít moji polohu</button><button class="button button--secondary" type="button" data-club-location-clear hidden>Zrušit řazení podle polohy</button></div><p role="status" aria-live="polite" aria-atomic="true" data-club-location-status></p></div></section><h2 class="club-results-title" id="club-results" tabindex="-1">Seznam klubů</h2><div class="club-grid club-grid--listing"><article class="club-card accent-card" id="klub-squash-centrum-hk" data-latitude="50.19601920" data-longitude="15.83490340" data-filter-item data-category="hradec"><p class="eyebrow">Hradec Králové</p><h2>Squash centrum club HK z.s.</h2><dl class="fact-list"><div><dt>Domácí sportoviště</dt><dd>SQ centrum HK</dd></div><div><dt>Adresa kurtů</dt><dd>Hradecká 1770, Hradec Králové</dd></div></dl><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><p class="club-card__map-link"><a href="https://mapy.com/fnc/v1/showmap?center=15.83490340,50.19601920&amp;zoom=17&amp;marker=true">Mapa sportoviště<span class="ui-icon ui-icon--external ui-icon--inline" aria-hidden="true"></span></a></p><a class="button" href="./klub-squash-centrum-hk.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-viktoria-brno" data-latitude="49.17634222" data-longitude="16.61647806" data-filter-item data-category="brno"><p class="eyebrow">Brno</p><h2>Squash Viktoria, z.s.</h2><dl class="fact-list"><div><dt>Domácí sportoviště</dt><dd>Centrum Viktoria</dd></div><div><dt>Adresa kurtů</dt><dd>Vodařská 2, Brno</dd></div></dl><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><p class="club-card__map-link"><a href="https://mapy.com/fnc/v1/showmap?center=16.61647806,49.17634222&amp;zoom=17&amp;marker=true">Mapa sportoviště<span class="ui-icon ui-icon--external ui-icon--inline" aria-hidden="true"></span></a></p><a class="button" href="./klub-viktoria-brno.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-jm-ostrava" data-latitude="49.83293674" data-longitude="18.18476335" data-filter-item data-category="ostrava"><p class="eyebrow">Ostrava</p><h2>JM Squash akademie Ostrava z.s.</h2><dl class="fact-list"><div><dt>Domácí sportoviště</dt><dd>SC FAJNE</dd></div><div><dt>Adresa kurtů</dt><dd>Gen. Sochora 12, Ostrava</dd></div></dl><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><p class="club-card__map-link"><a href="https://mapy.com/fnc/v1/showmap?center=18.18476335,49.83293674&amp;zoom=17&amp;marker=true">Mapa sportoviště<span class="ui-icon ui-icon--external ui-icon--inline" aria-hidden="true"></span></a></p><a class="button" href="./klub-jm-ostrava.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-hamr" data-latitude="50.05306574" data-longitude="14.48587240" data-filter-item data-category="praha"><p class="eyebrow">Praha</p><h2>SK HAMR, z.s.</h2><dl class="fact-list"><div><dt>Domácí sportoviště</dt><dd>Sportovní areál HAMR-Záběhlice</dd></div><div><dt>Adresa kurtů</dt><dd>Záběhlická ulice, Praha 10</dd></div></dl><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><p class="club-card__map-link"><a href="https://mapy.com/fnc/v1/showmap?center=14.48587240,50.05306574&amp;zoom=17&amp;marker=true">Mapa sportoviště<span class="ui-icon ui-icon--external ui-icon--inline" aria-hidden="true"></span></a></p><a class="button" href="./klub-hamr.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-sc-otec" data-latitude="50.08106278" data-longitude="14.38965167" data-filter-item data-category="praha"><p class="eyebrow">Praha</p><h2>SC Otec</h2><dl class="fact-list"><div><dt>Domácí sportoviště</dt><dd>Squashcentrum Strahov</dd></div><div><dt>Adresa kurtů</dt><dd>Vaníčkova 2b, Praha 6 - Strahov</dd></div></dl><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><p class="club-card__map-link"><a href="https://mapy.com/fnc/v1/showmap?center=14.38965167,50.08106278&amp;zoom=17&amp;marker=true">Mapa sportoviště<span class="ui-icon ui-icon--external ui-icon--inline" aria-hidden="true"></span></a></p><a class="button" href="./klub-sc-otec.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-strahov" data-latitude="50.08106278" data-longitude="14.38965167" data-filter-item data-category="praha"><p class="eyebrow">Praha</p><h2>Squashclub Strahov z.s.</h2><dl class="fact-list"><div><dt>Domácí sportoviště</dt><dd>Squashcentrum Strahov</dd></div><div><dt>Adresa kurtů</dt><dd>Vaníčkova 2b, Praha 6 - Strahov</dd></div></dl><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><p class="club-card__map-link"><a href="https://mapy.com/fnc/v1/showmap?center=14.38965167,50.08106278&amp;zoom=17&amp;marker=true">Mapa sportoviště<span class="ui-icon ui-icon--external ui-icon--inline" aria-hidden="true"></span></a></p><a class="button" href="./klub-strahov.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-uherske-hradiste" data-latitude="49.06705639" data-longitude="17.47069111" data-filter-item data-category="hradiste"><p class="eyebrow">Uherské Hradiště</p><h2>TJ Slovácká Slavia Uherské Hradiště, z.s.</h2><dl class="fact-list"><div><dt>Domácí sportoviště</dt><dd>Sportovní hala Uherské Hradiště</dd></div><div><dt>Adresa kurtů</dt><dd>Stonky 860, Uherské Hradiště</dd></div></dl><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><p class="club-card__map-link"><a href="https://mapy.com/fnc/v1/showmap?center=17.47069111,49.06705639&amp;zoom=17&amp;marker=true">Mapa sportoviště<span class="ui-icon ui-icon--external ui-icon--inline" aria-hidden="true"></span></a></p><a class="button" href="./klub-uherske-hradiste.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><!-- club-links:start --><article class="club-card accent-card" id="klub-03418677" data-filter-item data-category="neuvedeno"><p class="eyebrow">Město sportoviště neuvedeno</p><h2>1. Slezský Squash Klub, z.s.</h2><p>Sportoviště není uvedeno.</p><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-03418677.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-65082419" data-filter-item data-category="teplice"><p class="eyebrow">Teplice</p><h2>1. SQ Teplice, z.s.</h2><dl class="fact-list"><div><dt>Sportoviště ze soupisky</dt><dd>Aquacentrum Teplice</dd></div><div><dt>Adresa kurtů</dt><dd>A. Jiráska 3149, Teplice</dd></div></dl><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-65082419.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-69987076" data-filter-item data-category="neuvedeno"><p class="eyebrow">Město sportoviště neuvedeno</p><h2>AB Squash klub, z.s.</h2><p>Sportoviště není uvedeno.</p><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-69987076.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-68308540" data-filter-item data-category="neuvedeno"><p class="eyebrow">Město sportoviště neuvedeno</p><h2>Corkers Ostrava z.s.</h2><p>Sportoviště není uvedeno.</p><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-68308540.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-22859021" data-filter-item data-category="praha"><p class="eyebrow">Praha</p><h2>Král Squash Academy, spolek</h2><dl class="fact-list"><div><dt>Sportoviště ze soupisky</dt><dd>SQUASHARENA</dd></div><div><dt>Adresa kurtů</dt><dd>Cholupická 431, Praha 4 - Lhotka</dd></div></dl><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-22859021.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-26986965" data-filter-item data-category="ostrava"><p class="eyebrow">Ostrava</p><h2>OSTRAVA SQUASH KLUB z.s.</h2><dl class="fact-list"><div><dt>Sportoviště ze soupisky</dt><dd>SC FAJNE</dd></div><div><dt>Adresa kurtů</dt><dd>Gen. Sochora 12, Ostrava</dd></div></dl><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-26986965.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-62936719" data-filter-item data-category="neuvedeno"><p class="eyebrow">Město sportoviště neuvedeno</p><h2>Omega - tělovýchovný klub Chodov Praha, z.s.</h2><p>Sportoviště není uvedeno.</p><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-62936719.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-66933382" data-filter-item data-category="ostrava"><p class="eyebrow">Ostrava</p><h2>SBA Squash club z.s.</h2><dl class="fact-list"><div><dt>Sportoviště ze soupisky</dt><dd>Squashcentrum Mariánské Hory</dd></div><div><dt>Adresa kurtů</dt><dd>28.října 2663, Ostrava</dd></div></dl><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-66933382.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-26601818" data-filter-item data-category="znojmo"><p class="eyebrow">Znojmo</p><h2>SC Stroke Znojmo, z.s.</h2><dl class="fact-list"><div><dt>Sportoviště ze soupisky</dt><dd>Sportklub Znojemští orli</dd></div><div><dt>Adresa kurtů</dt><dd>Dvořákova 17, Znojmo</dd></div></dl><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-26601818.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-05260868" data-filter-item data-category="neuvedeno"><p class="eyebrow">Město sportoviště neuvedeno</p><h2>SK JEREMI, z.s.</h2><p>Sportoviště není uvedeno.</p><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-05260868.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-22709444" data-filter-item data-category="praha"><p class="eyebrow">Praha</p><h2>SK Prague United</h2><dl class="fact-list"><div><dt>Sportoviště ze soupisky</dt><dd>SQUASH HOLEŠOVICE</dd></div><div><dt>Adresa kurtů</dt><dd>Jankovcova 1055/13, Praha</dd></div></dl><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-22709444.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-26617251" data-filter-item data-category="praha"><p class="eyebrow">Praha</p><h2>SK Squash Modrý svět, z.s.</h2><dl class="fact-list"><div><dt>Sportoviště ze soupisky</dt><dd>Squash Modrý svět</dd></div><div><dt>Adresa kurtů</dt><dd>Beranových 125, Praha 9 - Letňany</dd></div></dl><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-26617251.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-05268397" data-filter-item data-category="neuvedeno"><p class="eyebrow">Město sportoviště neuvedeno</p><h2>SK Squash Sport Čimice, z.s.</h2><p>Sportoviště není uvedeno.</p><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-05268397.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-04837533" data-filter-item data-category="praha"><p class="eyebrow">Praha</p><h2>SK SquashArena z.s.</h2><dl class="fact-list"><div><dt>Sportoviště ze soupisky</dt><dd>SQUASHARENA</dd></div><div><dt>Adresa kurtů</dt><dd>Cholupická 431, Praha 4 - Lhotka</dd></div></dl><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-04837533.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-16191579" data-filter-item data-category="praha"><p class="eyebrow">Praha</p><h2>SK Uhelné sklady Praha, z.s.</h2><dl class="fact-list"><div><dt>Sportoviště ze soupisky</dt><dd>SK US SQUASHPARK Cibulka</dd></div><div><dt>Adresa kurtů</dt><dd>Fabiánova 1134, Praha 5 - Košíře</dd></div></dl><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-16191579.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-26558921" data-filter-item data-category="vyskov"><p class="eyebrow">Vyškov</p><h2>SQ Haná Vyškov, z.s.</h2><dl class="fact-list"><div><dt>Sportoviště ze soupisky</dt><dd>Squash centrum Vyškov</dd></div><div><dt>Adresa kurtů</dt><dd>Havlíčkova 19/1, Vyškov</dd></div></dl><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-26558921.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-27034976" data-filter-item data-category="ostrava"><p class="eyebrow">Ostrava</p><h2>Spolek sportu Ostrava</h2><dl class="fact-list"><div><dt>Sportoviště ze soupisky</dt><dd>SQUASH CLUB Ostrava Mariánské Hory</dd></div><div><dt>Adresa kurtů</dt><dd>28. října 150, Ostrava</dd></div></dl><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-27034976.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-09525068" data-filter-item data-category="neuvedeno"><p class="eyebrow">Město sportoviště neuvedeno</p><h2>Sport Centrum Viktoria z.s.</h2><p>Sportoviště není uvedeno.</p><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-09525068.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-67171621" data-filter-item data-category="budejovice"><p class="eyebrow">České Budějovice</p><h2>Sportovní klub Démoni České Budějovice, z.s.</h2><dl class="fact-list"><div><dt>Sportoviště ze soupisky</dt><dd>Fitness Pouzar</dd></div><div><dt>Adresa kurtů</dt><dd>Dlouhá 1371/35a, České Budějovice</dd></div></dl><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-67171621.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-26599384" data-filter-item data-category="praha"><p class="eyebrow">Praha</p><h2>Squash Especial, z.s.</h2><dl class="fact-list"><div><dt>Sportoviště ze soupisky</dt><dd>SQUASHPOINT, PRAHA 4</dd></div><div><dt>Adresa kurtů</dt><dd>Květnového vítězství 938/79, Praha 4</dd></div></dl><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-26599384.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-26553317" data-filter-item data-category="brno"><p class="eyebrow">Brno</p><h2>Squash Moravská Slavia Brno, z. s.</h2><p>Sportoviště družstev jsou uvedena v detailu klubu.</p><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-26553317.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-68383061" data-filter-item data-category="praha"><p class="eyebrow">Praha</p><h2>Squash Stará Praha z.s.</h2><p>Sportoviště družstev jsou uvedena v detailu klubu.</p><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-68383061.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-68383614" data-filter-item data-category="praha"><p class="eyebrow">Praha</p><h2>&quot;Squash club Háje z.s.&quot;</h2><dl class="fact-list"><div><dt>Sportoviště ze soupisky</dt><dd>Squash Ohradní</dd></div><div><dt>Adresa kurtů</dt><dd>Oheradní 1440/2a, Praha 4</dd></div></dl><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-68383614.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-22862412" data-filter-item data-category="neuvedeno"><p class="eyebrow">Město sportoviště neuvedeno</p><h2>Squash club Praha, z.s.</h2><p>Sportoviště není uvedeno.</p><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-22862412.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-27036081" data-filter-item data-category="sadska"><p class="eyebrow">Sadská</p><h2>Squash klub Poděbrady, z.s.</h2><dl class="fact-list"><div><dt>Sportoviště ze soupisky</dt><dd>Bowling Squash Sadská</dd></div><div><dt>Adresa kurtů</dt><dd>Poděbradská 1127, Sadská</dd></div></dl><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-27036081.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-05224128" data-filter-item data-category="praha"><p class="eyebrow">Praha</p><h2>Squash prisoners, z.s.</h2><dl class="fact-list"><div><dt>Sportoviště ze soupisky</dt><dd>Squashcentrum Strahov</dd></div><div><dt>Adresa kurtů</dt><dd>Vaníčkova 2b, Praha 6 - Strahov</dd></div></dl><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-05224128.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-26566087" data-filter-item data-category="praha"><p class="eyebrow">Praha</p><h2>SquashYard</h2><dl class="fact-list"><div><dt>Sportoviště ze soupisky</dt><dd>Squash Ohradní</dd></div><div><dt>Adresa kurtů</dt><dd>Oheradní 1440/2a, Praha 4</dd></div></dl><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-26566087.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-03612473" data-filter-item data-category="neuvedeno"><p class="eyebrow">Město sportoviště neuvedeno</p><h2>Squashová akademie, z.s.</h2><p>Sportoviště není uvedeno.</p><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-03612473.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-26528878" data-filter-item data-category="olomouc"><p class="eyebrow">Olomouc</p><h2>Squashový klub mládeže Olomouc, z.s.</h2><dl class="fact-list"><div><dt>Sportoviště ze soupisky</dt><dd>OMEGA centrum sportu a zdraví</dd></div><div><dt>Adresa kurtů</dt><dd>Legionářská, Olomoc</dd></div></dl><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-26528878.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-26540266" data-filter-item data-category="neuvedeno"><p class="eyebrow">Město sportoviště neuvedeno</p><h2>TORNÁDO SQUASH MOST, z.s.</h2><p>Sportoviště není uvedeno.</p><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-26540266.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-casq-ixi" data-filter-item data-category="neuvedeno"><p class="eyebrow">Město sportoviště neuvedeno</p><h2>ixi club (TJ Čechie Cihelna)</h2><p>Sportoviště není uvedeno.</p><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-casq-ixi.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><article class="club-card accent-card" id="klub-02338599" data-filter-item data-category="zdar"><p class="eyebrow">Žďár nad Sázavou</p><h2>Školní sportovní klub AŠSK Active - SVČ Žďár nad Sázavou, pobočný spolek</h2><dl class="fact-list"><div><dt>Sportoviště ze soupisky</dt><dd>Active club</dd></div><div><dt>Adresa kurtů</dt><dd>Dolní 3, Žďár nad Sázavou</dd></div></dl><p class="club-card__distance" data-club-distance hidden></p><div class="club-card__actions"><a class="button" href="./klub-02338599.html">Detail klubu<span class="ui-icon ui-icon--arrow-right ui-icon--inline" aria-hidden="true"></span></a></div></article><!-- club-links:end --></div><div class="empty-state" data-filter-empty hidden><h2>Žádný klub neodpovídá výběru</h2><p>Zkuste jiné město nebo výraz.</p><button class="button button--secondary" type="button" data-filter-reset>Zobrazit všechny kluby</button></div></div></main>
+
+    <footer class="site-footer">
+      <section id="partneri" class="partners" aria-label="Partneři českého squashe">
+        <div class="partners__grid container">
+          <div class="partner-group">
+            <h2>Hlavní partner českého squashe</h2>
+            <img src="../assets/ui/logo-aricoma.svg" alt="Aricoma" width="226" height="32">
+          </div>
+          <div class="partner-group partner-group--wide">
+            <h2>Partneři českého squashe</h2>
+            <div>
+              <img src="../assets/ui/logo-asb.svg" alt="ASB SquashCourts" width="74" height="32">
+              <img src="../assets/ui/logo-underarmour.svg" alt="Under Armour" width="59" height="34">
+              <img src="../assets/ui/logo-dunlop.svg" alt="Dunlop" width="144" height="24">
+            </div>
+          </div>
+          <div class="partner-group">
+            <h2>Český squash finančně podporuje</h2>
+            <img src="../assets/ui/logo-nsa.svg" alt="Národní sportovní agentura" width="68" height="48">
+          </div>
+        </div>
+      </section>
+      <div class="footer-navigation container">
+        <section class="footer-column">
+          <h2>ČASQ</h2>
+          <ul>
+            <li><a href="./asociace.html">Odborné komise</a></li>
+            <li><a href="./kontakty.html">Kontakty</a></li>
+            <li><a href="./rozhodci.html">Rozhodčí</a></li>
+            <li><a href="./skoleni.html">Školení</a></li>
+            <li><a href="./treneri.html">Trenéři</a></li>
+            <li><a href="./dokumenty.html">Řády a předpisy</a></li>
+          </ul>
+        </section>
+        <section class="footer-column">
+          <h2>Hrej squash!</h2>
+          <ul>
+            <li><a href="./kluby.html">Najdi svůj klub</a></li>
+            <li><a href="./nabory.html">Začít se squashem</a></li>
+            <li><a href="./pravidla.html">Pravidla squashe</a></li>
+            
+            <li><a href="./nabory.html#otazky">Časté otázky</a></li>
+          </ul>
+        </section>
+        <section class="footer-column">
+          <h2>Turnaje a soutěže</h2>
+          <ul>
+            <li><a href="./kalendar-akci.html">Kalendář akcí</a></li>
+            <li><a href="./souteze.html">Soutěže družstev</a></li>
+            <li><a href="https://europeansquash.com/calendar/158/Event-Calendar">Mezinárodní turnaje ESF</a></li>
+            <li><a href="https://psaworldtour.com/tournaments">Mezinárodní turnaje PSA</a></li>
+            <li><a href="./zebricky.html">Žebříčky hráčů</a></li>
+          </ul>
+        </section>
+        <section class="footer-column">
+          <h2>Média a sítě</h2>
+          <ul>
+            <li><a href="./tiskove-zpravy.html">Tiskové informace</a></li>
+            <li><a href="./kontakty.html#marketing-komunikace">Kontakt pro média</a></li>
+            <li><a href="./fotogalerie.html">Fotogalerie</a></li>
+            <li><a href="./homepage.html#stream">Videa</a></li>
+            <li><a href="https://www.facebook.com/ceskaasociacesquashe">Facebook</a></li>
+            <li><a href="https://www.youtube.com/@czechsquashstream9906">YouTube</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="newsletter" aria-labelledby="newsletter-title">
+        <div class="container">
+          <h2 id="newsletter-title">Newsletter českého squashe</h2>
+          <p class="visually-hidden" id="newsletter-status">Přihlášení k odběru není dostupné.</p>
+          <div class="newsletter__form">
+            <label class="visually-hidden" for="newsletter-email">E-mailová adresa</label>
+            <input id="newsletter-email" type="email" autocomplete="email" aria-describedby="newsletter-status" disabled>
+            <button type="button" class="button" aria-describedby="newsletter-status" disabled>Přihlásit odběr</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="site-footer__legal">
+        <p>© 2015–2026 Česká asociace squashe &amp; eSports.cz | <a href="./ochrana-osobnich-udaju.html">GDPR</a> | Nastavení cookies</p>
+      </div>
+    </footer>
+  </body>
+</html>

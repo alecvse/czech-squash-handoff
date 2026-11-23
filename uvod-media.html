@@ -1,0 +1,796 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Úvod, aktuality a média | Předání pro vývojáře | Czech Squash</title>
+  <link rel="icon" href="assets/ui/logo-horizontal.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="predani.css?v=6cb83978139b">
+  <link rel="alternate" type="text/markdown" href="uvod-media.md">
+  <script src="ai.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#obsah">Přejít na obsah</a>
+  <main id="obsah" class="guide container" tabindex="-1">
+    <nav class="handoff-nav" aria-label="Navigace předání">
+      <a href="index.html">Přehled šablon</a>
+      <a href="principy.html">Obecné principy</a>
+    <details class="ai-tools">
+        <summary>Použít s AI</summary>
+        <div class="ai-tools__panel">
+          <button type="button" data-copy-markdown hidden><span class="ui-icon ui-icon--copy" aria-hidden="true"></span>Zkopírovat Markdown</button>
+          <a href="uvod-media.md" target="_blank" rel="noopener"><svg class="ai-tools__document" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+              <path d="M8 17H16 M8 13H12 M13 2.5V3C13 5.82843 13 7.24264 13.8787 8.12132C14.7574 9 16.1716 9 19 9H19.5M20 10.6569V14C20 17.7712 20 19.6569 18.8284 20.8284C17.6569 22 15.7712 22 12 22C8.22876 22 6.34315 22 5.17157 20.8284C4 19.6569 4 17.7712 4 14V9.45584C4 6.21082 4 4.58831 4.88607 3.48933C5.06508 3.26731 5.26731 3.06508 5.48933 2.88607C6.58831 2 8.21082 2 11.4558 2C12.1614 2 12.5141 2 12.8372 2.11401C12.9044 2.13772 12.9702 2.165 13.0345 2.19575C13.3436 2.34355 13.593 2.593 14.0919 3.09188L18.8284 7.82843C19.4065 8.40649 19.6955 8.69552 19.8478 9.06306C20 9.4306 20 9.83935 20 10.6569Z" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+            </svg>Zobrazit Markdown</a>
+          <div class="ai-tools__chats" hidden>
+            <!-- brand-openai · Tabler Icons
+MIT License
+
+Copyright (c) 2020-2026 Paweł Kuna
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+            -->
+            <a href="https://chatgpt.com/" target="_blank" rel="noopener" data-open-chat>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                <path d="M11.217 19.384a3.501 3.501 0 0 0 6.783 -1.217v-5.167l-6 -3.35 M5.214 15.014a3.501 3.501 0 0 0 4.446 5.266l4.34 -2.534v-6.946 M6 7.63c-1.391 -.236 -2.787 .395 -3.534 1.689a3.474 3.474 0 0 0 1.271 4.745l4.263 2.514l6 -3.348 M12.783 4.616a3.501 3.501 0 0 0 -6.783 1.217v5.067l6 3.45 M18.786 8.986a3.501 3.501 0 0 0 -4.446 -5.266l-4.34 2.534v6.946 M18 16.302c1.391 .236 2.787 -.395 3.534 -1.689a3.474 3.474 0 0 0 -1.271 -4.745l-4.308 -2.514l-5.955 3.42" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+              </svg>
+              Otevřít v ChatGPT<span class="ui-icon ui-icon--external" aria-hidden="true"></span></a>
+            <a href="https://claude.ai/new" target="_blank" rel="noopener" data-open-chat>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                <path d="M8.1 8.15 1.1 7.8 M8.1 8.15 2.1 4.05 M8.1 8.15 5.25 1.25 M8.1 8.15 9.2 1.7 M8.1 8.15 12.6 2.8 M8.1 8.15 14.55 6.55 M8.1 8.15 14.9 9.15 M8.1 8.15 13.1 12.45 M8.1 8.15 11.45 13.9 M8.1 8.15 7.35 14.85 M8.1 8.15 3.8 13.85 M8.1 8.15 1.6 11.9" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+              </svg>
+              Otevřít v Claude<span class="ui-icon ui-icon--external" aria-hidden="true"></span></a>
+          </div>
+          <p class="ai-tools__status" role="status"></p>
+        </div>
+      </details>
+
+    </nav>
+    <header>
+      <p class="eyebrow">Czech Squash · Předání pro vývojáře · 19. 11. 2026</p>
+      <h1>Úvod, aktuality a média</h1>
+      <p>Úvod vybírá obsah z více částí webu. Samostatné Aktuality zpřístupňují archiv a Média propojují zprávy, fotografie, videa a tiskové informace. Zadání platí pro všechny zveřejněné záznamy těchto typů a doplňuje <a href="principy.html">obecné principy předání</a>.</p>
+      <div class="guide-actions">
+        <a class="button" href="templates/homepage.html">Mustr úvodu</a>
+        <a class="button" href="templates/aktuality.html">Mustr archivu aktualit</a>
+        <a class="button" href="templates/media.html">Mustr rozcestníku médií</a>
+        <a class="button" href="templates/fotogalerie.html">Mustr přehledu galerií</a>
+      </div>
+    </header>
+
+    <nav class="guide-contents" aria-label="Obsah sekce">
+      <a href="#uvod">Úvodní stránka</a>
+      <a href="#aktuality">Archiv aktualit</a>
+      <a href="#clanek">Detail článku</a>
+      <a href="#media">Média</a>
+      <a href="#tiskove-zpravy">Tiskové informace</a>
+      <a href="#fotogalerie">Přehled fotogalerií</a>
+      <a href="#galerie">Detail galerie</a>
+      <a href="#prechod">Přechod ze stávajícího webu</a>
+      <a href="#prevzeti">Kontrola po napojení</a>
+    </nav>
+
+    <section id="uvod" data-template="homepage.html">
+      <h2>Úvodní stránka</h2>
+      <article>
+        <h3>Hlavní aktuality a výběr článků</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Úvod zvýrazňuje vybrané zprávy s fotografiemi a datem. Níže je výpis posledních aktualit s vyhledáváním a výběrem měsíce.</p>
+            <ul class="comparison-links"><li><a href="https://czechsquash.cz/">Živý úvod a jeho aktuality</a></li></ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Nahoře se přepínají tři zvýrazněné články s fotografií, rubrikou, datem, titulkem a perexem. Dalších šest karet tvoří blok Aktuality s odkazem na celý archiv. Krátké zprávy jsou vypnuté.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/homepage.html#main-content">Hlavní aktuality</a></li>
+              <li><a href="templates/homepage.html#aktuality">Šest článkových karet</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Backend.</strong> Oba bloky čtou zveřejněné články. Položka potřebuje stabilní identitu a adresu, rubriku, datum publikace, titulek, perex a fotografii s alternativním textem. Text i obraz v každé hlavní aktualitě odkazují na stejný článek. Karta i hlavní aktualita přebírají opravy článku ze společného zdroje. Zachovej ruční přepnutí, zastavení rotace při najetí a při focusu a vypnutí automatické rotace v režimu omezeného pohybu.</p>
+        <p><strong>Ověřit v backendu.</strong> Zjisti, zda současný zvýrazněný výběr má příznak, vlastní pořadí a dobu platnosti a kdo je může měnit v administraci.</p>
+        <p><strong>Rozhodnout s redakcí.</strong> Potvrď výběr a pořadí hlavních aktualit a pravidlo pro doplnění šesti dalších karet. Urči, zda se může článek objevit v obou blocích a jak má úvod fungovat při menším počtu publikovaných článků. Mustr dokládá rozložení, způsob výběru neurčuje.</p>
+      </article>
+
+      <article>
+        <h3>Vybrané akce</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Úvod má samostatné seznamy Nadcházející turnaje a Poslední turnaje. Oba odkazují do kalendáře. U nadcházejícího turnaje se podle stavu nabízí detail a přihláška nebo los. Ligové dvojice, termín, čas a halu najde návštěvník po výběru soutěže družstev v kalendáři.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/">Turnaje na živém úvodu</a></li>
+              <li><a href="https://czechsquash.cz/kalendar-akci/?kat%5B%5D=DM1&amp;nazev=&amp;od=01.09.2026&amp;do=&amp;Hledat=Hledat">Kalendář Extraligy mužů s časy a místy utkání</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Jeden vodorovný pás míchá turnaje a termíny družstev. Karta ukazuje datum nebo rozsah, název a kategorii. Akce s publikovaným cílem může vést na přehled ligy. Záhlaví pásu odkazuje do kalendáře akcí.</p>
+            <ul class="comparison-links"><li><a href="templates/homepage.html#main-content">Vybrané akce v mustru úvodu</a></li></ul>
+          </div>
+        </div>
+        <p><strong>Backend.</strong> Záznam přebírej z kalendáře nebo rozpisu včetně identity, data začátku a konce, názvu, kategorie a dostupného cíle. Změna termínu v jeho zdrojové evidenci se projeví i tady. Položka bez veřejného cíle zůstane čitelná jako text. Pozastavené detaily turnajů se v cílovém rozsahu nezpřístupňují.</p>
+        <p><strong>Rozhodnout s vlastníkem kalendáře.</strong> Potvrď ruční nebo automatický výběr akcí, časové okno, pořadí a pravidla pro ligové termíny a uplynulé akce. Ujasni, kudy uživatel dál přejde k funkční přihlášce a losu, které dnes nabízí úvod, pokud to schválený rozsah dovoluje.</p>
+      </article>
+
+      <article>
+        <h3>CzechSquash Stream</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>ČASQ zveřejňuje epizody Squashcastu jako jednotlivé aktuality s odkazy na video a playlist. Epizody s Karolínou Šrámkovou, Jakubem Stupkou a Viktorem Byrtusem odkazují na stejná videa jako karty v mustru.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/novinka/?news=3119">Squashcast s Karolínou Šrámkovou</a></li>
+              <li><a href="https://czechsquash.cz/novinka/?news=3106">Squashcast s Jakubem Stupkou</a></li>
+              <li><a href="https://czechsquash.cz/novinka/?news=3120">Squashcast s Viktorem Byrtusem</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Stream na úvodu má čtyři karty s náhledem, titulkem, datem a odkazem na video. Pod 768 px zůstávají dvě první karty. Odkaz Odebírej vede na skutečný kanál.</p>
+            <ul class="comparison-links"><li><a href="templates/homepage.html#stream">CzechSquash Stream</a></li></ul>
+          </div>
+        </div>
+        <p><strong>Backend.</strong> Každá karta potřebuje platnou adresu videa, titulek, datum a náhled s alternativním textem. Odkaz z rozcestníku médií a patičky vede na <code>#stream</code> na úvodu.</p>
+        <p><strong>Rozhodnout s redakcí.</strong> Potvrď, kdo vybírá videa a spravuje náhledy a pořadí. Urči zdroj zobrazovaného data. Datum publikace aktuality a datum vydání videa se mohou lišit a v mustru jsou data ukázková. Mustr používá lokální náhledy a běžné odkazy na YouTube.</p>
+      </article>
+
+      <article>
+        <h3>Společná hlavička, patička a partneři</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Hlavička dává přímý přístup ke sportovním částem a členskému přihlášení. V patičce jsou loga partnerů a podporovatele, odkazy ČASQ, sportovní odkazy a Facebook.</p>
+            <ul class="comparison-links"><li><a href="https://czechsquash.cz/">Společná navigace na živém webu</a></li></ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Desktop má hlavní a doplňkovou navigaci. Mobil stejné cíle seskupuje v menu. Patička odděluje hlavního partnera, další partnery a finanční podporu. Skupina Média a sítě vede na tiskové informace, mediální kontakt, fotogalerie, videa a sociální kanály.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/homepage.html">Desktopová a mobilní navigace</a></li>
+              <li><a href="templates/homepage.html#partneri">Partneři a patička</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Backend a administrace.</strong> Zaveď jeden zdroj společné hlavičky a patičky. Aktuality jsou přímá položka hlavního menu, vstupní stránka Média zůstává dostupná přes obsahové odkazy. Změny kontaktního cíle, kanálu nebo partnera se mají projevit na všech stránkách. Ke zveřejněnému logu patří přístupný název, skupina a pořadí. Odkaz používej jen u ověřeného cíle.</p>
+        <p><strong>Členský vstup.</strong> Tlačítko Přihlášení pro členy vede v živé hlavičce do členské aplikace a v mustru na informační stránku. Cílové chování popisuje zadání členského přístupu. <a href="https://czechsquash.cz/login/">Stávající vstup</a> · <a href="asociace-dokumenty.html#clensky-pristup">Zadání členského přístupu</a> · <a href="templates/clensky-system.html#main-content">Mustr členského přístupu</a></p>
+        <p><strong>Rozhodnout s vlastníkem webu.</strong> Potvrď schválené role partnerů a aktualizační proces, definitivní sociální odkazy a obsluhu položky Nastavení cookies. Instagram je v hlavičce mustru neodkazový a Nastavení cookies v patičce je text.</p>
+      </article>
+
+      <article>
+        <h3>Newsletter</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Patička obsahuje formulář s povinnou e-mailovou adresou a odesláním. Doručení ani funkce správy odběru nebyly předmětem veřejné kontroly.</p>
+            <ul class="comparison-links"><li><a href="https://czechsquash.cz/">Newsletter v živé patičce</a></li></ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Newsletter má označené e-mailové pole a tlačítko, obojí je deaktivované. Odesílání není napojené.</p>
+            <ul class="comparison-links"><li><a href="templates/homepage.html#newsletter-title">Newsletter v nové patičce</a></li></ul>
+          </div>
+        </div>
+        <p><strong>Ověřit v backendu.</strong> Zjisti příjemce stávajícího formuláře, místo správy seznamu, potvrzování odběru, řešení duplicit a odhlašování.</p>
+        <p><strong>Rozhodnout s vlastníkem newsletteru.</strong> Potvrď, zda odběr pokračuje, a případně schval službu, podmínky odběru a správu existujících kontaktů. Před aktivací stanov chování při úspěchu, neplatné adrese, existujícím odběru a chybě služby včetně opakování. Formulář se zapne po skutečném napojení a ověření těchto stavů.</p>
+      </article>
+    </section>
+
+    <section id="aktuality" data-template="aktuality.html">
+      <h2>Archiv aktualit</h2>
+      <article>
+        <h3>Vyhledávání, rubriky a stránkování</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Aktuality v navigaci vedou na úvod. Výpis na něm přijímá hledaný výraz nebo výběr měsíce v adrese. Článek se otevírá z titulku nebo odkazu Více zde.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/?month=2026-10">Živý archiv podle měsíce</a></li>
+              <li><a href="https://czechsquash.cz/?search=Pan%C3%A1%C4%8Dek">Živé vyhledávání v aktualitách</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Samostatný archiv nabízí hledání v textu karet a filtr rubriky. Filtry se kombinují a lze je zrušit. Výsledky jsou po 12, další strana se volí pod výpisem. Karta ukazuje rubriku, datum, titulek, perex a fotografii, případně označenou jako ilustrační.</p>
+            <ul class="comparison-links"><li><a href="templates/aktuality.html#main-content">Mustr archivu s filtry</a></li></ul>
+          </div>
+        </div>
+        <p><strong>Backend.</strong> Vrať všechny odpovídající zveřejněné zprávy, po datech od nejnovějších se stabilním pořadím také při shodném dni. Filtr uplatni před rozdělením na stránky. Hledání v mustru pracuje s veřejným textem karty bez rozlišení diakritiky a velikosti písmen. Po změně filtru přejdi na první stránku, oznam počet výsledků a při nulové shodě nabídni reset. Bez JavaScriptu jsou v mustru dostupné karty a odkazy. Pro napojený archiv zachovej přístup k celému obsahu i bez JS, například serverovým stránkováním.</p>
+        <p><strong>Ověřit v backendu.</strong> Zjisti pokrytí historických článků, stávající kategorizaci a rozsah vyhledávání. Rubriky mustru jsou Turnaje a soutěže, Reprezentace a ČASQ. Ověř, jak redaktor rubriku a zdroj náhledu mění a kdy je zveřejněná položka k dispozici ve všech výpisech.</p>
+        <p><strong>Rozhodnout s redakcí.</strong> Potvrď mapování starších záznamů do rubrik a rozsah hledání na novém webu. Mustr nemá výběr měsíce ani trvalý kontext filtrů v URL. Zvol, jak zachovat staré odkazy na měsíc či hledání a jak umožnit návrat z detailu na původní výsledky.</p>
+      </article>
+    </section>
+
+    <section id="clanek" data-template="clanek-hradecky-juniorsky-cup.html">
+      <h2>Detail článku</h2>
+      <article>
+        <h3>Redakční obsah a fotografie</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Detail má adresu s číselným ID. Ukazuje titulek, datum, autora a vlastní text. Podle článku jsou v něm fotografie a popisky. Vedle nebo pod obsahem jsou turnaje a další aktuality. U článku je také ovládání tisku a sdílení.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/novinka/?news=3231">Živý článek Hradecký juniorský CUP</a></li>
+              <li><a href="https://czechsquash.cz/novinka/?news=3227">Živá zpráva Open de Quebec</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Sloupec článku odděluje titulek a metadata, perex, volitelný hlavní snímek a redakční text. Fotografie mohou mít popisek a kredit nebo vlastní galerii. Drobečky odkazují na skutečné předky. Některé záznamy mají místo reportážní fotografie označený ilustrační snímek.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/clanek-hradecky-juniorsky-cup.html">Reportáž s galerií</a></li>
+              <li><a href="templates/clanek-3227.html#page-title">Článek s ilustrační fotografií</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Backend.</strong> Převezmi stabilní ID, kanonickou adresu, titulek, dostupnou rubriku, datum publikace, doloženého autora, perex a tělo článku v původním pořadí. Zachovej význam odstavců, podnadpisů, seznamů, tabulek, odkazů a vložených médií. Každému snímku ponech funkční adresu originálu, alternativní text, případný popisek a samostatný kredit. Fotografii, autora, rubriku a galerii vykresli podle dostupnosti. Vydavatele článku a fotografa eviduj odděleně. Stejný záznam může být odkazován i z tematické části webu a má jednu kanonickou adresu.</p>
+        <p><strong>Ověřit v backendu.</strong> Zjisti formát uloženého těla článku, vztah perexu a prvního odstavce a dostupnost samostatné fotografie pro kartu a detail. V redakci musí jít nastavit výřez, způsob zobrazení grafiky a označení ilustrační fotografie bez záměny s dokumentárním snímkem.</p>
+        <p><strong>Rozhodnout s redakcí.</strong> Urči, zda mají mít nový detail a sdílená metadata vlastní tisk/sdílení a blok dalších aktualit. Potvrď, zda se při migraci použije původní tělo nebo konkrétní schválená redakční úprava.</p>
+      </article>
+
+      <article>
+        <h3>Přílohy a externí odkazy</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>V textu článku mohou být přímé odkazy na soubory, výsledky a vysílání. Některé vedou ven ze současného webu.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/novinka/?news=3196">Živý článek s PDF a dvěma soubory XLSX</a></li>
+              <li><a href="https://czechsquash.cz/novinka/?news=3122">Živá reportáž s výsledky a vysíláním</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Výzva LSCM uvádí podmínky a jednotlivé soubory pod vlastními názvy. Reportáž z Krakova ukazuje delší text s externími odkazy včetně výsledků a několika zdrojů přenosu.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/clanek-podpora-lscm-2026.html">Mustr článku s přílohami</a></li>
+              <li><a href="templates/clanek-3122.html">Mustr delší reportáže s odkazy</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Backend a administrace.</strong> Redaktor může ke konkrétnímu článku přiřadit soubor nebo externí odkaz s čitelným názvem. Převeď relativní cíle z původního webu podle skutečné adresy souboru a zachovej obsahové pořadí odkazů. U příloh získej formát a případnou zobrazovanou velikost ze skutečného souboru. Externí odkaz na přenos zůstává odkazem podle zdroje. Pokud záznam opravdu má video s náhledem a titulkem, použij společnou video kartu.</p>
+        <p><strong>Ověřit v backendu.</strong> Zjisti, zda jsou přílohy evidované samostatně, nebo jen v redakčním HTML. Projdi i články, v nichž současný mustr odkazuje slovně na původní zprávu nebo některé odkazy neobsahuje, a porovnej je se zdrojem.</p>
+      </article>
+    </section>
+
+    <section id="media" data-template="media.html">
+      <h2>Rozcestník Média</h2>
+      <article>
+        <h3>Vstupy do mediálních sekcí</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Aktuality zpřístupňují fotografie a videa v jednotlivých zprávách. U konkrétních akcí ČASQ už soustřeďuje odkazy na reportáže, rozhovory a přenosy do jednoho článku. Kontakt na marketing a komunikaci je součástí Kontaktů ČASQ.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/novinka/?news=1261">Přehled přenosů a mediálních ohlasů MČR</a></li>
+              <li><a href="https://czechsquash.cz/novinka/?news=3145">Galerie medailistů MČR juniorů</a></li>
+              <li><a href="https://czechsquash.cz/kontakty/">Kontakty ČASQ</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Rozcestník nabízí odkazy na Aktuality, Fotogalerii, Videa a Tiskové informace. Stejné cíle používá sekční navigace mediálních stránek. Videa vedou k bloku Stream na úvodu.</p>
+            <ul class="comparison-links"><li><a href="templates/media.html#main-content">Mustr rozcestníku Média</a></li></ul>
+          </div>
+        </div>
+        <p><strong>Backend a administrace.</strong> Sdílej stejné veřejné adresy mezi rozcestníkem, sekční navigací a patičkou. Označ aktuální stránku v sekční navigaci a zachovej hierarchii předků v drobečcích. Média mají vlastní veřejnou adresu dostupnou z navázaných obsahových stránek.</p>
+      </article>
+    </section>
+
+    <section id="tiskove-zpravy" data-template="tiskove-zpravy.html">
+      <h2>Tiskové informace</h2>
+      <article>
+        <h3>Přehled tiskových zpráv</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Na současném webu nemá tato část předobraz.</p>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Rubrika zatím zobrazuje schválený prázdný stav a směřuje běžné zprávy do Aktualit. Na stejné stránce je také odkaz na mediální kontakt.</p>
+            <ul class="comparison-links"><li><a href="templates/tiskove-zpravy.html#main-content">Mustr tiskových informací</a></li></ul>
+          </div>
+        </div>
+        <p><strong>Související podklady.</strong> Při srovnání se ve veřejném archivu nepodařilo dohledat vydanou tiskovou zprávu. V Aktualitách jsou pozvánky na tiskové konference a přehledy mediálních ohlasů. <a href="https://czechsquash.cz/novinka/?news=3115">Termín tiskové konference k MČR 2026</a> · <a href="https://czechsquash.cz/novinka/?news=1971">Pozvánka k přenosu tiskové konference k MČR 2021</a> · <a href="https://czechsquash.cz/novinka/?news=1985">Mediální ohlasy MČR 2021</a></p>
+        <p><strong>Backend a administrace.</strong> Prázdný stav platí, dokud nejsou schválené zprávy nebo materiály. Pro publikovanou tiskovou zprávu bude třeba doložený původ, titulek, datum a zveřejněný obsah s funkčními přílohami. Běžné články se při migraci automaticky nepřeznačují.</p>
+        <p><strong>Rozhodnout s vlastníkem tiskových informací.</strong> Dodá a schválí první tiskové materiály a určí, kdo je bude publikovat. Potvrď, zda se budou vést jako zvláštní rubrika článků nebo samostatné záznamy, zda se objeví i v Aktualitách a kam povede položka z neprázdného seznamu. Podobu seznamu s položkami mustr nepředvádí.</p>
+      </article>
+      <article>
+        <h3>Kontakt pro média</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>V kontaktech ČASQ je člen VV odpovědný za marketing a komunikaci se jménem, veřejným e-mailem a telefonem.</p>
+            <ul class="comparison-links"><li><a href="https://czechsquash.cz/kontakty/">Živé kontakty ČASQ</a></li></ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Tiskové informace jmenují odpovědnou osobu a odkazují na její kartu v Kontaktech. Stejný cíl používá patička.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/tiskove-zpravy.html#main-content">Kontakt v tiskových informacích</a></li>
+              <li><a href="templates/kontakty.html#marketing-komunikace">Mustr cílového kontaktu</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Backend a administrace.</strong> Jméno a veřejné kontaktní údaje spravuj u role marketingu a komunikace ve společném adresáři. Po výměně odpovědné osoby se aktualizuje i tiskový text. Trvalý odkaz směřuje na roli.</p>
+      </article>
+    </section>
+
+    <section id="fotogalerie" data-template="fotogalerie.html">
+      <h2>Přehled fotogalerií</h2>
+      <article>
+        <h3>Archiv, kategorie a ročníky</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Galerie jsou v archivu aktualit. Hledání podle názvu najde například galerie medailistů ze dvou ročníků i články s odkazy na externí alba.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/?search=galerie+v%C3%ADt%C4%9Bz%C5%AF">Živý výpis galerií medailistů</a></li>
+              <li><a href="https://czechsquash.cz/?search=fotogalerie">Živý výpis aktualit s fotogaleriemi</a></li>
+              <li><a href="https://czechsquash.cz/novinka/?news=1852">Fotogalerie s externími alby</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Karty ukazují náhled, titulek, datum, počet fotografií a krátký popis. Lze kombinovat hledání, kategorii a ročník. Výsledek otevírá samostatný detail nebo přímo galerii uvnitř článku.</p>
+            <ul class="comparison-links"><li><a href="templates/fotogalerie.html#main-content">Mustr archivu fotogalerií</a></li></ul>
+          </div>
+        </div>
+        <p><strong>Backend.</strong> Každá zveřejněná galerie potřebuje vlastní stabilní identitu, titulek, datum, ročník, kategorii, popis, veřejný náhled a odkaz na skutečnou galerii. Počet karty odpovídá zveřejněným fotografiím v cíli. Všechny filtry se uplatňují společně, s počtem výsledků a možností resetu. Bez JS zůstávají karty a cíle dostupné.</p>
+        <p><strong>Ověřit v backendu.</strong> Zjisti, jestli pro zdrojové fotky existují alba, nebo zda je třeba vytvořit vazbu na část článku. Admin musí umět měnit zveřejnění, kategorii, náhled a pořadí fotografií bez rozbití cíle archivní karty.</p>
+        <p><strong>Rozhodnout s redakcí.</strong> Potvrď, které historické galerie do archivu zařadit, jaké budou kategorie a pořadí a zda ročník vychází z data akce nebo z redakčního zařazení. Oba způsoby otevření galerie využívej podle obsahu a jeho vazeb.</p>
+      </article>
+    </section>
+
+    <section id="galerie" data-template="galerie-mcr-junioru-2026.html">
+      <h2>Detail galerie</h2>
+      <article>
+        <h3>Galerie uvnitř článku</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Reportáž o Hradeckém juniorském CUPu obsahuje fotografie z vyhlášení a připojené popisky v rámci článku.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/novinka/?news=3231">Fotografie v reportáži z Hradce</a></li>
+              <li><a href="https://czechsquash.cz/novinka/?news=3197">Fotografie ze světového šampionátu</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>V článku je samostatná fotografická mřížka dosažitelná fragmentem <code>#fotogalerie</code>. Na ten míří také archivní karta. Fotografie se přes běžný odkaz otevře jako celý snímek.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/clanek-hradecky-juniorsky-cup.html#fotogalerie">Mustr galerie v reportáži</a></li>
+              <li><a href="templates/clanek-3163.html#fotogalerie">Mustr galerie s doloženým vydavatelem</a></li>
+              <li><a href="templates/clanek-juniorsti-mistri-sveta-2026.html#fotogalerie">Mustr galerie světového šampionátu</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Backend a administrace.</strong> Foto blok má vlastní trvalý fragment a stále patří k článku. Archivní karta odkazuje přímo na tento fragment. Po stažení článku z publikace aktualizuj i archivní kartu, aby nevedla na nedostupný obsah.</p>
+      </article>
+      <article>
+        <h3>Samostatná galerie</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>ČASQ vydává fotogalerie medailistů jako samostatné aktuality. Galerie pro každý ročník má vlastní adresu s ID zprávy. Dvojice fotografií z HAMRu je součástí původní reportáže.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/novinka/?news=3145">Živá galerie MČR juniorů 2026</a></li>
+              <li><a href="https://czechsquash.cz/novinka/?news=2945">Živá galerie MČR juniorů 2025</a></li>
+              <li><a href="https://czechsquash.cz/novinka/?news=2689">Živá reportáž z HAMRu</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Galerie má vlastní nadpis a adresu, popis, dostupný kredit, snímky s popisky a návrat do archivu. Je-li doložen související článek, může na něj odkázat.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/galerie-mcr-junioru-2026.html">Mustr galerie s uvedenou fotografkou</a></li>
+              <li><a href="templates/galerie-mcr-junioru-2025.html">Mustr dalšího ročníku MČR juniorů</a></li>
+              <li><a href="templates/galerie-hamr-2024.html">Mustr galerie s odkazem na reportáž</a></li>
+              <li><a href="templates/clanek-2689.html">Mustr související reportáže HAMR</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Backend a administrace.</strong> Pro oba typy zachovej pořadí snímků, jejich poměr stran v originálu a čitelný náhled. Každý snímek potřebuje alternativní text, odkaz na úplný soubor a dostupný popisek a kredit. Správce musí mít možnost upravit popisek, pořadí, náhled i vazbu na článek. Pokud je jeden snímek na obou místech, může být spravovaný jako jeden mediální soubor.</p>
+        <p><strong>Migrace.</strong> Samostatná galerie může vzniknout z fotografií dříve publikovaných uvnitř článku. Spáruj soubor s původním popiskem, zachovej autorství a práva ke zveřejnění. U HAMRu je zdrojem původní reportáž ČASQ, autora fotografie veřejný zdroj neuvádí. <a href="https://czechsquash.cz/novinka/?news=2689">Živá reportáž se zdrojovými fotografiemi</a></p>
+      </article>
+    </section>
+
+    <section id="prechod">
+      <h2>Přechod ze stávajícího webu</h2>
+      <ul>
+        <li>Vytvoř mapu starého číselného ID na cílovou kanonickou adresu. Zahrň i články otevřené ze speciálního přehledu Trenérů nebo Reprezentace. Kontroluj každý záznam podle ID a zdrojového data. Stejný titulek může patřit více článkům.</li>
+        <li>Při migraci zachovej historická data publikace, autora, pořadí textu, původní popisky, kredity a média i v článcích mimo reprezentativní ukázky. Prověř staré odkazy na soubory a přesměrování starých adres podle schválené mapy.</li>
+        <li>V živém zápisu výboru zůstaly přílohy odkazované přímo, zatímco jeho mustr obsahuje jen jejich popis. Při migraci podobných záznamů ověř a přenes všechny schválené přílohy. <a href="https://czechsquash.cz/novinka/?news=3216">Živý zápis s přílohami</a> · <a href="templates/clanek-3216.html">Mustr zápisu</a></li>
+        <li>Před přepnutím vyřeš staré adresy parametrů <code>search</code> a <code>month</code>, funkční přístup hráčů a klubů, stav newsletteru, dostupnost tiskových materiálů a schválený rozsah historických galerií podle rozhodnutí výše.</li>
+      </ul>
+    </section>
+
+    <section id="prevzeti">
+      <h2>Kontrola po napojení</h2>
+      <ol>
+        <li>Zveřejni nový článek a změň náhled, titulek a rubriku jiného. Zkontroluj úvod, archiv a detail. Nezveřejněný článek se nesmí objevit ve veřejných výpisech.</li>
+        <li>Přepni hlavní aktuality tlačítky i klávesnicí a otevři zvolenou zprávu z obrázku i titulku. Vyzkoušej mobil, režim s omezením pohybu a přístup k první aktualitě bez JS. Ověř aktuální termín akce, ligový odkaz i čitelnou položku bez odkazu. Otevři video i odkaz na kanál.</li>
+        <li>Hledej text s diakritikou i bez ní, přidej rubriku, přejdi na další stránku výsledků, vyzkoušej nulovou shodu a zruš filtry. Otevři jeden článek ze starého ID a ověř dohodnuté chování starých adres měsíce a hledání.</li>
+        <li>Otevři stručný článek i dlouhou reportáž, stáhni přílohu a porovnej ji se zdrojem. Zkontroluj variantu bez fotografie, ilustrační snímek a zprávu s fotografiemi a autorským kreditem.</li>
+        <li>Zkombinuj všechny filtry fotogalerie. Z jedné karty otevři samostatnou galerii, z jiné přímo oddíl článku. V obou případech otevři originál a zkontroluj popisky, čitelnost a shodu počtu fotografií.</li>
+        <li>Ověř prázdný stav tiskových zpráv, přechod z patičky na veřejný mediální kontakt a změnu kontaktní osoby. Ověř schválený průchod do členské aplikace a podle rozhodnutí také newsletter včetně chybového stavu. U obou služeb ověř skutečný výsledek v prostředí určeném pro testování.</li>
+      </ol>
+      <details class="accent-card reference-example" id="referencni-priklad">
+        <summary>Referenční příklady · články z úvodu<span class="ui-icon ui-icon--chevron-down" aria-hidden="true"></span></summary>
+        <ul>
+          <li>Článek o Madrid Open ukazuje, že stejný textový cíl může být v hlavních aktualitách i v archivu. <a href="https://czechsquash.cz/novinka/?news=3193">Živý článek</a> · <a href="templates/clanek-marek-panacek-madrid.html">Mustr Madrid Open</a></li>
+          <li>Zpráva o podpoře trenérů patří v ukázce do hlavních aktualit i do bloku šesti karet. <a href="https://czechsquash.cz/novinka/?news=3198">Živý článek</a> · <a href="templates/clanek-podpora-treneru-nadace-cez.html">Mustr zprávy ČASQ</a></li>
+          <li>Reportáže z Brazílie a z Dutch Junior Open ukazují stručnější a rozsáhlejší galerii. <a href="https://czechsquash.cz/novinka/?news=3230">Živá Brazílie</a> · <a href="templates/clanek-cb-squash-tour-brazilie.html">Mustr Brazílie</a> · <a href="https://czechsquash.cz/novinka/?news=3195">Živý Dutch Junior Open</a> · <a href="templates/clanek-dutch-junior-open-2026.html">Mustr Dutch Junior Open</a></li>
+        </ul>
+      </details>
+    </section>
+  </main>
+<template id="page-markdown"># Úvod, aktuality a média
+
+Úvod vybírá obsah z více částí webu. Samostatné Aktuality zpřístupňují archiv a Média propojují zprávy, fotografie, videa a tiskové informace. Zadání platí pro všechny zveřejněné záznamy těchto typů a doplňuje [obecné principy předání](principy.md).
+
+[Mustr úvodu](templates/homepage.html)
+
+[Mustr archivu aktualit](templates/aktuality.html)
+
+[Mustr rozcestníku médií](templates/media.html)
+
+[Mustr přehledu galerií](templates/fotogalerie.html)
+
+&lt;a id=&quot;uvod&quot;&gt;&lt;/a&gt;
+
+## Úvodní stránka
+
+### Hlavní aktuality a výběr článků
+
+#### Dnes
+
+Úvod zvýrazňuje vybrané zprávy s fotografiemi a datem. Níže je výpis posledních aktualit s vyhledáváním a výběrem měsíce.
+
+- [Živý úvod a jeho aktuality](https://czechsquash.cz/)
+
+#### Nový mustr
+
+Nahoře se přepínají tři zvýrazněné články s fotografií, rubrikou, datem, titulkem a perexem. Dalších šest karet tvoří blok Aktuality s odkazem na celý archiv. Krátké zprávy jsou vypnuté.
+
+- [Hlavní aktuality](templates/homepage.html#main-content)
+- [Šest článkových karet](templates/homepage.html#aktuality)
+
+**Backend.** Oba bloky čtou zveřejněné články. Položka potřebuje stabilní identitu a adresu, rubriku, datum publikace, titulek, perex a fotografii s alternativním textem. Text i obraz v každé hlavní aktualitě odkazují na stejný článek. Karta i hlavní aktualita přebírají opravy článku ze společného zdroje. Zachovej ruční přepnutí, zastavení rotace při najetí a při focusu a vypnutí automatické rotace v režimu omezeného pohybu.
+
+**Ověřit v backendu.** Zjisti, zda současný zvýrazněný výběr má příznak, vlastní pořadí a dobu platnosti a kdo je může měnit v administraci.
+
+**Rozhodnout s redakcí.** Potvrď výběr a pořadí hlavních aktualit a pravidlo pro doplnění šesti dalších karet. Urči, zda se může článek objevit v obou blocích a jak má úvod fungovat při menším počtu publikovaných článků. Mustr dokládá rozložení, způsob výběru neurčuje.
+
+### Vybrané akce
+
+#### Dnes
+
+Úvod má samostatné seznamy Nadcházející turnaje a Poslední turnaje. Oba odkazují do kalendáře. U nadcházejícího turnaje se podle stavu nabízí detail a přihláška nebo los. Ligové dvojice, termín, čas a halu najde návštěvník po výběru soutěže družstev v kalendáři.
+
+- [Turnaje na živém úvodu](https://czechsquash.cz/)
+- [Kalendář Extraligy mužů s časy a místy utkání](https://czechsquash.cz/kalendar-akci/?kat%5B%5D=DM1&amp;nazev=&amp;od=01.09.2026&amp;do=&amp;Hledat=Hledat)
+
+#### Nový mustr
+
+Jeden vodorovný pás míchá turnaje a termíny družstev. Karta ukazuje datum nebo rozsah, název a kategorii. Akce s publikovaným cílem může vést na přehled ligy. Záhlaví pásu odkazuje do kalendáře akcí.
+
+- [Vybrané akce v mustru úvodu](templates/homepage.html#main-content)
+
+**Backend.** Záznam přebírej z kalendáře nebo rozpisu včetně identity, data začátku a konce, názvu, kategorie a dostupného cíle. Změna termínu v jeho zdrojové evidenci se projeví i tady. Položka bez veřejného cíle zůstane čitelná jako text. Pozastavené detaily turnajů se v cílovém rozsahu nezpřístupňují.
+
+**Rozhodnout s vlastníkem kalendáře.** Potvrď ruční nebo automatický výběr akcí, časové okno, pořadí a pravidla pro ligové termíny a uplynulé akce. Ujasni, kudy uživatel dál přejde k funkční přihlášce a losu, které dnes nabízí úvod, pokud to schválený rozsah dovoluje.
+
+### CzechSquash Stream
+
+#### Dnes
+
+ČASQ zveřejňuje epizody Squashcastu jako jednotlivé aktuality s odkazy na video a playlist. Epizody s Karolínou Šrámkovou, Jakubem Stupkou a Viktorem Byrtusem odkazují na stejná videa jako karty v mustru.
+
+- [Squashcast s Karolínou Šrámkovou](https://czechsquash.cz/novinka/?news=3119)
+- [Squashcast s Jakubem Stupkou](https://czechsquash.cz/novinka/?news=3106)
+- [Squashcast s Viktorem Byrtusem](https://czechsquash.cz/novinka/?news=3120)
+
+#### Nový mustr
+
+Stream na úvodu má čtyři karty s náhledem, titulkem, datem a odkazem na video. Pod 768 px zůstávají dvě první karty. Odkaz Odebírej vede na skutečný kanál.
+
+- [CzechSquash Stream](templates/homepage.html#stream)
+
+**Backend.** Každá karta potřebuje platnou adresu videa, titulek, datum a náhled s alternativním textem. Odkaz z rozcestníku médií a patičky vede na `#stream` na úvodu.
+
+**Rozhodnout s redakcí.** Potvrď, kdo vybírá videa a spravuje náhledy a pořadí. Urči zdroj zobrazovaného data. Datum publikace aktuality a datum vydání videa se mohou lišit a v mustru jsou data ukázková. Mustr používá lokální náhledy a běžné odkazy na YouTube.
+
+### Společná hlavička, patička a partneři
+
+#### Dnes
+
+Hlavička dává přímý přístup ke sportovním částem a členskému přihlášení. V patičce jsou loga partnerů a podporovatele, odkazy ČASQ, sportovní odkazy a Facebook.
+
+- [Společná navigace na živém webu](https://czechsquash.cz/)
+
+#### Nový mustr
+
+Desktop má hlavní a doplňkovou navigaci. Mobil stejné cíle seskupuje v menu. Patička odděluje hlavního partnera, další partnery a finanční podporu. Skupina Média a sítě vede na tiskové informace, mediální kontakt, fotogalerie, videa a sociální kanály.
+
+- [Desktopová a mobilní navigace](templates/homepage.html)
+- [Partneři a patička](templates/homepage.html#partneri)
+
+**Backend a administrace.** Zaveď jeden zdroj společné hlavičky a patičky. Aktuality jsou přímá položka hlavního menu, vstupní stránka Média zůstává dostupná přes obsahové odkazy. Změny kontaktního cíle, kanálu nebo partnera se mají projevit na všech stránkách. Ke zveřejněnému logu patří přístupný název, skupina a pořadí. Odkaz používej jen u ověřeného cíle.
+
+**Členský vstup.** Tlačítko Přihlášení pro členy vede v živé hlavičce do členské aplikace a v mustru na informační stránku. Cílové chování popisuje zadání členského přístupu. [Stávající vstup](https://czechsquash.cz/login/) · [Zadání členského přístupu](asociace-dokumenty.md#clensky-pristup) · [Mustr členského přístupu](templates/clensky-system.html#main-content)
+
+**Rozhodnout s vlastníkem webu.** Potvrď schválené role partnerů a aktualizační proces, definitivní sociální odkazy a obsluhu položky Nastavení cookies. Instagram je v hlavičce mustru neodkazový a Nastavení cookies v patičce je text.
+
+### Newsletter
+
+#### Dnes
+
+Patička obsahuje formulář s povinnou e-mailovou adresou a odesláním. Doručení ani funkce správy odběru nebyly předmětem veřejné kontroly.
+
+- [Newsletter v živé patičce](https://czechsquash.cz/)
+
+#### Nový mustr
+
+Newsletter má označené e-mailové pole a tlačítko, obojí je deaktivované. Odesílání není napojené.
+
+- [Newsletter v nové patičce](templates/homepage.html#newsletter-title)
+
+**Ověřit v backendu.** Zjisti příjemce stávajícího formuláře, místo správy seznamu, potvrzování odběru, řešení duplicit a odhlašování.
+
+**Rozhodnout s vlastníkem newsletteru.** Potvrď, zda odběr pokračuje, a případně schval službu, podmínky odběru a správu existujících kontaktů. Před aktivací stanov chování při úspěchu, neplatné adrese, existujícím odběru a chybě služby včetně opakování. Formulář se zapne po skutečném napojení a ověření těchto stavů.
+
+&lt;a id=&quot;aktuality&quot;&gt;&lt;/a&gt;
+
+## Archiv aktualit
+
+### Vyhledávání, rubriky a stránkování
+
+#### Dnes
+
+Aktuality v navigaci vedou na úvod. Výpis na něm přijímá hledaný výraz nebo výběr měsíce v adrese. Článek se otevírá z titulku nebo odkazu Více zde.
+
+- [Živý archiv podle měsíce](https://czechsquash.cz/?month=2026-10)
+- [Živé vyhledávání v aktualitách](https://czechsquash.cz/?search=Pan%C3%A1%C4%8Dek)
+
+#### Nový mustr
+
+Samostatný archiv nabízí hledání v textu karet a filtr rubriky. Filtry se kombinují a lze je zrušit. Výsledky jsou po 12, další strana se volí pod výpisem. Karta ukazuje rubriku, datum, titulek, perex a fotografii, případně označenou jako ilustrační.
+
+- [Mustr archivu s filtry](templates/aktuality.html#main-content)
+
+**Backend.** Vrať všechny odpovídající zveřejněné zprávy, po datech od nejnovějších se stabilním pořadím také při shodném dni. Filtr uplatni před rozdělením na stránky. Hledání v mustru pracuje s veřejným textem karty bez rozlišení diakritiky a velikosti písmen. Po změně filtru přejdi na první stránku, oznam počet výsledků a při nulové shodě nabídni reset. Bez JavaScriptu jsou v mustru dostupné karty a odkazy. Pro napojený archiv zachovej přístup k celému obsahu i bez JS, například serverovým stránkováním.
+
+**Ověřit v backendu.** Zjisti pokrytí historických článků, stávající kategorizaci a rozsah vyhledávání. Rubriky mustru jsou Turnaje a soutěže, Reprezentace a ČASQ. Ověř, jak redaktor rubriku a zdroj náhledu mění a kdy je zveřejněná položka k dispozici ve všech výpisech.
+
+**Rozhodnout s redakcí.** Potvrď mapování starších záznamů do rubrik a rozsah hledání na novém webu. Mustr nemá výběr měsíce ani trvalý kontext filtrů v URL. Zvol, jak zachovat staré odkazy na měsíc či hledání a jak umožnit návrat z detailu na původní výsledky.
+
+&lt;a id=&quot;clanek&quot;&gt;&lt;/a&gt;
+
+## Detail článku
+
+### Redakční obsah a fotografie
+
+#### Dnes
+
+Detail má adresu s číselným ID. Ukazuje titulek, datum, autora a vlastní text. Podle článku jsou v něm fotografie a popisky. Vedle nebo pod obsahem jsou turnaje a další aktuality. U článku je také ovládání tisku a sdílení.
+
+- [Živý článek Hradecký juniorský CUP](https://czechsquash.cz/novinka/?news=3231)
+- [Živá zpráva Open de Quebec](https://czechsquash.cz/novinka/?news=3227)
+
+#### Nový mustr
+
+Sloupec článku odděluje titulek a metadata, perex, volitelný hlavní snímek a redakční text. Fotografie mohou mít popisek a kredit nebo vlastní galerii. Drobečky odkazují na skutečné předky. Některé záznamy mají místo reportážní fotografie označený ilustrační snímek.
+
+- [Reportáž s galerií](templates/clanek-hradecky-juniorsky-cup.html)
+- [Článek s ilustrační fotografií](templates/clanek-3227.html#page-title)
+
+**Backend.** Převezmi stabilní ID, kanonickou adresu, titulek, dostupnou rubriku, datum publikace, doloženého autora, perex a tělo článku v původním pořadí. Zachovej význam odstavců, podnadpisů, seznamů, tabulek, odkazů a vložených médií. Každému snímku ponech funkční adresu originálu, alternativní text, případný popisek a samostatný kredit. Fotografii, autora, rubriku a galerii vykresli podle dostupnosti. Vydavatele článku a fotografa eviduj odděleně. Stejný záznam může být odkazován i z tematické části webu a má jednu kanonickou adresu.
+
+**Ověřit v backendu.** Zjisti formát uloženého těla článku, vztah perexu a prvního odstavce a dostupnost samostatné fotografie pro kartu a detail. V redakci musí jít nastavit výřez, způsob zobrazení grafiky a označení ilustrační fotografie bez záměny s dokumentárním snímkem.
+
+**Rozhodnout s redakcí.** Urči, zda mají mít nový detail a sdílená metadata vlastní tisk/sdílení a blok dalších aktualit. Potvrď, zda se při migraci použije původní tělo nebo konkrétní schválená redakční úprava.
+
+### Přílohy a externí odkazy
+
+#### Dnes
+
+V textu článku mohou být přímé odkazy na soubory, výsledky a vysílání. Některé vedou ven ze současného webu.
+
+- [Živý článek s PDF a dvěma soubory XLSX](https://czechsquash.cz/novinka/?news=3196)
+- [Živá reportáž s výsledky a vysíláním](https://czechsquash.cz/novinka/?news=3122)
+
+#### Nový mustr
+
+Výzva LSCM uvádí podmínky a jednotlivé soubory pod vlastními názvy. Reportáž z Krakova ukazuje delší text s externími odkazy včetně výsledků a několika zdrojů přenosu.
+
+- [Mustr článku s přílohami](templates/clanek-podpora-lscm-2026.html)
+- [Mustr delší reportáže s odkazy](templates/clanek-3122.html)
+
+**Backend a administrace.** Redaktor může ke konkrétnímu článku přiřadit soubor nebo externí odkaz s čitelným názvem. Převeď relativní cíle z původního webu podle skutečné adresy souboru a zachovej obsahové pořadí odkazů. U příloh získej formát a případnou zobrazovanou velikost ze skutečného souboru. Externí odkaz na přenos zůstává odkazem podle zdroje. Pokud záznam opravdu má video s náhledem a titulkem, použij společnou video kartu.
+
+**Ověřit v backendu.** Zjisti, zda jsou přílohy evidované samostatně, nebo jen v redakčním HTML. Projdi i články, v nichž současný mustr odkazuje slovně na původní zprávu nebo některé odkazy neobsahuje, a porovnej je se zdrojem.
+
+&lt;a id=&quot;media&quot;&gt;&lt;/a&gt;
+
+## Rozcestník Média
+
+### Vstupy do mediálních sekcí
+
+#### Dnes
+
+Aktuality zpřístupňují fotografie a videa v jednotlivých zprávách. U konkrétních akcí ČASQ už soustřeďuje odkazy na reportáže, rozhovory a přenosy do jednoho článku. Kontakt na marketing a komunikaci je součástí Kontaktů ČASQ.
+
+- [Přehled přenosů a mediálních ohlasů MČR](https://czechsquash.cz/novinka/?news=1261)
+- [Galerie medailistů MČR juniorů](https://czechsquash.cz/novinka/?news=3145)
+- [Kontakty ČASQ](https://czechsquash.cz/kontakty/)
+
+#### Nový mustr
+
+Rozcestník nabízí odkazy na Aktuality, Fotogalerii, Videa a Tiskové informace. Stejné cíle používá sekční navigace mediálních stránek. Videa vedou k bloku Stream na úvodu.
+
+- [Mustr rozcestníku Média](templates/media.html#main-content)
+
+**Backend a administrace.** Sdílej stejné veřejné adresy mezi rozcestníkem, sekční navigací a patičkou. Označ aktuální stránku v sekční navigaci a zachovej hierarchii předků v drobečcích. Média mají vlastní veřejnou adresu dostupnou z navázaných obsahových stránek.
+
+&lt;a id=&quot;tiskove-zpravy&quot;&gt;&lt;/a&gt;
+
+## Tiskové informace
+
+### Přehled tiskových zpráv
+
+#### Dnes
+
+Na současném webu nemá tato část předobraz.
+
+#### Nový mustr
+
+Rubrika zatím zobrazuje schválený prázdný stav a směřuje běžné zprávy do Aktualit. Na stejné stránce je také odkaz na mediální kontakt.
+
+- [Mustr tiskových informací](templates/tiskove-zpravy.html#main-content)
+
+**Související podklady.** Při srovnání se ve veřejném archivu nepodařilo dohledat vydanou tiskovou zprávu. V Aktualitách jsou pozvánky na tiskové konference a přehledy mediálních ohlasů. [Termín tiskové konference k MČR 2026](https://czechsquash.cz/novinka/?news=3115) · [Pozvánka k přenosu tiskové konference k MČR 2021](https://czechsquash.cz/novinka/?news=1971) · [Mediální ohlasy MČR 2021](https://czechsquash.cz/novinka/?news=1985)
+
+**Backend a administrace.** Prázdný stav platí, dokud nejsou schválené zprávy nebo materiály. Pro publikovanou tiskovou zprávu bude třeba doložený původ, titulek, datum a zveřejněný obsah s funkčními přílohami. Běžné články se při migraci automaticky nepřeznačují.
+
+**Rozhodnout s vlastníkem tiskových informací.** Dodá a schválí první tiskové materiály a určí, kdo je bude publikovat. Potvrď, zda se budou vést jako zvláštní rubrika článků nebo samostatné záznamy, zda se objeví i v Aktualitách a kam povede položka z neprázdného seznamu. Podobu seznamu s položkami mustr nepředvádí.
+
+### Kontakt pro média
+
+#### Dnes
+
+V kontaktech ČASQ je člen VV odpovědný za marketing a komunikaci se jménem, veřejným e-mailem a telefonem.
+
+- [Živé kontakty ČASQ](https://czechsquash.cz/kontakty/)
+
+#### Nový mustr
+
+Tiskové informace jmenují odpovědnou osobu a odkazují na její kartu v Kontaktech. Stejný cíl používá patička.
+
+- [Kontakt v tiskových informacích](templates/tiskove-zpravy.html#main-content)
+- [Mustr cílového kontaktu](templates/kontakty.html#marketing-komunikace)
+
+**Backend a administrace.** Jméno a veřejné kontaktní údaje spravuj u role marketingu a komunikace ve společném adresáři. Po výměně odpovědné osoby se aktualizuje i tiskový text. Trvalý odkaz směřuje na roli.
+
+&lt;a id=&quot;fotogalerie&quot;&gt;&lt;/a&gt;
+
+## Přehled fotogalerií
+
+### Archiv, kategorie a ročníky
+
+#### Dnes
+
+Galerie jsou v archivu aktualit. Hledání podle názvu najde například galerie medailistů ze dvou ročníků i články s odkazy na externí alba.
+
+- [Živý výpis galerií medailistů](https://czechsquash.cz/?search=galerie+v%C3%ADt%C4%9Bz%C5%AF)
+- [Živý výpis aktualit s fotogaleriemi](https://czechsquash.cz/?search=fotogalerie)
+- [Fotogalerie s externími alby](https://czechsquash.cz/novinka/?news=1852)
+
+#### Nový mustr
+
+Karty ukazují náhled, titulek, datum, počet fotografií a krátký popis. Lze kombinovat hledání, kategorii a ročník. Výsledek otevírá samostatný detail nebo přímo galerii uvnitř článku.
+
+- [Mustr archivu fotogalerií](templates/fotogalerie.html#main-content)
+
+**Backend.** Každá zveřejněná galerie potřebuje vlastní stabilní identitu, titulek, datum, ročník, kategorii, popis, veřejný náhled a odkaz na skutečnou galerii. Počet karty odpovídá zveřejněným fotografiím v cíli. Všechny filtry se uplatňují společně, s počtem výsledků a možností resetu. Bez JS zůstávají karty a cíle dostupné.
+
+**Ověřit v backendu.** Zjisti, jestli pro zdrojové fotky existují alba, nebo zda je třeba vytvořit vazbu na část článku. Admin musí umět měnit zveřejnění, kategorii, náhled a pořadí fotografií bez rozbití cíle archivní karty.
+
+**Rozhodnout s redakcí.** Potvrď, které historické galerie do archivu zařadit, jaké budou kategorie a pořadí a zda ročník vychází z data akce nebo z redakčního zařazení. Oba způsoby otevření galerie využívej podle obsahu a jeho vazeb.
+
+&lt;a id=&quot;galerie&quot;&gt;&lt;/a&gt;
+
+## Detail galerie
+
+### Galerie uvnitř článku
+
+#### Dnes
+
+Reportáž o Hradeckém juniorském CUPu obsahuje fotografie z vyhlášení a připojené popisky v rámci článku.
+
+- [Fotografie v reportáži z Hradce](https://czechsquash.cz/novinka/?news=3231)
+- [Fotografie ze světového šampionátu](https://czechsquash.cz/novinka/?news=3197)
+
+#### Nový mustr
+
+V článku je samostatná fotografická mřížka dosažitelná fragmentem `#fotogalerie`. Na ten míří také archivní karta. Fotografie se přes běžný odkaz otevře jako celý snímek.
+
+- [Mustr galerie v reportáži](templates/clanek-hradecky-juniorsky-cup.html#fotogalerie)
+- [Mustr galerie s doloženým vydavatelem](templates/clanek-3163.html#fotogalerie)
+- [Mustr galerie světového šampionátu](templates/clanek-juniorsti-mistri-sveta-2026.html#fotogalerie)
+
+**Backend a administrace.** Foto blok má vlastní trvalý fragment a stále patří k článku. Archivní karta odkazuje přímo na tento fragment. Po stažení článku z publikace aktualizuj i archivní kartu, aby nevedla na nedostupný obsah.
+
+### Samostatná galerie
+
+#### Dnes
+
+ČASQ vydává fotogalerie medailistů jako samostatné aktuality. Galerie pro každý ročník má vlastní adresu s ID zprávy. Dvojice fotografií z HAMRu je součástí původní reportáže.
+
+- [Živá galerie MČR juniorů 2026](https://czechsquash.cz/novinka/?news=3145)
+- [Živá galerie MČR juniorů 2025](https://czechsquash.cz/novinka/?news=2945)
+- [Živá reportáž z HAMRu](https://czechsquash.cz/novinka/?news=2689)
+
+#### Nový mustr
+
+Galerie má vlastní nadpis a adresu, popis, dostupný kredit, snímky s popisky a návrat do archivu. Je-li doložen související článek, může na něj odkázat.
+
+- [Mustr galerie s uvedenou fotografkou](templates/galerie-mcr-junioru-2026.html)
+- [Mustr dalšího ročníku MČR juniorů](templates/galerie-mcr-junioru-2025.html)
+- [Mustr galerie s odkazem na reportáž](templates/galerie-hamr-2024.html)
+- [Mustr související reportáže HAMR](templates/clanek-2689.html)
+
+**Backend a administrace.** Pro oba typy zachovej pořadí snímků, jejich poměr stran v originálu a čitelný náhled. Každý snímek potřebuje alternativní text, odkaz na úplný soubor a dostupný popisek a kredit. Správce musí mít možnost upravit popisek, pořadí, náhled i vazbu na článek. Pokud je jeden snímek na obou místech, může být spravovaný jako jeden mediální soubor.
+
+**Migrace.** Samostatná galerie může vzniknout z fotografií dříve publikovaných uvnitř článku. Spáruj soubor s původním popiskem, zachovej autorství a práva ke zveřejnění. U HAMRu je zdrojem původní reportáž ČASQ, autora fotografie veřejný zdroj neuvádí. [Živá reportáž se zdrojovými fotografiemi](https://czechsquash.cz/novinka/?news=2689)
+
+&lt;a id=&quot;prechod&quot;&gt;&lt;/a&gt;
+
+## Přechod ze stávajícího webu
+
+- Vytvoř mapu starého číselného ID na cílovou kanonickou adresu. Zahrň i články otevřené ze speciálního přehledu Trenérů nebo Reprezentace. Kontroluj každý záznam podle ID a zdrojového data. Stejný titulek může patřit více článkům.
+- Při migraci zachovej historická data publikace, autora, pořadí textu, původní popisky, kredity a média i v článcích mimo reprezentativní ukázky. Prověř staré odkazy na soubory a přesměrování starých adres podle schválené mapy.
+- V živém zápisu výboru zůstaly přílohy odkazované přímo, zatímco jeho mustr obsahuje jen jejich popis. Při migraci podobných záznamů ověř a přenes všechny schválené přílohy. [Živý zápis s přílohami](https://czechsquash.cz/novinka/?news=3216) · [Mustr zápisu](templates/clanek-3216.html)
+- Před přepnutím vyřeš staré adresy parametrů `search` a `month`, funkční přístup hráčů a klubů, stav newsletteru, dostupnost tiskových materiálů a schválený rozsah historických galerií podle rozhodnutí výše.
+
+&lt;a id=&quot;prevzeti&quot;&gt;&lt;/a&gt;
+
+## Kontrola po napojení
+
+1. Zveřejni nový článek a změň náhled, titulek a rubriku jiného. Zkontroluj úvod, archiv a detail. Nezveřejněný článek se nesmí objevit ve veřejných výpisech.
+2. Přepni hlavní aktuality tlačítky i klávesnicí a otevři zvolenou zprávu z obrázku i titulku. Vyzkoušej mobil, režim s omezením pohybu a přístup k první aktualitě bez JS. Ověř aktuální termín akce, ligový odkaz i čitelnou položku bez odkazu. Otevři video i odkaz na kanál.
+3. Hledej text s diakritikou i bez ní, přidej rubriku, přejdi na další stránku výsledků, vyzkoušej nulovou shodu a zruš filtry. Otevři jeden článek ze starého ID a ověř dohodnuté chování starých adres měsíce a hledání.
+4. Otevři stručný článek i dlouhou reportáž, stáhni přílohu a porovnej ji se zdrojem. Zkontroluj variantu bez fotografie, ilustrační snímek a zprávu s fotografiemi a autorským kreditem.
+5. Zkombinuj všechny filtry fotogalerie. Z jedné karty otevři samostatnou galerii, z jiné přímo oddíl článku. V obou případech otevři originál a zkontroluj popisky, čitelnost a shodu počtu fotografií.
+6. Ověř prázdný stav tiskových zpráv, přechod z patičky na veřejný mediální kontakt a změnu kontaktní osoby. Ověř schválený průchod do členské aplikace a podle rozhodnutí také newsletter včetně chybového stavu. U obou služeb ověř skutečný výsledek v prostředí určeném pro testování.
+
+&lt;a id=&quot;referencni-priklad&quot;&gt;&lt;/a&gt;
+
+### Referenční příklady · články z úvodu
+
+- Článek o Madrid Open ukazuje, že stejný textový cíl může být v hlavních aktualitách i v archivu. [Živý článek](https://czechsquash.cz/novinka/?news=3193) · [Mustr Madrid Open](templates/clanek-marek-panacek-madrid.html)
+- Zpráva o podpoře trenérů patří v ukázce do hlavních aktualit i do bloku šesti karet. [Živý článek](https://czechsquash.cz/novinka/?news=3198) · [Mustr zprávy ČASQ](templates/clanek-podpora-treneru-nadace-cez.html)
+- Reportáže z Brazílie a z Dutch Junior Open ukazují stručnější a rozsáhlejší galerii. [Živá Brazílie](https://czechsquash.cz/novinka/?news=3230) · [Mustr Brazílie](templates/clanek-cb-squash-tour-brazilie.html) · [Živý Dutch Junior Open](https://czechsquash.cz/novinka/?news=3195) · [Mustr Dutch Junior Open](templates/clanek-dutch-junior-open-2026.html)
+</template>
+</body>
+</html>

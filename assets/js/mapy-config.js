@@ -1,0 +1,1 @@
+window.CZECH_SQUASH_MAPY_KEY = "";

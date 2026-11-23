@@ -1,0 +1,12 @@
+# Czech Squash — předání šablon
+
+## Dokumentace
+
+- [Přehled šablon](index.md)
+- [Obecné principy](principy.md)
+- [Soutěže družstev](souteze-druzstev.md)
+- [Sportovní přehledy a profily](sportovni-prehledy.md)
+- [Kluby a nábory](kluby-nabory.md)
+- [Úvod, aktuality a média](uvod-media.md)
+- [ČASQ, dokumenty a veřejné informace](asociace-dokumenty.md)
+- [Trenéři, rozhodčí a školení](odborny-servis.md)

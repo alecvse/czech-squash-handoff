@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Obecné principy | Předání pro vývojáře | Czech Squash</title>
+  <link rel="icon" href="assets/ui/logo-horizontal.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="predani.css?v=6cb83978139b">
+  <link rel="alternate" type="text/markdown" href="principy.md">
+  <script src="ai.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#obsah">Přejít na obsah</a>
+  <main id="obsah" class="guide container" tabindex="-1">
+    <nav class="handoff-nav" aria-label="Navigace předání">
+      <a href="index.html">Přehled šablon</a>
+      <a href="principy.html" aria-current="page">Obecné principy</a>
+    <details class="ai-tools">
+        <summary>Použít s AI</summary>
+        <div class="ai-tools__panel">
+          <button type="button" data-copy-markdown hidden><span class="ui-icon ui-icon--copy" aria-hidden="true"></span>Zkopírovat Markdown</button>
+          <a href="principy.md" target="_blank" rel="noopener"><svg class="ai-tools__document" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+              <path d="M8 17H16 M8 13H12 M13 2.5V3C13 5.82843 13 7.24264 13.8787 8.12132C14.7574 9 16.1716 9 19 9H19.5M20 10.6569V14C20 17.7712 20 19.6569 18.8284 20.8284C17.6569 22 15.7712 22 12 22C8.22876 22 6.34315 22 5.17157 20.8284C4 19.6569 4 17.7712 4 14V9.45584C4 6.21082 4 4.58831 4.88607 3.48933C5.06508 3.26731 5.26731 3.06508 5.48933 2.88607C6.58831 2 8.21082 2 11.4558 2C12.1614 2 12.5141 2 12.8372 2.11401C12.9044 2.13772 12.9702 2.165 13.0345 2.19575C13.3436 2.34355 13.593 2.593 14.0919 3.09188L18.8284 7.82843C19.4065 8.40649 19.6955 8.69552 19.8478 9.06306C20 9.4306 20 9.83935 20 10.6569Z" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+            </svg>Zobrazit Markdown</a>
+          <div class="ai-tools__chats" hidden>
+            <!-- brand-openai · Tabler Icons
+MIT License
+
+Copyright (c) 2020-2026 Paweł Kuna
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+            -->
+            <a href="https://chatgpt.com/" target="_blank" rel="noopener" data-open-chat>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                <path d="M11.217 19.384a3.501 3.501 0 0 0 6.783 -1.217v-5.167l-6 -3.35 M5.214 15.014a3.501 3.501 0 0 0 4.446 5.266l4.34 -2.534v-6.946 M6 7.63c-1.391 -.236 -2.787 .395 -3.534 1.689a3.474 3.474 0 0 0 1.271 4.745l4.263 2.514l6 -3.348 M12.783 4.616a3.501 3.501 0 0 0 -6.783 1.217v5.067l6 3.45 M18.786 8.986a3.501 3.501 0 0 0 -4.446 -5.266l-4.34 2.534v6.946 M18 16.302c1.391 .236 2.787 -.395 3.534 -1.689a3.474 3.474 0 0 0 -1.271 -4.745l-4.308 -2.514l-5.955 3.42" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+              </svg>
+              Otevřít v ChatGPT<span class="ui-icon ui-icon--external" aria-hidden="true"></span></a>
+            <a href="https://claude.ai/new" target="_blank" rel="noopener" data-open-chat>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                <path d="M8.1 8.15 1.1 7.8 M8.1 8.15 2.1 4.05 M8.1 8.15 5.25 1.25 M8.1 8.15 9.2 1.7 M8.1 8.15 12.6 2.8 M8.1 8.15 14.55 6.55 M8.1 8.15 14.9 9.15 M8.1 8.15 13.1 12.45 M8.1 8.15 11.45 13.9 M8.1 8.15 7.35 14.85 M8.1 8.15 3.8 13.85 M8.1 8.15 1.6 11.9" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
+              </svg>
+              Otevřít v Claude<span class="ui-icon ui-icon--external" aria-hidden="true"></span></a>
+          </div>
+          <p class="ai-tools__status" role="status"></p>
+        </div>
+      </details>
+
+    </nav>
+    <header>
+      <p class="eyebrow">Czech Squash · Předání pro vývojáře</p>
+      <h1>Obecné principy</h1>
+      <p>Každá sekce popisuje chování typu stránky při výměně obsahu. Konkrétní adresa, jméno, datum a výsledek v ukázce slouží k porovnání. Produkční stránka je načítá pro právě zvolený záznam.</p>
+    </header>
+    <nav class="guide-contents" aria-label="Obsah obecných principů">
+      <a href="#spusteni">Spuštění</a>
+      <a href="#data">Data a identita</a>
+      <a href="#admin">Administrace</a>
+      <a href="#odkazy">Odkazy a ovládání</a>
+      <a href="#overeni">Ověření</a>
+      <a href="#postup">Zadání další sekce</a>
+    </nav>
+
+    <section id="spusteni">
+      <h2>Spuštění náhledu</h2>
+      <p>Ve složce se souborem <code>nahled.py</code> spusť <code>python3 nahled.py</code> a otevři <a href="http://127.0.0.1:8011/">lokální přehled šablon</a>. Stačí Python 3.</p>
+      <p>HTML mustry jsou v <code>templates/</code>. Sdílené styly, skript, písma, ikony a soubory ke stažení jsou v <code>assets/</code>. Pro produkční cesty sestav adresy stránek i assetů pomocí routeru projektu.</p>
+    </section>
+    <section id="data">
+      <h2>Data a identita záznamů</h2>
+      <p>Vazbu mezi přehledem a detailem sestav ze stabilního ID. Pokud záznam závisí na soutěži, sezóně nebo rozhodném datu, přenes tento kontext i do detailu a exportu. Změna zobrazovaného jména má zachovat správný cíl odkazu.</p>
+      <p>Chybějící údaj ponech neznámý. Nulu zobraz až tam, kde ji potvrzují zdrojová data. Datum a obsah ukázky mohou být starší než živý web. Při porovnávání hodnot vybírej stejnou verzi záznamu.</p>
+    </section>
+    <section id="admin">
+      <h2>Backend a administrace</h2>
+      <p>U každé změny je uvedeno, co má stránka zobrazit a které údaje k tomu potřebuje. Správce backendu ověří, co už poskytuje dnešní rozhraní a jaký zásah je potřeba. Veřejný web a HTML mustry samy o sobě nedokládají podobu neveřejného API.</p>
+      <p>U redakčně spravovaných údajů určuj, kde vznikají, kdo je může změnit a na které stránky se má změna propsat. Pokud stejný údaj používá přehled, detail i export, mají ho přebírat z jednoho zdroje. Odkazy na dostupné profily sestavuj z existujících vazeb.</p>
+    </section>
+    <section id="odkazy">
+      <h2>Odkazy a ovládání</h2>
+      <p>Při přechodu ze stávajícího webu mapuj přímé adresy na odpovídající záznam a část stránky. Zachovej důležité parametry, fragmenty a návrat tlačítkem Zpět. Konkrétní mapování najdeš v příslušné sekci.</p>
+      <p>Při napojení zachovej popisky odkazů a polí, viditelný fokus a ovládání klávesnicí. Obsah vykreslený v HTML i běžné odkazy mají fungovat před spuštěním JavaScriptu. U širší tabulky má na úzké obrazovce rolovat její vlastní oblast.</p>
+    </section>
+    <section id="overeni">
+      <h2>Ověření po napojení</h2>
+      <p>Začni na přehledu, otevři konkrétní detail a vrať se zpět. Zkontroluj zvolený záznam a jeho kontext. U sdílených údajů proveď v testovací administraci jednu změnu a ověř ji na všech dotčených místech. Pokud stránka nabízí export, porovnej jej se stejnou verzí dat na webu.</p>
+      <p><a href="souteze-druzstev.html#prevzeti">Příklad kontroly po napojení soutěží družstev</a></p>
+    </section>
+    <section id="postup">
+      <h2>Zadání další sekce</h2>
+      <ol>
+        <li>Urči, které typy stránek sekce obsahuje a jak mezi nimi návštěvník přechází. U každého rozdílu dej do karty „Dnes“ odkaz na odpovídající místo současného webu a do karty „Nový mustr“ odkaz na šablonu. Pokud nový mustr spojuje údaje z více míst, popiš v „Dnes“, kde je návštěvník najde, a odkaž na příslušné stránky. Pokud předobraz neexistuje, obsah karty „Dnes“ tvoří jediná věta „Na současném webu nemá tato část předobraz.“ Při nedostupné stránce uveď, co ještě potřebuješ ověřit.</li>
+        <li>Popiš požadované chování pro libovolný záznam daného typu, potřebná data, jejich vazby a zobrazení při chybějící hodnotě. Vysvětli také, co správce zadává a kam se jeho změna propíše. Konkrétní jména, výsledky nebo ID použij jako příklad pro ověření.</li>
+        <li>Otevřené otázce přiřaď odpovědnost. Pod označením „Ověřit v backendu“ vývojář zjistí třeba zdroj dat, existující vazbu nebo oprávnění v administraci. Pod označením „Rozhodnout s vlastníkem…“ uveď konkrétní roli a volbu, například kde má být návštěvníkům dostupný dosavadní export.</li>
+        <li>Přečti zadání v Markdownu a zkus podle něj popsat napojení jiného záznamu. Musí z něj být poznat, co implementovat, podle čeho ověřit výsledek a komu patří zbývající rozhodnutí. V pracovním náhledu ověř cestu mezi mustry a odkazy z obou karet.</li>
+      </ol>
+      <p>V autorském projektu příkaz <code>python3 implementation/predani/build_extraliga.py</code> aktualizuje lokální náhled. Schválené mustry a zadání předáváme jako <a href="https://github.com/alecvse/czech-squash-handoff/tags">označené verze na GitHubu</a>.</p>
+    </section>
+  </main>
+<template id="page-markdown"># Obecné principy
+
+Každá sekce popisuje chování typu stránky při výměně obsahu. Konkrétní adresa, jméno, datum a výsledek v ukázce slouží k porovnání. Produkční stránka je načítá pro právě zvolený záznam.
+
+&lt;a id=&quot;spusteni&quot;&gt;&lt;/a&gt;
+
+## Spuštění náhledu
+
+Ve složce se souborem `nahled.py` spusť `python3 nahled.py` a otevři [lokální přehled šablon](http://127.0.0.1:8011/). Stačí Python 3.
+
+HTML mustry jsou v `templates/`. Sdílené styly, skript, písma, ikony a soubory ke stažení jsou v `assets/`. Pro produkční cesty sestav adresy stránek i assetů pomocí routeru projektu.
+
+&lt;a id=&quot;data&quot;&gt;&lt;/a&gt;
+
+## Data a identita záznamů
+
+Vazbu mezi přehledem a detailem sestav ze stabilního ID. Pokud záznam závisí na soutěži, sezóně nebo rozhodném datu, přenes tento kontext i do detailu a exportu. Změna zobrazovaného jména má zachovat správný cíl odkazu.
+
+Chybějící údaj ponech neznámý. Nulu zobraz až tam, kde ji potvrzují zdrojová data. Datum a obsah ukázky mohou být starší než živý web. Při porovnávání hodnot vybírej stejnou verzi záznamu.
+
+&lt;a id=&quot;admin&quot;&gt;&lt;/a&gt;
+
+## Backend a administrace
+
+U každé změny je uvedeno, co má stránka zobrazit a které údaje k tomu potřebuje. Správce backendu ověří, co už poskytuje dnešní rozhraní a jaký zásah je potřeba. Veřejný web a HTML mustry samy o sobě nedokládají podobu neveřejného API.
+
+U redakčně spravovaných údajů určuj, kde vznikají, kdo je může změnit a na které stránky se má změna propsat. Pokud stejný údaj používá přehled, detail i export, mají ho přebírat z jednoho zdroje. Odkazy na dostupné profily sestavuj z existujících vazeb.
+
+&lt;a id=&quot;odkazy&quot;&gt;&lt;/a&gt;
+
+## Odkazy a ovládání
+
+Při přechodu ze stávajícího webu mapuj přímé adresy na odpovídající záznam a část stránky. Zachovej důležité parametry, fragmenty a návrat tlačítkem Zpět. Konkrétní mapování najdeš v příslušné sekci.
+
+Při napojení zachovej popisky odkazů a polí, viditelný fokus a ovládání klávesnicí. Obsah vykreslený v HTML i běžné odkazy mají fungovat před spuštěním JavaScriptu. U širší tabulky má na úzké obrazovce rolovat její vlastní oblast.
+
+&lt;a id=&quot;overeni&quot;&gt;&lt;/a&gt;
+
+## Ověření po napojení
+
+Začni na přehledu, otevři konkrétní detail a vrať se zpět. Zkontroluj zvolený záznam a jeho kontext. U sdílených údajů proveď v testovací administraci jednu změnu a ověř ji na všech dotčených místech. Pokud stránka nabízí export, porovnej jej se stejnou verzí dat na webu.
+
+[Příklad kontroly po napojení soutěží družstev](souteze-druzstev.md#prevzeti)
+
+&lt;a id=&quot;postup&quot;&gt;&lt;/a&gt;
+
+## Zadání další sekce
+
+1. Urči, které typy stránek sekce obsahuje a jak mezi nimi návštěvník přechází. U každého rozdílu dej do karty „Dnes“ odkaz na odpovídající místo současného webu a do karty „Nový mustr“ odkaz na šablonu. Pokud nový mustr spojuje údaje z více míst, popiš v „Dnes“, kde je návštěvník najde, a odkaž na příslušné stránky. Pokud předobraz neexistuje, obsah karty „Dnes“ tvoří jediná věta „Na současném webu nemá tato část předobraz.“ Při nedostupné stránce uveď, co ještě potřebuješ ověřit.
+2. Popiš požadované chování pro libovolný záznam daného typu, potřebná data, jejich vazby a zobrazení při chybějící hodnotě. Vysvětli také, co správce zadává a kam se jeho změna propíše. Konkrétní jména, výsledky nebo ID použij jako příklad pro ověření.
+3. Otevřené otázce přiřaď odpovědnost. Pod označením „Ověřit v backendu“ vývojář zjistí třeba zdroj dat, existující vazbu nebo oprávnění v administraci. Pod označením „Rozhodnout s vlastníkem…“ uveď konkrétní roli a volbu, například kde má být návštěvníkům dostupný dosavadní export.
+4. Přečti zadání v Markdownu a zkus podle něj popsat napojení jiného záznamu. Musí z něj být poznat, co implementovat, podle čeho ověřit výsledek a komu patří zbývající rozhodnutí. V pracovním náhledu ověř cestu mezi mustry a odkazy z obou karet.
+
+V autorském projektu příkaz `python3 implementation/predani/build_extraliga.py` aktualizuje lokální náhled. Schválené mustry a zadání předáváme jako [označené verze na GitHubu](https://github.com/alecvse/czech-squash-handoff/tags).
+</template>
+</body>
+</html>

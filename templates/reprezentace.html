@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reprezentace | Český squash</title>
+    <meta name="description" content="Čeští účastníci mistrovství Evropy jednotlivců a mistrovství Evropy juniorů U19 v roce 2026.">
+    <link rel="icon" href="../assets/ui/logo-horizontal.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../assets/css/site.css">
+    <script src="../assets/js/site.js?v=20261021-gallery" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Přejít na obsah</a>
+    <header class="site-header" data-site-header>
+      <div class="site-header__inner container">
+        <div class="site-header__brand">
+          <a href="./homepage.html" aria-label="Český squash – domů">
+            <img src="../assets/ui/logo-horizontal.svg" width="154" height="40" alt="">
+          </a>
+        </div>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Otevřít menu"
+          hidden
+          data-menu-toggle
+        >
+          <span class="menu-toggle__icon" aria-hidden="true"></span>
+        </button>
+
+        <div class="site-header__desktop">
+          <div class="utility-row">
+            <ul class="utility-list">
+              <li><a href="./kluby.html"><span class="ui-icon ui-icon--mapa" aria-hidden="true"></span><span>Kluby</span></a></li>
+              <li><a href="./treneri.html"><span class="ui-icon ui-icon--treneri" aria-hidden="true"></span><span>Trenéři</span></a></li>
+              <li><a href="./zebricky.html"><span class="ui-icon ui-icon--zebricky" aria-hidden="true"></span><span>Žebříčky</span></a></li>
+            </ul>
+            <ul class="social-list">
+              <li><a href="https://www.facebook.com/ceskaasociacesquashe" aria-label="Facebook"><span class="ui-icon ui-icon--fb" aria-hidden="true"></span></a></li>
+              <li><span class="nav-label" role="img" aria-label="Instagram"><span class="ui-icon ui-icon--ig" aria-hidden="true"></span></span></li>
+              <li><a href="https://www.youtube.com/@czechsquashstream9906" aria-label="YouTube"><span class="ui-icon ui-icon--yt" aria-hidden="true"></span></a></li>
+            </ul>
+          </div>
+
+          <div class="main-row">
+            <nav class="main-navigation" aria-label="Hlavní navigace">
+              <ul>
+                <li><a href="./aktuality.html">Aktuality</a></li>
+                <li><a href="./kalendar-akci.html">Kalendář akcí</a></li>
+                <li><a href="./souteze.html">Soutěže družstev</a></li>
+                <li><a href="./reprezentace.html">Reprezentace</a></li>
+                <li><a href="./nabory.html">Hrej squash!</a></li>
+                <li><a href="./asociace.html">ČASQ</a></li>
+                <li><a href="./dokumenty.html">Dokumenty</a></li>
+                <li><a href="./kontakty.html">Kontakty</a></li>
+              </ul>
+            </nav>
+            <a class="button button--member" href="./clensky-system.html">Přihlášení pro členy</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+        <div class="container">
+          <a class="button button--member" href="./clensky-system.html">Přihlášení pro členy</a>
+          <nav aria-label="Mobilní navigace">
+            <ul class="mobile-menu__main">
+              <li><a href="./aktuality.html">Aktuality</a></li>
+              <li><a href="./kalendar-akci.html">Kalendář akcí</a></li>
+                <li><a href="./souteze.html">Soutěže družstev</a></li>
+              <li><a href="./reprezentace.html">Reprezentace</a></li>
+              <li><a href="./nabory.html">Hrej squash!</a></li>
+              <li><a href="./asociace.html">ČASQ</a></li>
+                <li><a href="./dokumenty.html">Dokumenty</a></li>
+              <li><a href="./kontakty.html">Kontakty</a></li>
+            </ul>
+          </nav>
+          <ul class="mobile-menu__utility">
+            <li><a href="./kluby.html"><span class="ui-icon ui-icon--mapa" aria-hidden="true"></span><span>Kluby</span></a></li>
+            <li><a href="./treneri.html"><span class="ui-icon ui-icon--treneri" aria-hidden="true"></span><span>Trenéři</span></a></li>
+            <li><a href="./zebricky.html"><span class="ui-icon ui-icon--zebricky" aria-hidden="true"></span><span>Žebříčky</span></a></li>
+          </ul>
+          <div class="mobile-menu__footer">
+            <div class="mobile-menu__social">
+              <a href="https://www.facebook.com/ceskaasociacesquashe" aria-label="Facebook"><span class="ui-icon ui-icon--fb" aria-hidden="true"></span></a>
+              <span class="nav-label" role="img" aria-label="Instagram"><span class="ui-icon ui-icon--ig" aria-hidden="true"></span></span>
+              <a href="https://www.youtube.com/@czechsquashstream9906" aria-label="YouTube"><span class="ui-icon ui-icon--yt" aria-hidden="true"></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1"><div class="listing-page container" data-filter-list><nav class="breadcrumbs" aria-label="Drobečková navigace"><ol><li><a href="./homepage.html">Úvod</a></li></ol></nav><header class="page-heading"><p class="eyebrow">České barvy na světových kurtech</p><h1>Reprezentace</h1><p class="page-heading__intro">Čeští účastníci mistrovství Evropy jednotlivců a mistrovství Evropy juniorů U19 v roce 2026.</p></header><form class="filters filters--representatives" data-list-filters hidden aria-label="Filtrovat reprezentanty"><div class="field field--search"><label for="reps-search">Hledat</label><input type="search" name="search" id="reps-search" placeholder="Jméno, název nebo klíčové slovo"></div><div class="field"><label for="reps-category">Kategorie</label><select name="category" id="reps-category"><option value="">Všechny kategorie</option><option value="dospeli">Dospělí</option><option value="juniori-u19">Junioři U19</option></select></div><div class="field"><label for="reps-group">Skupina</label><select name="group" id="reps-group"><option value="">Všichni</option><option value="muzi">Hráči</option><option value="zeny">Hráčky</option></select></div><button class="button button--secondary" type="reset">Zrušit filtry</button></form><p class="visually-hidden" data-result-count role="status" aria-live="polite" aria-atomic="true">Zobrazeno: 9 z 9</p><div class="representative-grid"><article class="representative-card accent-card" data-filter-item data-category="dospeli" data-group="muzi"><h2>Jakub Solnický</h2><dl class="fact-list"><div><dt>Klub</dt><dd><a href="./klub-jm-ostrava.html">JM Squash akademie Ostrava z.s.</a></dd></div><div><dt>Ročník</dt><dd>1994</dd></div><div><dt>Umístění na turnaji</dt><dd>8. místo na ME jednotlivců 2026.</dd></div></dl><a class="button" href="./hrac-jakub-solnicky.html">Profil hráče</a></article><article class="representative-card accent-card" data-filter-item data-category="dospeli" data-group="muzi"><h2>Marek Panáček</h2><dl class="fact-list"><div><dt>Klub</dt><dd><a href="./klub-viktoria-brno.html">Squash Viktoria, z.s.</a></dd></div><div><dt>Ročník</dt><dd>2002</dd></div><div><dt>Umístění na turnaji</dt><dd>10. místo na ME jednotlivců 2026.</dd></div></dl><a class="button" href="./hrac-marek-panacek.html">Profil hráče</a></article><article class="representative-card accent-card" data-filter-item data-category="dospeli" data-group="zeny"><h2>Karolína Šrámková</h2><dl class="fact-list"><div><dt>Klub</dt><dd><a href="./klub-26553317.html">Squash Moravská Slavia Brno, z.s.</a></dd></div><div><dt>Ročník</dt><dd>2007</dd></div><div><dt>Umístění na turnaji</dt><dd>13. místo na ME jednotlivců 2026.</dd></div></dl><a class="button" href="./hrac-karolina-sramkova.html">Profil hráče</a></article><article class="representative-card accent-card" data-filter-item data-category="dospeli juniori-u19" data-group="muzi"><h2>Vojtěch Martinovský</h2><dl class="fact-list"><div><dt>Klub</dt><dd><a href="./klub-squash-centrum-hk.html">Squash centrum club HK z.s.</a></dd></div><div><dt>Ročník</dt><dd>2007</dd></div><div><dt>Umístění na turnaji</dt><dd>23. místo na ME jednotlivců 2026<br>11. místo na ME U19 2026</dd></div></dl><a class="button" href="./hrac-vojtech-martinovsky.html">Profil hráče</a></article><article class="representative-card accent-card" data-filter-item data-category="dospeli" data-group="zeny"><h2>Tereza Široká</h2><dl class="fact-list"><div><dt>Klub</dt><dd><a href="./klub-26528878.html">Squashový klub mládeže Olomouc, z.s.</a></dd></div><div><dt>Ročník</dt><dd>2002</dd></div><div><dt>Umístění na turnaji</dt><dd>23. místo na ME jednotlivců 2026.</dd></div></dl><a class="button" href="./hrac-tereza-siroka.html">Profil hráče</a></article><article class="representative-card accent-card" data-filter-item data-category="dospeli" data-group="zeny"><h2>Tamara Holzbauerová</h2><dl class="fact-list"><div><dt>Klub</dt><dd><a href="./klub-strahov.html">Squashclub Strahov z.s.</a></dd></div><div><dt>Ročník</dt><dd>2003</dd></div><div><dt>Umístění na turnaji</dt><dd>24. místo na ME jednotlivců 2026.</dd></div></dl><a class="button" href="./hrac-tamara-holzbauerova.html">Profil hráče</a></article><article class="representative-card accent-card" data-filter-item data-category="dospeli" data-group="zeny"><h2>Anna Serme</h2><dl class="fact-list"><div><dt>Klub</dt><dd><a href="./klub-26617251.html">SK Squash Modrý svět</a></dd></div><div><dt>Ročník</dt><dd>1991</dd></div><div><dt>Umístění na turnaji</dt><dd>26. místo na ME jednotlivců 2026.</dd></div></dl><a class="button" href="./hrac-anna-serme.html">Profil hráče</a></article><article class="representative-card accent-card" data-filter-item data-category="juniori-u19" data-group="zeny"><h2>Aneta Sezemská</h2><dl class="fact-list"><div><dt>Klub</dt><dd><a href="./klub-26599384.html">Squash Especial, z.s.</a></dd></div><div><dt>Ročník</dt><dd>2007</dd></div><div><dt>Umístění na turnaji</dt><dd>13. místo na ME U19 2026.</dd></div></dl><a class="button" href="./hrac-aneta-sezemska.html">Profil hráče</a></article><article class="representative-card accent-card" data-filter-item data-category="juniori-u19" data-group="zeny"><h2>Ella Pelikánová</h2><dl class="fact-list"><div><dt>Klub</dt><dd><a href="./klub-viktoria-brno.html">Squash Viktoria, z.s.</a></dd></div><div><dt>Ročník</dt><dd>2008</dd></div><div><dt>Umístění na turnaji</dt><dd>27. místo na ME U19 2026.</dd></div></dl><a class="button" href="./hrac-ella-pelikanova.html">Profil hráče</a></article></div><div class="empty-state" data-filter-empty hidden><h2>Nic jsme nenašli</h2><p>Zkuste jiný výraz nebo zrušte filtry.</p><button class="button button--secondary" type="button" data-filter-reset>Zobrazit vše</button></div></div></main>
+
+    <footer class="site-footer">
+      <section id="partneri" class="partners" aria-label="Partneři českého squashe">
+        <div class="partners__grid container">
+          <div class="partner-group">
+            <h2>Hlavní partner českého squashe</h2>
+            <img src="../assets/ui/logo-aricoma.svg" alt="Aricoma" width="226" height="32">
+          </div>
+          <div class="partner-group partner-group--wide">
+            <h2>Partneři českého squashe</h2>
+            <div>
+              <img src="../assets/ui/logo-asb.svg" alt="ASB SquashCourts" width="74" height="32">
+              <img src="../assets/ui/logo-underarmour.svg" alt="Under Armour" width="59" height="34">
+              <img src="../assets/ui/logo-dunlop.svg" alt="Dunlop" width="144" height="24">
+            </div>
+          </div>
+          <div class="partner-group">
+            <h2>Český squash finančně podporuje</h2>
+            <img src="../assets/ui/logo-nsa.svg" alt="Národní sportovní agentura" width="68" height="48">
+          </div>
+        </div>
+      </section>
+      <div class="footer-navigation container">
+        <section class="footer-column">
+          <h2>ČASQ</h2>
+          <ul>
+            <li><a href="./asociace.html">Odborné komise</a></li>
+            <li><a href="./kontakty.html">Kontakty</a></li>
+            <li><a href="./rozhodci.html">Rozhodčí</a></li>
+            <li><a href="./skoleni.html">Školení</a></li>
+            <li><a href="./treneri.html">Trenéři</a></li>
+            <li><a href="./dokumenty.html">Řády a předpisy</a></li>
+          </ul>
+        </section>
+        <section class="footer-column">
+          <h2>Hrej squash!</h2>
+          <ul>
+            <li><a href="./kluby.html">Najdi svůj klub</a></li>
+            <li><a href="./nabory.html">Začít se squashem</a></li>
+            <li><a href="./pravidla.html">Pravidla squashe</a></li>
+            
+            <li><a href="./nabory.html#otazky">Časté otázky</a></li>
+          </ul>
+        </section>
+        <section class="footer-column">
+          <h2>Turnaje a soutěže</h2>
+          <ul>
+            <li><a href="./kalendar-akci.html">Kalendář akcí</a></li>
+            <li><a href="./souteze.html">Soutěže družstev</a></li>
+            <li><a href="https://europeansquash.com/calendar/158/Event-Calendar">Mezinárodní turnaje ESF</a></li>
+            <li><a href="https://psaworldtour.com/tournaments">Mezinárodní turnaje PSA</a></li>
+            <li><a href="./zebricky.html">Žebříčky hráčů</a></li>
+          </ul>
+        </section>
+        <section class="footer-column">
+          <h2>Média a sítě</h2>
+          <ul>
+            <li><a href="./tiskove-zpravy.html">Tiskové informace</a></li>
+            <li><a href="./kontakty.html#marketing-komunikace">Kontakt pro média</a></li>
+            <li><a href="./fotogalerie.html">Fotogalerie</a></li>
+            <li><a href="./homepage.html#stream">Videa</a></li>
+            <li><a href="https://www.facebook.com/ceskaasociacesquashe">Facebook</a></li>
+            <li><a href="https://www.youtube.com/@czechsquashstream9906">YouTube</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="newsletter" aria-labelledby="newsletter-title">
+        <div class="container">
+          <h2 id="newsletter-title">Newsletter českého squashe</h2>
+          <p class="visually-hidden" id="newsletter-status">Přihlášení k odběru není dostupné.</p>
+          <div class="newsletter__form">
+            <label class="visually-hidden" for="newsletter-email">E-mailová adresa</label>
+            <input id="newsletter-email" type="email" autocomplete="email" aria-describedby="newsletter-status" disabled>
+            <button type="button" class="button" aria-describedby="newsletter-status" disabled>Přihlásit odběr</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="site-footer__legal">
+        <p>© 2015–2026 Česká asociace squashe &amp; eSports.cz | <a href="./ochrana-osobnich-udaju.html">GDPR</a> | Nastavení cookies</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Český squash</title>
+    <link rel="icon" href="../assets/ui/logo-horizontal.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../assets/css/site.css">
+    <script src="../assets/js/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Přejít na obsah</a>
+    <header class="site-header" data-site-header>
+      <div class="site-header__inner container">
+        <div class="site-header__brand">
+          <a href="./homepage.html" aria-label="Český squash – domů">
+            <img src="../assets/ui/logo-horizontal.svg" width="154" height="40" alt="">
+          </a>
+        </div>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Otevřít menu"
+          hidden
+          data-menu-toggle
+        >
+          <span class="menu-toggle__icon" aria-hidden="true"></span>
+        </button>
+
+        <div class="site-header__desktop">
+          <div class="utility-row">
+            <ul class="utility-list">
+              <li><a href="./kluby.html"><span class="ui-icon ui-icon--mapa" aria-hidden="true"></span><span>Kluby</span></a></li>
+              <li><a href="./treneri.html"><span class="ui-icon ui-icon--treneri" aria-hidden="true"></span><span>Trenéři</span></a></li>
+              <li><a href="./zebricky.html"><span class="ui-icon ui-icon--zebricky" aria-hidden="true"></span><span>Žebříčky</span></a></li>
+            </ul>
+            <ul class="social-list">
+              <li><a href="https://www.facebook.com/ceskaasociacesquashe" aria-label="Facebook"><span class="ui-icon ui-icon--fb" aria-hidden="true"></span></a></li>
+              <li><span class="nav-label" role="img" aria-label="Instagram"><span class="ui-icon ui-icon--ig" aria-hidden="true"></span></span></li>
+              <li><a href="https://www.youtube.com/@czechsquashstream9906" aria-label="YouTube"><span class="ui-icon ui-icon--yt" aria-hidden="true"></span></a></li>
+            </ul>
+          </div>
+
+          <div class="main-row">
+            <nav class="main-navigation" aria-label="Hlavní navigace">
+              <ul>
+                <li><a href="./aktuality.html">Aktuality</a></li>
+                <li><a href="./kalendar-akci.html">Kalendář akcí</a></li>
+                <li><a href="./souteze.html">Soutěže družstev</a></li>
+                <li><a href="./reprezentace.html">Reprezentace</a></li>
+                <li><a href="./nabory.html">Hrej squash!</a></li>
+                <li><a href="./asociace.html">ČASQ</a></li>
+                <li><a href="./dokumenty.html">Dokumenty</a></li>
+                <li><a href="./kontakty.html">Kontakty</a></li>
+              </ul>
+            </nav>
+            <a class="button button--member" href="./clensky-system.html">Přihlášení pro členy</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+        <div class="container">
+          <a class="button button--member" href="./clensky-system.html">Přihlášení pro členy</a>
+          <nav aria-label="Mobilní navigace">
+            <ul class="mobile-menu__main">
+              <li><a href="./aktuality.html">Aktuality</a></li>
+              <li><a href="./kalendar-akci.html">Kalendář akcí</a></li>
+                <li><a href="./souteze.html">Soutěže družstev</a></li>
+              <li><a href="./reprezentace.html">Reprezentace</a></li>
+              <li><a href="./nabory.html">Hrej squash!</a></li>
+              <li><a href="./asociace.html">ČASQ</a></li>
+                <li><a href="./dokumenty.html">Dokumenty</a></li>
+              <li><a href="./kontakty.html">Kontakty</a></li>
+            </ul>
+          </nav>
+          <ul class="mobile-menu__utility">
+            <li><a href="./kluby.html"><span class="ui-icon ui-icon--mapa" aria-hidden="true"></span><span>Kluby</span></a></li>
+            <li><a href="./treneri.html"><span class="ui-icon ui-icon--treneri" aria-hidden="true"></span><span>Trenéři</span></a></li>
+            <li><a href="./zebricky.html"><span class="ui-icon ui-icon--zebricky" aria-hidden="true"></span><span>Žebříčky</span></a></li>
+          </ul>
+          <div class="mobile-menu__footer">
+            <div class="mobile-menu__social">
+              <a href="https://www.facebook.com/ceskaasociacesquashe" aria-label="Facebook"><span class="ui-icon ui-icon--fb" aria-hidden="true"></span></a>
+              <span class="nav-label" role="img" aria-label="Instagram"><span class="ui-icon ui-icon--ig" aria-hidden="true"></span></span>
+              <a href="https://www.youtube.com/@czechsquashstream9906" aria-label="YouTube"><span class="ui-icon ui-icon--yt" aria-hidden="true"></span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <h1 class="visually-hidden">Český squash</h1>
+
+      <section class="hero container" aria-label="Hlavní aktuality" data-hero data-active-index="0">
+        <div class="hero__viewport">
+          <div class="hero__media-viewport">
+            <div class="hero__track">
+              <div class="hero__media" data-hero-slide>
+                <a class="hero__media-link" href="./clanek-marek-panacek-madrid.html">
+                  <img
+                    src="../assets/img/hero-image-3x2@2x.jpg"
+                    alt="Squashový hráč během utkání"
+                    width="1680"
+                    height="1118"
+                  >
+                </a>
+              </div>
+
+              <div class="hero__media" data-hero-slide inert aria-hidden="true">
+                <a class="hero__media-link" href="./clanek-juniorsti-mistri-sveta-2026.html">
+                  <img
+                    src="../assets/img/hero-image-3x2-2@2x.jpg"
+                    alt="Hráčky při juniorském squashovém utkání"
+                    width="1680"
+                    height="1118"
+                  >
+                </a>
+              </div>
+
+              <div class="hero__media" data-hero-slide inert aria-hidden="true">
+                <a class="hero__media-link" href="./clanek-podpora-treneru-nadace-cez.html">
+                  <img
+                    src="../assets/img/hero-image-3x2-3@2x.jpg"
+                    alt="Squashový hráč při úderu na turnaji"
+                    width="1680"
+                    height="1118"
+                  >
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__content">
+            <div data-hero-content>
+              <p class="eyebrow">Turnaje a soutěže · 27. 06. 2026</p>
+              <h2><a href="./clanek-marek-panacek-madrid.html">Marek Panáček v Madridu na titul nedosáhl</a></h2>
+              <p>Bohužel, Marek Panáček ve svém dosud největším finále kariéry v Madridu na titul nedosáhl, Leandro Romiglio zvítězil po 85 minutách 3/1 na sety.</p>
+            </div>
+            <div data-hero-content hidden>
+              <p class="eyebrow">Reprezentace · 26. 07. 2026</p>
+              <h2><a href="./clanek-juniorsti-mistri-sveta-2026.html">Juniorskými mistry světa se stávají Singh a Zakaria</a></h2>
+              <p>Juniorské mistrovství světa v Kanadě vyvrcholilo finálovými zápasy. Z titulů se radují Indka Anahat Singh a Egypťan Mohamed Zakaria.</p>
+            </div>
+            <div data-hero-content hidden>
+              <p class="eyebrow">ČASQ · 27. 07. 2026</p>
+              <h2><a href="./clanek-podpora-treneru-nadace-cez.html">Trenéry mládeže podpořila Nadace ČEZ — děkujeme!</a></h2>
+              <p>Podpora pomůže trenérům LSCM pokračovat v systematické práci s mladými hráči také v sezoně 2025/2026.</p>
+            </div>
+
+            <img
+              class="hero__dots"
+              src="../assets/ui/dotts.svg"
+              alt=""
+              width="30"
+              height="80"
+              data-hero-dots
+            >
+          </div>
+
+          <div class="hero__controls" hidden data-hero-controls>
+            <div class="hero__steps" role="group" aria-label="Výběr hlavní aktuality">
+              <button type="button" aria-label="Zobrazit story 1 ze 3" aria-current="true" data-hero-step data-slide-index="0">
+                <span>01</span><span class="hero__progress"><span class="hero__progress-fill"></span></span>
+              </button>
+              <button type="button" aria-label="Zobrazit story 2 ze 3" data-hero-step data-slide-index="1">
+                <span>02</span><span class="hero__progress"><span class="hero__progress-fill"></span></span>
+              </button>
+              <button type="button" aria-label="Zobrazit story 3 ze 3" data-hero-step data-slide-index="2">
+                <span>03</span><span class="hero__progress"><span class="hero__progress-fill"></span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="events section">
+        <div class="section-heading container">
+          <h2>Vybrané akce</h2>
+          <a class="section-action" href="./kalendar-akci.html">Přehled akcí <span class="section-action__icon" aria-hidden="true"></span></a>
+        </div>
+        <div class="events__viewport">
+          <div class="events__track" tabindex="0" aria-label="Vybrané akce">
+<article class="event-card"><time datetime="2026-10-10">10. 10. 2026</time><h3>naPočkání.com Masters HAMR</h3><p><span class="ui-icon ui-icon--category" aria-hidden="true"></span>Masters</p></article>
+<article class="event-card"><time datetime="2026-10-13">13. 10. 2026</time><h3><a href="./soutez-extraliga-muzi.html">Dunlop Sq Team UH – Viktoria Brno Sportprofit</a></h3><p><span class="ui-icon ui-icon--category" aria-hidden="true"></span>Extraliga muži</p><a class="button button--small" href="./soutez-extraliga-muzi.html">Přehled ligy</a></article>
+<article class="event-card"><time datetime="2026-10-13">13. 10. 2026</time><h3><a href="./soutez-extraliga-muzi.html">SC Strahov A – SC Strahov B</a></h3><p><span class="ui-icon ui-icon--category" aria-hidden="true"></span>Extraliga muži</p><a class="button button--small" href="./soutez-extraliga-muzi.html">Přehled ligy</a></article>
+<article class="event-card"><time datetime="2026-10-14">14. 10. 2026</time><h3><a href="./soutez-extraliga-muzi.html">SC Otec – TOPO muži A – HAMR D naPočkání.com</a></h3><p><span class="ui-icon ui-icon--category" aria-hidden="true"></span>Extraliga muži</p><a class="button button--small" href="./soutez-extraliga-muzi.html">Přehled ligy</a></article>
+<article class="event-card"><time datetime="2026-10-15">15. 10. 2026</time><h3><a href="./soutez-extraliga-muzi.html">JM Ostrava – SCC HK BULDOCI</a></h3><p><span class="ui-icon ui-icon--category" aria-hidden="true"></span>Extraliga muži</p><a class="button button--small" href="./soutez-extraliga-muzi.html">Přehled ligy</a></article>
+<article class="event-card"><time datetime="2026-10-17">17.–18. 10. 2026</time><h3>1., 2. a 3. liga družstev mužů</h3><p><span class="ui-icon ui-icon--category" aria-hidden="true"></span>Ligy mužů</p></article>
+<article class="event-card"><time datetime="2026-10-24">24.–25. 10. 2026</time><h3>MEMORIÁL JANY KOSINKOVÉ</h3><p><span class="ui-icon ui-icon--category" aria-hidden="true"></span>Muži A</p></article>
+<article class="event-card"><time datetime="2026-10-24">24. 10. 2026</time><h3>MEMORIÁL JANY KOSINKOVÉ</h3><p><span class="ui-icon ui-icon--category" aria-hidden="true"></span>Ženy A</p></article>
+<article class="event-card"><time datetime="2026-11-07">7. 11. 2026</time><h3>ELEKTRO MAHL – Muži C</h3><p><span class="ui-icon ui-icon--category" aria-hidden="true"></span>Muži C</p></article>
+<article class="event-card"><time datetime="2026-11-14">14.–15. 11. 2026</time><h3>Elbe/Labe Junior Squash Open 2026</h3><p><span class="ui-icon ui-icon--category" aria-hidden="true"></span>Junioři A</p></article>
+<article class="event-card"><time datetime="2026-11-14">14. 11. 2026</time><h3>naPočkání.com Masters HAMR</h3><p><span class="ui-icon ui-icon--category" aria-hidden="true"></span>Masters</p></article>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="news-section section container" id="aktuality">
+        <div class="news-layout">
+          <div class="articles">
+            <div class="section-heading">
+              <h2>Aktuality</h2>
+              <a class="section-action" href="./aktuality.html">Další zprávy <span class="section-action__icon" aria-hidden="true"></span></a>
+            </div>
+            <div class="article-grid">
+              <article class="article-card">
+                <a class="article-card__media" href="./clanek-hradecky-juniorsky-cup.html" aria-label="Hradecký juniorský CUP">
+                  <img src="../assets/img/hradecky-cup-2026-01.jpg" alt="Stupně vítězů dívek U11 na Hradeckém juniorském CUPu 2026" width="2048" height="1524" loading="lazy">
+                </a>
+                <div class="article-card__body">
+                  <p class="eyebrow">Turnaje a soutěže · 05. 10. 2026</p>
+                  <h3><a href="./clanek-hradecky-juniorsky-cup.html">Hradecký juniorský CUP</a></h3>
+                  <p>Hradec Králové přivítal o prvním říjnovém víkendu 131 mladých hráčů a hráček. O výsledky bojovali v deseti kategoriích od U11 do U19.</p>
+                </div>
+              </article>
+              <article class="article-card">
+                <a class="article-card__media" href="./clanek-cb-squash-tour-brazilie.html" aria-label="CB Squash Tour v Brazílii">
+                  <img src="../assets/img/article-3230-00.jpg" alt="Tamara Holzbauerová na kurtu při CB Squash Tour v Brazílii" width="1200" height="1600" loading="lazy">
+                </a>
+                <div class="article-card__body">
+                  <p class="eyebrow">Turnaje a soutěže · 30. 09. 2026</p>
+                  <h3><a href="./clanek-cb-squash-tour-brazilie.html">CB Squash Tour v Brazílii</a></h3>
+                  <p>Tamara Holzbauerová nastoupila na turnaji World Tour v São Paulu. V úvodním kole získala zkušenost proti Australance Madison Lyon.</p>
+                </div>
+              </article>
+              <article class="article-card">
+                <a class="article-card__media article-card__media--illustrative" href="./clanek-podpora-treneru-nadace-cez.html" aria-label="Trenéry mládeže podpořila Nadace ČEZ - děkujeme! — ilustrační fotografie"><img src="../assets/img/article-3195-03.jpg" alt="Ilustrační fotografie mladé squashové hráčky" width="2048" height="1365" loading="lazy"><span class="article-card__illustration" aria-hidden="true">Ilustrační foto</span></a>
+                <div class="article-card__body">
+                  <p class="eyebrow">ČASQ · 27. 07. 2026</p>
+                  <h3><a href="./clanek-podpora-treneru-nadace-cez.html">Trenéry mládeže podpořila Nadace ČEZ — děkujeme!</a></h3>
+                  <p>Finanční příspěvek Nadace ČEZ umožnil uhradit velkou většinu podpory trenérů mládeže v celé sezoně 2025/2026. Za štědrou podporu děkujeme a věříme, že spolupráce bude pokračovat i v nadcházející sezoně.</p>
+                </div>
+              </article>
+              <article class="article-card">
+                <a class="article-card__media" href="./clanek-juniorsti-mistri-sveta-2026.html">
+                  <img src="../assets/img/article-3197-00.jpg" alt="Juniorští mistři světa Mohamad Zakaria a Anahat Singh" width="2465" height="1643" loading="lazy">
+                </a>
+                <div class="article-card__body">
+                  <p class="eyebrow">Reprezentace · 26. 07. 2026</p>
+                  <h3><a href="./clanek-juniorsti-mistri-sveta-2026.html">Juniorskými mistry světa se stávají Singh a Zakaria</a></h3>
+                  <p>Juniorské mistrovství světa v Kanadě vyvrcholilo finálovými zápasy. Z titulů se radují Indka Anahat Singh a Egypťan Mohamed Zakaria, kteří potvrdili roli favoritů turnaje.</p>
+                </div>
+              </article>
+              <article class="article-card">
+                <a class="article-card__media article-card__media--illustrative" href="./clanek-podpora-lscm-2026.html" aria-label="Projekt podpory trenérů LSCM 2026/2027 — ilustrační fotografie"><img src="../assets/img/article-3163-02.jpg" alt="Ilustrační fotografie juniorských družstev" width="3124" height="2083" loading="lazy"><span class="article-card__illustration" aria-hidden="true">Ilustrační foto</span></a>
+                <div class="article-card__body">
+                  <p class="eyebrow">ČASQ · 06. 07. 2026</p>
+                  <h3><a href="./clanek-podpora-lscm-2026.html">Projekt podpory trenérů LSCM 2026/2027</a></h3>
+                  <p>Projekt podpory trenérů mládeže LSCM bude v sezoně 2026/2027 pokračovat v nezměněné podobě. Vybraní trenéři budou opět dostávat pravidelnou měsíční podporu.</p>
+                </div>
+              </article>
+              <article class="article-card">
+                <a class="article-card__media" href="./clanek-dutch-junior-open-2026.html">
+                  <img src="../assets/img/article-3195-02.jpg" alt="Skleněný kurt na Dutch Junior Open 2026" width="2048" height="1365" loading="lazy">
+                </a>
+                <div class="article-card__body">
+                  <p class="eyebrow">Reprezentace · 05. 07. 2026</p>
+                  <h3><a href="./clanek-dutch-junior-open-2026.html">Dutch Junior Open 2026</a></h3>
+                  <p>Medaile z Dutch Junior Open nakonec těsně unikla. Honza Jašek po výborných výkonech obsadil v silné mezinárodní konkurenci čtvrté místo.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="stream section" id="stream">
+        <div class="container">
+          <div class="section-heading section-heading--light">
+            <h2>CzechSquash Stream</h2>
+            <a class="section-action" href="https://www.youtube.com/@czechsquashstream9906">Odebírej <span class="section-action__icon" aria-hidden="true"></span></a>
+          </div>
+          <div class="stream__grid">
+            <article class="video-card">
+              <a class="video-card__media" href="https://www.youtube.com/watch?v=MBXqbgafkys">
+                <img src="../assets/img/img-video-16x9-3@2x.jpg" alt="Náhled rozhovoru s Kájou Šrámkovou" width="580" height="326">
+              </a>
+              <time datetime="2026-07-06">06. 07. 2026</time>
+              <h3 class="video-card__title"><a href="https://www.youtube.com/watch?v=MBXqbgafkys">SQUASHCAST | Kája Šrámková, mistryně ČR o MČR 2026</a></h3>
+            </article>
+            <article class="video-card">
+              <a class="video-card__media" href="https://www.youtube.com/watch?v=SQgEPaeANxQ">
+                <img src="../assets/img/img-video-16x9-1@2x.jpg" alt="Náhled rozhovoru s Jakubem Stupkou" width="580" height="326">
+              </a>
+              <time datetime="2026-07-06">06. 07. 2026</time>
+              <h3 class="video-card__title"><a href="https://www.youtube.com/watch?v=SQgEPaeANxQ">SQUASHCAST | Jakub Stupka — od squashe k úspěšné IT firmě</a></h3>
+            </article>
+            <article class="video-card">
+              <a class="video-card__media" href="https://www.youtube.com/watch?v=xtCvs9nAilo">
+                <img src="../assets/img/img-video-16x9-4@2x.jpg" alt="Náhled rozhovoru s Viktorem Byrtusem" width="580" height="326">
+              </a>
+              <time datetime="2026-07-06">06. 07. 2026</time>
+              <h3 class="video-card__title"><a href="https://www.youtube.com/watch?v=xtCvs9nAilo">SQUASHCAST | Viktor Byrtus, mistr ČR o MČR 2026</a></h3>
+            </article>
+            <article class="video-card">
+              <a class="video-card__media" href="https://www.youtube.com/watch?v=96FchiXI6pc">
+                <img src="../assets/img/img-video-16x9-2@2x.jpg" alt="Náhled rozhovoru s Tomášem Fořterem" width="580" height="326">
+              </a>
+              <time datetime="2026-07-06">06. 07. 2026</time>
+              <h3 class="video-card__title"><a href="https://www.youtube.com/watch?v=96FchiXI6pc">SQUASHCAST | Tomáš Fořter — MČR ve squashi 2026 bude úplně jiné</a></h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <section id="partneri" class="partners" aria-label="Partneři českého squashe">
+        <div class="partners__grid container">
+          <div class="partner-group">
+            <h2>Hlavní partner českého squashe</h2>
+            <img src="../assets/ui/logo-aricoma.svg" alt="Aricoma" width="226" height="32">
+          </div>
+          <div class="partner-group partner-group--wide">
+            <h2>Partneři českého squashe</h2>
+            <div>
+              <img src="../assets/ui/logo-asb.svg" alt="ASB SquashCourts" width="74" height="32">
+              <img src="../assets/ui/logo-underarmour.svg" alt="Under Armour" width="59" height="34">
+              <img src="../assets/ui/logo-dunlop.svg" alt="Dunlop" width="144" height="24">
+            </div>
+          </div>
+          <div class="partner-group">
+            <h2>Český squash finančně podporuje</h2>
+            <img src="../assets/ui/logo-nsa.svg" alt="Národní sportovní agentura" width="68" height="48">
+          </div>
+        </div>
+      </section>
+      <div class="footer-navigation container">
+        <section class="footer-column">
+          <h2>ČASQ</h2>
+          <ul>
+            <li><a href="./asociace.html">Odborné komise</a></li>
+            <li><a href="./kontakty.html">Kontakty</a></li>
+            <li><a href="./rozhodci.html">Rozhodčí</a></li>
+            <li><a href="./skoleni.html">Školení</a></li>
+            <li><a href="./treneri.html">Trenéři</a></li>
+            <li><a href="./dokumenty.html">Řády a předpisy</a></li>
+          </ul>
+        </section>
+        <section class="footer-column">
+          <h2>Hrej squash!</h2>
+          <ul>
+            <li><a href="./kluby.html">Najdi svůj klub</a></li>
+            <li><a href="./nabory.html">Začít se squashem</a></li>
+            <li><a href="./pravidla.html">Pravidla squashe</a></li>
+            
+            <li><a href="./nabory.html#otazky">Časté otázky</a></li>
+          </ul>
+        </section>
+        <section class="footer-column">
+          <h2>Turnaje a soutěže</h2>
+          <ul>
+            <li><a href="./kalendar-akci.html">Kalendář akcí</a></li>
+            <li><a href="./souteze.html">Soutěže družstev</a></li>
+            <li><a href="https://europeansquash.com/calendar/158/Event-Calendar">Mezinárodní turnaje ESF</a></li>
+            <li><a href="https://psaworldtour.com/tournaments">Mezinárodní turnaje PSA</a></li>
+            <li><a href="./zebricky.html">Žebříčky hráčů</a></li>
+          </ul>
+        </section>
+        <section class="footer-column">
+          <h2>Média a sítě</h2>
+          <ul>
+            <li><a href="./tiskove-zpravy.html">Tiskové informace</a></li>
+            <li><a href="./kontakty.html#marketing-komunikace">Kontakt pro média</a></li>
+            <li><a href="./fotogalerie.html">Fotogalerie</a></li>
+            <li><a href="./homepage.html#stream">Videa</a></li>
+            <li><a href="https://www.facebook.com/ceskaasociacesquashe">Facebook</a></li>
+            <li><a href="https://www.youtube.com/@czechsquashstream9906">YouTube</a></li>
+          </ul>
+        </section>
+      </div>
+
+      <section class="newsletter" aria-labelledby="newsletter-title">
+        <div class="container">
+          <h2 id="newsletter-title">Newsletter českého squashe</h2>
+          <p class="visually-hidden" id="newsletter-status">Přihlášení k odběru není dostupné.</p>
+          <div class="newsletter__form">
+            <label class="visually-hidden" for="newsletter-email">E-mailová adresa</label>
+            <input id="newsletter-email" type="email" autocomplete="email" aria-describedby="newsletter-status" disabled>
+            <button type="button" class="button" aria-describedby="newsletter-status" disabled>Přihlásit odběr</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="site-footer__legal">
+        <p>© 2015–2026 Česká asociace squashe &amp; eSports.cz | <a href="./ochrana-osobnich-udaju.html">GDPR</a> | Nastavení cookies</p>
+      </div>
+    </footer>
+  </body>
+</html>

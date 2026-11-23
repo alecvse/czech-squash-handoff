@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ČASQ, dokumenty a veřejné informace | Předání pro vývojáře | Czech Squash</title>
+  <link rel="icon" href="assets/ui/logo-horizontal.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <link rel="stylesheet" href="predani.css">
+</head>
+<body>
+  <a class="skip-link" href="#obsah">Přejít na obsah</a>
+  <main id="obsah" class="guide container" tabindex="-1">
+    <nav class="handoff-nav" aria-label="Navigace předání">
+      <a href="index.html">Přehled šablon</a>
+      <a href="principy.html">Obecné principy</a>
+    </nav>
+    <header>
+      <p class="eyebrow">Czech Squash · Předání pro vývojáře · 19. 11. 2026</p>
+      <h1>ČASQ, dokumenty a veřejné informace</h1>
+      <p>Návštěvník tu hledá odpovědnou osobu, platný předpis, formulář nebo zápis z konkrétního jednání. Veřejné informační stránky mu pomohou s pravidly hry, členstvím a kontaktem na asociaci.</p>
+    </header>
+    <nav class="guide-contents" aria-label="Obsah sekce">
+      <a href="#komise">ČASQ a odborné komise</a>
+      <a href="#kontakty">Kontakty a vedení asociace</a>
+      <a href="#partneri">Partneři</a>
+      <a href="#predpisy">Řády a předpisy</a>
+      <a href="#hledani">Hledání napříč dokumenty</a>
+      <a href="#formulare">Formuláře</a>
+      <a href="#vybor">Zápisy výkonného výboru</a>
+      <a href="#hromady">Valné hromady</a>
+      <a href="#zapisy-komisi">Zápisy komisí</a>
+      <a href="#trenerske-dokumenty">Dokumenty pro trenéry</a>
+      <a href="#pravidla">Pravidla hry</a>
+      <a href="#clensky-pristup">Členský přístup</a>
+      <a href="#faq">Časté otázky</a>
+      <a href="#ochrana-udaju">Ochrana osobních údajů</a>
+    </nav>
+
+    <section id="komise" data-template="asociace.html">
+      <h2>ČASQ a odborné komise</h2>
+      <article>
+        <h3>Členové, role a spojení</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Odborné komise mají vlastní stránku se jmény, předsedy a zveřejněnými kontakty. Stránka asociace představuje organizaci a výkonný výbor.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/casq/odborne-komise/">Odborné komise ČASQ</a></li>
+              <li><a href="https://czechsquash.cz/asociace/">Dosavadní stránka asociace</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Vstup ČASQ otevírá karty odborných komisí. Stejný seznam zůstává i na samostatné adrese komisí. Odtud návštěvník přejde k rozhodčím, školením a trenérům.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/asociace.html#odborne-komise">Komise na vstupu ČASQ</a></li>
+              <li><a href="templates/odborne-komise.html">Samostatná adresa komisí</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Data a správa.</strong> U komise eviduj název, agendu, pořadí a členství osob s rolí. Zobraz jen doložené funkce a zveřejněné kontakty. Agenda může být svěřená jinému orgánu a kontakt může vést na sekretariát.</p>
+        <p><strong>Přechod ze starého webu.</strong> Přímý vstup <code>/casq/odborne-komise/</code> veď na seznam odborných komisí. Nová položka ČASQ v hlavní navigaci otevírá stejný obsah. Dosavadní adresy představení asociace a výkonného výboru mají vlastní cíle v <a href="#kontakty">Kontaktech</a>.</p>
+        <p><strong>Ověřit v backendu.</strong> Najdi společný zdroj pro členství a veřejné kontakty. Změna člena komise rozhodčích se má propsat také na stránku Rozhodčí. Kontaktní seznam nemusí odpovídat seznamu komisí v archivu zápisů.</p>
+        <p><strong>Kontrola po napojení.</strong> Vedle komise se jmenovaným předsedou zobraz arbitrážní komisi bez uvedeného předsedy a marketingovou komisi s popisem agendy. Porovnej obě adresy seznamu.</p>
+      </article>
+    </section>
+
+    <section id="kontakty" data-template="kontakty.html">
+      <h2>Kontakty a vedení asociace</h2>
+      <article>
+        <h3>Organizace, bankovní spojení a lidé</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Představení asociace, složení výboru a kontakty jsou rozdělené mezi tři stránky. Kontaktní stránka uvádí sídlo, fakturační údaje, bankovní spojení, pracovníky sekretariátu a členy výboru.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/asociace/">O asociaci</a></li>
+              <li><a href="https://czechsquash.cz/kontakty/">Kontakty a bankovní spojení</a></li>
+              <li><a href="https://czechsquash.cz/casq/vykonny-vybor/">Výkonný výbor</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Kontakty začínají kartou O asociaci. Následují adresa s mapou, organizační údaje a účty podle měny, pak karty výkonného výboru a sekretariátu. E-mail nebo telefon lze otevřít přímo u správné osoby.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/kontakty.html#o-asociaci">Představení asociace v Kontaktech</a></li>
+              <li><a href="templates/kontakty.html#vybor">Karty výkonného výboru</a></li>
+              <li><a href="templates/kontakty.html#marketing-komunikace">Kontakt pro média</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Data a správa.</strong> Odděl údaje organizace, banky a veřejný pracovní kontakt osoby. Zachovej jméno s tituly, roli, agendu, pořadí a určení účtu včetně měny, IBAN a SWIFT. Změnu držitele agendy promítni do kontaktů i cíle odkazu pro média.</p>
+        <p><strong>Přechod ze starého webu.</strong> Návštěvníka z původní <code>/asociace/</code> veď na kartu O asociaci v Kontaktech, z <code>/casq/vykonny-vybor/</code> přímo na výkonný výbor a z <code>/kontakty/</code> na kontaktní stránku. V routeru vyhraď pro nový vstup ČASQ s komisemi odlišnou adresu, aby převod staré adresy fungoval jednoznačně.</p>
+        <p><strong>Ověřit v backendu.</strong> Zjisti, která evidence je rozhodná pro pracovní e-mail a telefon a kdo může upravit bankovní údaje. Ulož i identifikátory a účty s úvodními nulami bez číselných převodů.</p>
+        <p><strong>Kontrola po napojení.</strong> Otevři původní adresy asociace, výboru a odborných komisí. Každá musí přivést návštěvníka přímo k příslušnému obsahu. Na druhé měně porovnej číslo účtu i IBAN se zdrojem. U člena výboru ověř volání a e-mail. Otevři uložený odkaz na agendu marketingu.</p>
+      </article>
+    </section>
+
+    <section id="partneri" data-template="partneri.html">
+      <h2>Partneři</h2>
+      <article>
+        <h3>Partnerské úrovně a odkazy na partnery</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>V patičce úvodní stránky jsou klikací loga rozdělená podle role. Národní sportovní agentura je uvedena jako poskytovatel finanční podpory, Aricoma jako hlavní partner a ASB, Under Armour a Dunlop jako další partneři.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/#:~:text=%C4%8Cesk%C3%BD%20squash%20je%20finan%C4%8Dn%C4%9B%20podporov%C3%A1n">Partnerský pás v patičce úvodní stránky</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Na samostatné stránce má každá skupina nadpis a každý partner odkaz na svůj web. Zájemce o spolupráci může pokračovat na kontakty. Stejné partnerské úrovně a loga využívá patička.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/partneri.html">Přehled partnerů a spolupráce</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Data a správa.</strong> V jedné evidenci pro stránku i patičku spravuj partnera, název pro alternativní text, logo, cílovou URL, úroveň a pořadí v rámci úrovně. Popis finanční podpory patří k poskytovateli podpory. Se změnou partnera aktualizuj jeho stránku i společný pás.</p>
+        <p><strong>Kontrola po napojení.</strong> Ověř přímý cíl u partnera z druhé skupiny a u poskytovatele finanční podpory. Po změně pořadí musejí obě umístění respektovat příslušnost ke skupině.</p>
+      </article>
+    </section>
+
+    <section id="predpisy" data-template="dokumenty.html">
+      <h2>Řády a předpisy</h2>
+      <article>
+        <h3>Vstup do Dokumentů a platnost předpisu</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Do rozcestníku Ke stažení vede odkaz z hlavičky i z patičky, každý na jinou adresu. Z rozcestníku návštěvník vybírá kategorii. Řády a předpisy obsahují stanovy a předpisy, u některých s datem platnosti, změnami nebo popisem.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/soubory/">Ke stažení z hlavičky</a></li>
+              <li><a href="https://czechsquash.cz/ke-stazeni/">Ke stažení z patičky</a></li>
+              <li><a href="https://czechsquash.cz/ke-stazeni/rady-a-predpisy/">Přímo do řádů a předpisů</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Dokumenty jsou samostatným vstupem v hlavním menu. Řády a předpisy se otevírají jako první ze šesti kategorií. Každý předpis je přímý odkaz s názvem, formátem a velikostí.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/dokumenty.html">Vstup do Dokumentů</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Data a správa.</strong> Přenes název, kategorii, řazení, číslo či platnost uvedenou vydavatelem, soubor nebo externí cíl. Záměnu verze řeš v místě správy předpisu. Původní příloha zápisu musí zůstat dohledatelná i po změně nyní platného řádu.</p>
+        <p><strong>Přechod ze starého webu.</strong> Převod adres otestuj z obou původních vstupů <code>/soubory/</code> a <code>/ke-stazeni/</code>. Obě mají otevřít Dokumenty s výchozí kategorií Řády a předpisy. Staré přímé vstupy do předávaných kategorií musejí otevřít odpovídající výpis, například Formuláře.</p>
+        <p><strong>Kontrola po napojení.</strong> Porovnej předpis s uvedenou účinností a stanovy na jiné doméně. Otevři skutečný dokument a zkontroluj shodu názvu, verze a souboru.</p>
+      </article>
+    </section>
+
+    <section id="hledani">
+      <h2>Hledání napříč dokumenty</h2>
+      <article>
+        <h3>Dotaz z libovolné kategorie</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Návštěvník prochází samostatné výpisy předpisů, formulářů, zápisů výboru a komisí nebo valných hromad v sekci Ke stažení. Kodexy a další trenérské podklady jsou v sekci Trenéři. V každém výpisu vybírá příslušný dokument a jeho přílohy zvlášť.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/ke-stazeni/rady-a-predpisy/">Řády a předpisy</a></li>
+              <li><a href="https://czechsquash.cz/ke-stazeni/formulare/">Formuláře</a></li>
+              <li><a href="https://czechsquash.cz/ke-stazeni/zapisy-vv/">Zápisy výkonného výboru</a></li>
+              <li><a href="https://czechsquash.cz/ke-stazeni/valne-hromady/">Valné hromady</a></li>
+              <li><a href="https://czechsquash.cz/ke-stazeni/zapisy-komisi/">Zápisy komisí</a></li>
+              <li><a href="https://czechsquash.cz/treneri/dokumenty/">Základní dokumenty a kodexy pro trenéry</a></li>
+              <li><a href="https://czechsquash.cz/treneri/archiv/">Starší trenérské podklady</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Pole Hledat dokument prohledá všechny kategorie včetně trenérských materiálů. Výsledky zůstávají ve skupinách, přílohy u příslušných zápisů. Zadání bez shody má vlastní stav a vymazání dotazu vrací původní výpis.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/dokumenty.html?q=kodex">Vyhledání kodexů z hlavní kategorie</a></li>
+              <li><a href="templates/dokumenty-treneri.html">Kategorie trenérů</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Ověřit v backendu.</strong> Vyhledej publikované záznamy ze stejné evidence, která plní kategorie. Dotaz bez diakritiky musí najít český název, změna kategorie zachovat parametr q a vymazání obnovit její místní obsah. Při vypnutém JavaScriptu zůstávají kategorie a odkazy dostupné.</p>
+        <p><strong>Kontrola po napojení.</strong> Z formulářů vyhledej název přílohy VV, otevři nalezený soubor, pak vyhledej neexistující výraz. Při návratu bez dotazu ověř běžný výpis formulářů.</p>
+      </article>
+    </section>
+
+    <section id="formulare" data-template="dokumenty-formulare.html">
+      <h2>Formuláře</h2>
+      <article>
+        <h3>Jeden formulář ve více formátech nebo ročnících</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Původní tabulka páruje dokumenty v PDF a editovatelné soubory. Některé položky mají jen jediný formát nebo více ročníkových verzí.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/ke-stazeni/formulare/">Tabulka formulářů</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Návštěvník vybírá přímo název formuláře a formát. Dostupné verze jsou u sebe a každá má vlastní odkaz i velikost.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/dokumenty-formulare.html">Formátové a ročníkové verze</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Data a správa.</strong> Publikuj formulář s jeho doloženými verzemi, každou s vlastním cílem, označením, formátem a velikostí. Zachovej číslo a pořadí formuláře. Jediná verze smí stát samostatně.</p>
+        <p><strong>Kontrola po napojení.</strong> Zkontroluj jeden formulář s PDF a DOC a další se sezónními variantami. Obdobný základ názvu nesmí sloučit dva různé soubory.</p>
+      </article>
+    </section>
+
+    <section id="vybor" data-template="dokumenty-zapisy-vv.html">
+      <h2>Zápisy výkonného výboru</h2>
+      <article>
+        <h3>Zápis VV a jeho přílohy</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Zápisy jsou v sezónních blocích. Pod jednotlivými zápisy jsou očíslované přílohy s vlastními odkazy.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/ke-stazeni/zapisy-vv/">Zápisy výkonného výboru</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Chronologický seznam drží pohromadě zápis, datum jednání a zveřejnění a jeho přílohy. Starší rok lze otevřít přímo odkazem.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/dokumenty-zapisy-vv.html">Zápisy s přílohami</a></li>
+              <li><a href="templates/dokumenty-zapisy-vv.html#rok-2025">Starší rok jednání</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Data a správa.</strong> U zápisu zachovej číslo, datum jednání, případné datum zveřejnění, vlastní soubor a uspořádané přílohy. Přílohu spoj s konkrétním zápisem, a to i při shodné adrese souboru u více záznamů.</p>
+        <p><strong>Kontrola po napojení.</strong> Prověř starší zápis i zápis bez přílohy. Vyhledání výrazu z přílohy musí ukázat, ke kterému zápisu patří.</p>
+      </article>
+    </section>
+
+    <section id="hromady" data-template="dokumenty-valne-hromady.html">
+      <h2>Valné hromady</h2>
+      <article>
+        <h3>Jedna nebo více valných hromad za rok</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Pod ročními nadpisy jsou zápisy, pozvánky, prezenční listiny a zprávy. Jeden rok může obsahovat více zasedání.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/ke-stazeni/valne-hromady/">Veřejné podklady valných hromad</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Jeden blok v přehledu obsahuje zdrojové dokumenty daného roku. V roce s více zasedáními se zobrazí všechny jeho zápisy a přílohy v původním pořadí.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/dokumenty-valne-hromady.html">Přehled podle roku</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Data a správa.</strong> Vazba souboru na zasedání a jeho pořadí musí přežít seskupení podle roku. Zachovej také jednotlivé soubory uvnitř jedné číslované přílohy. Při rozporu názvu a cílového souboru zaznamenej původní dvojici k opravě správcem.</p>
+        <p><strong>Kontrola po napojení.</strong> Vedle běžného ročníku zkontroluj obě zasedání z roku 2014. Pro rok bez zveřejněných podkladů nevytvářej prázdné zasedání.</p>
+      </article>
+    </section>
+
+    <section id="zapisy-komisi" data-template="dokumenty-zapisy-komisi.html">
+      <h2>Zápisy komisí</h2>
+      <article>
+        <h3>Rozhodnutí nebo zápisy podle komise</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Komise se střídají v dlouhém výpisu. Soutěžní a disciplinární komise navíc rozlišuje rozhodnutí a zápisy po sezónách.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/ke-stazeni/zapisy-komisi/">Původní skupiny rozhodnutí a zápisů</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Přepínač vybere komisi. Její rozhodnutí a zápisy se zobrazí v původních skupinách. Komise bez rozepsaných sezón má soubory pohromadě.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/dokumenty-zapisy-komisi.html">Výběr komise a skupiny dokumentů</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Data a správa.</strong> Uchovej příslušnost ke komisi, druh záznamu, zdrojovou sezónu a pořadí. Historické komise zůstávají v archivu i po změně organizační struktury. Položka bez cílového souboru zůstává textem.</p>
+        <p><strong>Ověřit v backendu.</strong> Prověř zdroj chybných či nejednoznačných označení sezón a dostupnost přílohy podle záznamu. Původní hodnoty ponech dohledatelné do potvrzení opravy.</p>
+        <p><strong>Kontrola po napojení.</strong> Porovnej soutěžní komisi po sezónách s komisí bez sezonního dělení. Bez skriptů musí jít přečíst seznamy všech komisí.</p>
+      </article>
+    </section>
+
+    <section id="trenerske-dokumenty" data-template="dokumenty-treneri.html">
+      <h2>Dokumenty pro trenéry</h2>
+      <article>
+        <h3>Jedna kategorie pro metodické dokumenty a starší podklady</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Trenérské dokumenty obsahují systém tříd a kodexy. Starší pozvánky, historické seznamy a projektové podklady jsou samostatně v trenérském archivu.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/treneri/dokumenty/">Základní trenérské dokumenty</a></li>
+              <li><a href="https://czechsquash.cz/treneri/archiv/">Starší trenérské podklady</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Trenérská kategorie v Dokumentech spojuje základní dokumenty a starší soubory. Původní místní adresa dokumentů zobrazuje stejný obsah. Z pozvánek vede odkaz přímo na starší podklady.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/dokumenty-treneri.html">Kategorie Dokumenty pro trenéry</a></li>
+              <li><a href="templates/dokumenty-treneri.html#skoleni-a-starsi-podklady">Starší podklady</a></li>
+              <li><a href="templates/treneri-dokumenty.html">Dosavadní místní adresa</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Data a správa.</strong> Zařaď každý soubor do odpovídající skupiny, zachovej datum a místo kurzu, doložený popis a verzi seznamu. Pod stejnou veřejnou položkou spravuj pouze jednu kopii metadat pro obě adresy a pro společné vyhledávání.</p>
+        <p><strong>Kontrola po napojení.</strong> Najdi historický seznam k určitému datu z jiné kategorie Dokumentů. Ověř, že dokument zůstává datovaným souborem a že stará adresa vede ke shodné verzi.</p>
+      </article>
+    </section>
+
+    <section id="pravidla" data-template="pravidla.html">
+      <h2>Pravidla hry</h2>
+      <article>
+        <h3>Úplná pravidla v českém a anglickém znění</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Původní stránka ke stažení nabízí český překlad a anglický originál pravidel WSF 2020 i další soubory včetně zkrácených pravidel.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/ke-stazeni/pravidla/">Oficiální výpis pravidel a jazykových verzí</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Stránka pro veřejnost nabízí výklad pro začátečníky a dvojici úplných pravidel v češtině a angličtině. U odkazů přímo uvádí jazyk, rok vydání, formát a velikost.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/pravidla.html">Pravidla hry</a></li>
+              <li><a href="templates/pravidla.html#rules-downloads-title">Úplná pravidla ve dvou jazycích</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Data a správa.</strong> U každé jazykové verze zachovej vydavatele, vydání, jazyk a skutečný soubor. Krátké redakční karty mají název a výklad, který lze při změně pravidel přezkoumat. Informace v kartách a označení staženého vydání musí souhlasit.</p>
+        <p><strong>Rozhodnout s vlastníkem pravidel.</strong> Potvrdit, které vydání a překlad má ČASQ při spuštění nabízet. Ukázka vychází z vydání 2020, které je přímo uvedené u souborů.</p>
+        <p><strong>Kontrola po napojení.</strong> Otevři českou i anglickou verzi a zkontroluj titulní stranu proti popisu. Při budoucí výměně přezkoušej všechny dotčené karty, například podání nebo bránění ve hře.</p>
+      </article>
+    </section>
+
+    <section id="clensky-pristup" data-template="clensky-system.html">
+      <h2>Členský přístup</h2>
+      <article>
+        <h3>Veřejná nápověda pro hráče a kluby</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Přihlašovací stránka členské aplikace obsahuje vedle formuláře samostatné pokyny pro hráče a kluby. Vysvětluje jejich oprávnění i to, kdo jim zajišťuje přístupové údaje.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/login">Přihlášení pro členy ČASQ</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Informační stránka rozděluje pokyny pro hráče a kluby a odkazuje na přehled klubů, sekretariát a kalendář. V mustru se žádné přihlašovací údaje nezadávají.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/clensky-system.html">Veřejné pokyny pro členy</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Data a správa.</strong> Udržuj dva různé kontaktní postupy. Hráč získává přístup prostřednictvím svého klubu, klub přes sekretariát. Zachovej veřejnou cestu ke kontaktům i při změně adresy členské aplikace.</p>
+        <p><strong>Ověřit v backendu.</strong> Potvrď, kam v produkci vede stávající vstup do členské aplikace a kdo spravuje jeho adresu. Přihlášení, oprávnění a soukromé členské úkony nejsou předmětem tohoto informačního mustru.</p>
+        <p><strong>Rozhodnout s vlastníkem členského systému.</strong> Určit, odkud bude člen na novém webu vstupovat přímo do provozované aplikace. Samotný informační mustr vstup do účtu nenabízí.</p>
+        <p><strong>Kontrola po napojení.</strong> Projdi případ hráče bez účtu a klubu bez účtu. Každý musí dojít ke svému správci přístupu. Po napojení zkontroluj též dohodnutý veřejný vstup do přihlášení.</p>
+      </article>
+    </section>
+
+    <section id="faq" data-template="faq.html">
+      <h2>Časté otázky</h2>
+      <article>
+        <h3>Odpovědi na stránce Hrej squash!</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>Počet hráčů vysvětluje úvod do hry, bodování a úplné znění pravidel jsou v sekci Pravidla. Termíny soutěží jsou v kalendáři. Členská aplikace vysvětluje, kdo vystavuje přístupy hráčům a klubům, a kontakty rozdělují soutěžní agendu a práci s mládeží mezi členy výboru.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/co-je-to-squash/">Dvouhra a čtyřhra na původním webu</a></li>
+              <li><a href="https://czechsquash.cz/ke-stazeni/pravidla/">Počítání skóre a úplná pravidla</a></li>
+              <li><a href="https://czechsquash.cz/kalendar-akci/">Termíny soutěží podle kategorie a data</a></li>
+              <li><a href="https://czechsquash.cz/login">Přístupové údaje hráče a klubu</a></li>
+              <li><a href="https://czechsquash.cz/kontakty/">Odpovědnost za soutěže a mládež</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Odpovědi pro začátečníky, rodiče, kluby a členy se rozbalují přímo na stránce Hrej squash!. Patička i dosavadní adresa Častých otázek vedou na sekci s odpověďmi.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/nabory.html#otazky">Otázky a odpovědi na Hrej squash!</a></li>
+              <li><a href="templates/faq.html">Původní místní adresa FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Data a správa.</strong> Spravuj znění otázky, odpověď, pořadí a případný související odkaz. Odkazy na pravidla, klub či sekretariát musejí sledovat stejné zdroje jako navazující stránky. Věk pro přijetí dítěte a cenu první lekce určuje konkrétní klub.</p>
+        <p><strong>Kontrola po napojení.</strong> Otevři starou adresu i odkaz z patičky. Klávesnicí a bez JavaScriptu rozbal otázku s odkazem na pravidla a otázku s čistě textovou odpovědí.</p>
+      </article>
+    </section>
+
+    <section id="ochrana-udaju" data-template="ochrana-osobnich-udaju.html">
+      <h2>Ochrana osobních údajů</h2>
+      <article>
+        <h3>Informační stránka a stav před dodáním znění</h3>
+        <div class="comparison">
+          <div class="accent-card comparison-card comparison-card--current">
+            <h4>Dnes</h4>
+            <p>ČASQ zveřejňuje informace pro subjekty osobních údajů včetně účelů zpracování, kategorií příjemců, lhůt a práv. Registrační řád zvlášť popisuje evidenci členů a druhá strana registračního formuláře obsahuje souhlas pro členskou evidenci, statistiku a organizaci soutěží.</p>
+            <ul class="comparison-links">
+              <li><a href="https://czechsquash.cz/casq/gdpr/">Informace ČASQ pro subjekty osobních údajů</a></li>
+              <li><a href="https://czechsquash.cz/web/Predpisy_CASQ/2025_08_01_Registracni_a_prestupni_rad_CASQ.pdf#page=2">Registrační řád, čl. 4–6 (PDF, strana 2)</a></li>
+              <li><a href="https://czechsquash.cz/web/Predpisy_CASQ/01_individualni_registrace_clena_CASQ.pdf#page=2">Individuální registrace, souhlas člena (PDF, strana 2)</a></li>
+            </ul>
+          </div>
+          <div class="accent-card comparison-card">
+            <h4>Nový mustr</h4>
+            <p>Mustr sděluje, že úplné informace pro tento web zatím nejsou k dispozici. Uvádí ověřený obecný kontakt ČASQ a odkaz na kontaktní stránku.</p>
+            <ul class="comparison-links">
+              <li><a href="templates/ochrana-osobnich-udaju.html">Stav při chybějícím úplném textu</a></li>
+            </ul>
+          </div>
+        </div>
+        <p><strong>Data a správa.</strong> Zveřejni verzi potvrzenou vlastníkem pro nový web. Udržuj datum verze a ověřený kontakt. Změna kontaktní osoby se má projevit i na stránce otevřené z patičky. Registrační formulář patří k členské registraci.</p>
+        <p><strong>Ověřit v backendu.</strong> Zjisti, jaké údaje zpracovává veřejný web, které přebírá z členské aplikace a komu se předávají. Na původní informační stránce se zobrazená e-mailová adresa liší od cíle odkazu. Před migrací ověř skutečnou schránku a cíl odkazu pro žádosti.</p>
+        <p><strong>Rozhodnout s vlastníkem webu.</strong> Porovnat zjištěné zpracování se zveřejněnými informacemi ČASQ, schválit rozsah a znění pro nový web, odpovědný kontakt a další aktualizace.</p>
+        <p><strong>Kontrola po napojení.</strong> Z patičky otevři stránku i s chybějícím textem a ověř obecný kontakt. Po dodání schválené verze porovnej zveřejněné znění s podkladem vlastníka.</p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
