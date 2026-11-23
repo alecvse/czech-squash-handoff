@@ -154,10 +154,6 @@
 
 [Otevřít mustr](templates/treneri.html)
 
-### [Aktuality pro trenéry](odborny-servis.md#aktuality)
-
-[Otevřít mustr](templates/treneri-aktuality.html)
-
 ### [Archiv trenérů](odborny-servis.md#archiv)
 
 [Otevřít mustr](templates/treneri-archiv.html)
@@ -169,14 +165,6 @@
 ### [Přehled trenérských projektů](odborny-servis.md#projekty)
 
 [Otevřít mustr](templates/treneri-projekty.html)
-
-### [Detail projektu](odborny-servis.md#detail-projektu)
-
-[Otevřít mustr](templates/treneri-projekty-lscm.html)
-
-### [Pozvánky pro trenéry](odborny-servis.md#pozvanky)
-
-[Otevřít mustr](templates/treneri-pozvanky.html)
 
 ### [Seznam trenérů](odborny-servis.md#seznam)
 
@@ -202,6 +190,14 @@ Turnajové detaily čekají na posouzení návrhu jako celku. Pracovní ukázky 
 - **Rozlosování a pavouky.** Los před začátkem turnaje a pavouk s výsledky. Pracovní varianty mají 8, 16 a 32 míst, hlavní větev i větve o umístění. Zahrnují nasazení, volný postup, skreč a dosud neobsazené místo.
 - **Skupiny a konečné pořadí.** Skupinová tabulka, návazné zápasy o umístění a konečné pořadí v kategorii. Samostatný stav má kategorie, která se neodehrála.
 - **Rozpis a výsledky zápasů.** Soupeři, dostupné časy a výsledky po setech, výběr jedné kategorie nebo zápasů napříč turnajem.
+
+<a id="trenerske-detaily"></a>
+
+### Trenéři – detaily čekající na zpracování
+
+- **Detail trenérské aktuality.** [Předobraz na současném webu](https://czechsquash.cz/treneri/aktuality/)
+- **Detail trenérského projektu.** [Předobraz na současném webu](https://czechsquash.cz/treneri/projekty-lscm)
+- **Detail trenérské pozvánky.** [Předobraz na současném webu](https://czechsquash.cz/kalendar-akci-treneri?kat%5B%5D=TR&nazev=&od=01.01.2024&do=&Hledat=Hledat)
 
 ### Další stránky a varianty
 

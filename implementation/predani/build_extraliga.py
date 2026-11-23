@@ -22,7 +22,8 @@ WITHHELD = {'historie.html', 'co-je-to-squash.html', 'design-system.html'}
 
 
 def withheld(name):
-    return name in WITHHELD or name.startswith('turnaj-')
+    return (name in WITHHELD or name in {'treneri-aktuality.html', 'treneri-pozvanky.html'}
+            or name.startswith(('turnaj-', 'treneri-projekty-')))
 
 
 class PageLinks(HTMLParser):

@@ -21,13 +21,13 @@ Veřejný kalendář nabízí kategorii, název a období od–do. Pod měsíci 
 Pod měsícem je tabulka s termínem, kategorií, názvem, místem a stavem nebo časem. Hledání podle názvu či místa se kombinuje s kategorií a rozmezím dat. Přehled rozlišuje jednotlivce, konkrétní utkání družstev, společné ligové kolo i školení trenérů a rozhodčích.
 
 - [Kalendář, filtry a měsíční tabulky](templates/kalendar-akci.html#main-content)
-- [Pozvánky s propozicemi pražského kurzu](templates/treneri-pozvanky.html)
+- [Trenérské pozvánky čekající na zpracování](index.md#trenerske-detaily)
 
 **Data pro přehled.** Ke zveřejněné položce předej identitu, druh a podrobnější kategorii, začátek, případně konec, místní čas, název, sportoviště a zveřejněný stav. Ligové kolo může mít místo až v rozlosování. U kurzu zachovej i zrušení a zveřejněný důvod. Samotné uplynutí data nedokládá odehrání.
 
 **Ověřit v backendu.** Které údaje propojují kalendářní položku se soutěží, zápisem utkání nebo školením? Ověř, odkud se čte změna termínu či stavu. Vícedenní akce patří do výsledku, i pokud zvolený interval protíná jen jeden její den.
 
-**Cesta k propozicím.** V kalendářním mustru je kurz z 19.–22. 6. 2025 uvedený bez odkazu. Jeho PDF najdeš v Pozvánkách pro trenéry. Po napojení má odkaz u termínu otevřít zveřejněnou pozvánku tohoto kurzu a z ní aktuální propozice. Kalendář i Pozvánky čtou stejný záznam kurzu. Ověř cestu i po výměně PDF. U kurzu bez veřejné přílohy zobraz termín, místo a známý stav bez odkazu ke stažení.
+**Cesta k propozicím.** V kalendářním mustru je kurz z 19.–22. 6. 2025 uvedený bez odkazu. Detail trenérské pozvánky čeká na zpracování. Po jeho schválení a napojení má odkaz u termínu otevřít zveřejněnou pozvánku tohoto kurzu a z ní aktuální propozice. Kalendář i Pozvánky čtou stejný záznam kurzu. Ověř cestu i po výměně PDF. U kurzu bez veřejné přílohy zobraz termín, místo a známý stav bez odkazu ke stažení.
 
 **Administrace.** Správce musí umět odlišit pořadatele od místa akce a změnit termín nebo stav na jednom místě. Při překladu termínu zachovej existující záznam a jeho vazby.
 
